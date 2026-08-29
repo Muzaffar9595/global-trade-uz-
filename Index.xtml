@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Global Trade Uzbekistan</title>
+
+  <meta name="description"
+        content="Global Trade Uzbekistan — xalqaro konsalting, ishga joylashtirish, ta'lim, turizm va savdo xizmatlari.">
+
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: Arial, sans-serif;
+    }
+
+    body {
+      background: #f5f7fb;
+      color: #172033;
+      line-height: 1.6;
+    }
+
+    header {
+      background: #0b1f3a;
+      color: white;
+      padding: 18px 7%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: sticky;
+      top: 0;
+      z-index: 10;
+    }
+
+    .logo {
+      font-size: 22px;
+      font-weight: bold;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin-left: 18px;
+      font-size: 14px;
+    }
+
+    .hero {
+      background: linear-gradient(135deg, #0b1f3a, #1769aa);
+      color: white;
+      padding: 90px 7%;
+      text-align: center;
+    }
+
+    .hero h1 {
+      font-size: 42px;
+      margin-bottom: 20px;
+    }
+
+    .hero p {
+      max-width: 700px;
+      margin: auto;
+      font-size: 18px;
+    }
+
+    .button {
+      display: inline-block;
+      margin-top: 30px;
+      background: white;
+      color: #0b1f3a;
+      padding: 13px 25px;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    section {
+      padding: 60px 7%;
+    }
+
+    .title {
+      text-align: center;
+      margin-bottom: 35px;
+    }
+
+    .title h2 {
+      font-size: 30px;
+      color: #0b1f3a;
+    }
+
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+      gap: 20px;
+    }
+
+    .card {
+      background: white;
+      padding: 25px;
+      border-radius: 12px;
+      box-shadow: 0 5px 20px rgba(0,0,0,.08);
+    }
+
+    .card h3 {
+      color: #1769aa;
+      margin-bottom: 10px;
+    }
+
+    .countries {
+      background: #eaf1f8;
+    }
+
+    .country-list {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 12px;
+    }
+
+    .country {
+      background: white;
+      padding: 12px 18px;
+      border-radius: 20px;
+      box-shadow: 0 3px 10px rgba(0,0,0,.07);
+    }
+
+    .contact {
+      text-align: center;
+      background: #0b1f3a;
+      color: white;
+    }
+
+    .contact h2 {
+      margin-bottom: 15px;
+    }
+
+    .contact a {
+      color: white;
+      text-decoration: none;
+    }
+
+    footer {
+      background: #071426;
+      color: #ccc;
+      text-align: center;
+      padding: 20px;
+      font-size: 14px;
+    }
+
+    @media (max-width: 650px) {
+      .hero h1 {
+        font-size: 32px;
+      }
+
+      nav {
+        display: none;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+<header>
+  <div class="logo">GLOBAL TRADE UZ</div>
+
+  <nav>
+    <a href="#xizmatlar">Xizmatlar</a>
+    <a href="#davlatlar">Davlatlar</a>
+    <a href="#bizhaqimizda">Biz haqimizda</a>
+    <a href="#aloqa">Aloqa</a>
+  </nav>
+</header>
+
+<section class="hero">
+  <h1>Global Trade Uzbekistan</h1>
+
+  <p>
+    Xalqaro konsalting, ishga joylashtirish, ta'lim,
+    turizm va xalqaro savdo xizmatlari.
+  </p>
+
+  <a class="button" href="#aloqa">Biz bilan bog‘lanish</a>
+</section>
+
+<section id="bizhaqimizda">
+  <div class="title">
+    <h2>Biz haqimizda</h2>
+  </div>
+
+  <p style="max-width:850px;margin:auto;text-align:center;">
+    Global Trade Uzbekistan — O‘zbekiston fuqarolari va xalqaro
+    hamkorlar o‘rtasida xizmatlar, ta’lim, ishga joylashtirish,
+    turizm va savdo yo‘nalishlarida hamkorlikni rivojlantirishga
+    yo‘naltirilgan kompaniya.
+  </p>
+</section>
+
+<section id="xizmatlar">
+  <div class="title">
+    <h2>Bizning xizmatlarimiz</h2>
+  </div>
+
+  <div class="cards">
+
+    <div class="card">
+      <h3>🌍 Xalqaro konsalting</h3>
+      <p>
+        Xalqaro hamkorlik va biznes loyihalari bo‘yicha
+        maslahat xizmatlari.
+      </p>
+    </div>
+
+    <div class="card">
+      <h3>👷 Ishga joylashtirish</h3>
+      <p>
+        Xorijiy ish beruvchilar bilan hamkorlik qilish
+        va qonuniy ish imkoniyatlarini izlashda yordam.
+      </p>
+    </div>
+
+    <div class="card">
+      <h3>🎓 Ta'lim</h3>
+      <p>
+        O‘zbekiston va xorijiy ta'lim muassasalari bilan
+        hamkorlik va ta'lim imkoniyatlari.
+      </p>
+    </div>
+
+    <div class="card">
+      <h3>✈️ Turizm</h3>
+      <p>
+        Xalqaro turizm yo‘nalishlari va sayohat xizmatlarini
+        tashkil etish.
+      </p>
+    </div>
+
+    <div class="card">
+      <h3>📄 Hujjatlar bo‘yicha yordam</h3>
+      <p>
+        Viza va boshqa hujjatlarni tayyorlash jarayonida
+        axborot va tashkiliy yordam.
+      </p>
+    </div>
+
+    <div class="card">
+      <h3>📦 Global Trade</h3>
+      <p>
+        Xalqaro savdo, eksport-import va biznes hamkorlik
+        yo‘nalishlarini rivojlantirish.
+      </p>
+    </div>
+
+  </div>
+</section>
+
+<section id="davlatlar" class="countries">
+
+  <div class="title">
+    <h2>Hamkorlik yo‘nalishlari</h2>
+  </div>
+
+  <div class="country-list">
+    <div class="country">🇺🇿 O‘zbekiston</div>
+    <div class="country">🇩🇪 Germaniya</div>
+    <div class="country">🇨🇳 Xitoy</div>
+    <div class="country">🇶🇦 Qatar</div>
+    <div class="country">🇦🇪 BAA</div>
+    <div class="country">🇹🇷 Turkiya</div>
+    <div class="country">🇰🇷 Koreya</div>
+    <div class="country">🇱🇹 Litva</div>
+    <div class="country">🇨🇿 Chexiya</div>
+    <div class="country">🇺🇸 AQSH</div>
+    <div class="country">🇬🇧 Angliya</div>
+    <div class="country">🇸🇰 Slovakiya</div>
+  </div>
+
+</section>
+
+<section id="aloqa" class="contact">
+
+  <h2>Biz bilan bog‘laning</h2>
+
+  <p>
+    Global Trade Uzbekistan
+  </p>
+
+  <p>
+    Surxondaryo viloyati, Uzun tumani
+  </p>
+
+  <p style="margin-top:15px;">
+    Telefon: +998 XX XXX XX XX
+  </p>
+
+  <p>
+    Email: info@example.com
+  </p>
+
+</section>
+
+<footer>
+  © 2026 Global Trade Uzbekistan. Barcha huquqlar himoyalangan.
+</footer>
+
+</body>
+</html>
