@@ -4,16 +4,15 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>Global Trade Uzbekistan | Xalqaro biznes va xizmatlar</title>
-
-  <meta name="description"
-        content="Global Trade Uzbekistan — xalqaro savdo, konsalting, ishga joylashtirish, ta'lim, turizm va biznes xizmatlari.">
+  <title>Global Trade Uzbekistan</title>
+  <meta name="description" content="Global Trade Uzbekistan — xalqaro savdo, qurilish, ishga joylashtirish, konsalting, ta'lim va turizm xizmatlari.">
 
   <style>
     * {
-      box-sizing: border-box;
       margin: 0;
       padding: 0;
+      box-sizing: border-box;
+      font-family: Arial, sans-serif;
     }
 
     html {
@@ -21,25 +20,22 @@
     }
 
     body {
-      font-family: Arial, sans-serif;
-      background: #f5f7fb;
+      background: #f5f7fa;
       color: #172033;
       line-height: 1.6;
     }
 
     header {
+      background: linear-gradient(135deg, #062b5c, #0b5cab);
+      color: white;
+      padding: 18px 7%;
       position: sticky;
       top: 0;
-      z-index: 100;
-      background: #071b35;
-      color: white;
-      padding: 16px 7%;
-      box-shadow: 0 3px 15px rgba(0,0,0,.15);
+      z-index: 1000;
+      box-shadow: 0 3px 15px rgba(0,0,0,0.15);
     }
 
-    .header-inner {
-      max-width: 1200px;
-      margin: auto;
+    .nav {
       display: flex;
       justify-content: space-between;
       align-items: center;
@@ -52,244 +48,295 @@
       letter-spacing: 1px;
     }
 
-    .logo span {
-      color: #42b4ff;
-    }
-
-    nav {
-      display: flex;
-      gap: 20px;
-      flex-wrap: wrap;
-    }
-
     nav a {
       color: white;
       text-decoration: none;
-      font-size: 14px;
+      margin-left: 18px;
+      font-size: 15px;
     }
 
     nav a:hover {
-      color: #42b4ff;
+      opacity: 0.75;
     }
 
     .hero {
-      background: linear-gradient(135deg, #071b35, #1268a8);
+      min-height: 88vh;
+      display: flex;
+      align-items: center;
+      padding: 70px 7%;
+      background:
+        linear-gradient(rgba(3,30,65,0.82), rgba(5,68,125,0.78)),
+        linear-gradient(135deg, #07366d, #0b76c9);
       color: white;
-      padding: 100px 7%;
-      text-align: center;
     }
 
     .hero-content {
-      max-width: 950px;
-      margin: auto;
+      max-width: 850px;
     }
 
     .hero h1 {
-      font-size: 48px;
-      margin-bottom: 20px;
-    }
-
-    .hero h1 span {
-      color: #42b4ff;
+      font-size: 52px;
+      line-height: 1.15;
+      margin-bottom: 22px;
     }
 
     .hero p {
       font-size: 19px;
-      max-width: 750px;
-      margin: auto;
-      opacity: .95;
+      max-width: 700px;
+      margin-bottom: 30px;
+      color: #e8f2ff;
     }
 
     .buttons {
-      margin-top: 32px;
+      display: flex;
+      gap: 14px;
+      flex-wrap: wrap;
     }
 
-    .button {
+    .btn {
       display: inline-block;
-      padding: 14px 25px;
-      margin: 5px;
+      padding: 14px 24px;
       border-radius: 8px;
       text-decoration: none;
       font-weight: bold;
+      transition: 0.3s;
     }
 
-    .button-primary {
+    .btn-primary {
       background: white;
-      color: #071b35;
+      color: #0757a0;
     }
 
-    .button-secondary {
+    .btn-secondary {
       border: 1px solid white;
       color: white;
     }
 
+    .btn:hover {
+      transform: translateY(-2px);
+    }
+
     section {
-      padding: 70px 7%;
+      padding: 75px 7%;
     }
 
-    .container {
-      max-width: 1200px;
-      margin: auto;
-    }
-
-    .title {
+    .section-title {
       text-align: center;
-      margin-bottom: 40px;
+      margin-bottom: 45px;
     }
 
-    .title h2 {
-      font-size: 34px;
-      color: #071b35;
+    .section-title h2 {
+      font-size: 35px;
+      color: #07366d;
       margin-bottom: 10px;
     }
 
-    .title p {
-      color: #657084;
+    .section-title p {
+      color: #667085;
+      max-width: 700px;
+      margin: auto;
     }
 
     .about {
       background: white;
     }
 
-    .about-text {
-      max-width: 900px;
+    .about-box {
+      max-width: 950px;
       margin: auto;
       text-align: center;
-      font-size: 17px;
+      font-size: 18px;
+      color: #4b5563;
+    }
+
+    .services {
+      background: #f5f7fa;
     }
 
     .cards {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      grid-template-columns: repeat(3, 1fr);
       gap: 22px;
     }
 
     .card {
       background: white;
-      padding: 28px;
-      border-radius: 14px;
-      box-shadow: 0 5px 25px rgba(0,0,0,.07);
-      transition: .2s;
+      padding: 30px 24px;
+      border-radius: 15px;
+      box-shadow: 0 8px 25px rgba(20,40,70,0.08);
+      transition: 0.3s;
+      border: 1px solid #e8edf3;
     }
 
     .card:hover {
       transform: translateY(-5px);
+      box-shadow: 0 12px 30px rgba(20,40,70,0.13);
     }
 
     .icon {
-      font-size: 35px;
+      font-size: 38px;
       margin-bottom: 15px;
     }
 
     .card h3 {
-      color: #1268a8;
+      color: #07366d;
       margin-bottom: 10px;
+      font-size: 21px;
+    }
+
+    .card p {
+      color: #667085;
     }
 
     .countries {
-      background: #eaf2f9;
+      background: white;
     }
 
     .country-list {
       display: flex;
-      justify-content: center;
       flex-wrap: wrap;
+      justify-content: center;
       gap: 12px;
-    }
-
-    .country {
-      background: white;
-      padding: 13px 19px;
-      border-radius: 25px;
-      box-shadow: 0 3px 12px rgba(0,0,0,.06);
-      font-weight: bold;
-    }
-
-    .why {
-      background: white;
-    }
-
-    .why-list {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-      gap: 20px;
-    }
-
-    .why-item {
-      padding: 25px;
-      border-left: 4px solid #1268a8;
-      background: #f5f7fb;
-      border-radius: 8px;
-    }
-
-    .contact {
-      background: #071b35;
-      color: white;
-      text-align: center;
-    }
-
-    .contact .title h2 {
-      color: white;
-    }
-
-    .contact-info {
-      max-width: 650px;
+      max-width: 900px;
       margin: auto;
     }
 
-    .contact-box {
-      background: rgba(255,255,255,.08);
-      padding: 25px;
-      margin: 12px 0;
-      border-radius: 10px;
+    .country {
+      padding: 12px 18px;
+      background: #edf5ff;
+      color: #0757a0;
+      border-radius: 30px;
+      font-weight: bold;
     }
 
-    .contact-box a {
+    .steps {
+      background: #f5f7fa;
+    }
+
+    .step-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 20px;
+    }
+
+    .step {
+      text-align: center;
+      background: white;
+      padding: 28px 18px;
+      border-radius: 14px;
+    }
+
+    .number {
+      width: 45px;
+      height: 45px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto 15px;
+      border-radius: 50%;
+      background: #0757a0;
+      color: white;
+      font-weight: bold;
+      font-size: 20px;
+    }
+
+    .contact {
+      background: linear-gradient(135deg, #062b5c, #0b5cab);
+      color: white;
+    }
+
+    .contact .section-title h2 {
+      color: white;
+    }
+
+    .contact .section-title p {
+      color: #d9eaff;
+    }
+
+    .contact-box {
+      max-width: 700px;
+      margin: auto;
+      display: grid;
+      gap: 14px;
+    }
+
+    .contact-item {
+      background: rgba(255,255,255,0.1);
+      padding: 18px;
+      border-radius: 10px;
+      text-align: center;
+    }
+
+    .contact-item a {
       color: white;
       text-decoration: none;
+      font-weight: bold;
     }
 
     footer {
-      background: #041020;
-      color: #b9c1cc;
+      background: #031b38;
+      color: #cbd5e1;
       text-align: center;
       padding: 25px 7%;
       font-size: 14px;
     }
 
-    @media (max-width: 700px) {
-
-      header {
-        position: static;
+    @media (max-width: 850px) {
+      .hero h1 {
+        font-size: 39px;
       }
 
-      .header-inner {
-        flex-direction: column;
+      .cards {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .step-grid {
+        grid-template-columns: repeat(2, 1fr);
       }
 
       nav {
-        justify-content: center;
-        gap: 12px;
+        display: none;
+      }
+    }
+
+    @media (max-width: 600px) {
+      header {
+        padding: 16px 5%;
+      }
+
+      .logo {
+        font-size: 18px;
       }
 
       .hero {
-        padding: 70px 6%;
+        padding: 60px 5%;
+        min-height: 80vh;
       }
 
       .hero h1 {
-        font-size: 34px;
+        font-size: 32px;
       }
 
       .hero p {
-        font-size: 17px;
+        font-size: 16px;
       }
 
       section {
-        padding: 55px 6%;
+        padding: 55px 5%;
       }
 
-      .title h2 {
-        font-size: 28px;
+      .section-title h2 {
+        font-size: 29px;
+      }
+
+      .cards,
+      .step-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .btn {
+        width: 100%;
+        text-align: center;
       }
     }
   </style>
@@ -298,285 +345,203 @@
 <body>
 
 <header>
-  <div class="header-inner">
-
-    <div class="logo">
-      GLOBAL <span>TRADE UZ</span>
-    </div>
+  <div class="nav">
+    <div class="logo">GLOBAL TRADE UZBEKISTAN</div>
 
     <nav>
-      <a href="#bosh">Bosh sahifa</a>
-      <a href="#biz-haqimizda">Biz haqimizda</a>
-      <a href="#xizmatlar">Xizmatlar</a>
-      <a href="#davlatlar">Davlatlar</a>
-      <a href="#aloqa">Aloqa</a>
+      <a href="#about">Biz haqimizda</a>
+      <a href="#services">Xizmatlar</a>
+      <a href="#countries">Davlatlar</a>
+      <a href="#contact">Aloqa</a>
     </nav>
-
   </div>
 </header>
 
-
-<section class="hero" id="bosh">
-
+<section class="hero">
   <div class="hero-content">
-
-    <h1>
-      GLOBAL <span>TRADE</span> UZBEKISTAN
-    </h1>
+    <h1>Xalqaro imkoniyatlar sari birgalikda</h1>
 
     <p>
-      Xalqaro savdo, biznes konsalting, ishga joylashtirish,
-      ta'lim, turizm va xalqaro hamkorlik xizmatlari.
-    </p>
-
-    <div class="buttons">
-
-      <a class="button button-primary" href="#xizmatlar">
-        Xizmatlarimiz
-      </a>
-
-      <a class="button button-secondary" href="#aloqa">
-        Bog‘lanish
-      </a>
-
-    </div>
-
-  </div>
-
-</section>
-
-
-<section class="about" id="biz-haqimizda">
-
-  <div class="container">
-
-    <div class="title">
-      <h2>Biz haqimizda</h2>
-      <p>Global Trade Uzbekistan</p>
-    </div>
-
-    <p class="about-text">
       Global Trade Uzbekistan — O‘zbekiston va xalqaro hamkorlar
-      o‘rtasida savdo, biznes, ta'lim, turizm, konsalting va boshqa
-      xizmatlar bo‘yicha hamkorlikni rivojlantirishga yo‘naltirilgan
+      o‘rtasida savdo, qurilish, ishga joylashtirish, konsalting,
+      ta’lim va turizm yo‘nalishlarida hamkorlikni rivojlantiruvchi
       zamonaviy kompaniya.
     </p>
 
+    <div class="buttons">
+      <a class="btn btn-primary" href="#services">Xizmatlarimiz</a>
+      <a class="btn btn-secondary" href="#contact">Bog‘lanish</a>
+    </div>
   </div>
-
 </section>
 
-
-<section id="xizmatlar">
-
-  <div class="container">
-
-    <div class="title">
-      <h2>Bizning xizmatlarimiz</h2>
-      <p>Siz uchun asosiy xizmat yo‘nalishlarimiz</p>
-    </div>
-
-    <div class="cards">
-
-      <div class="card">
-        <div class="icon">🌍</div>
-        <h3>Xalqaro konsalting</h3>
-        <p>
-          Xalqaro biznes, hamkorlik va loyihalarni rivojlantirish
-          bo‘yicha maslahat xizmatlari.
-        </p>
-      </div>
-
-      <div class="card">
-        <div class="icon">👷</div>
-        <h3>Ishga joylashtirish</h3>
-        <p>
-          Xorijiy ish beruvchilar bilan hamkorlik va qonuniy
-          ish imkoniyatlarini izlashda tashkiliy yordam.
-        </p>
-      </div>
-
-      <div class="card">
-        <div class="icon">🎓</div>
-        <h3>Ta'lim</h3>
-        <p>
-          O‘zbekiston va xorijiy ta'lim muassasalari bilan
-          hamkorlik va ta'lim imkoniyatlari.
-        </p>
-      </div>
-
-      <div class="card">
-        <div class="icon">✈️</div>
-        <h3>Turizm</h3>
-        <p>
-          Xalqaro sayohat va turizm yo‘nalishlarini tashkil
-          etish bo‘yicha xizmatlar.
-        </p>
-      </div>
-
-      <div class="card">
-        <div class="icon">📄</div>
-        <h3>Hujjatlar bo‘yicha yordam</h3>
-        <p>
-          Viza va boshqa hujjatlar bo‘yicha axborot va
-          tashkiliy yordam.
-        </p>
-      </div>
-
-      <div class="card">
-        <div class="icon">📦</div>
-        <h3>Global Trade</h3>
-        <p>
-          Eksport-import va xalqaro savdo hamkorligini
-          rivojlantirish xizmatlari.
-        </p>
-      </div>
-
-    </div>
-
+<section id="about" class="about">
+  <div class="section-title">
+    <h2>Biz haqimizda</h2>
+    <p>Global hamkorlik va yangi imkoniyatlar</p>
   </div>
 
+  <div class="about-box">
+    <p>
+      Global Trade Uzbekistan O‘zbekistonni xalqaro biznes bozori bilan
+      bog‘lash, mahalliy va xorijiy kompaniyalar o‘rtasida hamkorlik
+      o‘rnatish hamda mijozlarga zamonaviy xizmatlarni taqdim etishga
+      yo‘naltirilgan.
+    </p>
+  </div>
 </section>
 
+<section id="services" class="services">
+  <div class="section-title">
+    <h2>Asosiy xizmatlar</h2>
+    <p>Biznes va xalqaro hamkorlik uchun kompleks xizmatlar</p>
+  </div>
 
-<section class="countries" id="davlatlar">
+  <div class="cards">
 
-  <div class="container">
-
-    <div class="title">
-      <h2>Xalqaro hamkorlik</h2>
-      <p>Hamkorlik yo‘nalishlari</p>
+    <div class="card">
+      <div class="icon">🏗️</div>
+      <h3>Qurilish</h3>
+      <p>
+        Qurilish kompaniyalari bilan hamkorlik, loyihalar va
+        mutaxassislarni xalqaro bozorga yo‘naltirish.
+      </p>
     </div>
 
-    <div class="country-list">
+    <div class="card">
+      <div class="icon">💼</div>
+      <h3>Ishga joylashtirish</h3>
+      <p>
+        Xorijiy ish beruvchilar bilan hamkorlik qilish va
+        munosib ish imkoniyatlarini izlashda ko‘maklashish.
+      </p>
+    </div>
 
-      <div class="country">🇺🇿 O‘zbekiston</div>
-      <div class="country">🇩🇪 Germaniya</div>
-      <div class="country">🇨🇳 Xitoy</div>
-      <div class="country">🇶🇦 Qatar</div>
-      <div class="country">🇦🇪 BAA</div>
-      <div class="country">🇹🇷 Turkiya</div>
-      <div class="country">🇰🇷 Koreya</div>
-      <div class="country">🇱🇹 Litva</div>
-      <div class="country">🇨🇿 Chexiya</div>
-      <div class="country">🇺🇸 AQSH</div>
-      <div class="country">🇬🇧 Angliya</div>
-      <div class="country">🇸🇰 Slovakiya</div>
+    <div class="card">
+      <div class="icon">🌍</div>
+      <h3>Xalqaro savdo</h3>
+      <p>
+        O‘zbekiston va xorijiy davlatlar o‘rtasidagi savdo
+        va biznes aloqalarini rivojlantirish.
+      </p>
+    </div>
 
+    <div class="card">
+      <div class="icon">📊</div>
+      <h3>Konsalting</h3>
+      <p>
+        Biznesni rivojlantirish, xalqaro hamkorlik va bozorga
+        chiqish bo‘yicha maslahat xizmatlari.
+      </p>
+    </div>
+
+    <div class="card">
+      <div class="icon">🎓</div>
+      <h3>Ta’lim</h3>
+      <p>
+        Ta’lim loyihalari, xalqaro hamkorlik va rivojlanish
+        imkoniyatlarini qo‘llab-quvvatlash.
+      </p>
+    </div>
+
+    <div class="card">
+      <div class="icon">✈️</div>
+      <h3>Turizm</h3>
+      <p>
+        Ichki va xalqaro turizm yo‘nalishlarida hamkorlik
+        va turistik xizmatlarni rivojlantirish.
+      </p>
     </div>
 
   </div>
-
 </section>
 
+<section id="countries" class="countries">
+  <div class="section-title">
+    <h2>Xalqaro hamkorlik</h2>
+    <p>Hamkorlikni quyidagi davlatlar va boshqa xalqaro bozorlar bilan rivojlantirish</p>
+  </div>
 
-<section class="why">
+  <div class="country-list">
+    <div class="country">🇺🇿 O‘zbekiston</div>
+    <div class="country">🇩🇪 Germaniya</div>
+    <div class="country">🇨🇳 Xitoy</div>
+    <div class="country">🇶🇦 Qatar</div>
+    <div class="country">🇦🇪 BAA</div>
+    <div class="country">🇹🇷 Turkiya</div>
+    <div class="country">🇰🇷 Koreya</div>
+    <div class="country">🇱🇹 Litva</div>
+    <div class="country">🇨🇿 Chexiya</div>
+    <div class="country">🇺🇸 AQSH</div>
+    <div class="country">🇬🇧 Angliya</div>
+    <div class="country">🇸🇰 Slovakiya</div>
+  </div>
+</section>
 
-  <div class="container">
+<section class="steps">
+  <div class="section-title">
+    <h2>Qanday ishlaymiz?</h2>
+    <p>Hamkorlik jarayoni oddiy va tushunarli</p>
+  </div>
 
-    <div class="title">
-      <h2>Nima uchun Global Trade UZ?</h2>
-      <p>Hamkorlarimiz uchun asosiy qadriyatlar</p>
+  <div class="step-grid">
+
+    <div class="step">
+      <div class="number">1</div>
+      <h3>Murojaat</h3>
+      <p>Siz biz bilan bog‘lanasiz.</p>
     </div>
 
-    <div class="why-list">
+    <div class="step">
+      <div class="number">2</div>
+      <h3>Maslahat</h3>
+      <p>Ehtiyojingizni aniqlaymiz.</p>
+    </div>
 
-      <div class="why-item">
-        <h3>🤝 Hamkorlik</h3>
-        <p>
-          Mahalliy va xalqaro hamkorlar bilan uzoq muddatli
-          aloqalarni rivojlantirish.
-        </p>
-      </div>
+    <div class="step">
+      <div class="number">3</div>
+      <h3>Hamkorlik</h3>
+      <p>Mos imkoniyatlarni izlaymiz.</p>
+    </div>
 
-      <div class="why-item">
-        <h3>🌐 Xalqaro yo‘nalish</h3>
-        <p>
-          Turli davlatlar va xalqaro biznes imkoniyatlarini
-          birlashtirish.
-        </p>
-      </div>
-
-      <div class="why-item">
-        <h3>💼 Biznes yondashuv</h3>
-        <p>
-          Mijoz va hamkorlar ehtiyojiga mos xizmatlarni
-          tashkil etish.
-        </p>
-      </div>
-
-      <div class="why-item">
-        <h3>📈 Rivojlanish</h3>
-        <p>
-          Yangi loyihalar va xalqaro bozor imkoniyatlarini
-          izlash.
-        </p>
-      </div>
-
+    <div class="step">
+      <div class="number">4</div>
+      <h3>Natija</h3>
+      <p>Kelishilgan yo‘nalishda ishni davom ettiramiz.</p>
     </div>
 
   </div>
-
 </section>
 
+<section id="contact" class="contact">
+  <div class="section-title">
+    <h2>Biz bilan bog‘laning</h2>
+    <p>Hamkorlik qilish yoki xizmatlarimiz haqida ma’lumot olish uchun murojaat qiling.</p>
+  </div>
 
-<section class="contact" id="aloqa">
+  <div class="contact-box">
 
-  <div class="container">
-
-    <div class="title">
-      <h2>Biz bilan bog‘laning</h2>
-      <p>Hamkorlik uchun murojaat qiling</p>
+    <div class="contact-item">
+      📞 Telefon:
+      <a href="tel:+998000000000">+998 XX XXX XX XX</a>
     </div>
 
-    <div class="contact-info">
+    <div class="contact-item">
+      📧 Email:
+      <a href="mailto:info@globaltradeuzbekistan.uz">
+        info@globaltradeuzbekistan.uz
+      </a>
+    </div>
 
-      <div class="contact-box">
-        <strong>🏢 Kompaniya</strong>
-        <p>Global Trade Uzbekistan</p>
-      </div>
-
-      <div class="contact-box">
-        <strong>📍 Manzil</strong>
-        <p>Surxondaryo viloyati, Uzun tumani</p>
-      </div>
-
-      <div class="contact-box">
-        <strong>📞 Telefon</strong>
-        <p>
-          <a href="tel:+998XXXXXXXXX">
-            +998 XX XXX XX XX
-          </a>
-        </p>
-      </div>
-
-      <div class="contact-box">
-        <strong>📧 Elektron pochta</strong>
-        <p>
-          <a href="mailto:info@example.com">
-            info@example.com
-          </a>
-        </p>
-      </div>
-
+    <div class="contact-item">
+      📍 Manzil: O‘zbekiston
     </div>
 
   </div>
-
 </section>
-
 
 <footer>
-
-  <p>
-    © 2026 Global Trade Uzbekistan.
-    Barcha huquqlar himoyalangan.
-  </p>
-
-  <p style="margin-top:7px;">
-    Xalqaro savdo • Konsalting • Ta'lim • Turizm • Biznes
-  </p>
-
+  © 2026 Global Trade Uzbekistan. Barcha huquqlar himoyalangan.
 </footer>
 
 </body>
