@@ -1,351 +1,144 @@
-<!-- ================= ONLINE TRADE PLATFORM ================= -->
-
-<section id="online-trade" style="background:#f4f7fb;padding:80px 20px;">
-
-  <div style="max-width:1200px;margin:auto;">
-
-    <div style="text-align:center;margin-bottom:40px;">
-      <div style="display:inline-block;background:#061a35;color:#e7c45a;
-                  padding:8px 18px;border-radius:30px;font-weight:bold;">
-        GLOBAL TRADE MARKET
-      </div>
-
-      <h2 style="font-size:40px;color:#092752;margin:15px 0 10px;">
-        Online Savdo Platformasi
-      </h2>
-
-      <p style="color:#657187;">
-        Mahsulotlar va xizmatlarni bir joyda toping
-      </p>
-    </div>
-
-
-    <!-- QIDIRUV -->
-
-    <div style="background:white;padding:20px;border-radius:16px;
-                box-shadow:0 8px 25px rgba(0,0,0,.08);
-                margin-bottom:30px;">
-
-      <input
-        id="searchProduct"
-        type="text"
-        placeholder="🔎 Mahsulot yoki xizmat qidiring..."
-        onkeyup="searchProducts()"
-        style="width:100%;padding:16px;border:1px solid #ddd;
-               border-radius:10px;font-size:16px;outline:none;">
-    </div>
-
-
-    <!-- KATEGORIYALAR -->
-
-    <div style="display:flex;flex-wrap:wrap;gap:10px;
-                justify-content:center;margin-bottom:35px;">
-
-      <button onclick="filterProducts('all')" class="category-btn">
-        Barchasi
-      </button>
-
-      <button onclick="filterProducts('qurilish')" class="category-btn">
-        🏗️ Qurilish
-      </button>
-
-      <button onclick="filterProducts('texnika')" class="category-btn">
-        💻 Texnika
-      </button>
-
-      <button onclick="filterProducts('xizmat')" class="category-btn">
-        💼 Xizmatlar
-      </button>
-
-      <button onclick="filterProducts('uy')" class="category-btn">
-        🏠 Uy-ro‘zg‘or
-      </button>
-
-    </div>
-
-
-    <!-- MAHSULOTLAR -->
-
-    <div id="products"
-         style="display:grid;grid-template-columns:
-         repeat(auto-fit,minmax(240px,1fr));gap:22px;">
-
-
-      <!-- 1 -->
-
-      <div class="product-card" data-category="qurilish"
-           data-name="Qurilish materiallari">
-
-        <div class="product-icon">🏗️</div>
-
-        <h3>Qurilish materiallari</h3>
-
-        <p>
-          Qurilish uchun turli materiallar va mahsulotlar.
-        </p>
-
-        <strong>Kelishilgan narx</strong>
-
-        <button onclick="addToCart('Qurilish materiallari')">
-          🛒 Savatga qo‘shish
-        </button>
-
-      </div>
-
-
-      <!-- 2 -->
-
-      <div class="product-card" data-category="texnika"
-           data-name="Elektronika">
-
-        <div class="product-icon">💻</div>
-
-        <h3>Elektronika</h3>
-
-        <p>
-          Kompyuter, telefon va boshqa texnologik mahsulotlar.
-        </p>
-
-        <strong>Kelishilgan narx</strong>
-
-        <button onclick="addToCart('Elektronika')">
-          🛒 Savatga qo‘shish
-        </button>
-
-      </div>
-
-
-      <!-- 3 -->
-
-      <div class="product-card" data-category="xizmat"
-           data-name="Biznes konsalting">
-
-        <div class="product-icon">💼</div>
-
-        <h3>Biznes konsalting</h3>
-
-        <p>
-          Biznes loyihalar va rivojlanish strategiyasi.
-        </p>
-
-        <strong>Xizmat</strong>
-
-        <button onclick="addToCart('Biznes konsalting')">
-          📋 Murojaat qilish
-        </button>
-
-      </div>
-
-
-      <!-- 4 -->
-
-      <div class="product-card" data-category="uy"
-           data-name="Uy-ro‘zg‘or mahsulotlari">
-
-        <div class="product-icon">🏠</div>
-
-        <h3>Uy-ro‘zg‘or mahsulotlari</h3>
-
-        <p>
-          Kundalik foydalanish uchun mahsulotlar.
-        </p>
-
-        <strong>Kelishilgan narx</strong>
-
-        <button onclick="addToCart('Uy-ro‘zg‘or mahsulotlari')">
-          🛒 Savatga qo‘shish
-        </button>
-
-      </div>
-
-
-      <!-- 5 -->
-
-      <div class="product-card" data-category="xizmat"
-           data-name="Marketing">
-
-        <div class="product-icon">📈</div>
-
-        <h3>Marketing</h3>
-
-        <p>
-          Raqamli marketing va biznesni targ‘ib qilish xizmatlari.
-        </p>
-
-        <strong>Xizmat</strong>
-
-        <button onclick="addToCart('Marketing')">
-          📋 Murojaat qilish
-        </button>
-
-      </div>
-
-
-      <!-- 6 -->
-
-      <div class="product-card" data-category="qurilish"
-           data-name="Qurilish xizmatlari">
-
-        <div class="product-icon">👷</div>
-
-        <h3>Qurilish xizmatlari</h3>
-
-        <p>
-          Qurilish va loyiha ishlari bo‘yicha xizmatlar.
-        </p>
-
-        <strong>Xizmat</strong>
-
-        <button onclick="addToCart('Qurilish xizmatlari')">
-          📋 Murojaat qilish
-        </button>
-
-      </div>
-
-    </div>
-
-
-    <!-- SAVAT -->
-
-    <div style="margin-top:40px;background:#061a35;color:white;
-                padding:30px;border-radius:18px;text-align:center;">
-
-      <h2>🛒 Savat</h2>
-
-      <p id="cartCount">
-        Savatda hozircha mahsulot yo‘q.
-      </p>
-
-      <button onclick="showCart()"
-              style="margin-top:15px;padding:13px 25px;
-                     border:0;border-radius:8px;
-                     background:#e7c45a;color:#061a35;
-                     font-weight:bold;cursor:pointer;">
-        Savatni ko‘rish
-      </button>
-
-    </div>
-
-  </div>
-</section>
-
-
-<style>
-
-.category-btn{
-  padding:11px 18px;
-  border:0;
-  border-radius:25px;
-  background:#061a35;
-  color:white;
-  cursor:pointer;
-  font-weight:bold;
-}
-
-.category-btn:hover{
-  background:#0b4da2;
-}
-
-.product-card{
-  background:white;
-  padding:25px;
-  border-radius:18px;
-  box-shadow:0 8px 25px rgba(0,0,0,.07);
-  transition:.3s;
-  border-top:4px solid #0b4da2;
-}
-
-.product-card:hover{
-  transform:translateY(-5px);
-}
-
-.product-icon{
-  font-size:50px;
-  margin-bottom:12px;
-}
-
-.product-card h3{
-  color:#092752;
-  margin-bottom:10px;
-}
-
-.product-card p{
-  color:#657187;
-  min-height:55px;
-}
-
-.product-card strong{
-  display:block;
-  margin:15px 0;
-  color:#0b4da2;
-}
-
-.product-card button{
-  width:100%;
-  padding:12px;
-  border:0;
-  border-radius:8px;
-  background:#061a35;
-  color:white;
-  font-weight:bold;
-  cursor:pointer;
-}
-
-.product-card button:hover{
-  background:#0b4da2;
-}
-
-</style>
-
-
 <script>
 
 let cart = [];
 
+/* MAHSULOTNI SAVATGA QO'SHISH */
 
-function addToCart(product){
+function addToCart(product) {
 
   cart.push(product);
 
-  document.getElementById("cartCount").innerText =
-    "Savatda " + cart.length + " ta mahsulot/xizmat mavjud.";
+  updateCart();
 
-  alert(product + " savatga qo‘shildi!");
+  alert("✅ " + product + " savatga qo‘shildi!");
 }
 
 
-function showCart(){
+/* SAVAT SONINI YANGILASH */
 
-  if(cart.length === 0){
+function updateCart() {
 
-    alert("Savat hozircha bo‘sh.");
+  const cartCount =
+    document.getElementById("cartCount");
+
+  if (cart.length === 0) {
+
+    cartCount.innerText =
+      "Savat hozircha bo‘sh.";
+
+  } else {
+
+    cartCount.innerText =
+      "🛒 Savatda " +
+      cart.length +
+      " ta mahsulot/xizmat mavjud.";
+
+  }
+}
+
+
+/* SAVATNI KO'RISH */
+
+function showCart() {
+
+  if (cart.length === 0) {
+
+    alert("🛒 Savat hozircha bo‘sh.");
+
+    return;
+  }
+
+  let list = "";
+
+  cart.forEach(function(item, index) {
+
+    list +=
+      (index + 1) +
+      ". " +
+      item +
+      "\n";
+
+  });
+
+  alert(
+    "🛒 SAVAT\n\n" +
+    list +
+    "\nBuyurtma berish uchun OK tugmasini bosing."
+  );
+
+  openOrderForm();
+}
+
+
+/* BUYURTMA FORMASINI OCHISH */
+
+function openOrderForm() {
+
+  const form =
+    document.getElementById("orderForm");
+
+  if (form) {
+
+    form.style.display = "block";
+
+    form.scrollIntoView({
+      behavior: "smooth"
+    });
+
+  }
+
+}
+
+
+/* BUYURTMA YUBORISH */
+
+function submitOrder(event) {
+
+  event.preventDefault();
+
+  const name =
+    document.getElementById("customerName").value;
+
+  const phone =
+    document.getElementById("customerPhone").value;
+
+  const city =
+    document.getElementById("customerCity").value;
+
+  if (!name || !phone || !city) {
+
+    alert("⚠️ Iltimos, barcha maydonlarni to‘ldiring.");
 
     return;
   }
 
   alert(
-    "Savatdagi mahsulotlar:\n\n" +
-    cart.map((item,index)=>
-      (index+1) + ". " + item
-    ).join("\n")
+    "✅ Buyurtma ma’lumotlari qabul qilindi!\n\n" +
+    "Mijoz: " + name + "\n" +
+    "Telefon: " + phone + "\n" +
+    "Manzil: " + city
   );
 
 }
 
 
-function filterProducts(category){
+/* KATEGORIYA FILTRI */
 
-  let products =
+function filterProducts(category) {
+
+  const products =
     document.querySelectorAll(".product-card");
 
-  products.forEach(function(product){
+  products.forEach(function(product) {
 
-    if(category === "all" ||
-       product.dataset.category === category){
+    if (
+      category === "all" ||
+      product.dataset.category === category
+    ) {
 
       product.style.display = "block";
 
-    }else{
+    } else {
 
       product.style.display = "none";
 
@@ -356,25 +149,29 @@ function filterProducts(category){
 }
 
 
-function searchProducts(){
+/* MAHSULOT QIDIRISH */
 
-  let search =
-    document.getElementById("searchProduct")
-    .value.toLowerCase();
+function searchProducts() {
 
-  let products =
+  const search =
+    document
+      .getElementById("searchProduct")
+      .value
+      .toLowerCase();
+
+  const products =
     document.querySelectorAll(".product-card");
 
-  products.forEach(function(product){
+  products.forEach(function(product) {
 
-    let name =
+    const name =
       product.dataset.name.toLowerCase();
 
-    if(name.includes(search)){
+    if (name.includes(search)) {
 
       product.style.display = "block";
 
-    }else{
+    } else {
 
       product.style.display = "none";
 
@@ -385,5 +182,3 @@ function searchProducts(){
 }
 
 </script>
-
-<!-- ================= END ONLINE TRADE ================= -->
