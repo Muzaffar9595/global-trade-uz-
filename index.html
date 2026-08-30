@@ -11,167 +11,262 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    scroll-behavior: smooth;
 }
 
 body {
     font-family: Arial, sans-serif;
     background: #f4f7fb;
     color: #172033;
-    line-height: 1.6;
 }
 
+/* HEADER */
 header {
-    background: linear-gradient(135deg, #073b8c, #087f5b);
+    background: #071d36;
     color: white;
-    padding: 20px;
+    padding: 18px 6%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     position: sticky;
     top: 0;
     z-index: 1000;
 }
 
-.nav {
-    max-width: 1100px;
-    margin: auto;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    gap: 20px;
-}
-
 .logo {
-    font-size: 24px;
+    font-size: 21px;
     font-weight: bold;
 }
 
 nav a {
     color: white;
     text-decoration: none;
-    margin-left: 18px;
-    font-weight: bold;
+    margin-left: 16px;
+    font-size: 14px;
 }
 
+nav a:hover {
+    color: #ffd166;
+}
+
+/* HERO */
 .hero {
-    min-height: 500px;
+    min-height: 560px;
+    background: linear-gradient(135deg, #071d36, #1769aa);
+    color: white;
     display: flex;
     align-items: center;
-    justify-content: center;
-    text-align: center;
-    padding: 60px 20px;
-    background: linear-gradient(135deg, #e8f1ff, #e9fff5);
+    padding: 70px 6%;
 }
 
 .hero-content {
-    max-width: 850px;
+    max-width: 750px;
 }
 
 .hero h1 {
     font-size: 48px;
-    color: #073b8c;
     margin-bottom: 20px;
 }
 
 .hero p {
     font-size: 20px;
+    line-height: 1.7;
     margin-bottom: 30px;
 }
 
 .btn {
     display: inline-block;
-    background: #087f5b;
-    color: white;
-    padding: 14px 28px;
-    border-radius: 8px;
+    background: #ffd166;
+    color: #172033;
     text-decoration: none;
+    padding: 14px 23px;
+    border-radius: 8px;
     font-weight: bold;
     margin: 5px;
 }
 
 .btn:hover {
-    background: #056b4d;
+    background: white;
 }
 
+/* SECTIONS */
 section {
-    max-width: 1100px;
-    margin: auto;
-    padding: 70px 20px;
+    padding: 70px 6%;
 }
 
-.section-title {
+.title {
     text-align: center;
+    color: #071d36;
     font-size: 34px;
-    color: #073b8c;
     margin-bottom: 40px;
 }
 
+/* PRODUCTS */
+.products {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+    gap: 25px;
+}
+
+.product {
+    background: white;
+    border-radius: 15px;
+    padding: 25px;
+    text-align: center;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+    transition: 0.3s;
+}
+
+.product:hover {
+    transform: translateY(-5px);
+}
+
+.product-image {
+    height: 150px;
+    background: #eaf1f8;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 65px;
+    margin-bottom: 18px;
+}
+
+.product h3 {
+    color: #1769aa;
+    margin-bottom: 10px;
+}
+
+.price {
+    font-size: 20px;
+    font-weight: bold;
+    margin: 15px 0;
+}
+
+.order-btn {
+    display: inline-block;
+    background: #1769aa;
+    color: white;
+    text-decoration: none;
+    padding: 11px 20px;
+    border-radius: 7px;
+}
+
+.order-btn:hover {
+    background: #071d36;
+}
+
+/* CARDS */
 .cards {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
     gap: 25px;
 }
 
 .card {
     background: white;
     padding: 30px;
-    border-radius: 14px;
-    box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+    border-radius: 15px;
     text-align: center;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+}
+
+.icon {
+    font-size: 48px;
+    margin-bottom: 10px;
 }
 
 .card h3 {
-    color: #073b8c;
-    margin-bottom: 12px;
-}
-
-.card-icon {
-    font-size: 45px;
-    margin-bottom: 15px;
-}
-
-.products {
-    background: white;
-}
-
-.contact {
-    background: #eef4ff;
-}
-
-.contact-box {
-    max-width: 700px;
-    margin: auto;
-    background: white;
-    padding: 35px;
-    border-radius: 14px;
-    box-shadow: 0 5px 20px rgba(0,0,0,0.08);
-}
-
-.contact-box p {
+    color: #1769aa;
     margin: 12px 0;
+}
+
+.card p {
+    color: #555;
+    line-height: 1.6;
+}
+
+/* ABOUT */
+.about {
+    background: white;
+}
+
+.about-text {
+    max-width: 850px;
+    margin: auto;
+    text-align: center;
+    line-height: 1.8;
     font-size: 18px;
 }
 
-footer {
-    background: #172033;
+/* CONTACT */
+.contact {
+    background: #071d36;
     color: white;
     text-align: center;
-    padding: 30px 20px;
 }
 
-@media (max-width: 800px) {
-    .nav {
+.contact .title {
+    color: white;
+}
+
+.contact-box {
+    max-width: 650px;
+    margin: auto;
+    font-size: 18px;
+    line-height: 2;
+}
+
+.contact-btn {
+    display: inline-block;
+    margin-top: 25px;
+    padding: 14px 25px;
+    background: #ffd166;
+    color: #172033;
+    text-decoration: none;
+    border-radius: 8px;
+    font-weight: bold;
+}
+
+/* FOOTER */
+footer {
+    background: #041225;
+    color: white;
+    text-align: center;
+    padding: 25px;
+}
+
+/* MOBILE */
+@media (max-width: 750px) {
+
+    header {
         flex-direction: column;
+        gap: 15px;
+    }
+
+    nav {
+        text-align: center;
     }
 
     nav a {
-        margin: 5px;
         display: inline-block;
+        margin: 5px;
+    }
+
+    .hero {
+        min-height: 500px;
     }
 
     .hero h1 {
         font-size: 34px;
     }
 
-    .cards {
-        grid-template-columns: 1fr;
+    .hero p {
+        font-size: 17px;
+    }
+
+    .title {
+        font-size: 29px;
     }
 }
 </style>
@@ -179,160 +274,443 @@ footer {
 
 <body>
 
+<!-- HEADER -->
 <header>
-    <div class="nav">
-        <div class="logo">MUZAFFAR GLOBAL TRADE UZ</div>
 
-        <nav>
-            <a href="#home">Bosh sahifa</a>
-            <a href="#shop">Savdo</a>
-            <a href="#services">Xizmatlar</a>
-            <a href="#business">Biznes</a>
-            <a href="#contact">Aloqa</a>
-        </nav>
+    <div class="logo">
+        MUZAFFAR GLOBAL TRADE UZ
     </div>
+
+    <nav>
+        <a href="#home">Bosh sahifa</a>
+        <a href="#shop">Savdo</a>
+        <a href="#services">Xizmatlar</a>
+        <a href="#business">Biznes</a>
+        <a href="#investment">Investitsiya</a>
+        <a href="#contact">Aloqa</a>
+    </nav>
+
 </header>
 
+
+<!-- HERO -->
 <section class="hero" id="home">
+
     <div class="hero-content">
-        <h1>MUZAFFAR GLOBAL TRADE UZ</h1>
+
+        <h1>
+            MUZAFFAR GLOBAL TRADE UZ
+        </h1>
 
         <p>
-            O‘zbekiston va xalqaro bozorlar uchun
-            zamonaviy savdo, xizmatlar va biznes imkoniyatlari.
+            Zamonaviy onlayn savdo, biznes loyihalar,
+            xizmatlar va investitsiya imkoniyatlari uchun
+            professional platforma.
         </p>
 
-        <a class="btn" href="#shop">Online savdo</a>
-        <a class="btn" href="#contact">Biz bilan bog‘lanish</a>
+        <a href="#shop" class="btn">
+            🛒 Onlayn savdo
+        </a>
+
+        <a href="#contact" class="btn">
+            📞 Biz bilan bog‘lanish
+        </a>
+
     </div>
+
 </section>
 
+
+<!-- SHOP -->
 <section id="shop">
-    <h2 class="section-title">Online Savdo</h2>
 
-    <div class="cards">
+    <h2 class="title">
+        🛍️ Onlayn Savdo
+    </h2>
 
-        <div class="card">
-            <div class="card-icon">🛒</div>
-            <h3>Mahsulotlar</h3>
+    <div class="products">
+
+        <div class="product">
+
+            <div class="product-image">
+                📱
+            </div>
+
+            <h3>
+                Elektronika
+            </h3>
+
             <p>
-                Sifatli mahsulotlarni qulay va zamonaviy
-                usulda taklif qilamiz.
+                Zamonaviy elektron mahsulotlar.
             </p>
-            <a class="btn" href="#contact">Buyurtma berish</a>
+
+            <div class="price">
+                Narx: kelishiladi
+            </div>
+
+            <a href="#contact" class="order-btn">
+                Buyurtma berish
+            </a>
+
         </div>
 
-        <div class="card">
-            <div class="card-icon">🌍</div>
-            <h3>Xalqaro savdo</h3>
+
+        <div class="product">
+
+            <div class="product-image">
+                👕
+            </div>
+
+            <h3>
+                Kiyim-kechak
+            </h3>
+
             <p>
-                Mahalliy va xalqaro hamkorlar bilan
-                savdo imkoniyatlarini rivojlantiramiz.
+                Sifatli va zamonaviy mahsulotlar.
             </p>
+
+            <div class="price">
+                Narx: kelishiladi
+            </div>
+
+            <a href="#contact" class="order-btn">
+                Buyurtma berish
+            </a>
+
         </div>
 
-        <div class="card">
-            <div class="card-icon">📦</div>
-            <h3>Buyurtmalar</h3>
+
+        <div class="product">
+
+            <div class="product-image">
+                🏠
+            </div>
+
+            <h3>
+                Uy mahsulotlari
+            </h3>
+
             <p>
-                Mijozlar uchun buyurtma va savdo jarayonlarini
-                qulay tashkil qilish.
+                Uy uchun kerakli mahsulotlar.
             </p>
+
+            <div class="price">
+                Narx: kelishiladi
+            </div>
+
+            <a href="#contact" class="order-btn">
+                Buyurtma berish
+            </a>
+
+        </div>
+
+
+        <div class="product">
+
+            <div class="product-image">
+                🎁
+            </div>
+
+            <h3>
+                Sovg‘alar
+            </h3>
+
+            <p>
+                Maxsus sovg‘a va aksessuarlar.
+            </p>
+
+            <div class="price">
+                Narx: kelishiladi
+            </div>
+
+            <a href="#contact" class="order-btn">
+                Buyurtma berish
+            </a>
+
         </div>
 
     </div>
+
 </section>
 
-<section id="services">
-    <h2 class="section-title">Xizmatlarimiz</h2>
+
+<!-- SERVICES -->
+<section id="services" class="about">
+
+    <h2 class="title">
+        💼 Bizning Xizmatlar
+    </h2>
 
     <div class="cards">
 
         <div class="card">
-            <div class="card-icon">🤝</div>
-            <h3>Biznes hamkorlik</h3>
+
+            <div class="icon">
+                📦
+            </div>
+
+            <h3>
+                Onlayn savdo
+            </h3>
+
             <p>
-                Yangi hamkorlar va biznes imkoniyatlarini
-                izlashda yordam beramiz.
+                Mahsulotlarni internet orqali
+                xaridorlarga taklif qilish.
             </p>
+
         </div>
 
-        <div class="card">
-            <div class="card-icon">🚚</div>
-            <h3>Logistika</h3>
-            <p>
-                Savdo va yetkazib berish jarayonlarini
-                rivojlantirish imkoniyatlari.
-            </p>
-        </div>
 
         <div class="card">
-            <div class="card-icon">📈</div>
-            <h3>Biznes rivoji</h3>
+
+            <div class="icon">
+                📢
+            </div>
+
+            <h3>
+                Marketing
+            </h3>
+
             <p>
-                Yangi loyihalar va biznes yo‘nalishlarini
+                Biznes va mahsulotlarni
+                internet orqali targ‘ib qilish.
+            </p>
+
+        </div>
+
+
+        <div class="card">
+
+            <div class="icon">
+                🤝
+            </div>
+
+            <h3>
+                Hamkorlik
+            </h3>
+
+            <p>
+                Mahalliy va xalqaro biznes
+                hamkorlik imkoniyatlari.
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- BUSINESS -->
+<section id="business">
+
+    <h2 class="title">
+        🚀 Biznes Loyihalar
+    </h2>
+
+    <div class="cards">
+
+        <div class="card">
+
+            <div class="icon">
+                💡
+            </div>
+
+            <h3>
+                Startap
+            </h3>
+
+            <p>
+                Yangi biznes g‘oyalarini
                 rivojlantirish.
             </p>
+
+        </div>
+
+
+        <div class="card">
+
+            <div class="icon">
+                🌐
+            </div>
+
+            <h3>
+                Global biznes
+            </h3>
+
+            <p>
+                Xalqaro bozorlarga chiqish
+                imkoniyatlarini rivojlantirish.
+            </p>
+
+        </div>
+
+
+        <div class="card">
+
+            <div class="icon">
+                📈
+            </div>
+
+            <h3>
+                Rivojlanish
+            </h3>
+
+            <p>
+                Biznesni kengaytirish va
+                yangi imkoniyatlar yaratish.
+            </p>
+
         </div>
 
     </div>
+
 </section>
 
-<section id="business" class="products">
-    <h2 class="section-title">Biznes loyihalar va investitsiya</h2>
+
+<!-- INVESTMENT -->
+<section id="investment" class="about">
+
+    <h2 class="title">
+        💰 Investitsiya
+    </h2>
 
     <div class="cards">
 
         <div class="card">
-            <div class="card-icon">💼</div>
-            <h3>Biznes loyihalar</h3>
+
+            <div class="icon">
+                💵
+            </div>
+
+            <h3>
+                Investitsiya loyihalari
+            </h3>
+
             <p>
-                Yangi biznes g‘oyalarini ishlab chiqish
-                va rivojlantirish.
+                Istiqbolli biznes loyihalarini
+                rivojlantirish imkoniyatlari.
             </p>
+
         </div>
 
-        <div class="card">
-            <div class="card-icon">💰</div>
-            <h3>Investitsiya</h3>
-            <p>
-                Istiqbolli loyihalar va investitsiya
-                imkoniyatlari.
-            </p>
-        </div>
 
         <div class="card">
-            <div class="card-icon">🚀</div>
-            <h3>Rivojlanish</h3>
+
+            <div class="icon">
+                📊
+            </div>
+
+            <h3>
+                Biznes tahlil
+            </h3>
+
             <p>
-                Zamonaviy texnologiyalar orqali
-                biznesni yangi bosqichga olib chiqish.
+                Bozor va biznes imkoniyatlarini
+                o‘rganish.
             </p>
+
+        </div>
+
+
+        <div class="card">
+
+            <div class="icon">
+                🌱
+            </div>
+
+            <h3>
+                Barqaror rivojlanish
+            </h3>
+
+            <p>
+                Uzoq muddatli biznes rivojiga
+                e’tibor qaratish.
+            </p>
+
         </div>
 
     </div>
+
 </section>
 
-<section id="contact" class="contact">
-    <h2 class="section-title">Aloqa</h2>
 
-    <div class="contact-box">
-        <p><strong>🏢 Kompaniya:</strong> MUZAFFAR GLOBAL TRADE UZ</p>
-        <p><strong>🌍 Hudud:</strong> O‘zbekiston</p>
-        <p><strong>📞 Telefon:</strong> Telefon raqamingizni shu yerga yozing</p>
-        <p><strong>📧 Email:</strong> Email manzilingizni shu yerga yozing</p>
+<!-- ABOUT -->
+<section class="about">
+
+    <h2 class="title">
+        Biz haqimizda
+    </h2>
+
+    <div class="about-text">
+
+        <p>
+            <strong>MUZAFFAR GLOBAL TRADE UZ</strong>
+            — onlayn savdo, biznes, xizmatlar va
+            yangi loyihalarni rivojlantirishga
+            yo‘naltirilgan zamonaviy platforma.
+        </p>
 
         <br>
 
-        <a class="btn" href="mailto:example@gmail.com">
-            Email yuborish
-        </a>
+        <p>
+            Bizning maqsadimiz — xaridorlar,
+            tadbirkorlar va hamkorlar uchun
+            qulay raqamli biznes muhitini yaratish.
+        </p>
+
     </div>
+
 </section>
 
+
+<!-- CONTACT -->
+<section id="contact" class="contact">
+
+    <h2 class="title">
+        📞 Aloqa
+    </h2>
+
+    <div class="contact-box">
+
+        <p>
+            Biznes, mahsulot yoki hamkorlik
+            bo‘yicha biz bilan bog‘laning.
+        </p>
+
+        <p>
+            📱 Telefon: +998 XX XXX XX XX
+        </p>
+
+        <p>
+            📧 Email: info@muzaffarglobaltrade.uz
+        </p>
+
+        <p>
+            🌍 MUZAFFAR GLOBAL TRADE UZ
+        </p>
+
+        <a href="mailto:info@muzaffarglobaltrade.uz"
+           class="contact-btn">
+            ✉️ Email orqali bog‘lanish
+        </a>
+
+    </div>
+
+</section>
+
+
+<!-- FOOTER -->
 <footer>
-    <p>© 2026 MUZAFFAR GLOBAL TRADE UZ</p>
-    <p>Barcha huquqlar himoyalangan.</p>
+
+    <p>
+        © 2026 MUZAFFAR GLOBAL TRADE UZ
+    </p>
+
+    <p>
+        Barcha huquqlar himoyalangan.
+    </p>
+
 </footer>
 
 </body>
