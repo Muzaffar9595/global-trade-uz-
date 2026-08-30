@@ -15,16 +15,15 @@
 }
 
 body{
-    font-family:Arial, sans-serif;
+    font-family:Arial,Helvetica,sans-serif;
     background:#f4f7fb;
     color:#172033;
     line-height:1.6;
 }
 
 header{
-    background:linear-gradient(135deg,#071952,#088395);
+    background:linear-gradient(135deg,#071a3d,#0d47a1);
     color:white;
-    padding:18px 6%;
     position:sticky;
     top:0;
     z-index:1000;
@@ -32,6 +31,9 @@ header{
 }
 
 .navbar{
+    max-width:1200px;
+    margin:auto;
+    padding:18px 20px;
     display:flex;
     justify-content:space-between;
     align-items:center;
@@ -41,32 +43,35 @@ header{
 .logo{
     font-size:22px;
     font-weight:bold;
+    white-space:nowrap;
 }
 
 nav{
     display:flex;
     gap:20px;
     flex-wrap:wrap;
+    justify-content:center;
 }
 
 nav a{
     color:white;
     text-decoration:none;
     font-weight:bold;
+    transition:.3s;
 }
 
 nav a:hover{
-    opacity:.75;
+    color:#ffd54f;
 }
 
 .hero{
-    min-height:520px;
+    min-height:570px;
     display:flex;
     align-items:center;
     justify-content:center;
     text-align:center;
-    padding:60px 20px;
-    background:linear-gradient(135deg,#071952,#088395,#05bfdb);
+    padding:70px 20px;
+    background:linear-gradient(135deg,#0d47a1,#1976d2,#42a5f5);
     color:white;
 }
 
@@ -75,7 +80,7 @@ nav a:hover{
 }
 
 .hero h1{
-    font-size:46px;
+    font-size:52px;
     margin-bottom:20px;
 }
 
@@ -89,7 +94,7 @@ nav a:hover{
     padding:14px 25px;
     border:none;
     border-radius:10px;
-    background:#ffb703;
+    background:#ffd54f;
     color:#172033;
     text-decoration:none;
     font-weight:bold;
@@ -98,40 +103,43 @@ nav a:hover{
 }
 
 .btn:hover{
-    transform:translateY(-2px);
-    opacity:.9;
+    transform:translateY(-3px);
+    box-shadow:0 8px 20px rgba(0,0,0,.2);
 }
 
 section{
-    padding:70px 6%;
+    max-width:1200px;
+    margin:auto;
+    padding:75px 20px;
 }
 
 .section-title{
     text-align:center;
-    margin-bottom:40px;
+    margin-bottom:45px;
 }
 
 .section-title h2{
-    font-size:34px;
-    color:#071952;
+    font-size:35px;
+    color:#0d47a1;
+    margin-bottom:10px;
 }
 
 .section-title p{
-    color:#667085;
+    color:#64748b;
 }
 
-.services{
+.cards{
     display:grid;
     grid-template-columns:repeat(4,1fr);
-    gap:25px;
+    gap:22px;
 }
 
 .card{
     background:white;
     padding:30px 20px;
-    border-radius:16px;
+    border-radius:18px;
     text-align:center;
-    box-shadow:0 5px 20px rgba(0,0,0,.08);
+    box-shadow:0 8px 25px rgba(0,0,0,.08);
     transition:.3s;
 }
 
@@ -146,21 +154,7 @@ section{
 
 .card h3{
     margin-bottom:10px;
-    color:#071952;
-}
-
-.search-box{
-    max-width:600px;
-    margin:0 auto 35px;
-}
-
-.search-box input{
-    width:100%;
-    padding:15px;
-    border:2px solid #d9e1ec;
-    border-radius:12px;
-    font-size:16px;
-    outline:none;
+    color:#0d47a1;
 }
 
 .products{
@@ -171,32 +165,39 @@ section{
 
 .product{
     background:white;
-    border-radius:16px;
-    padding:25px;
-    box-shadow:0 5px 20px rgba(0,0,0,.08);
-    text-align:center;
+    border-radius:18px;
+    overflow:hidden;
+    box-shadow:0 8px 25px rgba(0,0,0,.08);
+    transition:.3s;
 }
 
-.product-icon{
-    font-size:65px;
-    margin-bottom:10px;
+.product:hover{
+    transform:translateY(-6px);
 }
 
-.product h3{
-    color:#071952;
-    margin-bottom:8px;
+.product-image{
+    height:180px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-size:75px;
+    background:#eaf2ff;
 }
 
-.product p{
-    color:#667085;
-    margin-bottom:10px;
+.product-info{
+    padding:22px;
+}
+
+.product-info h3{
+    color:#0d47a1;
+    margin-bottom:7px;
 }
 
 .price{
     font-size:21px;
     font-weight:bold;
-    color:#088395;
-    margin:15px 0;
+    color:#0d47a1;
+    margin:12px 0;
 }
 
 .product button{
@@ -204,12 +205,11 @@ section{
 }
 
 .cart{
-    max-width:900px;
-    margin:auto;
-    background:white;
+    background:#fff;
+    border-radius:18px;
     padding:30px;
-    border-radius:16px;
-    box-shadow:0 5px 20px rgba(0,0,0,.08);
+    box-shadow:0 8px 25px rgba(0,0,0,.08);
+    margin-top:30px;
 }
 
 .cart-item{
@@ -228,30 +228,25 @@ section{
 }
 
 .quantity button{
+    width:32px;
+    height:32px;
     border:none;
-    background:#071952;
+    border-radius:7px;
+    background:#0d47a1;
     color:white;
-    width:30px;
-    height:30px;
-    border-radius:6px;
     cursor:pointer;
 }
 
 .remove{
-    border:none;
-    background:#dc3545;
-    color:white;
-    padding:7px 10px;
-    border-radius:6px;
-    cursor:pointer;
+    background:#dc2626 !important;
 }
 
 .total{
     text-align:right;
     font-size:24px;
     font-weight:bold;
-    margin-top:25px;
-    color:#071952;
+    color:#0d47a1;
+    margin-top:20px;
 }
 
 .business{
@@ -260,33 +255,43 @@ section{
     gap:25px;
 }
 
+.business-box{
+    background:white;
+    padding:30px;
+    border-radius:18px;
+    box-shadow:0 8px 25px rgba(0,0,0,.08);
+}
+
+.business-box h3{
+    color:#0d47a1;
+    margin:12px 0;
+}
+
 .order-box{
     max-width:700px;
     margin:auto;
     background:white;
     padding:35px;
-    border-radius:16px;
-    box-shadow:0 5px 20px rgba(0,0,0,.08);
+    border-radius:18px;
+    box-shadow:0 8px 25px rgba(0,0,0,.08);
 }
 
-.form-group{
-    margin-bottom:18px;
+form{
+    display:grid;
+    gap:15px;
 }
 
-.form-group label{
-    display:block;
-    margin-bottom:7px;
-    font-weight:bold;
-}
-
-.form-group input,
-.form-group textarea,
-.form-group select{
+input,textarea{
     width:100%;
-    padding:13px;
-    border:1px solid #ccd5e0;
-    border-radius:9px;
+    padding:14px;
+    border:1px solid #d1d5db;
+    border-radius:10px;
     font-size:16px;
+    outline:none;
+}
+
+input:focus,textarea:focus{
+    border-color:#1976d2;
 }
 
 textarea{
@@ -294,88 +299,79 @@ textarea{
     resize:vertical;
 }
 
-.order-box .btn{
-    width:100%;
-    font-size:17px;
-}
-
-.success{
-    display:none;
-    margin-top:20px;
-    padding:15px;
-    border-radius:10px;
-    background:#d1fae5;
-    color:#065f46;
-    text-align:center;
-    font-weight:bold;
-}
-
 .contact{
-    text-align:center;
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:25px;
 }
 
-.contact-info{
-    display:flex;
-    justify-content:center;
-    gap:30px;
-    flex-wrap:wrap;
-    margin-top:25px;
-}
-
-.contact-item{
+.contact-box{
     background:white;
-    padding:25px;
-    border-radius:14px;
-    min-width:220px;
-    box-shadow:0 5px 20px rgba(0,0,0,.08);
+    padding:30px;
+    text-align:center;
+    border-radius:18px;
+    box-shadow:0 8px 25px rgba(0,0,0,.08);
+}
+
+.contact-box .icon{
+    font-size:38px;
 }
 
 footer{
-    background:#071952;
+    background:#071a3d;
     color:white;
     text-align:center;
     padding:30px 20px;
 }
 
+.success{
+    display:none;
+    background:#dcfce7;
+    color:#166534;
+    padding:15px;
+    border-radius:10px;
+    margin-bottom:20px;
+    font-weight:bold;
+}
+
+.empty{
+    text-align:center;
+    color:#64748b;
+    padding:20px;
+}
+
 @media(max-width:900px){
-    .services,
+    .cards,
     .products{
         grid-template-columns:repeat(2,1fr);
     }
 
-    .business{
+    .business,
+    .contact{
         grid-template-columns:1fr;
     }
 
     .hero h1{
-        font-size:36px;
+        font-size:40px;
     }
 }
 
 @media(max-width:600px){
-    header{
-        position:relative;
-    }
-
     .navbar{
         flex-direction:column;
     }
 
     nav{
-        justify-content:center;
         gap:12px;
-    }
-
-    nav a{
         font-size:14px;
     }
 
     .hero{
-        min-height:450px;
+        min-height:500px;
     }
 
     .hero h1{
-        font-size:30px;
+        font-size:32px;
     }
 
     .hero p{
@@ -383,10 +379,10 @@ footer{
     }
 
     section{
-        padding:50px 5%;
+        padding:55px 15px;
     }
 
-    .services,
+    .cards,
     .products{
         grid-template-columns:1fr;
     }
@@ -396,8 +392,8 @@ footer{
         align-items:flex-start;
     }
 
-    .order-box{
-        padding:25px 18px;
+    .total{
+        text-align:left;
     }
 }
 </style>
@@ -408,9 +404,7 @@ footer{
 <header>
 <div class="navbar">
 
-<div class="logo">
-MUZAFFAR GLOBAL TRADE UZ
-</div>
+<div class="logo">MUZAFFAR GLOBAL TRADE UZ</div>
 
 <nav>
 <a href="#home">Bosh sahifa</a>
@@ -424,6 +418,7 @@ MUZAFFAR GLOBAL TRADE UZ
 </header>
 
 
+<!-- BOSH SAHIFA -->
 <section class="hero" id="home">
 
 <div class="hero-content">
@@ -431,30 +426,26 @@ MUZAFFAR GLOBAL TRADE UZ
 <h1>MUZAFFAR GLOBAL TRADE UZ</h1>
 
 <p>
-Onlayn savdo, xizmatlar, biznes va investitsiya
-yo‘nalishlarida zamonaviy imkoniyatlarni birlashtiruvchi platforma.
+Onlayn savdo, xizmatlar, biznes va investitsiya yo‘nalishlarida
+zamonaviy imkoniyatlarni birlashtiruvchi platforma.
 </p>
 
-<a href="#shop" class="btn">
-🛒 Savdoni boshlash
-</a>
+<a href="#shop" class="btn">🛒 Savdoni boshlash</a>
 
 </div>
 
 </section>
 
 
+<!-- XIZMATLAR -->
 <section id="services">
 
 <div class="section-title">
-
 <h2>Xizmatlarimiz</h2>
-
 <p>Biznesingiz uchun qulay va zamonaviy yechimlar</p>
-
 </div>
 
-<div class="services">
+<div class="cards">
 
 <div class="card">
 <div class="icon">🛒</div>
@@ -471,7 +462,7 @@ yo‘nalishlarida zamonaviy imkoniyatlarni birlashtiruvchi platforma.
 <div class="card">
 <div class="icon">💼</div>
 <h3>Biznes xizmatlari</h3>
-<p>Tadbirkorlik va biznes rivoji uchun xizmatlar.</p>
+<p>Tadbirkorlik va biznes rivoji uchun zamonaviy xizmatlar.</p>
 </div>
 
 <div class="card">
@@ -481,201 +472,116 @@ yo‘nalishlarida zamonaviy imkoniyatlarni birlashtiruvchi platforma.
 </div>
 
 </div>
-
 </section>
 
 
+<!-- SAVDO -->
 <section id="shop">
 
 <div class="section-title">
-
 <h2>🛍️ Onlayn savdo</h2>
-
 <p>Mahsulotlarimiz bilan tanishing</p>
-
 </div>
 
-<div class="search-box">
+<div class="products">
 
-<input
-type="text"
-id="search"
-placeholder="🔎 Mahsulot qidirish..."
-onkeyup="searchProducts()"
->
-
-</div>
-
-<div class="products" id="products">
-
-<div class="product" data-name="smartfon">
-
-<div class="product-icon">📱</div>
-
+<div class="product">
+<div class="product-image">📱</div>
+<div class="product-info">
 <h3>Smartfon</h3>
-
 <p>Zamonaviy smartfon</p>
-
 <div class="price">2 500 000 so‘m</div>
-
-<button
-class="btn"
-onclick="addToCart('Smartfon',2500000)"
->
-Savatchaga qo‘shish
-</button>
-
+<button class="btn" onclick="addToCart('Smartfon',2500000)">🛒 Savatchaga</button>
+</div>
 </div>
 
-
-<div class="product" data-name="noutbuk">
-
-<div class="product-icon">💻</div>
-
+<div class="product">
+<div class="product-image">💻</div>
+<div class="product-info">
 <h3>Noutbuk</h3>
-
 <p>Ish va o‘qish uchun noutbuk</p>
-
 <div class="price">6 500 000 so‘m</div>
-
-<button
-class="btn"
-onclick="addToCart('Noutbuk',6500000)"
->
-Savatchaga qo‘shish
-</button>
-
+<button class="btn" onclick="addToCart('Noutbuk',6500000)">🛒 Savatchaga</button>
+</div>
 </div>
 
-
-<div class="product" data-name="quloqchin">
-
-<div class="product-icon">🎧</div>
-
+<div class="product">
+<div class="product-image">🎧</div>
+<div class="product-info">
 <h3>Quloqchin</h3>
-
 <p>Sifatli simsiz quloqchin</p>
-
 <div class="price">350 000 so‘m</div>
-
-<button
-class="btn"
-onclick="addToCart('Quloqchin',350000)"
->
-Savatchaga qo‘shish
-</button>
-
+<button class="btn" onclick="addToCart('Quloqchin',350000)">🛒 Savatchaga</button>
+</div>
 </div>
 
-
-<div class="product" data-name="smart watch">
-
-<div class="product-icon">⌚</div>
-
+<div class="product">
+<div class="product-image">⌚</div>
+<div class="product-info">
 <h3>Smart Watch</h3>
-
 <p>Zamonaviy aqlli soat</p>
-
 <div class="price">750 000 so‘m</div>
-
-<button
-class="btn"
-onclick="addToCart('Smart Watch',750000)"
->
-Savatchaga qo‘shish
-</button>
-
+<button class="btn" onclick="addToCart('Smart Watch',750000)">🛒 Savatchaga</button>
+</div>
 </div>
 
 </div>
 
-</section>
 
-
-<section>
-
-<div class="section-title">
+<!-- SAVATCHA -->
+<div class="cart">
 
 <h2>🛒 Savatcha</h2>
 
-<p>Tanlangan mahsulotlaringiz</p>
-
-</div>
-
-<div class="cart">
-
 <div id="cartItems">
-🛒 Savatcha hozircha bo‘sh.
+<div class="empty">Savatcha hozircha bo‘sh.</div>
 </div>
 
 <div class="total">
 Jami: <span id="total">0</span> so‘m
 </div>
 
-<div style="text-align:right;margin-top:20px;">
+<br>
 
-<a href="#order" class="btn">
-📦 Buyurtma berish
-</a>
-
-</div>
+<a href="#order" class="btn">📦 Buyurtma berish</a>
 
 </div>
 
 </section>
 
 
+<!-- BIZNES -->
 <section id="business">
 
 <div class="section-title">
-
 <h2>💼 Biznes va investitsiya</h2>
-
 <p>Yangi imkoniyatlar sari birga harakat qilamiz</p>
-
 </div>
 
 <div class="business">
 
-<div class="card">
-
+<div class="business-box">
 <div class="icon">🌍</div>
-
 <h3>Global savdo</h3>
-
 <p>
-Xalqaro bozorlarga chiqish va savdo
-imkoniyatlarini rivojlantirish.
+Xalqaro bozorlarga chiqish va savdo imkoniyatlarini rivojlantirish.
 </p>
-
 </div>
 
-
-<div class="card">
-
+<div class="business-box">
 <div class="icon">📊</div>
-
 <h3>Biznes rivoji</h3>
-
 <p>
-Biznes g‘oyalarni rivojlantirish va
-yangi yo‘nalishlarni izlash.
+Biznes g‘oyalarni rivojlantirish va yangi yo‘nalishlarni izlash.
 </p>
-
 </div>
 
-
-<div class="card">
-
+<div class="business-box">
 <div class="icon">🤝</div>
-
 <h3>Hamkorlik</h3>
-
 <p>
-Yangi hamkorlar va mijozlar bilan
-ishlash imkoniyatlari.
+Yangi hamkorlar va mijozlar bilan ishlash imkoniyatlari.
 </p>
-
 </div>
 
 </div>
@@ -683,23 +589,21 @@ ishlash imkoniyatlari.
 </section>
 
 
+<!-- BUYURTMA -->
 <section id="order">
 
 <div class="section-title">
-
 <h2>📦 Buyurtma berish</h2>
-
 <p>Ma’lumotlaringizni kiriting</p>
-
 </div>
 
 <div class="order-box">
 
-<form onsubmit="submitOrder(event)">
+<div class="success" id="success">
+✅ Buyurtmangiz tayyorlandi!
+</div>
 
-<div class="form-group">
-
-<label>Ismingiz</label>
+<form id="orderForm">
 
 <input
 type="text"
@@ -708,115 +612,62 @@ placeholder="Ismingiz"
 required
 >
 
-</div>
-
-
-<div class="form-group">
-
-<label>Telefon raqamingiz</label>
-
 <input
 type="tel"
 id="phone"
-placeholder="+998 90 123 45 67"
+placeholder="Telefon raqamingiz"
 required
 >
-
-</div>
-
-
-<div class="form-group">
-
-<label>Manzilingiz</label>
 
 <input
 type="text"
 id="address"
-placeholder="Yetkazib berish manzili"
+placeholder="Manzilingiz"
 required
 >
 
-</div>
-
-
-<div class="form-group">
-
-<label>Izoh</label>
-
 <textarea
-id="message"
-placeholder="Buyurtma haqida qo‘shimcha ma’lumot..."
+id="comment"
+placeholder="Izoh"
 ></textarea>
 
-</div>
-
-
-<button class="btn" type="submit">
+<button type="submit" class="btn">
 📦 Buyurtmani yuborish
 </button>
 
 </form>
-
-
-<div class="success" id="success">
-
-✅ Buyurtmangiz qabul qilindi!
-
-Tez orada siz bilan bog‘lanamiz.
-
-</div>
 
 </div>
 
 </section>
 
 
-<section>
+<!-- ALOQA -->
+<section id="contact">
 
 <div class="section-title">
-
 <h2>📞 Aloqa</h2>
-
 <p>Biz bilan bog‘laning</p>
-
 </div>
 
 <div class="contact">
 
-<div class="contact-info">
-
-<div class="contact-item">
-
+<div class="contact-box">
 <div class="icon">📱</div>
-
 <h3>Telefon</h3>
-
 <p>+998 90 123 45 67</p>
-
 </div>
 
-
-<div class="contact-item">
-
+<div class="contact-box">
 <div class="icon">📧</div>
-
 <h3>Email</h3>
-
 <p>info@globaltrade.uz</p>
-
 </div>
 
-
-<div class="contact-item">
-
+<div class="contact-box">
 <div class="icon">🌍</div>
-
 <h3>Manzil</h3>
-
 <p>O‘zbekiston</p>
-
-</div>
-
 </div>
 
 </div>
@@ -828,8 +679,12 @@ Tez orada siz bilan bog‘lanamiz.
 
 <h3>MUZAFFAR GLOBAL TRADE UZ</h3>
 
-<p style="margin-top:10px;">
-© 2026 Barcha huquqlar himoyalangan.
+<p>
+Onlayn savdo • Xizmatlar • Biznes • Investitsiya
+</p>
+
+<p>
+© 2026 MUZAFFAR GLOBAL TRADE UZ. Barcha huquqlar himoyalangan.
 </p>
 
 </footer>
@@ -839,245 +694,231 @@ Tez orada siz bilan bog‘lanamiz.
 
 let cart = [];
 
-
 function addToCart(name, price){
 
-let existing = cart.find(item => item.name === name);
+    let existing = cart.find(item => item.name === name);
 
-if(existing){
+    if(existing){
+        existing.quantity++;
+    }else{
+        cart.push({
+            name:name,
+            price:price,
+            quantity:1
+        });
+    }
 
-existing.quantity++;
+    updateCart();
 
-}else{
-
-cart.push({
-name:name,
-price:price,
-quantity:1
-});
-
-}
-
-updateCart();
-
+    alert(name + " savatchaga qo‘shildi! 🛒");
 }
 
 
 function updateCart(){
 
-const cartItems =
-document.getElementById("cartItems");
+    const cartItems = document.getElementById("cartItems");
+    const totalElement = document.getElementById("total");
 
-const totalElement =
-document.getElementById("total");
+    cartItems.innerHTML = "";
 
+    if(cart.length === 0){
 
-if(cart.length === 0){
+        cartItems.innerHTML =
+        '<div class="empty">Savatcha hozircha bo‘sh.</div>';
 
-cartItems.innerHTML =
-"🛒 Savatcha hozircha bo‘sh.";
+        totalElement.textContent = "0";
 
-totalElement.innerText = "0";
+        return;
+    }
 
-return;
+    let total = 0;
 
+    cart.forEach((item,index)=>{
+
+        total += item.price * item.quantity;
+
+        const div = document.createElement("div");
+
+        div.className = "cart-item";
+
+        div.innerHTML = `
+
+        <div>
+            <strong>${item.name}</strong>
+            <br>
+            ${formatPrice(item.price)} so‘m
+        </div>
+
+        <div class="quantity">
+
+            <button onclick="decrease(${index})">−</button>
+
+            <strong>${item.quantity}</strong>
+
+            <button onclick="increase(${index})">+</button>
+
+            <button class="remove"
+            onclick="removeItem(${index})">
+            🗑️
+            </button>
+
+        </div>
+
+        `;
+
+        cartItems.appendChild(div);
+
+    });
+
+    totalElement.textContent = formatPrice(total);
 }
 
 
-cartItems.innerHTML = "";
+function increase(index){
 
-let total = 0;
+    cart[index].quantity++;
 
-
-cart.forEach((item,index)=>{
-
-let itemTotal =
-item.price * item.quantity;
-
-total += itemTotal;
-
-
-let div =
-document.createElement("div");
-
-div.className = "cart-item";
-
-
-div.innerHTML = `
-
-<div>
-
-<strong>${item.name}</strong>
-
-<br>
-
-${item.price.toLocaleString('uz-UZ')} so‘m
-
-</div>
-
-<div class="quantity">
-
-<button onclick="changeQuantity(${index},-1)">
-−
-</button>
-
-<span>${item.quantity}</span>
-
-<button onclick="changeQuantity(${index},1)">
-+
-</button>
-
-</div>
-
-<div>
-
-<strong>
-${itemTotal.toLocaleString('uz-UZ')} so‘m
-</strong>
-
-<br>
-
-<button
-class="remove"
-onclick="removeItem(${index})"
->
-O‘chirish
-</button>
-
-</div>
-
-`;
-
-cartItems.appendChild(div);
-
-});
-
-
-totalElement.innerText =
-total.toLocaleString('uz-UZ');
-
+    updateCart();
 }
 
 
-function changeQuantity(index,value){
+function decrease(index){
 
-cart[index].quantity += value;
+    if(cart[index].quantity > 1){
 
-if(cart[index].quantity <= 0){
+        cart[index].quantity--;
 
-cart.splice(index,1);
+    }else{
 
-}
+        cart.splice(index,1);
 
-updateCart();
+    }
 
+    updateCart();
 }
 
 
 function removeItem(index){
 
-cart.splice(index,1);
+    cart.splice(index,1);
 
-updateCart();
+    updateCart();
+}
+
+
+function formatPrice(number){
+
+    return number.toLocaleString("uz-UZ");
 
 }
 
 
-function searchProducts(){
+document.getElementById("orderForm")
+.addEventListener("submit",function(e){
 
-let input =
-document.getElementById("search")
-.value
-.toLowerCase();
+    e.preventDefault();
 
-let products =
-document.querySelectorAll(".product");
+    if(cart.length === 0){
+
+        alert("Avval savatchaga mahsulot qo‘shing! 🛒");
+
+        document.getElementById("shop")
+        .scrollIntoView();
+
+        return;
+    }
+
+    const name =
+    document.getElementById("name").value;
+
+    const phone =
+    document.getElementById("phone").value;
+
+    const address =
+    document.getElementById("address").value;
+
+    const comment =
+    document.getElementById("comment").value;
+
+    let orderText =
+    "YANGI BUYURTMA%0A%0A";
+
+    orderText +=
+    "Mijoz: " + encodeURIComponent(name) + "%0A";
+
+    orderText +=
+    "Telefon: " + encodeURIComponent(phone) + "%0A";
+
+    orderText +=
+    "Manzil: " + encodeURIComponent(address) + "%0A";
+
+    orderText +=
+    "Izoh: " + encodeURIComponent(comment) + "%0A%0A";
+
+    orderText +=
+    "MAHSULOTLAR:%0A";
+
+    let total = 0;
+
+    cart.forEach(item=>{
+
+        let sum =
+        item.price * item.quantity;
+
+        total += sum;
+
+        orderText +=
+        encodeURIComponent(
+        item.name +
+        " x " +
+        item.quantity +
+        " = " +
+        formatPrice(sum) +
+        " so‘m"
+        ) + "%0A";
+
+    });
+
+    orderText +=
+    "%0AJami: " +
+    encodeURIComponent(formatPrice(total)) +
+    " so‘m";
 
 
-products.forEach(product=>{
+    /*
+       MUHIM:
+       Quyidagi raqamni o‘zingizning
+       WhatsApp raqamingizga almashtiring.
 
-let name =
-product.dataset.name
-.toLowerCase();
+       Hozir demo raqam:
+       998901234567
+    */
 
-if(name.includes(input)){
+    const whatsappNumber =
+    "998901234567";
 
-product.style.display = "";
+    const whatsappURL =
+    "https://wa.me/" +
+    whatsappNumber +
+    "?text=" +
+    orderText;
 
-}else{
 
-product.style.display = "none";
+    document.getElementById("success")
+    .style.display = "block";
 
-}
+
+    setTimeout(()=>{
+
+        window.open(
+            whatsappURL,
+            "_blank"
+        );
+
+    },500);
+
 
 });
-
-}
-
-
-function submitOrder(event){
-
-event.preventDefault();
-
-
-if(cart.length === 0){
-
-alert(
-"Avval savatchaga kamida bitta mahsulot qo‘shing."
-);
-
-return;
-
-}
-
-
-let name =
-document.getElementById("name").value;
-
-let phone =
-document.getElementById("phone").value;
-
-let address =
-document.getElementById("address").value;
-
-
-let orderText = cart.map(item =>
-
-item.name +
-" x " +
-item.quantity
-
-).join(", ");
-
-
-console.log("Yangi buyurtma:");
-console.log("Mijoz:",name);
-console.log("Telefon:",phone);
-console.log("Manzil:",address);
-console.log("Mahsulotlar:",orderText);
-
-
-document.getElementById("success")
-.style.display = "block";
-
-
-document.querySelector("form")
-.reset();
-
-
-cart = [];
-
-updateCart();
-
-
-setTimeout(()=>{
-
-document.getElementById("success")
-.style.display = "none";
-
-},5000);
-
-}
 
 
 updateCart();
