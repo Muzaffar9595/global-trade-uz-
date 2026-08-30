@@ -4,15 +4,258 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>MUZAFFAR GLOBAL TRADE UZ</title>
+
+<style>
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #f4f6f8;
+    color: #172033;
+}
+
+header {
+    background: #0b3d91;
+    color: white;
+    text-align: center;
+    padding: 35px 15px;
+}
+
+header h1 {
+    font-size: 30px;
+    margin-bottom: 10px;
+}
+
+header p {
+    font-size: 17px;
+}
+
+nav {
+    background: white;
+    padding: 15px;
+    text-align: center;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+nav a {
+    text-decoration: none;
+    color: #0b3d91;
+    font-weight: bold;
+    margin: 0 12px;
+}
+
+.container {
+    max-width: 1100px;
+    margin: auto;
+    padding: 30px 15px;
+}
+
+.welcome {
+    background: white;
+    padding: 30px;
+    border-radius: 15px;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.welcome h2 {
+    color: #0b3d91;
+    margin-bottom: 12px;
+}
+
+.products {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+    gap: 20px;
+}
+
+.product {
+    background: white;
+    border-radius: 15px;
+    padding: 22px;
+    text-align: center;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+}
+
+.product .icon {
+    font-size: 55px;
+    margin-bottom: 15px;
+}
+
+.product h3 {
+    margin-bottom: 10px;
+}
+
+.product p {
+    color: #555;
+    margin-bottom: 12px;
+}
+
+.price {
+    font-size: 21px;
+    font-weight: bold;
+    color: #0b3d91;
+    margin-bottom: 15px;
+}
+
+button {
+    border: none;
+    background: #0b3d91;
+    color: white;
+    padding: 12px 22px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 15px;
+}
+
+button:hover {
+    background: #06285f;
+}
+
+.contact {
+    margin-top: 35px;
+    background: white;
+    padding: 30px;
+    border-radius: 15px;
+    text-align: center;
+}
+
+.contact h2 {
+    color: #0b3d91;
+    margin-bottom: 15px;
+}
+
+footer {
+    margin-top: 40px;
+    background: #172033;
+    color: white;
+    text-align: center;
+    padding: 25px 15px;
+}
+
+@media (max-width: 600px) {
+    header h1 {
+        font-size: 24px;
+    }
+
+    nav a {
+        display: inline-block;
+        margin: 6px;
+    }
+}
+</style>
 </head>
 
 <body>
 
-<h1>MUZAFFAR GLOBAL TRADE UZ</h1>
+<header>
+    <h1>MUZAFFAR GLOBAL TRADE UZ</h1>
+    <p>Onlayn savdo • Xizmatlar • Biznes • Investitsiya</p>
+</header>
 
-<p>Saytimizga xush kelibsiz!</p>
+<nav>
+    <a href="#home">Bosh sahifa</a>
+    <a href="#shop">Onlayn savdo</a>
+    <a href="#contact">Aloqa</a>
+</nav>
 
-<p>Onlayn savdo • Xizmatlar • Biznes • Investitsiya</p>
+<div class="container">
+
+<section id="home" class="welcome">
+    <h2>Saytimizga xush kelibsiz!</h2>
+    <p>
+        MUZAFFAR GLOBAL TRADE UZ — onlayn savdo,
+        xizmatlar va biznes imkoniyatlari uchun zamonaviy platforma.
+    </p>
+</section>
+
+<section id="shop">
+    <h2 style="text-align:center; margin-bottom:20px;">
+        🛒 Onlayn savdo
+    </h2>
+
+    <div class="products">
+
+        <div class="product">
+            <div class="icon">📱</div>
+            <h3>Smartfon</h3>
+            <p>Zamonaviy va sifatli smartfon.</p>
+            <div class="price">2 500 000 so'm</div>
+            <button onclick="buyProduct('Smartfon')">
+                Sotib olish
+            </button>
+        </div>
+
+        <div class="product">
+            <div class="icon">💻</div>
+            <h3>Noutbuk</h3>
+            <p>O'qish va biznes uchun qulay noutbuk.</p>
+            <div class="price">6 500 000 so'm</div>
+            <button onclick="buyProduct('Noutbuk')">
+                Sotib olish
+            </button>
+        </div>
+
+        <div class="product">
+            <div class="icon">🎧</div>
+            <h3>Quloqchin</h3>
+            <p>Sifatli ovoz uchun zamonaviy quloqchin.</p>
+            <div class="price">350 000 so'm</div>
+            <button onclick="buyProduct('Quloqchin')">
+                Sotib olish
+            </button>
+        </div>
+
+        <div class="product">
+            <div class="icon">⌚</div>
+            <h3>Smart soat</h3>
+            <p>Kundalik foydalanish uchun aqlli soat.</p>
+            <div class="price">750 000 so'm</div>
+            <button onclick="buyProduct('Smart soat')">
+                Sotib olish
+            </button>
+        </div>
+
+    </div>
+</section>
+
+<section id="contact" class="contact">
+    <h2>📞 Biz bilan bog'laning</h2>
+    <p>Mahsulot yoki xizmatlar haqida ma'lumot olish uchun bizga murojaat qiling.</p>
+    <br>
+    <button onclick="contactUs()">
+        Bog'lanish
+    </button>
+</section>
+
+</div>
+
+<footer>
+    <p>© 2026 MUZAFFAR GLOBAL TRADE UZ</p>
+    <p>Barcha huquqlar himoyalangan.</p>
+</footer>
+
+<script>
+
+function buyProduct(product) {
+    alert(
+        "Siz \"" + product + "\" mahsulotini tanladingiz.\n\n" +
+        "Buyurtma berish tizimi keyingi bosqichda qo'shiladi."
+    );
+}
+
+function contactUs() {
+    alert(
+        "MUZAFFAR GLOBAL TRADE UZ\n\n" +
+        "Aloqa tizimi keyingi bosqichda qo'shiladi."
+    );
+}
+
+</script>
 
 </body>
 </html>
