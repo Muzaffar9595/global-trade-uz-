@@ -7,113 +7,119 @@
 <title>MUZAFFAR GLOBAL TRADE UZ</title>
 
 <style>
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    scroll-behavior: smooth;
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    scroll-behavior:smooth;
 }
 
-body {
-    font-family: Arial, sans-serif;
-    background: #f4f7fb;
-    color: #172033;
-    line-height: 1.6;
+body{
+    font-family:Arial,sans-serif;
+    background:#f4f7fb;
+    color:#172033;
 }
 
-header {
-    background: #071a3d;
-    color: white;
-    padding: 18px 6%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    position: sticky;
-    top: 0;
-    z-index: 1000;
+header{
+    background:#071a3d;
+    color:white;
+    padding:18px 6%;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    position:sticky;
+    top:0;
+    z-index:1000;
 }
 
-.logo {
-    font-size: 21px;
-    font-weight: bold;
+.logo{
+    font-size:20px;
+    font-weight:bold;
 }
 
-nav a {
-    color: white;
-    text-decoration: none;
-    margin-left: 18px;
-    font-size: 14px;
+nav a{
+    color:white;
+    text-decoration:none;
+    margin-left:15px;
+    font-size:14px;
 }
 
-nav a:hover {
-    color: #ffd43b;
+nav a:hover{
+    color:#ffd43b;
 }
 
-.hero {
-    min-height: 570px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    padding: 60px 20px;
-    background: linear-gradient(135deg, #071a3d, #1261a0);
-    color: white;
+.cart{
+    background:#ffd43b;
+    color:#172033;
+    padding:9px 14px;
+    border-radius:8px;
+    font-weight:bold;
+    cursor:pointer;
 }
 
-.hero h1 {
-    font-size: 46px;
-    margin-bottom: 20px;
+.hero{
+    min-height:500px;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    padding:50px 20px;
+    background:linear-gradient(135deg,#071a3d,#1261a0);
+    color:white;
 }
 
-.hero p {
-    max-width: 750px;
-    margin: auto;
-    font-size: 19px;
+.hero h1{
+    font-size:44px;
+    margin-bottom:18px;
 }
 
-.buttons {
-    margin-top: 30px;
+.hero p{
+    max-width:700px;
+    margin:auto;
+    font-size:18px;
 }
 
-.btn {
-    display: inline-block;
-    padding: 13px 25px;
-    margin: 7px;
-    border-radius: 8px;
-    text-decoration: none;
-    font-weight: bold;
-    background: #ffd43b;
-    color: #172033;
+.btn{
+    display:inline-block;
+    margin-top:20px;
+    padding:12px 22px;
+    border:0;
+    border-radius:8px;
+    background:#ffd43b;
+    color:#172033;
+    text-decoration:none;
+    font-weight:bold;
+    cursor:pointer;
 }
 
-.btn:hover {
-    transform: translateY(-2px);
+section{
+    padding:65px 6%;
 }
 
-section {
-    padding: 70px 6%;
+.title{
+    text-align:center;
+    margin-bottom:35px;
 }
 
-.title {
-    text-align: center;
-    margin-bottom: 40px;
+.title h2{
+    color:#071a3d;
+    font-size:30px;
 }
 
-.title h2 {
-    font-size: 32px;
-    color: #071a3d;
+.title p{
+    color:#667085;
+    margin-top:8px;
 }
 
-.title p {
-    color: #667085;
-    margin-top: 8px;
+.products{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+    gap:22px;
 }
 
-.cards {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
-    gap: 22px;
-}
-
-.card {
-    background:
+.product{
+    background:white;
+    padding:25px;
+    border-radius:14px;
+    text-align:center;
+    box-shadow:0
