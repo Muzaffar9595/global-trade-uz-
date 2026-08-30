@@ -3,14 +3,19 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Global Trade Uzbekistan | Biznes va Xalqaro Hamkorlik</title>
+
+<title>Global Trade Uzbekistan | Business & Investment</title>
+
+<meta name="description"
+content="Global Trade Uzbekistan — biznes, savdo, investitsiya, konsalting, turizm va xalqaro hamkorlik platformasi.">
 
 <style>
+
 *{
     margin:0;
     padding:0;
     box-sizing:border-box;
-    font-family:Arial, sans-serif;
+    font-family:Arial, Helvetica, sans-serif;
 }
 
 html{
@@ -18,24 +23,25 @@ html{
 }
 
 body{
-    background:#f4f7fb;
+    background:#f5f7fb;
     color:#172033;
     line-height:1.6;
 }
 
+/* HEADER */
+
 header{
-    background:linear-gradient(135deg,#071a35,#0b3d73);
-    color:white;
     position:sticky;
     top:0;
     z-index:1000;
-    box-shadow:0 3px 15px rgba(0,0,0,.2);
+    background:#071a35;
+    box-shadow:0 5px 20px rgba(0,0,0,.2);
 }
 
 .navbar{
-    max-width:1200px;
+    max-width:1250px;
     margin:auto;
-    padding:15px 20px;
+    padding:13px 20px;
     display:flex;
     align-items:center;
     justify-content:space-between;
@@ -46,19 +52,27 @@ header{
     display:flex;
     align-items:center;
     gap:10px;
-    font-size:19px;
+    color:white;
     font-weight:bold;
 }
 
-.logo-icon{
-    font-size:38px;
+.logo-eagle{
+    font-size:42px;
+}
+
+.logo-text{
+    font-size:17px;
+    line-height:1.15;
+}
+
+.logo-text span{
+    color:#f5c542;
 }
 
 nav{
     display:flex;
-    gap:18px;
     flex-wrap:wrap;
-    justify-content:center;
+    gap:17px;
 }
 
 nav a{
@@ -66,79 +80,87 @@ nav a{
     text-decoration:none;
     font-size:14px;
     font-weight:bold;
-    transition:.3s;
 }
 
 nav a:hover{
-    color:#ffd34d;
+    color:#f5c542;
 }
 
+/* HERO */
+
 .hero{
-    min-height:650px;
+    min-height:680px;
     display:flex;
-    align-items:center;
     justify-content:center;
+    align-items:center;
     text-align:center;
-    padding:70px 20px;
-    background:
-    radial-gradient(circle at top right,#1665a9,transparent 35%),
-    linear-gradient(135deg,#06152c,#0c4d83);
     color:white;
+    padding:80px 20px;
+
+    background:
+    radial-gradient(circle at 80% 20%,#1465a5,transparent 35%),
+    linear-gradient(135deg,#041226,#0b4c82);
 }
 
 .hero-content{
-    max-width:900px;
+    max-width:950px;
 }
 
-.badge{
+.hero-badge{
     display:inline-block;
+    border:1px solid #f5c542;
+    color:#f5c542;
     padding:8px 18px;
-    border:1px solid #ffd34d;
     border-radius:30px;
-    color:#ffd34d;
-    margin-bottom:20px;
+    margin-bottom:25px;
     font-weight:bold;
 }
 
+.hero-eagle{
+    font-size:90px;
+    margin-bottom:10px;
+}
+
 .hero h1{
-    font-size:55px;
-    line-height:1.1;
+    font-size:58px;
+    line-height:1.05;
     margin-bottom:20px;
 }
 
 .hero h1 span{
-    color:#ffd34d;
+    color:#f5c542;
 }
 
 .hero p{
+    max-width:800px;
+    margin:auto;
     font-size:20px;
-    max-width:750px;
-    margin:0 auto 30px;
-    color:#e8f1ff;
+    color:#e3edf8;
 }
 
 .buttons{
+    margin-top:35px;
     display:flex;
-    gap:15px;
     justify-content:center;
+    gap:15px;
     flex-wrap:wrap;
 }
 
 .btn{
-    display:inline-block;
-    padding:14px 26px;
+    padding:14px 27px;
     border-radius:30px;
     text-decoration:none;
     font-weight:bold;
+    display:inline-block;
     transition:.3s;
 }
 
 .btn-primary{
-    background:#ffd34d;
-    color:#10213b;
+    background:#f5c542;
+    color:#071a35;
 }
 
-.btn-secondary{
+.btn-outline{
     border:2px solid white;
     color:white;
 }
@@ -147,8 +169,10 @@ nav a:hover{
     transform:translateY(-3px);
 }
 
+/* GENERAL */
+
 section{
-    padding:75px 20px;
+    padding:80px 20px;
 }
 
 .container{
@@ -162,13 +186,79 @@ section{
 }
 
 .section-title h2{
-    font-size:36px;
-    color:#0b315c;
-    margin-bottom:10px;
+    font-size:38px;
+    color:#092f59;
 }
 
 .section-title p{
-    color:#64748b;
+    color:#66758a;
+}
+
+/* ABOUT */
+
+.about{
+    background:white;
+}
+
+.about-grid{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:45px;
+    align-items:center;
+}
+
+.brand-card{
+    min-height:420px;
+    border-radius:30px;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    color:white;
+
+    background:
+    radial-gradient(circle at center,#155e99,transparent 45%),
+    linear-gradient(135deg,#06172e,#0c4c80);
+}
+
+.brand-card .eagle{
+    font-size:130px;
+}
+
+.brand-card h2{
+    color:#f5c542;
+    font-size:32px;
+}
+
+.about-text h2{
+    color:#092f59;
+    font-size:38px;
+    margin-bottom:18px;
+}
+
+.about-text p{
+    color:#526176;
+}
+
+.values{
+    margin-top:25px;
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:12px;
+}
+
+.value{
+    background:#f2f6fb;
+    padding:15px;
+    border-radius:12px;
+    font-weight:bold;
+}
+
+/* SERVICES */
+
+.services{
+    background:#f2f6fb;
 }
 
 .cards{
@@ -179,146 +269,139 @@ section{
 
 .card{
     background:white;
+    border:1px solid #e2e8f0;
+    border-radius:20px;
     padding:30px;
-    border-radius:18px;
-    box-shadow:0 8px 25px rgba(20,50,90,.08);
-    border:1px solid #e5eaf1;
+    box-shadow:0 8px 25px rgba(10,40,80,.06);
     transition:.3s;
 }
 
 .card:hover{
-    transform:translateY(-7px);
-    box-shadow:0 15px 35px rgba(20,50,90,.15);
+    transform:translateY(-6px);
+    box-shadow:0 15px 35px rgba(10,40,80,.13);
 }
 
-.icon{
-    font-size:42px;
+.card-icon{
+    font-size:45px;
     margin-bottom:15px;
 }
 
 .card h3{
-    color:#0b315c;
+    color:#092f59;
     margin-bottom:10px;
 }
 
 .card p{
-    color:#64748b;
+    color:#66758a;
 }
 
-.about{
+/* PROJECTS */
+
+.projects{
     background:white;
 }
 
-.about-grid{
-    display:grid;
-    grid-template-columns:1fr 1fr;
-    gap:40px;
-    align-items:center;
-}
-
-.about-box{
-    background:linear-gradient(135deg,#071a35,#0d548e);
-    color:white;
-    padding:45px;
-    border-radius:25px;
-    text-align:center;
-}
-
-.about-box .eagle{
-    font-size:100px;
-}
-
-.about-text h2{
-    color:#0b315c;
-    font-size:36px;
-    margin-bottom:20px;
-}
-
-.stats{
-    display:grid;
-    grid-template-columns:repeat(4,1fr);
-    gap:15px;
-    margin-top:30px;
-}
-
-.stat{
-    background:#f4f7fb;
-    padding:20px;
-    border-radius:15px;
-    text-align:center;
-}
-
-.stat strong{
-    display:block;
-    font-size:28px;
-    color:#0b4d83;
-}
-
-.projects{
-    background:#eef4fa;
-}
-
 .project{
-    position:relative;
-    overflow:hidden;
+    border-top:5px solid #f5c542;
 }
 
-.project-tag{
+.tag{
     display:inline-block;
-    background:#e7b900;
-    color:#14213d;
+    background:#eef3f8;
+    color:#0a4e82;
     padding:5px 12px;
     border-radius:20px;
     font-size:12px;
     font-weight:bold;
-    margin-bottom:12px;
+    margin-bottom:15px;
 }
 
+.project-info{
+    margin-top:20px;
+}
+
+.project-info div{
+    padding:7px 0;
+    border-bottom:1px solid #edf0f4;
+}
+
+/* SHOP */
+
 .shop{
-    background:white;
+    background:#f2f6fb;
 }
 
 .product-price{
+    margin:18px 0;
     font-size:23px;
+    color:#0a548c;
     font-weight:bold;
-    color:#0b548e;
-    margin:15px 0;
 }
 
-.buy-btn{
+.buy{
     width:100%;
     border:0;
     padding:13px;
-    background:#0b315c;
-    color:white;
     border-radius:10px;
-    cursor:pointer;
+    background:#092f59;
+    color:white;
     font-weight:bold;
+    cursor:pointer;
 }
 
-.buy-btn:hover{
-    background:#1267a8;
+.buy:hover{
+    background:#1269a7;
 }
 
 .cart{
-    margin-top:35px;
-    padding:25px;
-    background:#eef4fa;
-    border-radius:15px;
     display:none;
+    margin-top:35px;
+    background:white;
+    border-radius:20px;
+    padding:25px;
+    border:2px solid #f5c542;
 }
 
 .cart h3{
-    color:#0b315c;
+    color:#092f59;
+    margin-bottom:15px;
 }
+
+.cart-item{
+    padding:10px;
+    border-bottom:1px solid #ddd;
+}
+
+/* INVESTMENT */
+
+.investment{
+    background:
+    linear-gradient(135deg,#071a35,#0c4e83);
+    color:white;
+}
+
+.investment .section-title h2{
+    color:white;
+}
+
+.invest-card{
+    background:rgba(255,255,255,.1);
+    border:1px solid rgba(255,255,255,.2);
+    color:white;
+}
+
+.invest-card h3{
+    color:#f5c542;
+}
+
+.invest-card p{
+    color:#d8e4f0;
+}
+
+/* CONTACT */
 
 .contact{
-    background:linear-gradient(135deg,#071a35,#0b4b80);
-    color:white;
-}
-
-.contact .section-title h2{
-    color:white;
+    background:white;
 }
 
 .contact-grid{
@@ -327,28 +410,67 @@ section{
     gap:25px;
 }
 
-.contact-card{
-    background:rgba(255,255,255,.1);
+.contact-box{
+    background:#f2f6fb;
+    border-radius:20px;
     padding:30px;
-    border-radius:18px;
-    border:1px solid rgba(255,255,255,.2);
 }
 
-.contact-card h3{
-    color:#ffd34d;
-    margin-bottom:10px;
+.contact-box h3{
+    color:#092f59;
+    margin-bottom:15px;
 }
+
+form{
+    display:flex;
+    flex-direction:column;
+    gap:12px;
+}
+
+input,
+textarea,
+select{
+    width:100%;
+    padding:14px;
+    border:1px solid #ccd5e0;
+    border-radius:10px;
+    font-size:15px;
+}
+
+textarea{
+    min-height:130px;
+    resize:vertical;
+}
+
+.submit{
+    border:0;
+    padding:14px;
+    border-radius:10px;
+    background:#092f59;
+    color:white;
+    font-weight:bold;
+    cursor:pointer;
+}
+
+/* FOOTER */
 
 footer{
     background:#041021;
-    color:#b9c5d5;
+    color:#b8c5d5;
     text-align:center;
-    padding:30px 20px;
+    padding:35px 20px;
+}
+
+footer h3{
+    color:white;
+    margin-bottom:10px;
 }
 
 footer strong{
-    color:white;
+    color:#f5c542;
 }
+
+/* MOBILE */
 
 @media(max-width:850px){
 
@@ -357,15 +479,12 @@ footer strong{
     }
 
     nav{
+        justify-content:center;
         gap:10px;
     }
 
     .hero h1{
-        font-size:38px;
-    }
-
-    .hero p{
-        font-size:17px;
+        font-size:40px;
     }
 
     .cards{
@@ -376,10 +495,6 @@ footer strong{
     .contact-grid{
         grid-template-columns:1fr;
     }
-
-    .stats{
-        grid-template-columns:1fr 1fr;
-    }
 }
 
 @media(max-width:550px){
@@ -389,55 +504,84 @@ footer strong{
     }
 
     .hero{
-        min-height:570px;
+        min-height:600px;
+    }
+
+    .hero-eagle{
+        font-size:70px;
     }
 
     .hero h1{
-        font-size:32px;
+        font-size:33px;
+    }
+
+    .hero p{
+        font-size:17px;
+    }
+
+    .values{
+        grid-template-columns:1fr;
     }
 
     .section-title h2{
-        font-size:28px;
-    }
-
-    .logo{
-        font-size:16px;
+        font-size:30px;
     }
 }
+
 </style>
 </head>
 
+
 <body>
 
+
+<!-- HEADER -->
+
 <header>
+
 <div class="navbar">
 
 <div class="logo">
-<div class="logo-icon">🦅</div>
-<div>
+
+<div class="logo-eagle">🦅</div>
+
+<div class="logo-text">
 GLOBAL TRADE<br>
-UZBEKISTAN
+<span>UZBEKISTAN</span>
 </div>
+
 </div>
 
 <nav>
+
 <a href="#home">Bosh sahifa</a>
 <a href="#about">Biz haqimizda</a>
 <a href="#services">Xizmatlar</a>
 <a href="#projects">Loyihalar</a>
 <a href="#shop">Savdo</a>
+<a href="#investment">Investitsiya</a>
 <a href="#contact">Aloqa</a>
+
 </nav>
 
 </div>
+
 </header>
 
+
+<!-- HERO -->
 
 <section class="hero" id="home">
 
 <div class="hero-content">
 
-<div class="badge">🇺🇿 O‘zbekiston • 🌍 Xalqaro hamkorlik</div>
+<div class="hero-badge">
+🇺🇿 O‘ZBEKISTON • 🌍 GLOBAL HAMKORLIK
+</div>
+
+<div class="hero-eagle">
+🦅
+</div>
 
 <h1>
 GLOBAL TRADE<br>
@@ -445,19 +589,29 @@ GLOBAL TRADE<br>
 </h1>
 
 <p>
-Innovatsiya, savdo, biznes, investitsiya va xalqaro hamkorlikni
-birlashtiruvchi zamonaviy biznes platforma.
+Biznes, savdo, investitsiya, innovatsiya,
+konsalting va xalqaro hamkorlik uchun
+zamonaviy biznes platforma.
 </p>
 
 <div class="buttons">
-<a href="#services" class="btn btn-primary">Xizmatlarimiz</a>
-<a href="#contact" class="btn btn-secondary">Bog‘lanish</a>
+
+<a href="#services" class="btn btn-primary">
+Xizmatlarni ko‘rish
+</a>
+
+<a href="#projects" class="btn btn-outline">
+Loyihalarni ko‘rish
+</a>
+
 </div>
 
 </div>
 
 </section>
 
+
+<!-- ABOUT -->
 
 <section class="about" id="about">
 
@@ -465,50 +619,44 @@ birlashtiruvchi zamonaviy biznes platforma.
 
 <div class="about-grid">
 
-<div class="about-box">
+<div class="brand-card">
+
 <div class="eagle">🦅</div>
+
 <h2>GLOBAL TRADE</h2>
-<p>Business • Innovation • Partnership</p>
+
+<p>
+BUSINESS • TRADE • INVESTMENT
+</p>
+
 </div>
+
 
 <div class="about-text">
 
 <h2>Biz haqimizda</h2>
 
 <p>
-<b>Global Trade Uzbekistan</b> — savdo, biznes xizmatlari,
-konsalting, investitsiya, turizm, ta’lim va xalqaro hamkorlik
-yo‘nalishlarini rivojlantirishga qaratilgan zamonaviy biznes platforma.
+<b>Global Trade Uzbekistan</b> — O‘zbekiston va
+xalqaro bozorlar o‘rtasidagi biznes hamkorlikni
+rivojlantirishga qaratilgan zamonaviy platforma.
 </p>
 
 <br>
 
 <p>
-Bizning maqsadimiz — yangi g‘oyalarni real loyihalarga aylantirish,
-tadbirkorlar va hamkorlarni birlashtirish hamda O‘zbekistonning
-xalqaro biznes imkoniyatlarini kengaytirish.
+Biz yangi biznes g‘oyalarni, investitsiya loyihalarini,
+savdo imkoniyatlarini va xalqaro hamkorlikni
+bir tizimga birlashtirishni maqsad qilganmiz.
 </p>
 
-<div class="stats">
-<div class="stat">
-<strong>01</strong>
-Strategiya
-</div>
+<div class="values">
 
-<div class="stat">
-<strong>02</strong>
-Innovatsiya
-</div>
+<div class="value">🦅 Innovatsiya</div>
+<div class="value">🤝 Hamkorlik</div>
+<div class="value">📈 Rivojlanish</div>
+<div class="value">🌍 Global fikrlash</div>
 
-<div class="stat">
-<strong>03</strong>
-Hamkorlik
-</div>
-
-<div class="stat">
-<strong>04</strong>
-Rivojlanish
-</div>
 </div>
 
 </div>
@@ -520,69 +668,106 @@ Rivojlanish
 </section>
 
 
-<section id="services">
+<!-- SERVICES -->
+
+<section class="services" id="services">
 
 <div class="container">
 
 <div class="section-title">
-<h2>Biznes xizmatlarimiz</h2>
-<p>Sizning biznesingiz uchun kompleks yechimlar</p>
+
+<h2>💼 Biznes xizmatlari</h2>
+
+<p>
+Biznesingizni rivojlantirish uchun kompleks xizmatlar
+</p>
+
 </div>
+
 
 <div class="cards">
 
 <div class="card">
-<div class="icon">💼</div>
+
+<div class="card-icon">💼</div>
+
 <h3>Biznes konsalting</h3>
+
 <p>
-Biznes g‘oyalarni tahlil qilish, strategiya ishlab chiqish
-va rivojlanish yo‘nalishlarini belgilash.
+Biznes g‘oyalarni tahlil qilish,
+strategiya va rivojlanish rejasini ishlab chiqish.
 </p>
+
 </div>
 
-<div class="card">
-<div class="icon">📊</div>
-<h3>Biznes reja</h3>
-<p>
-Yangi loyihalar uchun professional biznes-reja,
-moliyaviy model va rivojlanish strategiyasi.
-</p>
-</div>
 
 <div class="card">
-<div class="icon">🌍</div>
+
+<div class="card-icon">📊</div>
+
+<h3>Biznes-reja</h3>
+
+<p>
+Professional biznes-reja, bozor tahlili,
+moliyaviy model va loyiha strategiyasi.
+</p>
+
+</div>
+
+
+<div class="card">
+
+<div class="card-icon">📣</div>
+
+<h3>Marketing</h3>
+
+<p>
+Brend, marketing strategiyasi,
+raqamli reklama va bozor pozitsiyalash.
+</p>
+
+</div>
+
+
+<div class="card">
+
+<div class="card-icon">🌍</div>
+
 <h3>Xalqaro hamkorlik</h3>
+
 <p>
-Xorijiy hamkorlar, kompaniyalar va investorlar bilan
-biznes aloqalarini rivojlantirish.
+Xorijiy kompaniyalar, tadbirkorlar va
+investorlar bilan biznes aloqalarini rivojlantirish.
 </p>
+
 </div>
 
-<div class="card">
-<div class="icon">📈</div>
-<h3>Investitsiya loyihalari</h3>
-<p>
-Investitsiya talab qiluvchi istiqbolli loyihalarni
-shakllantirish va taqdim etish.
-</p>
-</div>
 
 <div class="card">
-<div class="icon">✈️</div>
+
+<div class="card-icon">✈️</div>
+
 <h3>Turizm</h3>
+
 <p>
-O‘zbekiston va xalqaro yo‘nalishlarda turizm,
-sayohat va xizmat loyihalarini rivojlantirish.
+Turizm loyihalari, sayohat xizmatlari va
+xalqaro turizm hamkorligi.
 </p>
+
 </div>
 
+
 <div class="card">
-<div class="icon">🎓</div>
+
+<div class="card-icon">🎓</div>
+
 <h3>Ta’lim va rivojlanish</h3>
+
 <p>
-Biznes, til, professional ko‘nikmalar va
-tadbirkorlik bo‘yicha rivojlanish imkoniyatlari.
+Biznes, tadbirkorlik va professional
+rivojlanish yo‘nalishlari.
 </p>
+
 </div>
 
 </div>
@@ -591,43 +776,96 @@ tadbirkorlik bo‘yicha rivojlanish imkoniyatlari.
 
 </section>
 
+
+<!-- PROJECTS -->
 
 <section class="projects" id="projects">
 
 <div class="container">
 
 <div class="section-title">
-<h2>Biznes loyihalar</h2>
-<p>Kelajak uchun yangi g‘oyalar va imkoniyatlar</p>
+
+<h2>📚 Biznes loyihalar</h2>
+
+<p>
+Kelajak uchun istiqbolli loyihalar
+</p>
+
 </div>
+
 
 <div class="cards">
 
+
 <div class="card project">
-<span class="project-tag">STRATEGIC</span>
+
+<span class="tag">
+GLOBAL BUSINESS
+</span>
+
 <h3>Global Business Hub</h3>
+
 <p>
-Tadbirkorlar, investorlar va xalqaro hamkorlarni
-birlashtiruvchi biznes ekotizimi.
+Tadbirkorlar, investorlar va xalqaro
+hamkorlarni birlashtiruvchi biznes ekotizimi.
 </p>
+
+<div class="project-info">
+
+<div>📌 Yo‘nalish: Biznes</div>
+<div>🌍 Bozor: Xalqaro</div>
+<div>🤝 Hamkorlik: Ochiq</div>
+
 </div>
 
-<div class="card project">
-<span class="project-tag">TRADE</span>
-<h3>Online Trade Platform</h3>
-<p>
-Mahsulotlar, xizmatlar, savat va buyurtmalarni
-birlashtiruvchi elektron savdo tizimi.
-</p>
 </div>
 
+
 <div class="card project">
-<span class="project-tag">INVESTMENT</span>
-<h3>Investment Projects</h3>
+
+<span class="tag">
+ONLINE TRADE
+</span>
+
+<h3>Global Online Trade</h3>
+
 <p>
-Mahalliy va xalqaro investorlar uchun istiqbolli
-biznes loyihalar katalogi.
+Mahsulot va xizmatlarni internet orqali
+sotish va xarid qilish platformasi.
 </p>
+
+<div class="project-info">
+
+<div>📌 Yo‘nalish: E-commerce</div>
+<div>🌍 Bozor: O‘zbekiston + Global</div>
+<div>🤝 Hamkorlik: Ochiq</div>
+
+</div>
+
+</div>
+
+
+<div class="card project">
+
+<span class="tag">
+INNOVATION
+</span>
+
+<h3>Innovation Projects</h3>
+
+<p>
+Yangi g‘oyalar va innovatsion biznes
+loyihalarini rivojlantirish platformasi.
+</p>
+
+<div class="project-info">
+
+<div>📌 Yo‘nalish: Innovatsiya</div>
+<div>🌍 Bozor: Global</div>
+<div>🤝 Hamkorlik: Ochiq</div>
+
+</div>
+
 </div>
 
 </div>
@@ -636,94 +874,295 @@ biznes loyihalar katalogi.
 
 </section>
 
+
+<!-- SHOP -->
 
 <section class="shop" id="shop">
 
 <div class="container">
 
 <div class="section-title">
+
 <h2>🛒 Online savdo</h2>
-<p>Mahsulot va xizmatlar katalogi</p>
+
+<p>
+Xizmatlarni tanlang va savatga qo‘shing
+</p>
+
 </div>
+
 
 <div class="cards">
 
-<div class="card">
-<div class="icon">📦</div>
-<h3>Biznes xizmatlari</h3>
-<p>Professional biznes xizmatlari va konsultatsiya.</p>
-<div class="product-price">Kelishiladi</div>
-<button class="buy-btn" onclick="addToCart('Biznes konsalting')">
-Savatga qo‘shish
-</button>
-</div>
 
 <div class="card">
-<div class="icon">📚</div>
-<h3>Biznes loyiha</h3>
-<p>Individual biznes loyiha va biznes-reja.</p>
-<div class="product-price">Kelishiladi</div>
-<button class="buy-btn" onclick="addToCart('Biznes loyiha')">
-Savatga qo‘shish
-</button>
+
+<div class="card-icon">📋</div>
+
+<h3>Biznes konsalting</h3>
+
+<p>
+Individual biznes maslahatlari va strategik
+rivojlanish bo‘yicha xizmat.
+</p>
+
+<div class="product-price">
+Kelishiladi
 </div>
 
+<button class="buy"
+onclick="addToCart('Biznes konsalting')">
+🛒 Savatga qo‘shish
+</button>
+
+</div>
+
+
 <div class="card">
-<div class="icon">🌍</div>
+
+<div class="card-icon">📊</div>
+
+<h3>Biznes-reja</h3>
+
+<p>
+Individual loyiha uchun professional
+biznes-reja tayyorlash.
+</p>
+
+<div class="product-price">
+Kelishiladi
+</div>
+
+<button class="buy"
+onclick="addToCart('Professional biznes-reja')">
+🛒 Savatga qo‘shish
+</button>
+
+</div>
+
+
+<div class="card">
+
+<div class="card-icon">🌍</div>
+
 <h3>Xalqaro hamkorlik</h3>
-<p>Xalqaro biznes hamkorlik xizmatlari.</p>
-<div class="product-price">Kelishiladi</div>
-<button class="buy-btn" onclick="addToCart('Xalqaro hamkorlik')">
-Savatga qo‘shish
+
+<p>
+Xalqaro biznes aloqalarini rivojlantirish
+bo‘yicha xizmatlar.
+</p>
+
+<div class="product-price">
+Kelishiladi
+</div>
+
+<button class="buy"
+onclick="addToCart('Xalqaro hamkorlik')">
+🛒 Savatga qo‘shish
 </button>
+
 </div>
 
 </div>
+
 
 <div class="cart" id="cart">
-<h3>🛒 Sizning savatingiz</h3>
-<p id="cartItems"></p>
-<button class="buy-btn" onclick="sendOrder()">
-Buyurtma berish
+
+<h3>🛒 Savatingiz</h3>
+
+<div id="cartItems"></div>
+
+<br>
+
+<button class="buy" onclick="goToContact()">
+Buyurtmani rasmiylashtirish
 </button>
+
 </div>
 
 </div>
 
 </section>
 
+
+<!-- INVESTMENT -->
+
+<section class="investment" id="investment">
+
+<div class="container">
+
+<div class="section-title">
+
+<h2>💰 Investitsiya loyihalari</h2>
+
+<p>
+Investorlar va biznes hamkorlar uchun imkoniyatlar
+</p>
+
+</div>
+
+
+<div class="cards">
+
+<div class="card invest-card">
+
+<div class="card-icon">🏢</div>
+
+<h3>Biznes infratuzilmasi</h3>
+
+<p>
+Yangi biznes infratuzilmasini yaratish
+va rivojlantirishga qaratilgan loyihalar.
+</p>
+
+</div>
+
+
+<div class="card invest-card">
+
+<div class="card-icon">🌱</div>
+
+<h3>Innovatsion loyihalar</h3>
+
+<p>
+Yangi texnologiyalar va zamonaviy
+biznes g‘oyalarini rivojlantirish.
+</p>
+
+</div>
+
+
+<div class="card invest-card">
+
+<div class="card-icon">🌍</div>
+
+<h3>Xalqaro loyihalar</h3>
+
+<p>
+Xalqaro bozorga chiqish va xorijiy
+hamkorlar bilan qo‘shma loyihalar.
+</p>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- CONTACT -->
 
 <section class="contact" id="contact">
 
 <div class="container">
 
 <div class="section-title">
-<h2>Bog‘lanish</h2>
-<p>Biznes takliflaringizni yuboring</p>
+
+<h2>📞 Biz bilan bog‘laning</h2>
+
+<p>
+Biznes taklifingiz yoki loyihangizni yuboring
+</p>
+
 </div>
+
 
 <div class="contact-grid">
 
-<div class="contact-card">
-<h3>🦅 Global Trade Uzbekistan</h3>
-<p>
-Biznes hamkorlik, investitsiya, savdo va yangi
-loyihalar bo‘yicha murojaatlaringizni kutamiz.
-</p>
-</div>
 
-<div class="contact-card">
-<h3>📩 Murojaat</h3>
+<div class="contact-box">
+
+<h3>🦅 Global Trade Uzbekistan</h3>
+
 <p>
-Hamkorlik uchun biz bilan bog‘laning.
+Biznes, savdo, investitsiya, konsalting va
+xalqaro hamkorlik bo‘yicha murojaatlarni qabul qilamiz.
 </p>
 
 <br>
 
-<a href="mailto:info@globaltrade.uz"
-class="btn btn-primary">
-Email yuborish
-</a>
+<p>
+<strong>Asoschi:</strong><br>
+Muhammadiev Muzaffar Yuldoshivech
+</p>
+
+<br>
+
+<p>
+🇺🇿 Uzbekistan<br>
+🌍 International Business
+</p>
+
+</div>
+
+
+<div class="contact-box">
+
+<form id="contactForm">
+
+<input
+type="text"
+id="name"
+placeholder="Ismingiz"
+required
+>
+
+<input
+type="tel"
+id="phone"
+placeholder="Telefon raqamingiz"
+required
+>
+
+<select id="service" required>
+
+<option value="">
+Xizmatni tanlang
+</option>
+
+<option>
+Biznes konsalting
+</option>
+
+<option>
+Biznes-reja
+</option>
+
+<option>
+Marketing
+</option>
+
+<option>
+Xalqaro hamkorlik
+</option>
+
+<option>
+Investitsiya loyihasi
+</option>
+
+<option>
+Boshqa
+</option>
+
+</select>
+
+
+<textarea
+id="message"
+placeholder="Murojaatingizni yozing..."
+required>
+</textarea>
+
+
+<button
+class="submit"
+type="submit">
+📩 Murojaat yuborish
+</button>
+
+</form>
 
 </div>
 
@@ -734,18 +1173,25 @@ Email yuborish
 </section>
 
 
+<!-- FOOTER -->
+
 <footer>
 
-<p>
-© 2026 <strong>Global Trade Uzbekistan</strong>
-</p>
-
-<p>
-Founder: <strong>Muhammadiev Muzaffar Yuldoshivech</strong>
-</p>
+<h3>🦅 GLOBAL TRADE UZBEKISTAN</h3>
 
 <p>
 Business • Trade • Investment • Innovation • Partnership
+</p>
+
+<br>
+
+<p>
+© 2026 Global Trade Uzbekistan
+</p>
+
+<p>
+Founder:
+<strong>Muhammadiev Muzaffar Yuldoshivech</strong>
 </p>
 
 </footer>
@@ -753,7 +1199,10 @@ Business • Trade • Investment • Innovation • Partnership
 
 <script>
 
+/* SAVAT */
+
 let cart = [];
+
 
 function addToCart(product){
 
@@ -762,49 +1211,87 @@ function addToCart(product){
     updateCart();
 
     alert("✅ " + product + " savatga qo‘shildi!");
+
 }
+
 
 function updateCart(){
 
-    const cartBox = document.getElementById("cart");
-    const cartItems = document.getElementById("cartItems");
+    const box =
+    document.getElementById("cart");
 
-    cartBox.style.display = "block";
+    const items =
+    document.getElementById("cartItems");
+
+    box.style.display = "block";
+
 
     if(cart.length === 0){
 
-        cartItems.innerHTML = "Savatcha bo‘sh.";
+        items.innerHTML =
+        "<p>Savat bo‘sh.</p>";
 
         return;
+
     }
 
-    cartItems.innerHTML = cart
-        .map((item,index) =>
-        (index + 1) + ". " + item)
-        .join("<br>");
+
+    items.innerHTML =
+    cart.map(function(item,index){
+
+        return `
+        <div class="cart-item">
+        ${index + 1}. ${item}
+        </div>
+        `;
+
+    }).join("");
+
 }
 
-function sendOrder(){
 
-    if(cart.length === 0){
+function goToContact(){
 
-        alert("❗ Avval mahsulot yoki xizmat tanlang.");
+    document
+    .getElementById("contact")
+    .scrollIntoView();
 
-        return;
-    }
+}
 
-    const order = cart.join(", ");
+
+/* MUROJAAT */
+
+document
+.getElementById("contactForm")
+.addEventListener("submit",function(event){
+
+    event.preventDefault();
+
+
+    const name =
+    document.getElementById("name").value;
+
+    const phone =
+    document.getElementById("phone").value;
+
+    const service =
+    document.getElementById("service").value;
 
     const message =
-    "Assalomu alaykum! Global Trade Uzbekistan saytida quyidagi xizmatlarga qiziqyapman: "
-    + order;
+    document.getElementById("message").value;
 
-    window.location.href =
-    "mailto:info@globaltrade.uz?subject=Global Trade Uzbekistan buyurtmasi&body="
-    + encodeURIComponent(message);
-}
+
+    alert(
+    "✅ Murojaatingiz tayyorlandi!\n\n" +
+    "Ism: " + name + "\n" +
+    "Telefon: " + phone + "\n" +
+    "Xizmat: " + service
+    );
+
+});
 
 </script>
+
 
 </body>
 </html>
