@@ -18,87 +18,100 @@ body{
     font-family:Arial, sans-serif;
     background:#f5f7fb;
     color:#172033;
+    line-height:1.6;
 }
 
 header{
-    background:#071a33;
+    background:#0b1f3a;
     color:white;
-    padding:18px 6%;
     position:sticky;
     top:0;
     z-index:1000;
-    box-shadow:0 3px 15px rgba(0,0,0,.2);
+    box-shadow:0 3px 15px rgba(0,0,0,.15);
 }
 
-.nav{
+.navbar{
+    max-width:1200px;
+    margin:auto;
+    padding:18px 20px;
     display:flex;
-    align-items:center;
     justify-content:space-between;
+    align-items:center;
     gap:20px;
 }
 
 .logo{
-    font-size:22px;
+    font-size:21px;
     font-weight:bold;
+}
+
+nav{
+    display:flex;
+    gap:22px;
 }
 
 nav a{
     color:white;
     text-decoration:none;
-    margin-left:18px;
-    font-size:15px;
+    font-weight:bold;
 }
 
 nav a:hover{
-    color:#31c48d;
+    color:#38bdf8;
 }
 
 .hero{
-    min-height:560px;
+    min-height:520px;
     display:flex;
     align-items:center;
-    padding:70px 6%;
-    background:linear-gradient(135deg,#071a33,#123d68);
+    justify-content:center;
+    text-align:center;
+    padding:70px 20px;
+    background:linear-gradient(135deg,#0b1f3a,#1261a0);
     color:white;
 }
 
 .hero-content{
-    max-width:700px;
+    max-width:850px;
 }
 
 .hero h1{
     font-size:48px;
-    line-height:1.1;
     margin-bottom:20px;
 }
 
 .hero p{
-    font-size:19px;
-    line-height:1.7;
-    color:#dce8f5;
+    font-size:20px;
     margin-bottom:30px;
 }
 
 .btn{
     display:inline-block;
-    padding:14px 24px;
-    border-radius:10px;
-    background:#20b981;
-    color:white;
-    text-decoration:none;
     border:none;
     cursor:pointer;
+    background:#16a34a;
+    color:white;
+    padding:13px 24px;
+    border-radius:10px;
     font-size:16px;
     font-weight:bold;
+    text-decoration:none;
+    transition:.2s;
 }
 
 .btn:hover{
-    opacity:.9;
     transform:translateY(-2px);
+    opacity:.9;
+}
+
+.btn.blue{
+    background:#2563eb;
 }
 
 section{
-    padding:70px 6%;
+    max-width:1200px;
+    margin:auto;
+    padding:70px 20px;
 }
 
 .section-title{
@@ -111,181 +124,218 @@ section{
     margin-bottom:10px;
 }
 
-.section-title p{
-    color:#687386;
-}
-
 .cards{
     display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(230px,1fr));
-    gap:22px;
+    grid-template-columns:repeat(4,1fr);
+    gap:20px;
 }
 
 .card{
     background:white;
-    padding:28px;
+    padding:28px 20px;
     border-radius:16px;
-    box-shadow:0 5px 20px rgba(20,40,70,.08);
-    transition:.3s;
+    text-align:center;
+    box-shadow:0 5px 20px rgba(0,0,0,.07);
+    transition:.2s;
 }
 
 .card:hover{
-    transform:translateY(-6px);
-    box-shadow:0 10px 28px rgba(20,40,70,.14);
+    transform:translateY(-5px);
 }
 
 .icon{
-    font-size:40px;
+    font-size:45px;
     margin-bottom:15px;
-}
-
-.card h3{
-    margin-bottom:12px;
-}
-
-.card p{
-    color:#687386;
-    line-height:1.6;
 }
 
 .products{
     display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(230px,1fr));
-    gap:24px;
+    grid-template-columns:repeat(4,1fr);
+    gap:22px;
 }
 
 .product{
     background:white;
     border-radius:16px;
     overflow:hidden;
-    box-shadow:0 5px 20px rgba(20,40,70,.08);
+    box-shadow:0 5px 20px rgba(0,0,0,.08);
 }
 
 .product-img{
     height:170px;
-    background:linear-gradient(135deg,#e9eef5,#cdd8e6);
     display:flex;
-    justify-content:center;
     align-items:center;
-    font-size:65px;
+    justify-content:center;
+    background:#eaf1f8;
+    font-size:75px;
 }
 
-.product-body{
+.product-info{
     padding:20px;
 }
 
+.product h3{
+    margin-bottom:8px;
+}
+
 .price{
-    color:#15966b;
-    font-size:21px;
+    font-size:20px;
     font-weight:bold;
+    color:#0b7a42;
     margin:12px 0;
 }
 
-.product button{
+.search{
+    max-width:600px;
+    margin:0 auto 30px;
+}
+
+.search input{
     width:100%;
+    padding:15px;
+    border:1px solid #ccd3dd;
+    border-radius:10px;
+    font-size:16px;
 }
 
 .cart{
-    background:#071a33;
+    background:#0b1f3a;
     color:white;
+    border-radius:18px;
+    padding:30px;
+    max-width:850px;
+    margin:40px auto 0;
 }
 
-.cart-box{
-    max-width:800px;
-    margin:auto;
-    background:#102947;
-    padding:28px;
-    border-radius:16px;
+.cart h3{
+    font-size:25px;
+    margin-bottom:20px;
 }
 
 .cart-item{
     display:flex;
     justify-content:space-between;
-    gap:15px;
-    padding:14px 0;
-    border-bottom:1px solid #35506f;
+    align-items:center;
+    border-bottom:1px solid rgba(255,255,255,.2);
+    padding:13px 0;
+    gap:10px;
+}
+
+.remove{
+    background:#dc2626;
+    color:white;
+    border:none;
+    padding:7px 10px;
+    border-radius:6px;
+    cursor:pointer;
 }
 
 .total{
-    text-align:right;
     font-size:22px;
-    margin-top:20px;
     font-weight:bold;
+    margin:20px 0;
 }
 
-.form{
+.business{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:22px;
+}
+
+.business-card{
+    background:white;
+    padding:30px;
+    border-radius:16px;
+    box-shadow:0 5px 20px rgba(0,0,0,.07);
+}
+
+.form-box{
     max-width:700px;
     margin:auto;
     background:white;
     padding:30px;
-    border-radius:16px;
-    box-shadow:0 5px 20px rgba(20,40,70,.08);
+    border-radius:18px;
+    box-shadow:0 5px 25px rgba(0,0,0,.08);
 }
 
-input, textarea, select{
+.form-box input,
+.form-box textarea{
     width:100%;
     padding:14px;
     margin:8px 0 16px;
-    border:1px solid #d8dee8;
+    border:1px solid #ccd3dd;
     border-radius:9px;
     font-size:16px;
 }
 
-textarea{
-    min-height:120px;
+.form-box textarea{
+    min-height:110px;
     resize:vertical;
 }
 
 .contact{
     display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+    grid-template-columns:repeat(3,1fr);
     gap:20px;
 }
 
-.contact-box{
+.contact-card{
     background:white;
     padding:25px;
     border-radius:15px;
-    box-shadow:0 5px 20px rgba(20,40,70,.08);
+    text-align:center;
+    box-shadow:0 5px 20px rgba(0,0,0,.07);
 }
 
 footer{
-    background:#071a33;
+    background:#071426;
     color:white;
     text-align:center;
-    padding:30px 6%;
+    padding:35px 20px;
 }
 
-footer p{
-    margin:7px 0;
-    color:#c9d5e5;
-}
-
-@media(max-width:750px){
-    .nav{
-        flex-direction:column;
+@media(max-width:900px){
+    .cards,
+    .products{
+        grid-template-columns:repeat(2,1fr);
     }
 
-    nav{
-        text-align:center;
-    }
-
-    nav a{
-        display:inline-block;
-        margin:7px;
-    }
-
-    .hero{
-        text-align:center;
-        min-height:500px;
+    .business,
+    .contact{
+        grid-template-columns:1fr;
     }
 
     .hero h1{
         font-size:36px;
     }
+}
+
+@media(max-width:600px){
+    .navbar{
+        flex-direction:column;
+    }
+
+    nav{
+        flex-wrap:wrap;
+        justify-content:center;
+        gap:12px;
+    }
+
+    .cards,
+    .products{
+        grid-template-columns:1fr;
+    }
+
+    .hero{
+        min-height:450px;
+    }
+
+    .hero h1{
+        font-size:30px;
+    }
 
     .hero p{
-        font-size:16px;
+        font-size:17px;
     }
 }
 </style>
@@ -294,9 +344,11 @@ footer p{
 <body>
 
 <header>
-<div class="nav">
+<div class="navbar">
 
-<div class="logo">🌐 MUZAFFAR GLOBAL TRADE UZ</div>
+<div class="logo">
+MUZAFFAR GLOBAL TRADE UZ
+</div>
 
 <nav>
 <a href="#home">Bosh sahifa</a>
@@ -311,6 +363,7 @@ footer p{
 
 
 <section class="hero" id="home">
+
 <div class="hero-content">
 
 <h1>MUZAFFAR GLOBAL TRADE UZ</h1>
@@ -320,9 +373,12 @@ Onlayn savdo, xizmatlar, biznes va investitsiya yo‘nalishlarida
 zamonaviy imkoniyatlarni birlashtiruvchi platforma.
 </p>
 
-<a href="#shop" class="btn">🛒 Savdoni boshlash</a>
+<a class="btn" href="#shop">
+🛒 Savdoni boshlash
+</a>
 
 </div>
+
 </section>
 
 
@@ -360,70 +416,117 @@ zamonaviy imkoniyatlarni birlashtiruvchi platforma.
 </div>
 
 </div>
+
 </section>
 
 
 <section id="shop">
 
 <div class="section-title">
+
 <h2>🛍️ Onlayn savdo</h2>
 <p>Mahsulotlarimiz bilan tanishing</p>
+
 </div>
 
-<div class="products">
+<div class="search">
 
-<div class="product">
+<input
+type="text"
+id="searchInput"
+placeholder="🔎 Mahsulot qidirish..."
+onkeyup="searchProducts()"
+>
+
+</div>
+
+<div class="products" id="products">
+
+<div class="product" data-name="smartfon">
+
 <div class="product-img">📱</div>
-<div class="product-body">
+
+<div class="product-info">
+
 <h3>Smartfon</h3>
+
 <p>Zamonaviy smartfon</p>
+
 <div class="price">2 500 000 so‘m</div>
-<button class="btn" onclick="addToCart('Smartfon',2500000)">Savatchaga qo‘shish</button>
+
+<button class="btn" onclick="addToCart('Smartfon',2500000)">
+Savatchaga qo‘shish
+</button>
+
 </div>
 </div>
 
-<div class="product">
+
+<div class="product" data-name="noutbuk">
+
 <div class="product-img">💻</div>
-<div class="product-body">
+
+<div class="product-info">
+
 <h3>Noutbuk</h3>
+
 <p>Ish va o‘qish uchun noutbuk</p>
+
 <div class="price">6 500 000 so‘m</div>
-<button class="btn" onclick="addToCart('Noutbuk',6500000)">Savatchaga qo‘shish</button>
+
+<button class="btn" onclick="addToCart('Noutbuk',6500000)">
+Savatchaga qo‘shish
+</button>
+
 </div>
 </div>
 
-<div class="product">
+
+<div class="product" data-name="quloqchin">
+
 <div class="product-img">🎧</div>
-<div class="product-body">
+
+<div class="product-info">
+
 <h3>Quloqchin</h3>
+
 <p>Sifatli simsiz quloqchin</p>
+
 <div class="price">350 000 so‘m</div>
-<button class="btn" onclick="addToCart('Quloqchin',350000)">Savatchaga qo‘shish</button>
+
+<button class="btn" onclick="addToCart('Quloqchin',350000)">
+Savatchaga qo‘shish
+</button>
+
 </div>
 </div>
 
-<div class="product">
+
+<div class="product" data-name="smart watch">
+
 <div class="product-img">⌚</div>
-<div class="product-body">
+
+<div class="product-info">
+
 <h3>Smart Watch</h3>
+
 <p>Zamonaviy aqlli soat</p>
+
 <div class="price">750 000 so‘m</div>
-<button class="btn" onclick="addToCart('Smart Watch',750000)">Savatchaga qo‘shish</button>
-</div>
-</div>
+
+<button class="btn" onclick="addToCart('Smart Watch',750000)">
+Savatchaga qo‘shish
+</button>
 
 </div>
-</section>
-
-
-<section class="cart" id="cart">
-
-<div class="section-title">
-<h2>🛒 Savatcha</h2>
-<p style="color:#cbd8e7">Tanlangan mahsulotlar</p>
 </div>
 
-<div class="cart-box">
+</div>
+
+
+<div class="cart">
+
+<h3>🛒 Savatcha</h3>
 
 <div id="cartItems">
 Savatcha hozircha bo‘sh.
@@ -433,101 +536,189 @@ Savatcha hozircha bo‘sh.
 Jami: <span id="total">0</span> so‘m
 </div>
 
-<br>
-
-<a href="#order" class="btn">📦 Buyurtma berish</a>
+<button class="btn" onclick="goToOrder()">
+📦 Buyurtma berish
+</button>
 
 </div>
+
 </section>
 
 
 <section id="business">
 
 <div class="section-title">
+
 <h2>💼 Biznes va investitsiya</h2>
+
 <p>Yangi imkoniyatlar sari birga harakat qilamiz</p>
+
 </div>
 
-<div class="cards">
+<div class="business">
 
-<div class="card">
+<div class="business-card">
+
 <div class="icon">🌍</div>
+
 <h3>Global savdo</h3>
-<p>Xalqaro bozorlarga chiqish va savdo imkoniyatlarini rivojlantirish.</p>
+
+<p>
+Xalqaro bozorlarga chiqish va savdo imkoniyatlarini rivojlantirish.
+</p>
+
 </div>
 
-<div class="card">
+
+<div class="business-card">
+
 <div class="icon">📊</div>
+
 <h3>Biznes rivoji</h3>
-<p>Biznes g‘oyalarni rivojlantirish va yangi yo‘nalishlarni izlash.</p>
+
+<p>
+Biznes g‘oyalarni rivojlantirish va yangi yo‘nalishlarni izlash.
+</p>
+
 </div>
 
-<div class="card">
+
+<div class="business-card">
+
 <div class="icon">🤝</div>
+
 <h3>Hamkorlik</h3>
-<p>Yangi hamkorlar va mijozlar bilan ishlash imkoniyatlari.</p>
+
+<p>
+Yangi hamkorlar va mijozlar bilan ishlash imkoniyatlari.
+</p>
+
 </div>
 
 </div>
+
 </section>
 
 
 <section id="order">
 
 <div class="section-title">
+
 <h2>📦 Buyurtma berish</h2>
+
 <p>Ma’lumotlaringizni kiriting</p>
+
 </div>
 
-<div class="form">
+<div class="form-box">
 
 <form onsubmit="sendOrder(event)">
 
 <label>Ismingiz</label>
-<input type="text" id="name" placeholder="Ismingiz" required>
+
+<input
+type="text"
+id="name"
+placeholder="Ismingiz"
+required
+>
+
 
 <label>Telefon raqamingiz</label>
-<input type="tel" id="phone" placeholder="+998 90 123 45 67" required>
+
+<input
+type="tel"
+id="phone"
+placeholder="+998 90 123 45 67"
+required
+>
+
 
 <label>Manzil</label>
-<input type="text" id="address" placeholder="Yetkazib berish manzili" required>
+
+<input
+type="text"
+id="address"
+placeholder="Yetkazib berish manzili"
+required
+>
+
 
 <label>Izoh</label>
-<textarea id="message" placeholder="Qo‘shimcha ma’lumot"></textarea>
 
-<button class="btn" type="submit">Buyurtmani yuborish</button>
+<textarea
+id="comment"
+placeholder="Qo‘shimcha ma’lumot"
+></textarea>
+
+
+<button class="btn" type="submit">
+Buyurtmani yuborish
+</button>
 
 </form>
 
 </div>
+
 </section>
 
 
 <section id="contact">
 
 <div class="section-title">
+
 <h2>📞 Biz bilan bog‘laning</h2>
+
 <p>Savol va takliflaringizni yuboring</p>
+
 </div>
 
 <div class="contact">
 
-<div class="contact-box">
-<h3>📱 Telefon</h3>
+<div class="contact-card">
+
+<div class="icon">📱</div>
+
+<h3>Telefon</h3>
+
 <p>+998 XX XXX XX XX</p>
+
 </div>
 
-<div class="contact-box">
-<h3>✈️ Telegram</h3>
+
+<div class="contact-card">
+
+<div class="icon">✈️</div>
+
+<h3>Telegram</h3>
+
 <p>@MuzaffarGlobalTradeUZ</p>
+
+<br>
+
+<a
+class="btn blue"
+href="https://t.me/MuzaffarGlobalTradeUZ"
+target="_blank"
+>
+Telegramga yozish
+</a>
+
 </div>
 
-<div class="contact-box">
-<h3>📧 Email</h3>
+
+<div class="contact-card">
+
+<div class="icon">📧</div>
+
+<h3>Email</h3>
+
 <p>info@globaltrade.uz</p>
+
 </div>
 
 </div>
+
 </section>
 
 
@@ -536,6 +727,8 @@ Jami: <span id="total">0</span> so‘m
 <h3>🌐 MUZAFFAR GLOBAL TRADE UZ</h3>
 
 <p>Onlayn savdo • Xizmatlar • Biznes • Investitsiya</p>
+
+<br>
 
 <p>© 2026 MUZAFFAR GLOBAL TRADE UZ. Barcha huquqlar himoyalangan.</p>
 
@@ -546,6 +739,7 @@ Jami: <span id="total">0</span> so‘m
 
 let cart = [];
 
+
 function addToCart(name, price){
 
 cart.push({
@@ -553,87 +747,202 @@ name:name,
 price:price
 });
 
-showCart();
+updateCart();
 
 alert(name + " savatchaga qo‘shildi!");
 
 }
 
-function showCart(){
 
-let box = document.getElementById("cartItems");
-let total = 0;
+function updateCart(){
 
-if(cart.length === 0){
+let container =
+document.getElementById("cartItems");
 
-box.innerHTML = "Savatcha hozircha bo‘sh.";
-
-}else{
-
-box.innerHTML = "";
-
-cart.forEach((item,index)=>{
-
-total += item.price;
-
-let div = document.createElement("div");
-
-div.className = "cart-item";
-
-div.innerHTML =
-"<span>" + item.name + "</span>" +
-"<span>" + item.price.toLocaleString() + " so‘m " +
-"<button onclick='removeItem(" + index + ")'>❌</button></span>";
-
-box.appendChild(div);
-
-});
-
-}
-
-document.getElementById("total").innerText =
-total.toLocaleString();
-
-}
-
-function removeItem(index){
-
-cart.splice(index,1);
-
-showCart();
-
-}
-
-function sendOrder(event){
-
-event.preventDefault();
-
-let name = document.getElementById("name").value;
-let phone = document.getElementById("phone").value;
-let address = document.getElementById("address").value;
+let total =
+document.getElementById("total");
 
 if(cart.length === 0){
 
-alert("Avval savatchaga mahsulot qo‘shing.");
+container.innerHTML =
+"🛒 Savatcha hozircha bo‘sh.";
+
+total.innerText = "0";
 
 return;
 
 }
 
-let products = cart.map(item => item.name).join(", ");
+container.innerHTML = "";
 
-let total = cart.reduce((sum,item)=>sum + item.price,0);
+let sum = 0;
+
+cart.forEach((item,index)=>{
+
+sum += item.price;
+
+let div =
+document.createElement("div");
+
+div.className = "cart-item";
+
+div.innerHTML = `
+<span>
+${item.name} —
+${item.price.toLocaleString("uz-UZ")} so‘m
+</span>
+
+<button
+class="remove"
+onclick="removeItem(${index})"
+>
+O‘chirish
+</button>
+`;
+
+container.appendChild(div);
+
+});
+
+total.innerText =
+sum.toLocaleString("uz-UZ");
+
+}
+
+
+function removeItem(index){
+
+cart.splice(index,1);
+
+updateCart();
+
+}
+
+
+function goToOrder(){
+
+if(cart.length === 0){
+
+alert("Avval mahsulot tanlang!");
+
+return;
+
+}
+
+document
+.getElementById("order")
+.scrollIntoView({
+behavior:"smooth"
+});
+
+}
+
+
+function searchProducts(){
+
+let input =
+document
+.getElementById("searchInput")
+.value
+.toLowerCase();
+
+let products =
+document.querySelectorAll(".product");
+
+products.forEach(product=>{
+
+let name =
+product
+.getAttribute("data-name")
+.toLowerCase();
+
+if(name.includes(input)){
+
+product.style.display = "";
+
+}else{
+
+product.style.display = "none";
+
+}
+
+});
+
+}
+
+
+function sendOrder(event){
+
+event.preventDefault();
+
+if(cart.length === 0){
+
+alert("Savatchada mahsulot yo‘q!");
+
+return;
+
+}
+
+let name =
+document.getElementById("name").value;
+
+let phone =
+document.getElementById("phone").value;
+
+let address =
+document.getElementById("address").value;
+
+let comment =
+document.getElementById("comment").value;
+
+
+let products = cart.map(item =>
+item.name
+).join(", ");
+
+
+let total =
+cart.reduce(
+(sum,item)=>sum + item.price,
+0
+);
+
+
+let message =
+"YANGI BUYURTMA%0A%0A" +
+
+"👤 Ism: " + encodeURIComponent(name) + "%0A" +
+
+"📱 Telefon: " + encodeURIComponent(phone) + "%0A" +
+
+"📍 Manzil: " + encodeURIComponent(address) + "%0A" +
+
+"🛒 Mahsulotlar: " + encodeURIComponent(products) + "%0A" +
+
+"💰 Jami: " +
+encodeURIComponent(
+total.toLocaleString("uz-UZ")
+) +
+" so‘m%0A" +
+
+"📝 Izoh: " +
+encodeURIComponent(comment || "Yo‘q");
+
 
 alert(
-"Buyurtma qabul qilindi!\\n\\n" +
-"Mijoz: " + name +
-"\\nTelefon: " + phone +
-"\\nManzil: " + address +
-"\\nMahsulotlar: " + products +
-"\\nJami: " + total.toLocaleString() + " so‘m"
+"Buyurtma tayyorlandi! Telegram orqali yuborish oynasi ochiladi."
+);
+
+
+window.open(
+"https://t.me/share/url?url=&text=" + message,
+"_blank"
 );
 
 }
+
+
+updateCart();
 
 </script>
 
