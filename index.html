@@ -7,165 +7,217 @@
 <title>MUZAFFAR GLOBAL TRADE UZ</title>
 
 <style>
-* {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
+*{
+    box-sizing:border-box;
+    margin:0;
+    padding:0;
 }
 
-body {
-    font-family: Arial, sans-serif;
-    background: #f4f6f8;
-    color: #172033;
+body{
+    font-family:Arial,sans-serif;
+    background:#f4f7fb;
+    color:#172033;
 }
 
-header {
-    background: #0b1f3a;
-    color: white;
-    padding: 20px;
-    text-align: center;
+header{
+    background:linear-gradient(135deg,#071d49,#0b4da2);
+    color:white;
+    padding:18px 6%;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    flex-wrap:wrap;
+    gap:15px;
 }
 
-.logo {
-    font-size: 28px;
-    font-weight: bold;
+.logo{
+    font-size:24px;
+    font-weight:bold;
 }
 
-nav {
-    margin-top: 15px;
+nav a{
+    color:white;
+    text-decoration:none;
+    margin:0 10px;
+    font-weight:bold;
 }
 
-nav a {
-    color: white;
-    text-decoration: none;
-    margin: 0 8px;
-    font-size: 14px;
+.cart-btn{
+    background:#fff;
+    color:#0b4da2;
+    border:0;
+    padding:10px 16px;
+    border-radius:8px;
+    font-weight:bold;
+    cursor:pointer;
 }
 
-.hero {
-    background: linear-gradient(135deg, #0b1f3a, #1261a0);
-    color: white;
-    text-align: center;
-    padding: 70px 20px;
+.hero{
+    padding:70px 6%;
+    background:linear-gradient(135deg,#eaf3ff,#ffffff);
+    text-align:center;
 }
 
-.hero h1 {
-    font-size: 38px;
-    margin-bottom: 15px;
+.hero h1{
+    font-size:42px;
+    margin-bottom:15px;
+    color:#08285f;
 }
 
-.hero p {
-    font-size: 18px;
-    margin-bottom: 25px;
+.hero p{
+    font-size:18px;
+    margin-bottom:25px;
 }
 
-.btn {
-    display: inline-block;
-    background: #f5b700;
-    color: #111;
-    padding: 13px 25px;
-    border-radius: 8px;
-    text-decoration: none;
-    font-weight: bold;
-    border: none;
-    cursor: pointer;
+.btn{
+    display:inline-block;
+    padding:13px 22px;
+    background:#0b4da2;
+    color:white;
+    text-decoration:none;
+    border-radius:8px;
+    border:0;
+    cursor:pointer;
+    font-weight:bold;
 }
 
-section {
-    padding: 50px 20px;
-    max-width: 1100px;
-    margin: auto;
+section{
+    padding:50px 6%;
 }
 
-.section-title {
-    text-align: center;
-    font-size: 30px;
-    margin-bottom: 30px;
+.section-title{
+    text-align:center;
+    font-size:30px;
+    margin-bottom:30px;
+    color:#08285f;
 }
 
-.services,
-.products {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-    gap: 20px;
+.products{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+    gap:22px;
 }
 
-.card {
-    background: white;
-    padding: 25px;
-    border-radius: 12px;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.08);
-    text-align: center;
+.product{
+    background:white;
+    border-radius:14px;
+    padding:22px;
+    box-shadow:0 5px 18px rgba(0,0,0,.08);
+    text-align:center;
 }
 
-.card h3 {
-    margin: 15px 0 10px;
+.product-icon{
+    font-size:55px;
+    margin-bottom:15px;
 }
 
-.icon {
-    font-size: 45px;
+.product h3{
+    margin-bottom:10px;
 }
 
-.price {
-    color: #1261a0;
-    font-size: 22px;
-    font-weight: bold;
-    margin: 15px 0;
+.price{
+    color:#0b4da2;
+    font-size:20px;
+    font-weight:bold;
+    margin:12px 0;
 }
 
-.cart {
-    background: #0b1f3a;
-    color: white;
-    padding: 25px;
-    border-radius: 12px;
-    margin-top: 30px;
+.services{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+    gap:20px;
 }
 
-.cart h3 {
-    margin-bottom: 15px;
+.service{
+    background:#fff;
+    padding:25px;
+    border-radius:12px;
+    box-shadow:0 5px 15px rgba(0,0,0,.07);
 }
 
-footer {
-    background: #0b1f3a;
-    color: white;
-    text-align: center;
-    padding: 30px 20px;
-    margin-top: 30px;
+.service h3{
+    margin-bottom:10px;
+    color:#0b4da2;
 }
 
-.contact-box {
-    background: white;
-    padding: 30px;
-    border-radius: 12px;
-    text-align: center;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+.contact{
+    background:#08285f;
+    color:white;
+    text-align:center;
 }
 
-input, textarea {
-    width: 100%;
-    padding: 12px;
-    margin: 8px 0;
-    border: 1px solid #ccc;
-    border-radius: 7px;
+.contact h2{
+    margin-bottom:15px;
 }
 
-textarea {
-    height: 100px;
+footer{
+    background:#061633;
+    color:white;
+    text-align:center;
+    padding:20px;
 }
 
-#cartItems {
-    margin: 15px 0;
+.modal{
+    display:none;
+    position:fixed;
+    z-index:1000;
+    left:0;
+    top:0;
+    width:100%;
+    height:100%;
+    background:rgba(0,0,0,.6);
 }
 
-.cart-item {
-    padding: 8px 0;
-    border-bottom: 1px solid #555;
+.modal-content{
+    background:white;
+    width:90%;
+    max-width:500px;
+    margin:8% auto;
+    padding:25px;
+    border-radius:14px;
 }
 
-.total {
-    font-size: 20px;
-    font-weight: bold;
-    margin-top: 15px;
+.close{
+    float:right;
+    font-size:28px;
+    cursor:pointer;
+}
+
+.cart-item{
+    display:flex;
+    justify-content:space-between;
+    padding:12px 0;
+    border-bottom:1px solid #ddd;
+}
+
+.total{
+    font-size:21px;
+    font-weight:bold;
+    margin:20px 0;
+}
+
+input,textarea{
+    width:100%;
+    padding:12px;
+    margin:8px 0;
+    border:1px solid #ccc;
+    border-radius:7px;
+}
+
+@media(max-width:700px){
+    .hero h1{
+        font-size:30px;
+    }
+
+    nav{
+        width:100%;
+        text-align:center;
+    }
+
+    nav a{
+        display:inline-block;
+        margin:6px;
+    }
 }
 </style>
 </head>
@@ -173,245 +225,176 @@ textarea {
 <body>
 
 <header>
-    <div class="logo">🦅 MUZAFFAR GLOBAL TRADE UZ</div>
 
-    <nav>
-        <a href="#home">Bosh sahifa</a>
-        <a href="#shop">Online savdo</a>
-        <a href="#services">Xizmatlar</a>
-        <a href="#projects">Biznes loyihalar</a>
-        <a href="#contact">Aloqa</a>
-    </nav>
+<div class="logo">🦅 MUZAFFAR GLOBAL TRADE UZ</div>
+
+<nav>
+<a href="#home">Bosh sahifa</a>
+<a href="#shop">Savdo</a>
+<a href="#services">Xizmatlar</a>
+<a href="#contact">Aloqa</a>
+</nav>
+
+<button class="cart-btn" onclick="openCart()">
+🛒 Savat (<span id="cartCount">0</span>)
+</button>
+
 </header>
 
+
 <section class="hero" id="home">
-    <h1>MUZAFFAR GLOBAL TRADE UZ</h1>
-    <p>Online savdo, biznes xizmatlari va yangi imkoniyatlar</p>
-    <a href="#shop" class="btn">🛒 Savdoni boshlash</a>
+
+<h1>MUZAFFAR GLOBAL TRADE UZ</h1>
+
+<p>
+O‘zbekiston va xalqaro bozor uchun zamonaviy savdo,
+biznes va xizmatlar platformasi.
+</p>
+
+<a href="#shop" class="btn">Online savdoni boshlash</a>
+
 </section>
+
 
 <section id="shop">
 
-    <h2 class="section-title">🛒 Online Savdo</h2>
+<h2 class="section-title">🛒 Online Savdo</h2>
 
-    <div class="products">
+<div class="products">
 
-        <div class="card">
-            <div class="icon">📱</div>
-            <h3>Smartfon</h3>
-            <p>Zamonaviy smartfon</p>
-            <div class="price">2 500 000 so‘m</div>
-            <button class="btn" onclick="addToCart('Smartfon',2500000)">
-                Savatga qo‘shish
-            </button>
-        </div>
+<div class="product">
 
-        <div class="card">
-            <div class="icon">💻</div>
-            <h3>Noutbuk</h3>
-            <p>Ish va o‘qish uchun</p>
-            <div class="price">6 500 000 so‘m</div>
-            <button class="btn" onclick="addToCart('Noutbuk',6500000)">
-                Savatga qo‘shish
-            </button>
-        </div>
+<div class="product-icon">📱</div>
 
-        <div class="card">
-            <div class="icon">🎧</div>
-            <h3>Quloqchin</h3>
-            <p>Sifatli audio qurilma</p>
-            <div class="price">350 000 so‘m</div>
-            <button class="btn" onclick="addToCart('Quloqchin',350000)">
-                Savatga qo‘shish
-            </button>
-        </div>
+<h3>Smartfon</h3>
 
-        <div class="card">
-            <div class="icon">⌚</div>
-            <h3>Smart soat</h3>
-            <p>Zamonaviy aqlli soat</p>
-            <div class="price">700 000 so‘m</div>
-            <button class="btn" onclick="addToCart('Smart soat',700000)">
-                Savatga qo‘shish
-            </button>
-        </div>
+<p>Zamonaviy smartfonlar</p>
 
-    </div>
+<div class="price">2 500 000 so'm</div>
 
-    <div class="cart">
+<button class="btn"
+onclick="addToCart('Smartfon',2500000)">
+Savatga qo‘shish
+</button>
 
-        <h3>🛒 Savat</h3>
+</div>
 
-        <div id="cartItems">
-            Savat hozircha bo‘sh.
-        </div>
 
-        <div class="total">
-            Jami: <span id="total">0</span> so‘m
-        </div>
+<div class="product">
 
-        <br>
+<div class="product-icon">💻</div>
 
-        <button class="btn" onclick="orderNow()">
-            📦 Buyurtma berish
-        </button>
+<h3>Noutbuk</h3>
 
-    </div>
+<p>Ish va o‘qish uchun</p>
+
+<div class="price">6 500 000 so'm</div>
+
+<button class="btn"
+onclick="addToCart('Noutbuk',6500000)">
+Savatga qo‘shish
+</button>
+
+</div>
+
+
+<div class="product">
+
+<div class="product-icon">🎧</div>
+
+<h3>Quloqchin</h3>
+
+<p>Sifatli audio qurilma</p>
+
+<div class="price">350 000 so'm</div>
+
+<button class="btn"
+onclick="addToCart('Quloqchin',350000)">
+Savatga qo‘shish
+</button>
+
+</div>
+
+
+<div class="product">
+
+<div class="product-icon">⌚</div>
+
+<h3>Smart soat</h3>
+
+<p>Zamonaviy aqlli soat</p>
+
+<div class="price">750 000 so'm</div>
+
+<button class="btn"
+onclick="addToCart('Smart soat',750000)">
+Savatga qo‘shish
+</button>
+
+</div>
+
+</div>
 
 </section>
+
 
 <section id="services">
 
-    <h2 class="section-title">💼 Biznes xizmatlari</h2>
+<h2 class="section-title">💼 Biznes xizmatlari</h2>
 
-    <div class="services">
+<div class="services">
 
-        <div class="card">
-            <div class="icon">📊</div>
-            <h3>Biznes konsalting</h3>
-            <p>Biznesni rivojlantirish bo‘yicha maslahatlar.</p>
-        </div>
+<div class="service">
+<h3>📊 Biznes konsalting</h3>
+<p>Biznes g‘oyalarni rivojlantirish va rejalashtirish.</p>
+</div>
 
-        <div class="card">
-            <div class="icon">🌍</div>
-            <h3>Xalqaro savdo</h3>
-            <p>Import va eksport yo‘nalishlari.</p>
-        </div>
+<div class="service">
+<h3>🌍 Xalqaro savdo</h3>
+<p>Mahsulotlarni xalqaro bozorlarga olib chiqish.</p>
+</div>
 
-        <div class="card">
-            <div class="icon">📈</div>
-            <h3>Marketing</h3>
-            <p>Biznes uchun marketing strategiyalari.</p>
-        </div>
+<div class="service">
+<h3>📈 Investitsiya</h3>
+<p>Biznes loyihalar va investitsiya imkoniyatlari.</p>
+</div>
 
-    </div>
+<div class="service">
+<h3>🚚 Logistika</h3>
+<p>Mahsulotlarni yetkazib berish va savdo jarayonlari.</p>
+</div>
 
-</section>
-
-<section id="projects">
-
-    <h2 class="section-title">🚀 Biznes loyihalar</h2>
-
-    <div class="card">
-        <h3>Global biznes imkoniyatlari</h3>
-        <p>
-            Yangi biznes g‘oyalari, investitsiya loyihalari
-            va xalqaro hamkorlik imkoniyatlari.
-        </p>
-    </div>
+</div>
 
 </section>
 
-<section id="contact">
 
-    <h2 class="section-title">📞 Biz bilan bog‘laning</h2>
+<section id="contact" class="contact">
 
-    <div class="contact-box">
+<h2>📞 Biz bilan bog‘laning</h2>
 
-        <input type="text" id="name" placeholder="Ismingiz">
+<p>MUZAFFAR GLOBAL TRADE UZ</p>
 
-        <input type="tel" id="phone" placeholder="Telefon raqamingiz">
+<p>Online savdo va biznes hamkorlik uchun murojaat qiling.</p>
 
-        <textarea id="message" placeholder="Xabaringiz"></textarea>
+<br>
 
-        <button class="btn" onclick="sendMessage()">
-            ✉️ Xabar yuborish
-        </button>
-
-    </div>
+<a href="mailto:info@example.com" class="btn">
+Email orqali bog‘lanish
+</a>
 
 </section>
+
 
 <footer>
-    <p>© 2026 MUZAFFAR GLOBAL TRADE UZ</p>
-    <p>Online savdo va biznes xizmatlari</p>
+
+<p>© 2026 MUZAFFAR GLOBAL TRADE UZ</p>
+
+<p>Barcha huquqlar himoyalangan.</p>
+
 </footer>
 
-<script>
 
-let cart = [];
+<!-- SAVAT OYNASI -->
 
-function addToCart(name, price) {
-
-    cart.push({
-        name: name,
-        price: price
-    });
-
-    updateCart();
-
-    alert("✅ " + name + " savatga qo‘shildi!");
-}
-
-function updateCart() {
-
-    let cartItems = document.getElementById("cartItems");
-    let totalElement = document.getElementById("total");
-
-    if (cart.length === 0) {
-
-        cartItems.innerHTML = "Savat hozircha bo‘sh.";
-        totalElement.innerText = "0";
-
-        return;
-    }
-
-    let html = "";
-    let total = 0;
-
-    cart.forEach(function(item, index) {
-
-        total += item.price;
-
-        html += `
-            <div class="cart-item">
-                ${index + 1}. ${item.name}
-                — ${item.price.toLocaleString()} so‘m
-            </div>
-        `;
-    });
-
-    cartItems.innerHTML = html;
-
-    totalElement.innerText = total.toLocaleString();
-}
-
-function orderNow() {
-
-    if (cart.length === 0) {
-
-        alert("⚠️ Avval mahsulot tanlang!");
-
-        return;
-    }
-
-    alert(
-        "📦 Buyurtmangiz qabul qilindi!\n\n" +
-        "Tez orada siz bilan bog‘lanamiz."
-    );
-}
-
-function sendMessage() {
-
-    let name = document.getElementById("name").value;
-    let phone = document.getElementById("phone").value;
-    let message = document.getElementById("message").value;
-
-    if (name === "" || phone === "") {
-
-        alert("⚠️ Iltimos, ism va telefon raqamingizni kiriting.");
-
-        return;
-    }
-
-    alert(
-        "✅ Xabaringiz qabul qilindi!\n\n" +
-        "Rahmat, " + name + "!"
-    );
-
-}
-
-</script>
-
-</body>
-</html>
+<div id="cartModal"
