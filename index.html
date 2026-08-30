@@ -23,6 +23,8 @@ body {
     color: #172033;
 }
 
+/* HEADER */
+
 header {
     background: linear-gradient(135deg, #075e54, #0b8f7a);
     color: white;
@@ -40,20 +42,22 @@ header {
 }
 
 .logo {
-    font-size: 23px;
+    font-size: 22px;
     font-weight: bold;
 }
 
 nav a {
     color: white;
     text-decoration: none;
-    margin-left: 18px;
+    margin-left: 15px;
     font-weight: bold;
 }
 
 nav a:hover {
     text-decoration: underline;
 }
+
+/* HERO */
 
 .hero {
     min-height: 500px;
@@ -85,17 +89,19 @@ nav a:hover {
     display: inline-block;
     background: #075e54;
     color: white;
-    padding: 14px 25px;
+    padding: 13px 24px;
     border-radius: 8px;
-    text-decoration: none;
-    font-weight: bold;
     border: none;
     cursor: pointer;
+    text-decoration: none;
+    font-weight: bold;
 }
 
 .btn:hover {
     background: #064b44;
 }
+
+/* UMUMIY SECTION */
 
 section {
     padding: 70px 7%;
@@ -108,6 +114,8 @@ section {
     margin-bottom: 40px;
 }
 
+/* ABOUT */
+
 .about {
     background: white;
     text-align: center;
@@ -119,6 +127,8 @@ section {
     font-size: 18px;
     line-height: 1.8;
 }
+
+/* SHOP */
 
 .products {
     display: grid;
@@ -140,7 +150,7 @@ section {
 }
 
 .product-icon {
-    font-size: 60px;
+    font-size: 55px;
     margin-bottom: 15px;
 }
 
@@ -156,11 +166,12 @@ section {
 }
 
 .price {
-    font-size: 22px;
+    font-size: 21px;
     font-weight: bold;
-    color: #111;
     margin-bottom: 15px;
 }
+
+/* SERVICES */
 
 .services {
     background: #ffffff;
@@ -168,25 +179,191 @@ section {
 
 .service-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
     gap: 25px;
 }
 
 .service {
-    padding: 25px;
     background: #f4f7fb;
-    border-radius: 12px;
+    border-radius: 15px;
+    padding: 30px 22px;
     text-align: center;
+    border: 1px solid #e3e8ee;
+    transition: 0.3s;
+}
+
+.service:hover {
+    transform: translateY(-7px);
+    box-shadow: 0 8px 25px rgba(0,0,0,0.10);
 }
 
 .service-icon {
-    font-size: 45px;
-    margin-bottom: 15px;
+    font-size: 52px;
+    margin-bottom: 18px;
 }
 
 .service h3 {
     color: #075e54;
-    margin-bottom: 10px;
+    font-size: 21px;
+    margin-bottom: 12px;
 }
 
-.business
+.service p {
+    color: #555;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+/* BUSINESS */
+
+.business {
+    background: #e8fff9;
+}
+
+.business-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 25px;
+}
+
+.business-card {
+    background: white;
+    padding: 28px;
+    border-radius: 14px;
+    box-shadow: 0 5px 18px rgba(0,0,0,0.07);
+}
+
+.business-card h3 {
+    color: #075e54;
+    margin-bottom: 12px;
+}
+
+.business-card p {
+    line-height: 1.6;
+}
+
+/* INVESTMENT */
+
+.investment {
+    background: white;
+    text-align: center;
+}
+
+.investment p {
+    max-width: 800px;
+    margin: auto;
+    font-size: 18px;
+    line-height: 1.8;
+}
+
+/* CONTACT */
+
+.contact {
+    background: #075e54;
+    color: white;
+}
+
+.contact .section-title {
+    color: white;
+}
+
+.contact-box {
+    max-width: 600px;
+    margin: auto;
+    background: white;
+    padding: 30px;
+    border-radius: 15px;
+}
+
+.contact-box input,
+.contact-box textarea {
+    width: 100%;
+    padding: 13px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 7px;
+    font-size: 16px;
+}
+
+.contact-box textarea {
+    min-height: 120px;
+    resize: vertical;
+}
+
+/* CART */
+
+.cart {
+    position: fixed;
+    right: 20px;
+    bottom: 20px;
+    background: #075e54;
+    color: white;
+    padding: 15px 20px;
+    border-radius: 50px;
+    cursor: pointer;
+    z-index: 2000;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.2);
+    font-weight: bold;
+}
+
+.cart-panel {
+    display: none;
+    position: fixed;
+    right: 20px;
+    bottom: 85px;
+    width: 340px;
+    max-width: calc(100% - 40px);
+    background: white;
+    border-radius: 15px;
+    padding: 22px;
+    z-index: 2000;
+    box-shadow: 0 5px 30px rgba(0,0,0,0.25);
+}
+
+.cart-panel h3 {
+    color: #075e54;
+    margin-bottom: 15px;
+}
+
+.cart-item {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+    border-bottom: 1px solid #ddd;
+    padding: 10px 0;
+}
+
+.cart-total {
+    font-size: 19px;
+    font-weight: bold;
+    margin: 18px 0;
+}
+
+/* FOOTER */
+
+footer {
+    background: #102a2a;
+    color: white;
+    text-align: center;
+    padding: 25px;
+}
+
+footer p {
+    margin: 5px;
+}
+
+/* MOBILE */
+
+@media (max-width: 800px) {
+
+    .navbar {
+        flex-direction: column;
+    }
+
+    nav {
+        text-align: center;
+    }
+
+    nav a {
+        display: inline-block;
+        margin: 6
