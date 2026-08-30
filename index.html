@@ -8,114 +8,72 @@
 
 <style>
 *{
+    box-sizing:border-box;
     margin:0;
     padding:0;
-    box-sizing:border-box;
-    font-family:Arial,sans-serif;
 }
 
 body{
-    background:#f4f7fb;
+    font-family:Arial,sans-serif;
+    background:#f4f6f8;
     color:#172033;
 }
 
 header{
-    background:linear-gradient(135deg,#063b7a,#0874d1);
+    background:#0b1f3a;
     color:white;
-    padding:25px 8%;
+    padding:25px 15px;
     text-align:center;
 }
 
-.logo{
+header h1{
     font-size:30px;
-    font-weight:bold;
+    margin-bottom:8px;
 }
 
 header p{
-    margin-top:8px;
-    font-size:16px;
+    color:#dbe7f5;
 }
 
 nav{
-    background:#062d5c;
-    padding:14px;
+    background:#12345b;
+    padding:12px;
     text-align:center;
 }
 
 nav a{
     color:white;
     text-decoration:none;
-    margin:0 12px;
+    margin:0 10px;
     font-weight:bold;
 }
 
 .hero{
-    padding:70px 8%;
     text-align:center;
+    padding:45px 20px;
     background:white;
 }
 
-.hero h1{
-    font-size:42px;
-    color:#063b7a;
-    margin-bottom:15px;
+.hero h2{
+    font-size:32px;
+    margin-bottom:12px;
 }
 
 .hero p{
-    font-size:19px;
-    max-width:750px;
-    margin:auto;
-    line-height:1.6;
-}
-
-.btn{
-    display:inline-block;
-    margin-top:25px;
-    padding:14px 28px;
-    background:#0874d1;
-    color:white;
-    text-decoration:none;
-    border-radius:8px;
-    font-weight:bold;
-}
-
-section{
-    padding:55px 8%;
-}
-
-.title{
-    text-align:center;
-    font-size:30px;
-    color:#063b7a;
-    margin-bottom:35px;
-}
-
-.cards{
-    display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
-    gap:20px;
-}
-
-.card{
-    background:white;
-    padding:25px;
-    border-radius:12px;
-    box-shadow:0 4px 15px rgba(0,0,0,.08);
-    text-align:center;
-}
-
-.card h3{
-    color:#0874d1;
-    margin:12px 0;
-}
-
-.card p{
-    line-height:1.5;
+    font-size:18px;
     color:#555;
 }
 
-.icon{
-    font-size:45px;
+.container{
+    max-width:1100px;
+    margin:auto;
+    padding:35px 15px;
+}
+
+.section-title{
+    text-align:center;
+    margin-bottom:25px;
+    font-size:28px;
 }
 
 .products{
@@ -126,73 +84,100 @@ section{
 
 .product{
     background:white;
-    border-radius:12px;
     padding:20px;
+    border-radius:12px;
+    box-shadow:0 3px 12px rgba(0,0,0,0.08);
     text-align:center;
-    box-shadow:0 4px 15px rgba(0,0,0,.08);
 }
 
-.product .photo{
-    font-size:60px;
-    padding:20px;
+.product .icon{
+    font-size:55px;
+    margin-bottom:12px;
 }
 
 .product h3{
-    margin:10px;
+    margin-bottom:10px;
 }
 
-.product button{
-    border:0;
-    background:#0874d1;
+.price{
+    font-size:20px;
+    font-weight:bold;
+    margin:12px 0;
+}
+
+button{
+    background:#0b1f3a;
     color:white;
+    border:none;
     padding:12px 20px;
     border-radius:7px;
     cursor:pointer;
+    font-size:15px;
 }
 
-.contact{
-    background:#063b7a;
-    color:white;
+button:hover{
+    background:#164b82;
+}
+
+.cart{
+    margin-top:40px;
+    background:white;
+    padding:25px;
+    border-radius:12px;
+    box-shadow:0 3px 12px rgba(0,0,0,0.08);
+}
+
+.cart h2{
+    margin-bottom:15px;
+}
+
+#cartItems{
+    margin-bottom:15px;
+}
+
+.total{
+    font-size:20px;
+    font-weight:bold;
+    margin:15px 0;
+}
+
+.order{
+    background:#eaf2fb;
+    margin-top:40px;
+    padding:30px;
+    border-radius:12px;
     text-align:center;
 }
 
-.contact .title{
-    color:white;
-}
-
-.contact p{
-    margin:10px;
-    font-size:17px;
+.order input{
+    width:90%;
+    max-width:450px;
+    padding:13px;
+    margin:7px;
+    border:1px solid #ccc;
+    border-radius:7px;
 }
 
 footer{
-    background:#041d3b;
+    margin-top:40px;
+    background:#0b1f3a;
     color:white;
     text-align:center;
-    padding:20px;
-}
-
-#cart{
-    position:fixed;
-    right:20px;
-    bottom:20px;
-    background:#0874d1;
-    color:white;
-    padding:15px 20px;
-    border-radius:30px;
-    font-weight:bold;
-    box-shadow:0 4px 15px rgba(0,0,0,.25);
+    padding:25px;
 }
 
 @media(max-width:600px){
-    .hero h1{
-        font-size:30px;
+    header h1{
+        font-size:23px;
+    }
+
+    .hero h2{
+        font-size:25px;
     }
 
     nav a{
         display:inline-block;
         margin:6px;
-        font-size:14px;
     }
 }
 </style>
@@ -201,161 +186,217 @@ footer{
 <body>
 
 <header>
-    <div class="logo">🦅 MUZAFFAR GLOBAL TRADE UZ</div>
-    <p>Global savdo • Biznes xizmatlari • Investitsiya</p>
+    <h1>🦅 MUZAFFAR GLOBAL TRADE UZ</h1>
+    <p>Global savdo va biznes xizmatlari</p>
 </header>
 
 <nav>
     <a href="#home">Bosh sahifa</a>
     <a href="#shop">Online savdo</a>
-    <a href="#services">Xizmatlar</a>
-    <a href="#projects">Loyihalar</a>
+    <a href="#order">Buyurtma</a>
     <a href="#contact">Aloqa</a>
 </nav>
 
 <section class="hero" id="home">
-    <h1>MUZAFFAR GLOBAL TRADE UZ</h1>
-    <p>
-        O‘zbekiston va xalqaro bozorlarda savdo, biznes,
-        investitsiya va zamonaviy xizmatlarni birlashtiruvchi
-        professional platforma.
-    </p>
-    <a href="#shop" class="btn">Online savdoni boshlash</a>
+    <h2>MUZAFFAR GLOBAL TRADE UZ</h2>
+    <p>Mahsulotlar, savdo va biznes xizmatlari uchun zamonaviy platforma.</p>
 </section>
 
-<section id="services">
-    <h2 class="title">Biznes xizmatlarimiz</h2>
+<section class="container" id="shop">
 
-    <div class="cards">
-
-        <div class="card">
-            <div class="icon">🌍</div>
-            <h3>Global savdo</h3>
-            <p>Xalqaro bozorlarda mahsulotlar va hamkorlik imkoniyatlari.</p>
-        </div>
-
-        <div class="card">
-            <div class="icon">💼</div>
-            <h3>Biznes xizmatlari</h3>
-            <p>Biznesni rivojlantirish va yangi imkoniyatlarni izlash.</p>
-        </div>
-
-        <div class="card">
-            <div class="icon">📈</div>
-            <h3>Investitsiya</h3>
-            <p>Istiqbolli biznes loyihalar va investitsiya yo‘nalishlari.</p>
-        </div>
-
-        <div class="card">
-            <div class="icon">🚚</div>
-            <h3>Yetkazib berish</h3>
-            <p>Mahsulotlarni mijozlarga yetkazib berish xizmatlari.</p>
-        </div>
-
-    </div>
-</section>
-
-<section id="shop">
-    <h2 class="title">Online savdo</h2>
+    <h2 class="section-title">🛒 Online Savdo</h2>
 
     <div class="products">
 
         <div class="product">
-            <div class="photo">📱</div>
-            <h3>Elektronika</h3>
-            <p>Zamonaviy elektron mahsulotlar</p>
-            <button onclick="addToCart('Elektronika')">
+            <div class="icon">📱</div>
+            <h3>Smartfon</h3>
+            <p>Zamonaviy smartfon</p>
+            <div class="price">2 500 000 so‘m</div>
+            <button onclick="addToCart('Smartfon',2500000)">
                 Savatga qo‘shish
             </button>
         </div>
 
         <div class="product">
-            <div class="photo">👕</div>
-            <h3>Kiyim-kechak</h3>
-            <p>Sifatli va zamonaviy mahsulotlar</p>
-            <button onclick="addToCart('Kiyim-kechak')">
+            <div class="icon">💻</div>
+            <h3>Noutbuk</h3>
+            <p>Ish va o‘qish uchun</p>
+            <div class="price">6 500 000 so‘m</div>
+            <button onclick="addToCart('Noutbuk',6500000)">
                 Savatga qo‘shish
             </button>
         </div>
 
         <div class="product">
-            <div class="photo">🏠</div>
-            <h3>Uy mahsulotlari</h3>
-            <p>Uy uchun foydali mahsulotlar</p>
-            <button onclick="addToCart('Uy mahsulotlari')">
+            <div class="icon">🎧</div>
+            <h3>Quloqchin</h3>
+            <p>Sifatli audio qurilma</p>
+            <div class="price">350 000 so‘m</div>
+            <button onclick="addToCart('Quloqchin',350000)">
                 Savatga qo‘shish
             </button>
         </div>
 
         <div class="product">
-            <div class="photo">📦</div>
-            <h3>Boshqa mahsulotlar</h3>
-            <p>Turli xil savdo mahsulotlari</p>
-            <button onclick="addToCart('Boshqa mahsulotlar')">
+            <div class="icon">⌚</div>
+            <h3>Smart Watch</h3>
+            <p>Aqlli soat</p>
+            <div class="price">700 000 so‘m</div>
+            <button onclick="addToCart('Smart Watch',700000)">
                 Savatga qo‘shish
             </button>
         </div>
 
     </div>
+
+    <div class="cart">
+        <h2>🛍️ Savat</h2>
+
+        <div id="cartItems">
+            Savat hozircha bo‘sh.
+        </div>
+
+        <div class="total">
+            Jami: <span id="total">0</span> so‘m
+        </div>
+
+        <button onclick="clearCart()">
+            Savatni tozalash
+        </button>
+    </div>
+
 </section>
 
-<section id="projects">
-    <h2 class="title">Biznes loyihalar</h2>
+<section class="container" id="order">
 
-    <div class="cards">
+    <div class="order">
 
-        <div class="card">
-            <div class="icon">🚀</div>
-            <h3>Yangi biznes</h3>
-            <p>Yangi biznes g‘oyalarini rivojlantirish uchun imkoniyatlar.</p>
-        </div>
+        <h2>📦 Buyurtma berish</h2>
 
-        <div class="card">
-            <div class="icon">🤝</div>
-            <h3>Hamkorlik</h3>
-            <p>Mahalliy va xalqaro hamkorlar bilan biznes aloqalari.</p>
-        </div>
+        <p style="margin:15px 0;">
+            Buyurtma berish uchun ma’lumotlaringizni kiriting.
+        </p>
 
-        <div class="card">
-            <div class="icon">💰</div>
-            <h3>Investitsiya loyihalari</h3>
-            <p>Kelajak uchun istiqbolli loyihalarni rivojlantirish.</p>
-        </div>
+        <input type="text" id="name" placeholder="Ismingiz">
+
+        <br>
+
+        <input type="tel" id="phone" placeholder="Telefon raqamingiz">
+
+        <br>
+
+        <input type="text" id="address" placeholder="Manzilingiz">
+
+        <br><br>
+
+        <button onclick="sendOrder()">
+            Buyurtma yuborish
+        </button>
 
     </div>
+
 </section>
 
-<section class="contact" id="contact">
-    <h2 class="title">Biz bilan bog‘laning</h2>
+<section class="container" id="contact">
 
-    <p>📞 Telefon: +998 XX XXX XX XX</p>
-    <p>📧 Email: info@muzaf farglobaltrade.uz</p>
-    <p>📍 O‘zbekiston</p>
+    <h2 class="section-title">📞 Aloqa</h2>
 
-    <a class="btn" href="mailto:info@muzaf farglobaltrade.uz">
-        Bizga yozish
-    </a>
+    <div class="product">
+        <p>MUZAFFAR GLOBAL TRADE UZ</p>
+        <p style="margin-top:10px;">
+            Biz bilan bog‘lanish uchun murojaat qiling.
+        </p>
+    </div>
+
 </section>
-
-<div id="cart">
-    🛒 Savat: <span id="cartCount">0</span>
-</div>
 
 <footer>
-    © 2026 MUZAFFAR GLOBAL TRADE UZ. Barcha huquqlar himoyalangan.
+    <p>© 2026 MUZAFFAR GLOBAL TRADE UZ</p>
+    <p style="margin-top:8px;">Barcha huquqlar himoyalangan.</p>
 </footer>
 
 <script>
 
-let cartCount = 0;
+let cart = [];
 
-function addToCart(product){
+function addToCart(name, price){
 
-    cartCount++;
+    cart.push({
+        name:name,
+        price:price
+    });
 
-    document.getElementById("cartCount").innerText = cartCount;
+    updateCart();
 
-    alert("✅ " + product + " savatga qo‘shildi!");
+    alert("✅ " + name + " savatga qo‘shildi!");
+}
+
+function updateCart(){
+
+    const cartItems = document.getElementById("cartItems");
+    const totalElement = document.getElementById("total");
+
+    if(cart.length === 0){
+
+        cartItems.innerHTML = "Savat hozircha bo‘sh.";
+        totalElement.innerText = "0";
+
+        return;
+    }
+
+    let html = "";
+    let total = 0;
+
+    cart.forEach(function(item,index){
+
+        total += item.price;
+
+        html += `
+            <p style="margin:10px 0;">
+                ${index + 1}. ${item.name}
+                — ${item.price.toLocaleString()} so‘m
+            </p>
+        `;
+    });
+
+    cartItems.innerHTML = html;
+    totalElement.innerText = total.toLocaleString();
+}
+
+function clearCart(){
+
+    cart = [];
+
+    updateCart();
+
+    alert("🗑️ Savat tozalandi!");
+}
+
+function sendOrder(){
+
+    const name = document.getElementById("name").value;
+    const phone = document.getElementById("phone").value;
+    const address = document.getElementById("address").value;
+
+    if(name === "" || phone === "" || address === ""){
+
+        alert("⚠️ Iltimos, barcha ma’lumotlarni kiriting.");
+
+        return;
+    }
+
+    if(cart.length === 0){
+
+        alert("⚠️ Avval mahsulotni savatga qo‘shing.");
+
+        return;
+    }
+
+    alert(
+        "✅ Buyurtmangiz qabul qilindi!\n\n" +
+        "Rahmat, " + name + "!"
+    );
 }
 
 </script>
