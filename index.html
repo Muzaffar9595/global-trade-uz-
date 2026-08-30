@@ -3,7 +3,6 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="theme-color" content="#06111f">
 
 <title>MUZAFFAR GLOBAL TRADE UZ</title>
 
@@ -15,427 +14,280 @@
     scroll-behavior:smooth;
 }
 
-:root{
-    --dark:#050b14;
-    --blue:#0b1c32;
-    --gold:#f5c451;
-    --gold2:#ffd86b;
-    --white:#ffffff;
-    --gray:#aebbd0;
-    --line:#243854;
-}
-
 body{
-    font-family:Arial,Helvetica,sans-serif;
-    color:var(--white);
-    background:
-    radial-gradient(circle at 50% 0%,#234c79 0%,#0b1829 35%,#050b14 75%);
+    font-family:Arial, sans-serif;
+    background:#07111f;
+    color:white;
     line-height:1.6;
-    overflow-x:hidden;
 }
-
-/* YULDUZLAR */
-
-body::before{
-    content:"";
-    position:fixed;
-    inset:0;
-    pointer-events:none;
-    opacity:.08;
-    background-image:
-    radial-gradient(#fff 1px,transparent 1px);
-    background-size:65px 65px;
-    animation:stars 15s linear infinite;
-}
-
-@keyframes stars{
-    from{transform:translateY(0)}
-    to{transform:translateY(65px)}
-}
-
-/* HEADER */
 
 header{
     position:sticky;
     top:0;
-    z-index:100;
-    background:rgba(5,11,20,.90);
-    backdrop-filter:blur(15px);
-    border-bottom:1px solid var(--line);
+    z-index:1000;
+    background:rgba(5,15,28,.95);
+    border-bottom:1px solid rgba(255,255,255,.1);
 }
 
 .navbar{
     max-width:1200px;
     margin:auto;
-    padding:10px 18px;
+    padding:16px 20px;
     display:flex;
-    align-items:center;
     justify-content:space-between;
+    align-items:center;
     gap:20px;
 }
 
-.brand{
-    display:flex;
-    align-items:center;
-    gap:10px;
-    color:var(--gold);
-    text-decoration:none;
-    font-weight:900;
-    font-size:14px;
-}
-
 .logo{
-    width:55px;
-    height:55px;
-    filter:drop-shadow(0 0 15px rgba(245,196,81,.55));
-    animation:logoFloat 3s ease-in-out infinite;
-}
-
-@keyframes logoFloat{
-    0%,100%{transform:translateY(0)}
-    50%{transform:translateY(-7px) rotate(-2deg)}
+    font-size:20px;
+    font-weight:bold;
+    color:#ffd700;
 }
 
 nav{
     display:flex;
     flex-wrap:wrap;
-    justify-content:center;
-    gap:5px;
+    gap:8px;
 }
 
 nav a{
     color:white;
     text-decoration:none;
-    padding:8px 11px;
-    border-radius:10px;
+    padding:9px 13px;
+    border-radius:8px;
     transition:.3s;
 }
 
 nav a:hover{
-    color:var(--gold);
-    background:rgba(255,255,255,.08);
+    background:#ffd700;
+    color:#07111f;
 }
-
-/* UMUMIY */
 
 section{
-    max-width:1200px;
+    min-height:80vh;
+    padding:90px 20px;
+}
+
+.container{
+    max-width:1100px;
     margin:auto;
-    padding:85px 18px;
 }
-
-h2{
-    text-align:center;
-    font-size:clamp(30px,5vw,45px);
-    margin-bottom:30px;
-}
-
-.lead{
-    max-width:850px;
-    margin:-10px auto 40px;
-    text-align:center;
-    color:var(--gray);
-    font-size:17px;
-}
-
-/* HERO */
 
 .hero{
-    min-height:88vh;
-    display:grid;
-    place-items:center;
+    min-height:90vh;
+    display:flex;
+    align-items:center;
+    justify-content:center;
     text-align:center;
-}
-
-.badge{
-    display:inline-block;
-    padding:8px 16px;
-    border:1px solid rgba(245,196,81,.5);
-    border-radius:50px;
-    color:var(--gold);
-    box-shadow:0 0 30px rgba(245,196,81,.12);
+    background:
+    radial-gradient(circle at center,rgba(255,215,0,.15),transparent 35%),
+    linear-gradient(135deg,#07111f,#10243d);
 }
 
 .hero h1{
-    font-size:clamp(40px,8vw,85px);
-    line-height:1;
-    margin:22px 0;
-
-    background:
-    linear-gradient(
-        90deg,
-        white,
-        var(--gold),
-        white,
-        var(--gold2)
-    );
-
-    background-size:300%;
-    color:transparent;
-    background-clip:text;
-    -webkit-background-clip:text;
-
-    animation:titleShine 6s linear infinite;
-}
-
-@keyframes titleShine{
-    to{
-        background-position:300%;
-    }
+    font-size:clamp(36px,7vw,70px);
+    color:#ffd700;
+    margin-bottom:20px;
+    text-shadow:0 0 25px rgba(255,215,0,.3);
 }
 
 .hero p{
-    max-width:800px;
-    margin:20px auto;
-    color:var(--gray);
-    font-size:19px;
+    max-width:750px;
+    margin:auto;
+    font-size:20px;
+    color:#dce6f2;
 }
 
-/* BUTTONS */
-
 .buttons{
+    margin-top:30px;
     display:flex;
     justify-content:center;
-    gap:13px;
     flex-wrap:wrap;
-    margin-top:25px;
+    gap:15px;
 }
 
 .btn{
     display:inline-block;
-    padding:14px 22px;
-    border-radius:13px;
     text-decoration:none;
+    padding:14px 24px;
+    border-radius:30px;
     font-weight:bold;
-    color:#111827;
-    background:var(--gold);
-    box-shadow:0 10px 35px rgba(245,196,81,.20);
+    background:#ffd700;
+    color:#07111f;
     transition:.3s;
 }
 
 .btn:hover{
-    transform:translateY(-4px);
-    box-shadow:0 15px 45px rgba(245,196,81,.35);
+    transform:translateY(-3px);
+    box-shadow:0 8px 25px rgba(255,215,0,.25);
 }
 
-.btn.alt{
+.btn.dark{
+    background:transparent;
     color:white;
-    background:rgba(255,255,255,.06);
-    border:1px solid var(--line);
+    border:1px solid #ffd700;
 }
 
-/* CARDS */
-
-.grid{
-    display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(225px,1fr));
-    gap:20px;
-}
-
-.card{
-    padding:26px;
-    border-radius:20px;
-
-    background:
-    linear-gradient(
-        145deg,
-        rgba(16,35,60,.95),
-        rgba(7,18,32,.95)
-    );
-
-    border:1px solid var(--line);
-
-    box-shadow:0 15px 40px rgba(0,0,0,.25);
-
-    transition:.35s;
-}
-
-.card:hover{
-    transform:translateY(-8px);
-    border-color:rgba(245,196,81,.55);
-    box-shadow:0 25px 55px rgba(0,0,0,.5);
-}
-
-.icon{
-    font-size:36px;
-}
-
-.card h3{
-    color:var(--gold);
-    margin:12px 0;
-}
-
-.card p{
-    color:var(--gray);
-}
-
-/* TIMELINE */
-
-.timeline{
-    max-width:850px;
-    margin:auto;
-    border-left:2px solid rgba(245,196,81,.45);
-    padding-left:25px;
-}
-
-.timeline-item{
-    margin:28px 0;
-}
-
-.timeline-item b{
-    color:var(--gold);
-    font-size:20px;
-}
-
-/* RUHLANTIRUVCHI QISM */
-
-.motivation{
+.title{
     text-align:center;
+    margin-bottom:45px;
 }
 
-.quote{
-    max-width:950px;
-    margin:auto;
-    font-size:clamp(26px,4.5vw,47px);
-    font-weight:900;
+.title h2{
+    color:#ffd700;
+    font-size:38px;
+    margin-bottom:10px;
 }
 
-.quote span{
-    color:var(--gold);
+.title p{
+    color:#b9c6d5;
 }
 
-.motivation-text{
-    max-width:800px;
-    margin:30px auto;
-    color:var(--gray);
+.about{
+    background:#0a1728;
+}
+
+.about-box{
+    background:rgba(255,255,255,.05);
+    border:1px solid rgba(255,255,255,.1);
+    border-radius:20px;
+    padding:30px;
     font-size:18px;
 }
 
-/* STATISTIKA */
-
-.stats{
+.cards{
     display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(180px,1fr));
-    gap:18px;
-    margin-top:35px;
+    grid-template-columns:repeat(3,1fr);
+    gap:22px;
 }
 
-.stat{
-    text-align:center;
-    padding:25px;
-    border:1px solid var(--line);
+.card{
+    background:linear-gradient(145deg,#10243b,#0b1829);
+    padding:30px;
     border-radius:18px;
+    border:1px solid rgba(255,215,0,.15);
+    transition:.3s;
+}
+
+.card:hover{
+    transform:translateY(-7px);
+    border-color:#ffd700;
+}
+
+.card .icon{
+    font-size:42px;
+    margin-bottom:15px;
+}
+
+.card h3{
+    color:#ffd700;
+    margin-bottom:12px;
+}
+
+.card p{
+    color:#c5d0dc;
+}
+
+.projects{
+    background:#0a1728;
+}
+
+.project{
+    padding:25px;
+    border-left:4px solid #ffd700;
     background:rgba(255,255,255,.04);
+    margin-bottom:18px;
+    border-radius:0 12px 12px 0;
 }
 
-.stat strong{
-    display:block;
-    font-size:32px;
-    color:var(--gold);
+.project h3{
+    color:#ffd700;
 }
 
-/* FOOTER */
+.future-box{
+    text-align:center;
+    padding:45px 25px;
+    border-radius:25px;
+    background:
+    radial-gradient(circle,rgba(255,215,0,.12),transparent 60%),
+    #0d1d31;
+}
+
+.future-box h3{
+    color:#ffd700;
+    font-size:30px;
+    margin-bottom:15px;
+}
+
+.contact{
+    background:#07111f;
+}
+
+.contact-grid{
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:22px;
+}
+
+.contact-card{
+    background:#10243b;
+    padding:25px;
+    border-radius:16px;
+}
+
+.contact-card h3{
+    color:#ffd700;
+    margin-bottom:10px;
+}
+
+.contact-card a{
+    color:white;
+    text-decoration:none;
+    word-break:break-word;
+}
 
 footer{
     text-align:center;
-    padding:40px 18px;
-    color:var(--gray);
-    border-top:1px solid var(--line);
+    padding:30px 20px;
+    background:#040b14;
+    color:#9eabb9;
 }
 
-footer strong{
-    color:var(--gold);
+.gold{
+    color:#ffd700;
 }
 
-/* MOBIL */
-
-@media(max-width:720px){
-
+@media(max-width:800px){
     .navbar{
         flex-direction:column;
-        align-items:center;
-    }
-
-    .brand{
-        text-align:center;
     }
 
     nav{
-        width:100%;
+        justify-content:center;
     }
 
-    nav a{
-        font-size:13px;
-        padding:7px 8px;
+    .cards{
+        grid-template-columns:1fr;
     }
 
-    .hero{
-        min-height:80vh;
+    .contact-grid{
+        grid-template-columns:1fr;
     }
 
     section{
-        padding:60px 15px;
+        padding:70px 15px;
     }
-
 }
 </style>
 </head>
 
 <body>
 
-<!-- HEADER -->
-
 <header>
-
 <div class="navbar">
 
-<a href="#home" class="brand">
-
-<!-- PROFESSIONAL BURGUT + QALQON LOGOTIPI -->
-
-<svg class="logo"
-viewBox="0 0 100 100"
-xmlns="http://www.w3.org/2000/svg">
-
-<path
-d="M50 5L88 18V48C88 73 72 87 50 95C28 87 12 73 12 48V18Z"
-fill="none"
-stroke="#f5c451"
-stroke-width="5"/>
-
-<path
-d="M50 25
-C41 13 23 16 12 22
-C20 30 27 34 37 36
-C27 39 19 45 14 53
-C27 52 39 47 50 38
-C61 47 73 52 86 53
-C81 45 73 39 63 36
-C73 34 80 30 88 22
-C77 16 59 13 50 25Z"
-fill="#f5c451"/>
-
-<path
-d="M50 27V72"
-stroke="#07111f"
-stroke-width="3"/>
-
-<path
-d="M50 42
-C42 37 35 37 29 40
-C36 45 42 48 50 48
-M50 42
-C58 37 65 37 71 40
-C64 45 58 48 50 48"
-fill="none"
-stroke="#07111f"
-stroke-width="3"/>
-
-</svg>
-
-MUZAFFAR GLOBAL TRADE UZ
-
-</a>
+<div class="logo">🦅 MUZAFFAR GLOBAL TRADE UZ</div>
 
 <nav>
 <a href="#home">Bosh sahifa</a>
@@ -447,16 +299,261 @@ MUZAFFAR GLOBAL TRADE UZ
 </nav>
 
 </div>
-
 </header>
 
 
-<!-- HERO -->
+<!-- BOSH SAHIFA -->
+<section id="home" class="hero">
+<div class="container">
 
-<main id="home">
+<h1>MUZAFFAR GLOBAL TRADE UZ</h1>
 
-<section class="hero">
+<p>
+Onlayn savdo, xizmatlar, biznes va investitsiya yo‘nalishlarida
+zamonaviy imkoniyatlarni birlashtiruvchi professional platforma.
+</p>
 
-<div>
+<div class="buttons">
+<a class="btn" href="#services">Xizmatlarimiz</a>
+<a class="btn dark" href="#contact">Biz bilan bog‘lanish</a>
+</div>
 
-<span class="badge
+</div>
+</section>
+
+
+<!-- BIZ HAQIMIZDA -->
+<section id="about" class="about">
+<div class="container">
+
+<div class="title">
+<h2>Biz haqimizda</h2>
+<p>MUZAFFAR GLOBAL TRADE UZ</p>
+</div>
+
+<div class="about-box">
+
+<p>
+<strong class="gold">MUZAFFAR GLOBAL TRADE UZ</strong> —
+zamonaviy savdo, xizmatlar, biznes va investitsiya yo‘nalishlarini
+rivojlantirishga qaratilgan yangi avlod biznes platformasidir.
+</p>
+
+<br>
+
+<p>
+Kompaniya asoschisi va rahbari —
+<strong>Muhammadiev Muzaffar</strong>.
+</p>
+
+<br>
+
+<p>
+Bizning asosiy maqsadimiz — mijozlar va hamkorlar uchun
+qulay, ishonchli va zamonaviy biznes imkoniyatlarini yaratish,
+raqamli texnologiyalar orqali savdo va xizmatlarni rivojlantirish.
+</p>
+
+</div>
+</div>
+</section>
+
+
+<!-- XIZMATLAR -->
+<section id="services">
+<div class="container">
+
+<div class="title">
+<h2>Xizmatlar</h2>
+<p>Biz taklif qiladigan asosiy yo‘nalishlar</p>
+</div>
+
+<div class="cards">
+
+<div class="card">
+<div class="icon">🛒</div>
+<h3>Onlayn savdo</h3>
+<p>
+Mahsulotlar va xizmatlarni zamonaviy raqamli platforma
+orqali taqdim etish va sotish imkoniyatlari.
+</p>
+</div>
+
+<div class="card">
+<div class="icon">💼</div>
+<h3>Biznes xizmatlari</h3>
+<p>
+Tadbirkorlik faoliyati, hamkorlik va biznes loyihalarini
+rivojlantirishga yo‘naltirilgan xizmatlar.
+</p>
+</div>
+
+<div class="card">
+<div class="icon">🌍</div>
+<h3>Global savdo</h3>
+<p>
+Mahalliy va xalqaro bozorlarga chiqish,
+yangi hamkorlar topish va savdo imkoniyatlarini kengaytirish.
+</p>
+</div>
+
+<div class="card">
+<div class="icon">📈</div>
+<h3>Biznes rivojlantirish</h3>
+<p>
+Yangi g‘oyalarni loyihaga aylantirish va biznesni
+bosqichma-bosqich rivojlantirish.
+</p>
+</div>
+
+<div class="card">
+<div class="icon">🤝</div>
+<h3>Hamkorlik</h3>
+<p>
+Tadbirkorlar, kompaniyalar va yangi hamkorlar bilan
+o‘zaro manfaatli loyihalarni yo‘lga qo‘yish.
+</p>
+</div>
+
+<div class="card">
+<div class="icon">💡</div>
+<h3>Innovatsiyalar</h3>
+<p>
+Zamonaviy texnologiyalar va raqamli yechimlardan
+foydalanib yangi imkoniyatlar yaratish.
+</p>
+</div>
+
+</div>
+</div>
+</section>
+
+
+<!-- LOYIHALAR -->
+<section id="projects" class="projects">
+<div class="container">
+
+<div class="title">
+<h2>Loyihalar</h2>
+<p>Rivojlantirilayotgan biznes yo‘nalishlari</p>
+</div>
+
+<div class="project">
+<h3>01. Global Trade Platform</h3>
+<p>
+Savdo va xizmatlarni yagona raqamli platformada
+birlashtirish loyihasi.
+</p>
+</div>
+
+<div class="project">
+<h3>02. Online Business</h3>
+<p>
+Internet orqali biznes yuritish va mijozlarga
+qulay xizmat ko‘rsatish tizimi.
+</p>
+</div>
+
+<div class="project">
+<h3>03. Hamkorlik loyihalari</h3>
+<p>
+Mahalliy va xalqaro hamkorlar bilan yangi biznes
+yo‘nalishlarini yaratish.
+</p>
+</div>
+
+</div>
+</section>
+
+
+<!-- KELAJAK -->
+<section id="future">
+<div class="container">
+
+<div class="title">
+<h2>Kelajak</h2>
+<p>Bizning rivojlanish rejamiz</p>
+</div>
+
+<div class="future-box">
+
+<h3>Kelajak sari birgalikda!</h3>
+
+<p>
+MUZAFFAR GLOBAL TRADE UZ kelajakda raqamli savdo,
+xalqaro hamkorlik, innovatsion biznes loyihalari va
+zamonaviy xizmatlarni yanada kengaytirishni maqsad qilgan.
+</p>
+
+<br>
+
+<p>
+Bizning qarashimiz — O‘zbekistondan turib global bozorda
+raqobatbardosh biznes platformasini yaratish.
+</p>
+
+</div>
+</div>
+</section>
+
+
+<!-- ALOQA -->
+<section id="contact" class="contact">
+<div class="container">
+
+<div class="title">
+<h2>Aloqa</h2>
+<p>Biz bilan bog‘laning</p>
+</div>
+
+<div class="contact-grid">
+
+<div class="contact-card">
+<h3>📞 Telefon</h3>
+<a href="tel:+998701022731">
++998 70 102 27 31
+</a>
+</div>
+
+<div class="contact-card">
+<h3>✈️ Telegram</h3>
+<a href="https://t.me/+998701022731" target="_blank">
+Telegram orqali bog‘lanish
+</a>
+</div>
+
+<div class="contact-card">
+<h3>🏢 Kompaniya</h3>
+<p>MUZAFFAR GLOBAL TRADE UZ</p>
+</div>
+
+<div class="contact-card">
+<h3>👤 Rahbar</h3>
+<p>Muhammadiev Muzaffar</p>
+</div>
+
+</div>
+
+<div class="buttons">
+<a class="btn" href="tel:+998701022731">
+📞 Qo‘ng‘iroq qilish
+</a>
+
+<a class="btn dark" href="https://t.me/+998701022731" target="_blank">
+✈️ Telegram
+</a>
+</div>
+
+</div>
+</section>
+
+
+<footer>
+<p>
+© 2026 <span class="gold">MUZAFFAR GLOBAL TRADE UZ</span>.
+Barcha huquqlar himoyalangan.
+</p>
+</footer>
+
+</body>
+</html>
