@@ -1,230 +1,313 @@
-<!DOCTYPE html>
-<html lang="uz">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!-- ONLINE SAVDO -->
 
-  <title>Global Trade Uzbekistan | Biznes va xalqaro hamkorlik</title>
+<section id="shop">
 
-  <meta name="description"
-        content="Global Trade Uzbekistan — savdo, biznes, konsalting, investitsiya, turizm va xalqaro hamkorlik platformasi.">
+  <div class="section-title">
+    <h2>🛒 Online Savdo</h2>
+    <p>Mahsulotlarni tanlang va savatga qo‘shing</p>
+  </div>
 
-  <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-      font-family: Arial, sans-serif;
-      scroll-behavior: smooth;
-    }
+  <div class="cards">
 
-    body {
-      background: #f5f7fa;
-      color: #172033;
-    }
+    <div class="card">
+      <div class="card-icon">📱</div>
+      <h3>Smartfonlar</h3>
+      <p>Zamonaviy smartfon va elektron qurilmalar.</p>
+      <h3>3 000 000 so‘m</h3>
+      <button class="btn btn-main"
+        onclick="addProduct('Smartfon', 3000000)">
+        🛒 Savatga qo‘shish
+      </button>
+    </div>
 
-    /* HEADER */
+    <div class="card">
+      <div class="card-icon">💻</div>
+      <h3>Noutbuklar</h3>
+      <p>O‘qish, biznes va ish uchun noutbuklar.</p>
+      <h3>6 500 000 so‘m</h3>
+      <button class="btn btn-main"
+        onclick="addProduct('Noutbuk', 6500000)">
+        🛒 Savatga qo‘shish
+      </button>
+    </div>
 
-    header {
-      position: sticky;
-      top: 0;
-      z-index: 1000;
-      background: #071b35;
-      padding: 15px 6%;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      box-shadow: 0 3px 15px rgba(0,0,0,.2);
-    }
+    <div class="card">
+      <div class="card-icon">🎧</div>
+      <h3>Audio mahsulotlar</h3>
+      <p>Quloqchinlar va zamonaviy audio qurilmalar.</p>
+      <h3>350 000 so‘m</h3>
+      <button class="btn btn-main"
+        onclick="addProduct('Quloqchin', 350000)">
+        🛒 Savatga qo‘shish
+      </button>
+    </div>
 
-    .logo {
-      color: white;
-      font-size: 22px;
-      font-weight: bold;
-    }
+    <div class="card">
+      <div class="card-icon">⌚</div>
+      <h3>Smart Watch</h3>
+      <p>Sport va kundalik foydalanish uchun aqlli soatlar.</p>
+      <h3>750 000 so‘m</h3>
+      <button class="btn btn-main"
+        onclick="addProduct('Smart Watch', 750000)">
+        🛒 Savatga qo‘shish
+      </button>
+    </div>
 
-    .logo span {
-      color: #f5b400;
-    }
+  </div>
 
-    nav a {
-      color: white;
-      text-decoration: none;
-      margin-left: 18px;
-      font-size: 14px;
-    }
+</section>
 
-    nav a:hover {
-      color: #f5b400;
-    }
 
-    /* HERO */
+<!-- SAVAT -->
 
-    .hero {
-      min-height: 90vh;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      text-align: center;
-      padding: 70px 20px;
-      background:
-        linear-gradient(rgba(3,19,39,.88), rgba(3,19,39,.88)),
-        linear-gradient(135deg,#0b3d73,#071b35);
-      color: white;
-    }
+<section id="cart" class="about">
 
-    .hero-content {
-      max-width: 900px;
-    }
+  <div class="section-title">
+    <h2>🛍️ Savat</h2>
+    <p id="cartCount">Savat bo‘sh</p>
+  </div>
 
-    .hero h1 {
-      font-size: 48px;
-      margin-bottom: 20px;
-    }
+  <div id="cartItems" class="contact-box">
+    Savatda hozircha mahsulot yo‘q.
+  </div>
 
-    .hero h1 span {
-      color: #f5b400;
-    }
+</section>
 
-    .hero p {
-      font-size: 19px;
-      line-height: 1.7;
-      margin-bottom: 30px;
-      color: #e5eaf2;
-    }
 
-    .btn {
-      display: inline-block;
-      padding: 14px 25px;
-      margin: 7px;
-      border-radius: 8px;
-      text-decoration: none;
-      font-weight: bold;
-      transition: .3s;
-    }
+<script>
 
-    .btn-main {
-      background: #f5b400;
-      color: #071b35;
-    }
+let cart = [];
 
-    .btn-main:hover {
-      transform: translateY(-3px);
-      background: #ffd35a;
-    }
 
-    .btn-outline {
-      border: 1px solid white;
-      color: white;
-    }
+/* MAHSULOTNI SAVATGA QO‘SHISH */
 
-    .btn-outline:hover {
-      background: white;
-      color: #071b35;
-    }
+function addProduct(name, price) {
 
-    /* SECTION */
+  const existing = cart.find(item => item.name === name);
 
-    section {
-      padding: 75px 6%;
-    }
+  if (existing) {
+    existing.quantity++;
+  } else {
+    cart.push({
+      name: name,
+      price: price,
+      quantity: 1
+    });
+  }
 
-    .section-title {
-      text-align: center;
-      margin-bottom: 45px;
-    }
+  updateCart();
 
-    .section-title h2 {
-      font-size: 34px;
-      color: #071b35;
-      margin-bottom: 10px;
-    }
+  alert("✅ " + name + " savatga qo‘shildi!");
+}
 
-    .section-title p {
-      color: #64748b;
-    }
 
-    /* CARDS */
+/* SAVATNI YANGILASH */
 
-    .cards {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-      gap: 22px;
-    }
+function updateCart() {
 
-    .card {
-      background: white;
-      padding: 30px;
-      border-radius: 15px;
-      box-shadow: 0 5px 25px rgba(0,0,0,.08);
-      transition: .3s;
-      border-top: 4px solid #f5b400;
-    }
+  const cartItems = document.getElementById("cartItems");
+  const cartCount = document.getElementById("cartCount");
 
-    .card:hover {
-      transform: translateY(-7px);
-      box-shadow: 0 12px 30px rgba(0,0,0,.13);
-    }
+  if (cart.length === 0) {
 
-    .card-icon {
-      font-size: 40px;
-      margin-bottom: 15px;
-    }
+    cartItems.innerHTML =
+      "Savatda hozircha mahsulot yo‘q.";
 
-    .card h3 {
-      margin-bottom: 12px;
-      color: #071b35;
-    }
+    cartCount.innerText =
+      "Savat bo‘sh";
 
-    .card p {
-      line-height: 1.6;
-      color: #64748b;
-    }
+    return;
+  }
 
-    /* ABOUT */
 
-    .about {
-      background: white;
-    }
+  let total = 0;
+  let count = 0;
 
-    .about-box {
-      max-width: 1000px;
-      margin: auto;
-      text-align: center;
-      line-height: 1.8;
-      color: #475569;
-      font-size: 17px;
-    }
+  let html = "";
 
-    /* STATS */
 
-    .stats {
-      background: #071b35;
-      color: white;
-    }
+  cart.forEach((item, index) => {
 
-    .stats-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit,minmax(180px,1fr));
-      gap: 25px;
-      text-align: center;
-    }
+    const itemTotal =
+      item.price * item.quantity;
 
-    .stat h3 {
-      font-size: 38px;
-      color: #f5b400;
-    }
+    total += itemTotal;
+    count += item.quantity;
 
-    .stat p {
-      margin-top: 8px;
-    }
 
-    /* CONTACT */
+    html += `
 
-    .contact-box {
-      max-width: 700px;
-      margin: auto;
-      background: white;
-      padding: 35px;
-      border-radius: 15px;
-      box-shadow: 0 5px 25px rgba(0,0
+      <div style="
+        padding:15px;
+        margin-bottom:10px;
+        background:#f5f7fa;
+        border-radius:10px;
+      ">
+
+        <h3>${item.name}</h3>
+
+        <p>
+          ${item.price.toLocaleString()} so‘m
+        </p>
+
+        <p>
+          Miqdor:
+          <button onclick="changeQuantity(${index}, -1)">
+            −
+          </button>
+
+          <strong>${item.quantity}</strong>
+
+          <button onclick="changeQuantity(${index}, 1)">
+            +
+          </button>
+        </p>
+
+        <p>
+          Jami:
+          <strong>
+            ${itemTotal.toLocaleString()} so‘m
+          </strong>
+        </p>
+
+        <button
+          onclick="removeProduct(${index})"
+          style="
+            padding:8px 14px;
+            border:0;
+            border-radius:6px;
+            cursor:pointer;
+          ">
+          ❌ O‘chirish
+        </button>
+
+      </div>
+
+    `;
+
+  });
+
+
+  html += `
+
+    <hr>
+
+    <h2>
+      Umumiy summa:
+      ${total.toLocaleString()} so‘m
+    </h2>
+
+    <br>
+
+    <button
+      class="btn btn-main"
+      onclick="orderNow()">
+      📦 Buyurtma berish
+    </button>
+
+  `;
+
+
+  cartItems.innerHTML = html;
+
+  cartCount.innerText =
+    "Savatda " + count + " ta mahsulot";
+
+}
+
+
+/* MIQDORNI O‘ZGARTIRISH */
+
+function changeQuantity(index, amount) {
+
+  cart[index].quantity += amount;
+
+  if (cart[index].quantity <= 0) {
+    cart.splice(index, 1);
+  }
+
+  updateCart();
+}
+
+
+/* MAHSULOTNI O‘CHIRISH */
+
+function removeProduct(index) {
+
+  cart.splice(index, 1);
+
+  updateCart();
+
+}
+
+
+/* BUYURTMA */
+
+function orderNow() {
+
+  if (cart.length === 0) {
+
+    alert("Savat bo‘sh!");
+
+    return;
+  }
+
+
+  let message =
+    "📦 BUYURTMA\n\n";
+
+
+  let total = 0;
+
+
+  cart.forEach(item => {
+
+    const sum =
+      item.price * item.quantity;
+
+    total += sum;
+
+    message +=
+      item.name +
+      " x " +
+      item.quantity +
+      " = " +
+      sum.toLocaleString() +
+      " so‘m\n";
+
+  });
+
+
+  message +=
+    "\n💰 Umumiy: " +
+    total.toLocaleString() +
+    " so‘m";
+
+
+  alert(message);
+
+
+  const name =
+    prompt("Ismingizni kiriting:");
+
+  if (!name) return;
+
+
+  const phone =
+    prompt("Telefon raqamingizni kiriting:");
+
+  if (!phone) return;
+
+
+  alert(
+    "✅ Rahmat, " +
+    name +
+    "!\n\n" +
+    "Buyurtmangiz qabul qilindi.\n" +
+    "Telefon: " +
+    phone
+  );
+
+}
+
+</script>
