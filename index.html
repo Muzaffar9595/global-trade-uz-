@@ -7,269 +7,231 @@
 <title>MUZAFFAR GLOBAL TRADE UZ</title>
 
 <style>
-* {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
+*{
+box-sizing:border-box;
+margin:0;
+padding:0;
 }
 
-body {
-    font-family: Arial, sans-serif;
-    background: #f4f6f8;
-    color: #172033;
-    line-height: 1.6;
+body{
+font-family:Arial,sans-serif;
+background:#f4f6f8;
+color:#172033;
+line-height:1.6;
 }
 
-header {
-    background: linear-gradient(135deg, #071a35, #0b4f8a);
-    color: white;
-    padding: 20px;
-    position: sticky;
-    top: 0;
-    z-index: 1000;
+header{
+background:linear-gradient(135deg,#071a35,#0b4f8a);
+color:white;
+padding:18px 20px;
+position:sticky;
+top:0;
+z-index:1000;
 }
 
-.nav {
-    max-width: 1200px;
-    margin: auto;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    gap: 20px;
+.nav{
+max-width:1200px;
+margin:auto;
+display:flex;
+justify-content:space-between;
+align-items:center;
+gap:20px;
 }
 
-.logo {
-    font-size: 22px;
-    font-weight: bold;
+.logo{
+font-size:20px;
+font-weight:bold;
 }
 
-nav a {
-    color: white;
-    text-decoration: none;
-    margin-left: 15px;
-    font-weight: bold;
+nav a{
+color:white;
+text-decoration:none;
+margin:0 7px;
+font-weight:bold;
 }
 
-.hero {
-    background: linear-gradient(135deg, #071a35, #1261a0);
-    color: white;
-    padding: 90px 20px;
-    text-align: center;
+.hero{
+background:linear-gradient(135deg,#071a35,#1261a0);
+color:white;
+padding:80px 20px;
+text-align:center;
 }
 
-.hero h1 {
-    font-size: 42px;
-    margin-bottom: 15px;
+.hero h1{
+font-size:40px;
+margin-bottom:15px;
 }
 
-.hero p {
-    max-width: 800px;
-    margin: auto;
-    font-size: 19px;
+.hero p{
+max-width:800px;
+margin:auto;
+font-size:18px;
 }
 
-.btn {
-    display: inline-block;
-    margin-top: 25px;
-    padding: 13px 25px;
-    background: #f4b400;
-    color: #111;
-    text-decoration: none;
-    border-radius: 8px;
-    font-weight: bold;
+.btn{
+display:inline-block;
+margin-top:25px;
+padding:13px 25px;
+background:#f4b400;
+color:#111;
+text-decoration:none;
+border-radius:8px;
+font-weight:bold;
+border:none;
+cursor:pointer;
 }
 
-section {
-    max-width: 1200px;
-    margin: auto;
-    padding: 60px 20px;
+section{
+max-width:1200px;
+margin:auto;
+padding:55px 20px;
 }
 
-.title {
-    text-align: center;
-    font-size: 32px;
-    margin-bottom: 35px;
+.title{
+text-align:center;
+font-size:30px;
+margin-bottom:30px;
 }
 
-.cards {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-    gap: 20px;
+.products{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+gap:20px;
 }
 
-.card {
-    background: white;
-    padding: 25px;
-    border-radius: 12px;
-    box-shadow: 0 5px 18px rgba(0,0,0,0.08);
+.product{
+background:white;
+padding:22px;
+border-radius:12px;
+text-align:center;
+box-shadow:0 5px 18px rgba(0,0,0,.08);
 }
 
-.card h3 {
-    color: #0b4f8a;
-    margin-bottom: 10px;
+.icon{
+font-size:50px;
+margin-bottom:10px;
 }
 
-.products {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-    gap: 20px;
+.product h3{
+color:#0b4f8a;
+margin-bottom:8px;
 }
 
-.product {
-    background: white;
-    border-radius: 12px;
-    padding: 20px;
-    text-align: center;
-    box-shadow: 0 5px 18px rgba(0,0,0,0.08);
+.price{
+font-size:20px;
+font-weight:bold;
+margin-top:10px;
 }
 
-.product .icon {
-    font-size: 55px;
-    margin-bottom: 15px;
+.product button{
+margin-top:15px;
+padding:10px 18px;
+border:none;
+border-radius:7px;
+background:#0b4f8a;
+color:white;
+cursor:pointer;
 }
 
-.product button {
-    margin-top: 15px;
-    padding: 10px 18px;
-    border: none;
-    border-radius: 7px;
-    background: #0b4f8a;
-    color: white;
-    cursor: pointer;
+.cards{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
+gap:20px;
 }
 
-.contact {
-    background: #071a35;
-    color: white;
-    max-width: none;
-    text-align: center;
+.card{
+background:white;
+padding:25px;
+border-radius:12px;
+box-shadow:0 5px 18px rgba(0,0,0,.08);
 }
 
-.contact p {
-    margin: 10px 0;
+.card h3{
+color:#0b4f8a;
+margin-bottom:10px;
 }
 
-footer {
-    background: #030d1c;
-    color: white;
-    text-align: center;
-    padding: 25px;
+.cart-box{
+background:white;
+padding:25px;
+border-radius:12px;
+box-shadow:0 5px 18px rgba(0,0,0,.08);
 }
 
-#cart {
-    position: fixed;
-    right: 20px;
-    bottom: 20px;
-    background: #f4b400;
-    color: #111;
-    padding: 15px 20px;
-    border-radius: 10px;
-    font-weight: bold;
-    z-index: 2000;
+.cart-item{
+display:flex;
+justify-content:space-between;
+padding:10px 0;
+border-bottom:1px solid #ddd;
 }
 
-@media (max-width: 700px) {
-    .nav {
-        flex-direction: column;
-    }
-
-    nav a {
-        margin: 5px;
-        font-size: 14px;
-    }
-
-    .hero h1 {
-        font-size: 30px;
-    }
+.remove{
+background:#d9534f;
+color:white;
+border:none;
+padding:5px 10px;
+border-radius:5px;
+cursor:pointer;
 }
-</style>
-</head>
 
-<body>
+.total{
+font-size:22px;
+font-weight:bold;
+margin-top:20px;
+}
 
-<header>
-<div class="nav">
-<div class="logo">🦅 MUZAFFAR GLOBAL TRADE UZ</div>
+.order-form{
+display:grid;
+gap:12px;
+margin-top:20px;
+}
 
-<nav>
-<a href="#home">Bosh sahifa</a>
-<a href="#shop">Savdo</a>
-<a href="#services">Xizmatlar</a>
-<a href="#projects">Loyihalar</a>
-<a href="#contact">Aloqa</a>
-</nav>
-</div>
-</header>
+.order-form input,
+.order-form textarea{
+width:100%;
+padding:13px;
+border:1px solid #ccc;
+border-radius:7px;
+font-size:16px;
+}
 
-<section class="hero" id="home">
-<h1>MUZAFFAR GLOBAL TRADE UZ</h1>
+.order-form textarea{
+min-height:100px;
+resize:vertical;
+}
 
-<p>
-Zamonaviy savdo, biznes xizmatlari, yangi loyihalar,
-investitsiya va xalqaro hamkorlik uchun professional platforma.
-</p>
+.contact{
+background:#071a35;
+color:white;
+max-width:none;
+text-align:center;
+}
 
-<a href="#shop" class="btn">Online savdoni boshlash</a>
-</section>
+footer{
+background:#030d1c;
+color:white;
+text-align:center;
+padding:25px;
+}
 
-<section id="shop">
+#cartButton{
+position:fixed;
+right:20px;
+bottom:20px;
+background:#f4b400;
+color:#111;
+padding:14px 20px;
+border-radius:10px;
+font-weight:bold;
+cursor:pointer;
+z-index:2000;
+}
 
-<h2 class="title">🛒 Online Savdo</h2>
+@media(max-width:700px){
 
-<div class="products">
+.nav{
+flex-direction:column;
+}
 
-<div class="product">
-<div class="icon">📱</div>
-<h3>Elektronika</h3>
-<p>Zamonaviy elektron mahsulotlar.</p>
-<button onclick="addToCart('Elektronika')">
-Savatga qo‘shish
-</button>
-</div>
-
-<div class="product">
-<div class="icon">👕</div>
-<h3>Kiyim-kechak</h3>
-<p>Sifatli va zamonaviy mahsulotlar.</p>
-<button onclick="addToCart('Kiyim-kechak')">
-Savatga qo‘shish
-</button>
-</div>
-
-<div class="product">
-<div class="icon">🏠</div>
-<h3>Uy mahsulotlari</h3>
-<p>Uy uchun kerakli mahsulotlar.</p>
-<button onclick="addToCart('Uy mahsulotlari')">
-Savatga qo‘shish
-</button>
-</div>
-
-<div class="product">
-<div class="icon">🌍</div>
-<h3>Xalqaro savdo</h3>
-<p>Xalqaro bozor bilan hamkorlik.</p>
-<button onclick="addToCart('Xalqaro savdo')">
-Savatga qo‘shish
-</button>
-</div>
-
-</div>
-</section>
-
-<section id="services">
-
-<h2 class="title">💼 Biznes Xizmatlari</h2>
-
-<div class="cards">
-
-<div class="card">
-<h3>📊 Biznes konsalting</h3>
-<p>
-Biznesni rivojlantirish, bozorni o‘rganish
-va strategik rejalashtirish.
-</p>
-</div>
-
-<div class="card">
-<h3>📈 Marketing</h
+nav{
+text
