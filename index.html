@@ -7,711 +7,220 @@
 <title>MUZAFFAR GLOBAL TRADE UZ</title>
 
 <style>
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    scroll-behavior: smooth;
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, sans-serif;
 }
 
-body {
-    font-family: Arial, sans-serif;
-    background: #f4f7fb;
-    color: #172033;
+html{
+    scroll-behavior:smooth;
 }
 
-/* HEADER */
-header {
-    background: #071d36;
-    color: white;
-    padding: 18px 6%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    position: sticky;
-    top: 0;
-    z-index: 1000;
+body{
+    background:#f4f7fb;
+    color:#172033;
 }
 
-.logo {
-    font-size: 21px;
-    font-weight: bold;
+header{
+    background:#0b1f3a;
+    color:white;
+    padding:18px 6%;
+    position:sticky;
+    top:0;
+    z-index:1000;
+    box-shadow:0 3px 15px rgba(0,0,0,.15);
 }
 
-nav a {
-    color: white;
-    text-decoration: none;
-    margin-left: 16px;
-    font-size: 14px;
+.navbar{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    gap:20px;
 }
 
-nav a:hover {
-    color: #ffd166;
+.logo{
+    font-size:22px;
+    font-weight:bold;
 }
 
-/* HERO */
-.hero {
-    min-height: 560px;
-    background: linear-gradient(135deg, #071d36, #1769aa);
-    color: white;
-    display: flex;
-    align-items: center;
-    padding: 70px 6%;
+.logo span{
+    color:#20c997;
 }
 
-.hero-content {
-    max-width: 750px;
+nav{
+    display:flex;
+    gap:20px;
+    flex-wrap:wrap;
 }
 
-.hero h1 {
-    font-size: 48px;
-    margin-bottom: 20px;
+nav a{
+    color:white;
+    text-decoration:none;
+    font-size:15px;
+    font-weight:bold;
 }
 
-.hero p {
-    font-size: 20px;
-    line-height: 1.7;
-    margin-bottom: 30px;
+nav a:hover{
+    color:#20c997;
 }
 
-.btn {
-    display: inline-block;
-    background: #ffd166;
-    color: #172033;
-    text-decoration: none;
-    padding: 14px 23px;
-    border-radius: 8px;
-    font-weight: bold;
-    margin: 5px;
+.hero{
+    min-height:620px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    text-align:center;
+    padding:60px 6%;
+    background:linear-gradient(135deg,#0b1f3a,#123d68);
+    color:white;
 }
 
-.btn:hover {
-    background: white;
+.hero-content{
+    max-width:850px;
 }
 
-/* SECTIONS */
-section {
-    padding: 70px 6%;
+.hero h1{
+    font-size:52px;
+    margin-bottom:20px;
 }
 
-.title {
-    text-align: center;
-    color: #071d36;
-    font-size: 34px;
-    margin-bottom: 40px;
+.hero h1 span{
+    color:#20c997;
 }
 
-/* PRODUCTS */
-.products {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
-    gap: 25px;
+.hero p{
+    font-size:20px;
+    line-height:1.7;
+    margin-bottom:30px;
 }
 
-.product {
-    background: white;
-    border-radius: 15px;
-    padding: 25px;
-    text-align: center;
-    box-shadow: 0 5px 20px rgba(0,0,0,0.08);
-    transition: 0.3s;
+.buttons{
+    display:flex;
+    justify-content:center;
+    gap:15px;
+    flex-wrap:wrap;
 }
 
-.product:hover {
-    transform: translateY(-5px);
+.btn{
+    display:inline-block;
+    padding:14px 25px;
+    border-radius:8px;
+    text-decoration:none;
+    font-weight:bold;
+    transition:.3s;
 }
 
-.product-image {
-    height: 150px;
-    background: #eaf1f8;
-    border-radius: 12px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 65px;
-    margin-bottom: 18px;
+.btn-primary{
+    background:#20c997;
+    color:#082032;
 }
 
-.product h3 {
-    color: #1769aa;
-    margin-bottom: 10px;
+.btn-primary:hover{
+    transform:translateY(-3px);
 }
 
-.price {
-    font-size: 20px;
-    font-weight: bold;
-    margin: 15px 0;
+.btn-light{
+    border:2px solid white;
+    color:white;
 }
 
-.order-btn {
-    display: inline-block;
-    background: #1769aa;
-    color: white;
-    text-decoration: none;
-    padding: 11px 20px;
-    border-radius: 7px;
+.btn-light:hover{
+    background:white;
+    color:#0b1f3a;
 }
 
-.order-btn:hover {
-    background: #071d36;
+section{
+    padding:70px 6%;
 }
 
-/* CARDS */
-.cards {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-    gap: 25px;
+.section-title{
+    text-align:center;
+    margin-bottom:45px;
 }
 
-.card {
-    background: white;
-    padding: 30px;
-    border-radius: 15px;
-    text-align: center;
-    box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+.section-title h2{
+    font-size:35px;
+    color:#0b1f3a;
+    margin-bottom:12px;
 }
 
-.icon {
-    font-size: 48px;
-    margin-bottom: 10px;
+.section-title p{
+    color:#667085;
 }
 
-.card h3 {
-    color: #1769aa;
-    margin: 12px 0;
+.cards{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
+    gap:25px;
 }
 
-.card p {
-    color: #555;
-    line-height: 1.6;
+.card{
+    background:white;
+    padding:30px;
+    border-radius:15px;
+    box-shadow:0 5px 20px rgba(0,0,0,.08);
+    transition:.3s;
 }
 
-/* ABOUT */
-.about {
-    background: white;
+.card:hover{
+    transform:translateY(-7px);
 }
 
-.about-text {
-    max-width: 850px;
-    margin: auto;
-    text-align: center;
-    line-height: 1.8;
-    font-size: 18px;
+.icon{
+    font-size:42px;
+    margin-bottom:18px;
 }
 
-/* CONTACT */
-.contact {
-    background: #071d36;
-    color: white;
-    text-align: center;
+.card h3{
+    color:#0b1f3a;
+    margin-bottom:12px;
+    font-size:22px;
 }
 
-.contact .title {
-    color: white;
+.card p{
+    color:#667085;
+    line-height:1.6;
 }
 
-.contact-box {
-    max-width: 650px;
-    margin: auto;
-    font-size: 18px;
-    line-height: 2;
+.price{
+    color:#20a879;
+    font-size:21px;
+    font-weight:bold;
+    margin:18px 0;
 }
 
-.contact-btn {
-    display: inline-block;
-    margin-top: 25px;
-    padding: 14px 25px;
-    background: #ffd166;
-    color: #172033;
-    text-decoration: none;
-    border-radius: 8px;
-    font-weight: bold;
+.buy-btn{
+    display:block;
+    text-align:center;
+    padding:12px;
+    background:#0b1f3a;
+    color:white;
+    text-decoration:none;
+    border-radius:7px;
+    font-weight:bold;
 }
 
-/* FOOTER */
-footer {
-    background: #041225;
-    color: white;
-    text-align: center;
-    padding: 25px;
+.buy-btn:hover{
+    background:#20c997;
+    color:#082032;
 }
 
-/* MOBILE */
-@media (max-width: 750px) {
-
-    header {
-        flex-direction: column;
-        gap: 15px;
-    }
-
-    nav {
-        text-align: center;
-    }
-
-    nav a {
-        display: inline-block;
-        margin: 5px;
-    }
-
-    .hero {
-        min-height: 500px;
-    }
-
-    .hero h1 {
-        font-size: 34px;
-    }
-
-    .hero p {
-        font-size: 17px;
-    }
-
-    .title {
-        font-size: 29px;
-    }
+.about{
+    background:white;
 }
-</style>
-</head>
 
-<body>
-
-<!-- HEADER -->
-<header>
-
-    <div class="logo">
-        MUZAFFAR GLOBAL TRADE UZ
-    </div>
-
-    <nav>
-        <a href="#home">Bosh sahifa</a>
-        <a href="#shop">Savdo</a>
-        <a href="#services">Xizmatlar</a>
-        <a href="#business">Biznes</a>
-        <a href="#investment">Investitsiya</a>
-        <a href="#contact">Aloqa</a>
-    </nav>
-
-</header>
-
-
-<!-- HERO -->
-<section class="hero" id="home">
-
-    <div class="hero-content">
-
-        <h1>
-            MUZAFFAR GLOBAL TRADE UZ
-        </h1>
-
-        <p>
-            Zamonaviy onlayn savdo, biznes loyihalar,
-            xizmatlar va investitsiya imkoniyatlari uchun
-            professional platforma.
-        </p>
-
-        <a href="#shop" class="btn">
-            🛒 Onlayn savdo
-        </a>
-
-        <a href="#contact" class="btn">
-            📞 Biz bilan bog‘lanish
-        </a>
-
-    </div>
-
-</section>
-
-
-<!-- SHOP -->
-<section id="shop">
-
-    <h2 class="title">
-        🛍️ Onlayn Savdo
-    </h2>
-
-    <div class="products">
-
-        <div class="product">
-
-            <div class="product-image">
-                📱
-            </div>
-
-            <h3>
-                Elektronika
-            </h3>
-
-            <p>
-                Zamonaviy elektron mahsulotlar.
-            </p>
-
-            <div class="price">
-                Narx: kelishiladi
-            </div>
-
-            <a href="#contact" class="order-btn">
-                Buyurtma berish
-            </a>
-
-        </div>
-
-
-        <div class="product">
-
-            <div class="product-image">
-                👕
-            </div>
-
-            <h3>
-                Kiyim-kechak
-            </h3>
-
-            <p>
-                Sifatli va zamonaviy mahsulotlar.
-            </p>
-
-            <div class="price">
-                Narx: kelishiladi
-            </div>
-
-            <a href="#contact" class="order-btn">
-                Buyurtma berish
-            </a>
-
-        </div>
-
-
-        <div class="product">
-
-            <div class="product-image">
-                🏠
-            </div>
-
-            <h3>
-                Uy mahsulotlari
-            </h3>
-
-            <p>
-                Uy uchun kerakli mahsulotlar.
-            </p>
-
-            <div class="price">
-                Narx: kelishiladi
-            </div>
-
-            <a href="#contact" class="order-btn">
-                Buyurtma berish
-            </a>
-
-        </div>
-
-
-        <div class="product">
-
-            <div class="product-image">
-                🎁
-            </div>
-
-            <h3>
-                Sovg‘alar
-            </h3>
-
-            <p>
-                Maxsus sovg‘a va aksessuarlar.
-            </p>
-
-            <div class="price">
-                Narx: kelishiladi
-            </div>
-
-            <a href="#contact" class="order-btn">
-                Buyurtma berish
-            </a>
-
-        </div>
-
-    </div>
-
-</section>
-
-
-<!-- SERVICES -->
-<section id="services" class="about">
-
-    <h2 class="title">
-        💼 Bizning Xizmatlar
-    </h2>
-
-    <div class="cards">
-
-        <div class="card">
-
-            <div class="icon">
-                📦
-            </div>
-
-            <h3>
-                Onlayn savdo
-            </h3>
-
-            <p>
-                Mahsulotlarni internet orqali
-                xaridorlarga taklif qilish.
-            </p>
-
-        </div>
-
-
-        <div class="card">
-
-            <div class="icon">
-                📢
-            </div>
-
-            <h3>
-                Marketing
-            </h3>
-
-            <p>
-                Biznes va mahsulotlarni
-                internet orqali targ‘ib qilish.
-            </p>
-
-        </div>
-
-
-        <div class="card">
-
-            <div class="icon">
-                🤝
-            </div>
-
-            <h3>
-                Hamkorlik
-            </h3>
-
-            <p>
-                Mahalliy va xalqaro biznes
-                hamkorlik imkoniyatlari.
-            </p>
-
-        </div>
-
-    </div>
-
-</section>
-
-
-<!-- BUSINESS -->
-<section id="business">
-
-    <h2 class="title">
-        🚀 Biznes Loyihalar
-    </h2>
-
-    <div class="cards">
-
-        <div class="card">
-
-            <div class="icon">
-                💡
-            </div>
-
-            <h3>
-                Startap
-            </h3>
-
-            <p>
-                Yangi biznes g‘oyalarini
-                rivojlantirish.
-            </p>
-
-        </div>
-
-
-        <div class="card">
-
-            <div class="icon">
-                🌐
-            </div>
-
-            <h3>
-                Global biznes
-            </h3>
-
-            <p>
-                Xalqaro bozorlarga chiqish
-                imkoniyatlarini rivojlantirish.
-            </p>
-
-        </div>
-
-
-        <div class="card">
-
-            <div class="icon">
-                📈
-            </div>
-
-            <h3>
-                Rivojlanish
-            </h3>
-
-            <p>
-                Biznesni kengaytirish va
-                yangi imkoniyatlar yaratish.
-            </p>
-
-        </div>
-
-    </div>
-
-</section>
-
-
-<!-- INVESTMENT -->
-<section id="investment" class="about">
-
-    <h2 class="title">
-        💰 Investitsiya
-    </h2>
-
-    <div class="cards">
-
-        <div class="card">
-
-            <div class="icon">
-                💵
-            </div>
-
-            <h3>
-                Investitsiya loyihalari
-            </h3>
-
-            <p>
-                Istiqbolli biznes loyihalarini
-                rivojlantirish imkoniyatlari.
-            </p>
-
-        </div>
-
-
-        <div class="card">
-
-            <div class="icon">
-                📊
-            </div>
-
-            <h3>
-                Biznes tahlil
-            </h3>
-
-            <p>
-                Bozor va biznes imkoniyatlarini
-                o‘rganish.
-            </p>
-
-        </div>
-
-
-        <div class="card">
-
-            <div class="icon">
-                🌱
-            </div>
-
-            <h3>
-                Barqaror rivojlanish
-            </h3>
-
-            <p>
-                Uzoq muddatli biznes rivojiga
-                e’tibor qaratish.
-            </p>
-
-        </div>
-
-    </div>
-
-</section>
-
-
-<!-- ABOUT -->
-<section class="about">
-
-    <h2 class="title">
-        Biz haqimizda
-    </h2>
-
-    <div class="about-text">
-
-        <p>
-            <strong>MUZAFFAR GLOBAL TRADE UZ</strong>
-            — onlayn savdo, biznes, xizmatlar va
-            yangi loyihalarni rivojlantirishga
-            yo‘naltirilgan zamonaviy platforma.
-        </p>
-
-        <br>
-
-        <p>
-            Bizning maqsadimiz — xaridorlar,
-            tadbirkorlar va hamkorlar uchun
-            qulay raqamli biznes muhitini yaratish.
-        </p>
-
-    </div>
-
-</section>
-
-
-<!-- CONTACT -->
-<section id="contact" class="contact">
-
-    <h2 class="title">
-        📞 Aloqa
-    </h2>
-
-    <div class="contact-box">
-
-        <p>
-            Biznes, mahsulot yoki hamkorlik
-            bo‘yicha biz bilan bog‘laning.
-        </p>
-
-        <p>
-            📱 Telefon: +998 XX XXX XX XX
-        </p>
-
-        <p>
-            📧 Email: info@muzaffarglobaltrade.uz
-        </p>
-
-        <p>
-            🌍 MUZAFFAR GLOBAL TRADE UZ
-        </p>
-
-        <a href="mailto:info@muzaffarglobaltrade.uz"
-           class="contact-btn">
-            ✉️ Email orqali bog‘lanish
-        </a>
-
-    </div>
-
-</section>
-
-
-<!-- FOOTER -->
-<footer>
-
-    <p>
-        © 2026 MUZAFFAR GLOBAL TRADE UZ
-    </p>
-
-    <p>
-        Barcha huquqlar himoyalangan.
-    </p>
-
-</footer>
-
-</body>
-</html>
+.about-content{
+    max-width:900px;
+    margin:auto;
+    text-align:center;
+}
+
+.about-content p{
+    line-height:1.8;
+    color:#5d6878;
+    font-size:17px;
+}
+
+.stats{
