@@ -450,6 +450,8 @@ Kelajak
 
 <main>
 
+<!-- BOSH SAHIFA -->
+
 <section id="home" class="page active">
 
 <div class="hero">
@@ -472,6 +474,8 @@ raqamli platforma.
 
 </section>
 
+
+<!-- BIZ HAQIMIZDA -->
 
 <section id="about" class="page">
 
@@ -498,6 +502,8 @@ uchun qulay, ishonchli va zamonaviy raqamli muhit yaratish.
 
 </section>
 
+
+<!-- XIZMATLAR -->
 
 <section id="services" class="page">
 
@@ -530,6 +536,8 @@ uchun qulay, ishonchli va zamonaviy raqamli muhit yaratish.
 </section>
 
 
+<!-- LOYIHALAR -->
+
 <section id="projects" class="page">
 
 <h2>Loyihalar</h2>
@@ -556,6 +564,8 @@ uchun qulay, ishonchli va zamonaviy raqamli muhit yaratish.
 </section>
 
 
+<!-- KELAJAK -->
+
 <section id="future" class="page">
 
 <h2>Kelajak</h2>
@@ -572,6 +582,8 @@ texnologik yechimlarni rivojlantirishni maqsad qiladi.
 
 </section>
 
+
+<!-- SAVDO -->
 
 <section id="products" class="page">
 
@@ -664,7 +676,7 @@ id="searchInput"
 class="search-box"
 type="text"
 placeholder="🔎 Mahsulot qidirish..."
-oninput="filterProducts">
+oninput="filterProducts()">
 
 
 <div id="productsList" class="products">
@@ -677,6 +689,8 @@ oninput="filterProducts">
 
 </section>
 
+
+<!-- SAVATCHA -->
 
 <section id="cart" class="page">
 
@@ -703,6 +717,8 @@ onclick="showPage('products')">
 
 </div>
 
+
+<!-- BUYURTMA -->
 
 <div id="checkoutBox" class="checkout-box">
 
@@ -760,6 +776,8 @@ placeholder="Qo‘shimcha ma'lumot..."></textarea>
 
 </section>
 
+
+<!-- ALOQA -->
 
 <section id="contact" class="page">
 
@@ -841,8 +859,7 @@ let cart = [];
 
 try{
 
-cart =
-JSON.parse(
+cart = JSON.parse(
 localStorage.getItem("mgt_cart") || "[]"
 );
 
@@ -945,7 +962,10 @@ renderProducts(allProducts);
 
 }catch(error){
 
-console.error("PRODUCT LOAD ERROR:",error);
+console.error(
+"PRODUCT LOAD ERROR:",
+error
+);
 
 container.innerHTML =
 `
@@ -1185,10 +1205,14 @@ await loadProducts();
 
 }catch(error){
 
-console.error("PRODUCT ERROR:",error);
+console.error(
+"PRODUCT ERROR:",
+error
+);
 
 status.textContent =
-"❌ Mahsulot saqlanmadi.";
+"❌ Mahsulot saqlanmadi: " +
+(error.message || "Noma'lum xato");
 
 }
 
@@ -1455,343 +1479,3 @@ cart =
 cart.filter(
 item =>
 Number(item.id) !==
-Number(id)
-);
-
-saveCart();
-
-renderCart();
-
-}
-
-
-/* ==========================================
-   BUYURTMA FORMASINI OCHISH
-========================================== */
-
-function openCheckout(){
-
-if(!cart || cart.length === 0){
-
-alert(
-"🛒 Savatcha bo‘sh. Avval mahsulot tanlang."
-);
-
-return;
-
-}
-
-const box =
-document.getElementById(
-"checkoutBox"
-);
-
-const summary =
-document.getElementById(
-"orderSummary"
-);
-
-let total=0;
-
-let html="";
-
-cart.forEach(item=>{
-
-const itemTotal =
-Number(item.price) *
-Number(item.quantity);
-
-total += itemTotal;
-
-html +=
-`
-<p>
-${escapeHTML(item.name)}
-× ${Number(item.quantity)}
-=
-<strong>
-${formatPrice(itemTotal)}
-</strong>
-</p>
-`;
-
-});
-
-html +=
-`
-<hr style="margin:10px 0">
-
-<strong>
-Jami: ${formatPrice(total)}
-</strong>
-`;
-
-summary.innerHTML=html;
-
-box.style.display="block";
-
-box.scrollIntoView({
-behavior:"smooth",
-block:"start"
-});
-
-}
-
-
-/* ==========================================
-   BUYURTMA YUBORISH
-========================================== */
-
-document
-.getElementById("orderForm")
-.addEventListener(
-"submit",
-async function(event){
-
-event.preventDefault();
-
-if(!cart || cart.length === 0){
-
-alert("🛒 Savatcha bo‘sh.");
-
-return;
-
-}
-
-const name =
-document
-.getElementById("orderName")
-.value
-.trim();
-
-const phone =
-document
-.getElementById("orderPhone")
-.value
-.trim();
-
-const address =
-document
-.getElementById("orderAddress")
-.value
-.trim();
-
-const note =
-document
-.getElementById("orderNote")
-.value
-.trim();
-
-const status =
-document.getElementById(
-"orderStatus"
-);
-
-let total=0;
-
-const orderProducts =
-cart.map(item=>{
-
-const itemTotal =
-Number(item.price) *
-Number(item.quantity);
-
-total += itemTotal;
-
-return {
-
-id:item.id,
-
-name:item.name,
-
-price:Number(item.price),
-
-quantity:Number(item.quantity),
-
-subtotal:itemTotal
-
-};
-
-});
-
-status.textContent =
-"⏳ Buyurtma yuborilmoqda...";
-
-try{
-
-const result =
-await supabaseClient
-.from("orders")
-.insert([
-{
-name:name,
-phone:phone,
-address:address,
-note:note,
-products:orderProducts,
-total:total
-}
-]);
-
-if(result.error){
-
-throw result.error;
-
-}
-
-status.textContent =
-"✅ Buyurtma muvaffaqiyatli yuborildi!";
-
-cart=[];
-
-localStorage.removeItem("mgt_cart");
-
-updateCartCount();
-
-document
-.getElementById("orderForm")
-.reset();
-
-document
-.getElementById("checkoutBox")
-.style.display="none";
-
-renderCart();
-
-}catch(error){
-
-console.error(
-"ORDER ERROR:",
-error
-);
-
-status.textContent =
-"❌ Buyurtma yuborilmadi. Iltimos, qaytadan urinib ko‘ring.";
-
-}
-
-});
-
-
-/* ==========================================
-   ALOQA
-========================================== */
-
-document
-.getElementById("contactForm")
-.addEventListener(
-"submit",
-async function(event){
-
-event.preventDefault();
-
-const name =
-document
-.getElementById("name")
-.value
-.trim();
-
-const email =
-document
-.getElementById("email")
-.value
-.trim();
-
-const message =
-document
-.getElementById("message")
-.value
-.trim();
-
-const status =
-document.getElementById("status");
-
-status.textContent =
-"⏳ Xabar yuborilmoqda...";
-
-try{
-
-const result =
-await supabaseClient
-.from("contacts")
-.insert([
-{
-name:name,
-email:email,
-message:message
-}
-]);
-
-if(result.error){
-throw result.error;
-}
-
-status.textContent =
-"✅ Xabaringiz muvaffaqiyatli yuborildi!";
-
-document
-.getElementById("contactForm")
-.reset();
-
-}catch(error){
-
-console.error(
-"CONTACT ERROR:",
-error
-);
-
-status.textContent =
-"❌ Xabar yuborilmadi.";
-
-}
-
-});
-
-
-/* ==========================================
-   NARX
-========================================== */
-
-function formatPrice(price){
-
-return Number(price || 0)
-.toLocaleString("uz-UZ")
-+
-" so‘m";
-
-}
-
-
-/* ==========================================
-   XAVFSIZ HTML
-========================================== */
-
-function escapeHTML(value){
-
-return String(value)
-
-.replace(/&/g,"&amp;")
-
-.replace(/</g,"&lt;")
-
-.replace(/>/g,"&gt;")
-
-.replace(/"/g,"&quot;")
-
-.replace(/'/g,"&#039;");
-
-}
-
-
-/* ==========================================
-   BOSHLASH
-========================================== */
-
-updateCartCount();
-
-showPage("home");
-
-</script>
-
-</body>
-</html>
