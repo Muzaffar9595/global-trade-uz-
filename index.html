@@ -7,7 +7,7 @@
 <title>MUZAFFAR GLOBAL TRADE UZ | Global Business Platform</title>
 
 <meta name="description"
-content="MUZAFFAR GLOBAL TRADE UZ — xalqaro savdo, eksport, import, investitsiya, turizm, ta'lim va global biznes hamkorlik platformasi.">
+content="MUZAFFAR GLOBAL TRADE UZ — xalqaro savdo, eksport, import, turizm, viza, ta'lim, ishga joylashtirish va global biznes hamkorlik platformasi.">
 
 <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
 
@@ -38,6 +38,8 @@ button{
  cursor:pointer
 }
 
+/* ================= HEADER ================= */
+
 header{
  position:sticky;
  top:0;
@@ -50,7 +52,7 @@ header{
 }
 
 .header-inner{
- max-width:1400px;
+ max-width:1450px;
  margin:auto
 }
 
@@ -63,8 +65,8 @@ header{
 }
 
 .logo{
- width:68px;
- height:68px;
+ width:70px;
+ height:70px;
  flex:none;
  filter:drop-shadow(0 0 15px rgba(230,190,80,.35))
 }
@@ -117,8 +119,10 @@ nav button.active{
  padding:2px 7px
 }
 
+/* ================= MAIN ================= */
+
 main{
- max-width:1400px;
+ max-width:1450px;
  margin:auto;
  padding:28px 16px 80px
 }
@@ -143,10 +147,12 @@ main{
  }
 }
 
+/* ================= HERO ================= */
+
 .hero{
  position:relative;
  overflow:hidden;
- min-height:650px;
+ min-height:680px;
  display:flex;
  align-items:center;
  justify-content:center;
@@ -155,7 +161,7 @@ main{
  padding:55px 20px;
  color:#fff;
  background:
- linear-gradient(rgba(2,18,39,.73),rgba(2,18,39,.94)),
+ linear-gradient(rgba(2,18,39,.72),rgba(2,18,39,.95)),
  url("https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&w=1800&q=85")
  center/cover;
  box-shadow:0 20px 65px rgba(0,0,0,.22)
@@ -192,12 +198,12 @@ main{
 .hero-content{
  position:relative;
  z-index:2;
- max-width:980px
+ max-width:1000px
 }
 
 .hero-logo{
- width:135px;
- height:135px;
+ width:145px;
+ height:145px;
  margin:auto;
  animation:float 3s ease-in-out infinite
 }
@@ -207,7 +213,7 @@ main{
 }
 
 .hero h2{
- font-size:47px;
+ font-size:48px;
  margin:18px 0;
  background:linear-gradient(90deg,#fff,#e0bf62,#fff);
  -webkit-background-clip:text;
@@ -216,7 +222,7 @@ main{
 
 .hero p{
  font-size:19px;
- max-width:850px;
+ max-width:900px;
  margin:auto;
  color:#e1eaf4
 }
@@ -253,6 +259,9 @@ main{
 .btn.green{background:#198754}
 .btn.gray{background:#607d9c}
 .btn.red{background:#d32f2f}
+.btn.purple{background:#6a3db8}
+
+/* ================= SECTIONS ================= */
 
 .section{
  margin-top:35px
@@ -318,7 +327,8 @@ main{
 .idea:hover,
 .country:hover,
 .solution:hover,
-.product:hover{
+.product:hover,
+.team:hover{
  transform:translateY(-5px);
  box-shadow:0 16px 38px rgba(12,35,65,.14)
 }
@@ -339,6 +349,8 @@ main{
  font-size:42px;
  margin-bottom:10px
 }
+
+/* ================= STATS ================= */
 
 .stats{
  display:grid;
@@ -364,6 +376,8 @@ main{
  font-size:13px;
  opacity:.85
 }
+
+/* ================= PHOTOS ================= */
 
 .photo{
  height:210px;
@@ -392,22 +406,39 @@ main{
  height:195px
 }
 
+/* ================= TEAM ================= */
+
 .team{
  text-align:center
 }
 
 .avatar{
- width:125px;
- height:125px;
+ width:150px;
+ height:150px;
  border-radius:50%;
  margin:0 auto 15px;
  display:flex;
  align-items:center;
  justify-content:center;
- font-size:60px;
+ font-size:70px;
  background:linear-gradient(135deg,#d7e4f1,#fff);
- border:4px solid #d4b35c
+ border:4px solid #d4b35c;
+ overflow:hidden
 }
+
+.avatar img{
+ width:100%;
+ height:100%;
+ object-fit:cover
+}
+
+.position{
+ color:#b18a32;
+ font-weight:bold;
+ margin-bottom:10px
+}
+
+/* ================= COUNTRY ================= */
 
 .flag{
  font-size:45px;
@@ -418,23 +449,7 @@ main{
  text-align:center
 }
 
-.quote{
- font-size:20px;
- font-style:italic;
- color:#34506e;
- text-align:center;
- padding:30px;
- background:#fff;
- border-radius:18px;
- box-shadow:0 7px 25px rgba(0,0,0,.06)
-}
-
-.status-box{
- background:linear-gradient(135deg,#fff,#f2f6fb);
- border-left:5px solid #d0a944;
- padding:23px;
- border-radius:12px
-}
+/* ================= HIGHLIGHT ================= */
 
 .highlight{
  background:linear-gradient(135deg,#082b50,#124d81);
@@ -448,6 +463,33 @@ main{
  color:#fff
 }
 
+.quote{
+ font-size:20px;
+ font-style:italic;
+ color:#34506e;
+ text-align:center;
+ padding:30px;
+ background:#fff;
+ border-radius:18px;
+ box-shadow:0 7px 25px rgba(0,0,0,.06)
+}
+
+.notice{
+ background:#fff8df;
+ border:1px solid #e3c76c;
+ padding:18px;
+ border-radius:14px;
+ margin:20px 0
+}
+
+/* ================= VIDEO ================= */
+
+.video-grid{
+ display:grid;
+ grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+ gap:22px
+}
+
 .video-card{
  background:#061b36;
  border-radius:20px;
@@ -457,7 +499,7 @@ main{
 }
 
 .video-screen{
- height:240px;
+ height:245px;
  display:flex;
  align-items:center;
  justify-content:center;
@@ -468,6 +510,18 @@ main{
  linear-gradient(135deg,#031326,#0d4776);
  position:relative;
  overflow:hidden
+}
+
+.video-screen:before{
+ content:"AI VIDEO";
+ position:absolute;
+ top:15px;
+ left:15px;
+ padding:5px 9px;
+ border-radius:20px;
+ background:rgba(255,255,255,.12);
+ font-size:10px;
+ letter-spacing:2px
 }
 
 .play{
@@ -495,6 +549,44 @@ main{
  margin-bottom:7px
 }
 
+.video-tag{
+ display:inline-block;
+ background:#d2ae52;
+ color:#071e3a;
+ border-radius:20px;
+ padding:4px 9px;
+ font-size:11px;
+ font-weight:bold;
+ margin-top:10px
+}
+
+/* ================= OFFICE ================= */
+
+.office-special{
+ background:
+ linear-gradient(rgba(4,22,45,.78),rgba(4,22,45,.9)),
+ url("https://images.unsplash.com/photo-1497366811353-6870744d04b2?auto=format&fit=crop&w=1600&q=85")
+ center/cover;
+ color:#fff;
+ border-radius:25px;
+ padding:60px 30px;
+ text-align:center;
+ margin-bottom:25px
+}
+
+.office-special h2{
+ font-size:36px;
+ color:#fff;
+ margin-bottom:10px
+}
+
+.office-special p{
+ max-width:800px;
+ margin:auto
+}
+
+/* ================= PLANS ================= */
+
 .plan-card{
  border-left:4px solid #c39b3b
 }
@@ -509,6 +601,8 @@ main{
  color:#092d54;
  margin:5px 0
 }
+
+/* ================= TABLE ================= */
 
 .table-wrap{
  overflow-x:auto
@@ -533,6 +627,8 @@ th{
  color:#fff
 }
 
+/* ================= PRODUCTS ================= */
+
 .product-image{
  height:175px;
  display:flex;
@@ -543,12 +639,6 @@ th{
  overflow:hidden;
  margin-bottom:15px;
  font-size:60px
-}
-
-.product-image img{
- width:100%;
- height:100%;
- object-fit:cover
 }
 
 .product-description{
@@ -563,6 +653,8 @@ th{
  margin-top:12px;
  margin-bottom:12px
 }
+
+/* ================= FORMS ================= */
 
 .form-box{
  max-width:820px;
@@ -601,6 +693,8 @@ textarea{
  margin-top:13px;
  font-weight:bold
 }
+
+/* ================= CART ================= */
 
 .empty{
  background:#fff;
@@ -658,19 +752,7 @@ textarea{
  margin-bottom:18px
 }
 
-#toast{
- position:fixed;
- right:20px;
- bottom:20px;
- z-index:99999;
- background:#082b50;
- color:#fff;
- padding:15px 20px;
- border-radius:12px;
- box-shadow:0 10px 30px rgba(0,0,0,.25);
- display:none;
- max-width:330px
-}
+/* ================= MODAL ================= */
 
 .modal{
  display:none;
@@ -711,6 +793,8 @@ textarea{
  margin-top:18px
 }
 
+/* ================= FOOTER ================= */
+
 footer{
  background:#04162d;
  color:#fff;
@@ -734,13 +818,23 @@ footer p{
  margin:30px 0
 }
 
-.notice{
- background:#fff8df;
- border:1px solid #e3c76c;
- padding:18px;
- border-radius:14px;
- margin:20px 0
+/* ================= TOAST ================= */
+
+#toast{
+ position:fixed;
+ right:20px;
+ bottom:20px;
+ z-index:99999;
+ background:#082b50;
+ color:#fff;
+ padding:15px 20px;
+ border-radius:12px;
+ box-shadow:0 10px 30px rgba(0,0,0,.25);
+ display:none;
+ max-width:330px
 }
+
+/* ================= MOBILE ================= */
 
 @media(max-width:650px){
 
@@ -788,6 +882,10 @@ footer p{
   font-size:25px
  }
 
+ .office-special h2{
+  font-size:27px
+ }
+
  .cart-item{
   flex-direction:column;
   align-items:flex-start
@@ -802,58 +900,92 @@ footer p{
 
 <body>
 
+<!-- ================= SVG LOGO SYMBOL ================= -->
+
+<svg style="display:none">
+<symbol id="brandLogo" viewBox="0 0 200 200">
+
+<!-- Uchburchak -->
+<path
+d="M100 8 L181 151 L19 151 Z"
+fill="#071e3a"
+stroke="#d9b85c"
+stroke-width="7"/>
+
+<!-- Doira -->
+<circle
+cx="100"
+cy="95"
+r="57"
+fill="#061b36"
+stroke="#f0ce70"
+stroke-width="4"/>
+
+<!-- Oy -->
+<path
+d="M77 62
+A31 31 0 1 0 103 111
+A25 25 0 1 1 77 62"
+fill="#f3d47b"/>
+
+<!-- Yulduzlar -->
+<g fill="#ffe38a">
+<circle cx="111" cy="53" r="3"/>
+<circle cx="127" cy="61" r="2.7"/>
+<circle cx="142" cy="73" r="3"/>
+<circle cx="125" cy="82" r="2.5"/>
+<circle cx="144" cy="94" r="2.5"/>
+<circle cx="108" cy="68" r="2.3"/>
+</g>
+
+<!-- Burgut -->
+<path
+d="
+M100 67
+C86 61 72 56 48 61
+C59 71 69 79 83 84
+C68 83 54 87 43 95
+C63 101 81 98 96 91
+L100 111
+L104 91
+C119 98 137 101 157 95
+C146 87 132 83 117 84
+C131 79 141 71 152 61
+C128 56 114 61 100 67 Z"
+fill="#e1bf62"/>
+
+<!-- Burgut boshi -->
+<circle
+cx="100"
+cy="77"
+r="8"
+fill="#071e3a"/>
+
+<circle
+cx="103"
+cy="74"
+r="2"
+fill="#fff"/>
+
+<!-- Pastki belgi -->
+<path
+d="M100 112 L88 138 L100 132 L112 138 Z"
+fill="#d9b85c"/>
+
+</symbol>
+</svg>
+
+
+<!-- ================= HEADER ================= -->
+
 <header>
+
 <div class="header-inner">
 
 <div class="brand">
 
-<svg id="logo" class="logo" viewBox="0 0 200 200">
-<defs>
-<linearGradient id="gold" x1="0" x2="1">
-<stop offset="0" stop-color="#98752c"/>
-<stop offset=".5" stop-color="#ffe58a"/>
-<stop offset="1" stop-color="#a47d2e"/>
-</linearGradient>
-</defs>
-
-<path d="M100 8 L181 42 L169 119 Q158 164 100 190 Q42 164 31 119 L19 42 Z"
-fill="#071e3a" stroke="url(#gold)" stroke-width="8"/>
-
-<path d="M47 52 Q100 27 153 52"
-fill="none"
-stroke="#d9b85c"
-stroke-width="3"/>
-
-<path d="M60 67 A28 28 0 1 0 88 102 A22 22 0 1 1 60 67"
-fill="#f2d37b"/>
-
-<g fill="#f5d878">
-<circle cx="112" cy="54" r="3"/>
-<circle cx="128" cy="61" r="3"/>
-<circle cx="142" cy="72" r="3"/>
-<circle cx="118" cy="77" r="2.5"/>
-<circle cx="137" cy="88" r="2.5"/>
-<circle cx="102" cy="63" r="2.5"/>
-</g>
-
-<path d="M100 65
-C87 62 73 55 51 60
-C61 69 70 79 83 84
-C68 83 54 87 45 94
-C66 99 83 96 96 91
-L100 111
-L104 91
-C117 96 134 99 155 94
-C146 87 132 83 117 84
-C130 79 139 69 149 60
-C127 55 113 62 100 65 Z"
-fill="url(#gold)"/>
-
-<circle cx="100" cy="76" r="8" fill="#071e3a"/>
-<circle cx="103" cy="74" r="2" fill="#fff"/>
-
-<path d="M100 113 L87 138 L100 132 L113 138 Z"
-fill="#d9b85c"/>
+<svg class="logo">
+<use href="#brandLogo"></use>
 </svg>
 
 <div>
@@ -870,8 +1002,13 @@ fill="#d9b85c"/>
 <button data-page="services" onclick="showPage('services')">Xizmatlar</button>
 <button data-page="projects" onclick="showPage('projects')">Loyihalar</button>
 <button data-page="international" onclick="showPage('international')">🌍 Xalqaro</button>
+<button data-page="tourism" onclick="showPage('tourism')">✈️ Turizm</button>
+<button data-page="visa" onclick="showPage('visa')">🛂 Viza</button>
+<button data-page="education" onclick="showPage('education')">🎓 Ta'lim</button>
+<button data-page="jobs" onclick="showPage('jobs')">💼 Ish</button>
 <button data-page="media" onclick="showPage('media')">🎬 Media</button>
 <button data-page="offices" onclick="showPage('offices')">🏢 Ofislar</button>
+<button data-page="leadership" onclick="showPage('leadership')">👤 Rahbariyat</button>
 <button data-page="strategy" onclick="showPage('strategy')">📚 125 reja</button>
 <button data-page="youth" onclick="showPage('youth')">🎓 Yoshlar</button>
 <button data-page="future" onclick="showPage('future')">🚀 Kelajak</button>
@@ -885,29 +1022,34 @@ fill="#d9b85c"/>
 </button>
 
 </nav>
+
 </div>
+
 </header>
 
 
 <main>
 
-<!-- HOME -->
+
+<!-- ================= HOME ================= -->
+
 <section id="home" class="page active">
 
 <div class="hero">
 
 <div class="hero-content">
 
-<svg class="hero-logo" viewBox="0 0 200 200">
-<use href="#logo"></use>
+<svg class="hero-logo">
+<use href="#brandLogo"></use>
 </svg>
 
 <h2>MUZAFFAR GLOBAL TRADE UZ</h2>
 
 <p>
 Xalqaro savdo, eksport, import, investitsiya,
-turizm, ta'lim va zamonaviy biznes imkoniyatlarini
-birlashtiruvchi global platforma.
+turizm, viza, ta'lim, xalqaro ish imkoniyatlari
+va zamonaviy biznes xizmatlarini birlashtiruvchi
+global platforma.
 </p>
 
 <div class="hero-buttons">
@@ -927,14 +1069,15 @@ Biz haqimizda
 </div>
 
 </div>
+
 </div>
 
 
 <div class="section">
 
 <div class="section-title">
-<h2>Bizning yo‘nalishlarimiz</h2>
-<p>Global biznes uchun asosiy xizmatlar</p>
+<h2>Bizning asosiy yo‘nalishlarimiz</h2>
+<p>Global imkoniyatlar bir platformada</p>
 </div>
 
 <div class="cards">
@@ -946,21 +1089,33 @@ Biz haqimizda
 </div>
 
 <div class="card">
-<div class="icon">📦</div>
-<h3>Mahsulotlar</h3>
-<p>Zamonaviy mahsulotlarni onlayn ko‘rish va buyurtma qilish.</p>
+<div class="icon">✈️</div>
+<h3>Xalqaro turizm</h3>
+<p>Yevropa va Osiyo yo‘nalishlari bo‘yicha turizm xizmatlari.</p>
 </div>
 
 <div class="card">
-<div class="icon">💼</div>
-<h3>Biznes xizmatlari</h3>
-<p>Biznes loyihalari va hamkorlik imkoniyatlari.</p>
+<div class="icon">🛂</div>
+<h3>Viza va hujjatlar</h3>
+<p>Viza arizalari va zarur hujjatlarni tayyorlash bo‘yicha yordam.</p>
 </div>
 
 <div class="card">
 <div class="icon">🎓</div>
 <h3>Ta'lim</h3>
-<p>Yoshlar va tadbirkorlar uchun rivojlanish imkoniyatlari.</p>
+<p>Universitetlarga hujjat topshirish va ta'lim imkoniyatlari.</p>
+</div>
+
+<div class="card">
+<div class="icon">💼</div>
+<h3>Xalqaro ish</h3>
+<p>Xorijiy kompaniyalarga ishga joylashish hujjatlari bo‘yicha yordam.</p>
+</div>
+
+<div class="card">
+<div class="icon">🤖</div>
+<h3>AI va Digital</h3>
+<p>Sun'iy intellekt va raqamli texnologiyalar asosidagi biznes.</p>
 </div>
 
 </div>
@@ -987,7 +1142,7 @@ Biz haqimizda
 
 <div class="stat">
 <strong>24/7</strong>
-<span>Onlayn platforma</span>
+<span>Raqamli platforma</span>
 </div>
 
 </div>
@@ -995,7 +1150,8 @@ Biz haqimizda
 </section>
 
 
-<!-- ABOUT -->
+<!-- ================= ABOUT ================= -->
+
 <section id="about" class="page">
 
 <div class="section-title">
@@ -1004,13 +1160,16 @@ Biz haqimizda
 </div>
 
 <div class="highlight">
+
 <h2>Global biznes uchun yangi imkoniyatlar</h2>
+
 <p>
 MUZAFFAR GLOBAL TRADE UZ — xalqaro savdo,
-biznes, eksport, import, investitsiya, turizm va
-ta'lim yo‘nalishlarini birlashtirishga qaratilgan
-zamonaviy platforma.
+biznes, eksport, import, turizm, ta'lim,
+xalqaro ish va zamonaviy xizmatlarni birlashtirishga
+qaratilgan platforma.
 </p>
+
 </div>
 
 <div class="section">
@@ -1021,8 +1180,8 @@ zamonaviy platforma.
 <div class="icon">🎯</div>
 <h3>Missiyamiz</h3>
 <p>
-Tadbirkorlar, yoshlar va xalqaro hamkorlarni
-bir platformada birlashtirish.
+O‘zbekistonlik tadbirkorlar, yoshlar va hamkorlarni
+xalqaro imkoniyatlar bilan bog‘lash.
 </p>
 </div>
 
@@ -1039,7 +1198,7 @@ zamonaviy biznes ko‘prigini yaratish.
 <div class="icon">🤝</div>
 <h3>Hamkorlik</h3>
 <p>
-Ishonchli va uzoq muddatli biznes hamkorlikni rivojlantirish.
+Ishonchli va uzoq muddatli xalqaro hamkorlikni rivojlantirish.
 </p>
 </div>
 
@@ -1050,12 +1209,13 @@ Ishonchli va uzoq muddatli biznes hamkorlikni rivojlantirish.
 </section>
 
 
-<!-- SERVICES -->
+<!-- ================= SERVICES ================= -->
+
 <section id="services" class="page">
 
 <div class="section-title">
 <h2>Xizmatlar</h2>
-<p>Biznes uchun asosiy xizmatlar</p>
+<p>Biznes, turizm, ta'lim va xalqaro imkoniyatlar</p>
 </div>
 
 <div class="cards">
@@ -1084,15 +1244,29 @@ Ishonchli va uzoq muddatli biznes hamkorlikni rivojlantirish.
 <div class="card">
 <div class="icon">✈️</div>
 <h3>Turizm</h3>
-<p>Turizm va xalqaro sayohat yo‘nalishlari.</p>
-<button class="btn" onclick="showPage('international')">Ko‘rish</button>
+<p>Xalqaro sayohat va turizm yo‘nalishlari.</p>
+<button class="btn" onclick="showPage('tourism')">Ko‘rish</button>
+</div>
+
+<div class="card">
+<div class="icon">🛂</div>
+<h3>Viza xizmatlari</h3>
+<p>Turli davlatlarga borish uchun hujjatlarni tayyorlash bo‘yicha yordam.</p>
+<button class="btn" onclick="showPage('visa')">Batafsil</button>
 </div>
 
 <div class="card">
 <div class="icon">🎓</div>
-<h3>Ta'lim</h3>
-<p>Ta'lim, malaka va yoshlar rivoji yo‘nalishlari.</p>
-<button class="btn" onclick="showPage('youth')">Yoshlar</button>
+<h3>Universitet</h3>
+<p>Yoshlarni universitetlarga hujjat topshirishga tayyorlash.</p>
+<button class="btn" onclick="showPage('education')">Batafsil</button>
+</div>
+
+<div class="card">
+<div class="icon">💼</div>
+<h3>Xorijiy ish</h3>
+<p>Xorijiy kompaniyalarda ishlash uchun hujjatlar bo‘yicha yordam.</p>
+<button class="btn" onclick="showPage('jobs')">Batafsil</button>
 </div>
 
 <div class="card">
@@ -1107,7 +1281,8 @@ Ishonchli va uzoq muddatli biznes hamkorlikni rivojlantirish.
 </section>
 
 
-<!-- PROJECTS -->
+<!-- ================= PROJECTS ================= -->
+
 <section id="projects" class="page">
 
 <div class="section-title">
@@ -1141,12 +1316,25 @@ Ishonchli va uzoq muddatli biznes hamkorlikni rivojlantirish.
 <p>Xalqaro biznes hamkorlarini bog‘lovchi raqamli platforma.</p>
 </div>
 
+<div class="project">
+<div class="icon">🎓</div>
+<h3>Education Hub</h3>
+<p>Yoshlarni xalqaro va xususiy universitetlar bilan bog‘lash.</p>
+</div>
+
+<div class="project">
+<div class="icon">💼</div>
+<h3>Global Career</h3>
+<p>Xalqaro kompaniyalar bilan qonuniy ish imkoniyatlarini rivojlantirish.</p>
+</div>
+
 </div>
 
 </section>
 
 
-<!-- INTERNATIONAL -->
+<!-- ================= INTERNATIONAL ================= -->
+
 <section id="international" class="page">
 
 <div class="section-title">
@@ -1165,19 +1353,19 @@ Ishonchli va uzoq muddatli biznes hamkorlikni rivojlantirish.
 <div class="country">
 <div class="flag">🇹🇷</div>
 <h3>Turkiya</h3>
-<p>Savdo va biznes hamkorlik imkoniyatlari.</p>
+<p>Savdo, turizm, ta'lim va biznes hamkorlik.</p>
 </div>
 
 <div class="country">
 <div class="flag">🇦🇪</div>
 <h3>BAA</h3>
-<p>Xalqaro savdo va biznes markazlari.</p>
+<p>Xalqaro savdo va biznes imkoniyatlari.</p>
 </div>
 
 <div class="country">
 <div class="flag">🇺🇸</div>
 <h3>AQSH</h3>
-<p>Global biznes va texnologik imkoniyatlar.</p>
+<p>Global biznes va ta'lim imkoniyatlari.</p>
 </div>
 
 <div class="country">
@@ -1192,88 +1380,546 @@ Ishonchli va uzoq muddatli biznes hamkorlikni rivojlantirish.
 <p>Texnologiya, ta'lim va biznes aloqalari.</p>
 </div>
 
+<div class="country">
+<div class="flag">🇩🇪</div>
+<h3>Germaniya</h3>
+<p>Ta'lim, turizm va xalqaro ish imkoniyatlari.</p>
+</div>
+
+<div class="country">
+<div class="flag">🇫🇷</div>
+<h3>Fransiya</h3>
+<p>Turizm, ta'lim va xalqaro hamkorlik.</p>
+</div>
+
 </div>
 
 </section>
 
 
-<!-- MEDIA -->
-<section id="media" class="page">
+<!-- ================= TOURISM ================= -->
+
+<section id="tourism" class="page">
 
 <div class="section-title">
-<h2>🎬 Media</h2>
-<p>Yangiliklar va biznes kontent</p>
+<h2>✈️ Xalqaro turizm</h2>
+<p>Yevropa va Osiyo davlatlariga sayohat imkoniyatlari</p>
+</div>
+
+<div class="highlight">
+
+<h2>Sayohatni global imkoniyatga aylantiring</h2>
+
+<p>
+Turizm yo‘nalishlari, sayohat rejalari,
+hujjatlar va safarga tayyorgarlik bo‘yicha
+konsultativ yordam.
+</p>
+
+</div>
+
+<div class="section">
+
+<div class="cards">
+
+<div class="card">
+<div class="icon">🇹🇷</div>
+<h3>Turkiya</h3>
+<p>Istanbul, Antalya, Kapadokiya va boshqa turistik yo‘nalishlar.</p>
+</div>
+
+<div class="card">
+<div class="icon">🇫🇷</div>
+<h3>Fransiya</h3>
+<p>Parij va Yevropa turizm yo‘nalishlari.</p>
+</div>
+
+<div class="card">
+<div class="icon">🇮🇹</div>
+<h3>Italiya</h3>
+<p>Tarixiy shaharlar va madaniy turizm.</p>
+</div>
+
+<div class="card">
+<div class="icon">🇰🇷</div>
+<h3>Koreya</h3>
+<p>Texnologiya, madaniyat va zamonaviy turizm.</p>
+</div>
+
+<div class="card">
+<div class="icon">🇯🇵</div>
+<h3>Yaponiya</h3>
+<p>Madaniy va innovatsion turizm yo‘nalishlari.</p>
+</div>
+
+<div class="card">
+<div class="icon">🇦🇪</div>
+<h3>BAA</h3>
+<p>Dubay va xalqaro biznes turizmi.</p>
+</div>
+
+</div>
+
+</div>
+
+<div class="notice">
+<strong>Muhim:</strong>
+Viza berilishi tegishli davlatning elchixonasi yoki
+vakolatli organlari qaroriga bog‘liq. Biz hujjatlarni
+tayyorlash va jarayonni tushuntirish bo‘yicha yordam
+ko‘rsatish yo‘nalishini taklif qilamiz.
+</div>
+
+<button class="btn gold" onclick="showPage('contact')">
+📩 Turizm bo‘yicha murojaat
+</button>
+
+</section>
+
+
+<!-- ================= VISA ================= -->
+
+<section id="visa" class="page">
+
+<div class="section-title">
+<h2>🛂 Viza va hujjatlar</h2>
+<p>Yevropa va Osiyo davlatlari bo‘yicha hujjat tayyorlash</p>
 </div>
 
 <div class="cards">
 
-<div class="video-card">
-<div class="video-screen">
-<button class="play" onclick="openMedia('MUZAFFAR GLOBAL TRADE UZ — Global biznes platformasi')">▶</button>
-</div>
-<div class="video-info">
-<h3>Global biznes</h3>
-<p>Platforma haqida taqdimot.</p>
-</div>
-</div>
-
-<div class="video-card">
-<div class="video-screen">
-<button class="play" onclick="openMedia('Eksport va import imkoniyatlari')">▶</button>
-</div>
-<div class="video-info">
-<h3>Eksport va import</h3>
-<p>Xalqaro savdo imkoniyatlari.</p>
-</div>
+<div class="card">
+<div class="icon">🇪🇺</div>
+<h3>Yevropa</h3>
+<p>
+Yevropa davlatlariga safar uchun zarur hujjatlar
+ro‘yxatini shakllantirish va ariza tayyorlash bo‘yicha yordam.
+</p>
 </div>
 
+<div class="card">
+<div class="icon">🌏</div>
+<h3>Osiyo</h3>
+<p>
+Osiyo davlatlariga safar hujjatlarini tayyorlash
+va jarayon bo‘yicha konsultativ yordam.
+</p>
+</div>
+
+<div class="card">
+<div class="icon">📄</div>
+<h3>Hujjatlar</h3>
+<p>
+Anketa, tarjima, hujjatlar ro‘yxati va tayyorgarlik
+jarayonini tartibga solishga yordam.
+</p>
+</div>
+
+<div class="card">
+<div class="icon">🗂️</div>
+<h3>Konsultatsiya</h3>
+<p>
+Safar maqsadingizga mos hujjatlar bo‘yicha
+umumiy maslahat.
+</p>
+</div>
+
+</div>
+
+<div class="notice">
+<strong>⚠️ Eslatma:</strong>
+Viza kafolatlanmaydi. Yakuniy qarorni tegishli
+elchixona yoki davlat vakolatli organi qabul qiladi.
+Biz faqat qonuniy hujjat tayyorlash va konsultatsiya
+xizmatlarini ko‘rsatishimiz mumkin.
+</div>
+
+<button class="btn gold" onclick="showPage('contact')">
+🛂 Viza bo‘yicha murojaat
+</button>
+
+</section>
+
+
+<!-- ================= EDUCATION ================= -->
+
+<section id="education" class="page">
+
+<div class="section-title">
+<h2>🎓 Ta'lim va universitet</h2>
+<p>Yoshlarni universitetlarga tayyorlash</p>
+</div>
+
+<div class="highlight">
+
+<h2>Yoshlar uchun ta'lim imkoniyatlari</h2>
+
+<p>
+Universitet tanlash, hujjatlarni tayyorlash,
+ariza topshirish va ta'lim jarayoniga tayyorgarlik
+bo‘yicha xizmatlar.
+</p>
+
+</div>
+
+<div class="section">
+
+<div class="cards">
+
+<div class="card">
+<div class="icon">🏫</div>
+<h3>Universitet tanlash</h3>
+<p>
+Talabaning maqsadlari va yo‘nalishiga mos
+universitetlarni izlash va tanlashga yordam.
+</p>
+</div>
+
+<div class="card">
+<div class="icon">📑</div>
+<h3>Hujjat tayyorlash</h3>
+<p>
+Ariza, tarjima va universitet talab qiladigan
+hujjatlarni tayyorlash bo‘yicha yordam.
+</p>
+</div>
+
+<div class="card">
+<div class="icon">🤝</div>
+<h3>Xususiy universitetlar</h3>
+<p>
+Xususiy universitetlar bilan shartnoma asosidagi
+hamkorlik modelini rivojlantirish.
+</p>
+</div>
+
+<div class="card">
+<div class="icon">🌍</div>
+<h3>Xalqaro ta'lim</h3>
+<p>
+Xorijiy ta'lim imkoniyatlari va universitetlar
+bilan hamkorlik yo‘nalishlari.
+</p>
+</div>
+
+</div>
+
+</div>
+
+<div class="notice">
+<strong>Ta'lim prinsipi:</strong>
+Talabaning hujjatlari haqiqiy ma'lumotlar asosida
+tayyorlanadi. Qabul qarorini universitetning o‘zi beradi.
+</div>
+
+<button class="btn gold" onclick="showPage('contact')">
+🎓 Ta'lim bo‘yicha murojaat
+</button>
+
+</section>
+
+
+<!-- ================= JOBS ================= -->
+
+<section id="jobs" class="page">
+
+<div class="section-title">
+<h2>💼 Xorijiy kompaniyalarga ish</h2>
+<p>Qonuniy ishga joylashish bo‘yicha hujjat yordami</p>
+</div>
+
+<div class="cards">
+
+<div class="card">
+<div class="icon">📄</div>
+<h3>CV va hujjatlar</h3>
+<p>
+Nomzodning CV va ishga topshirish hujjatlarini
+tayyorlashga yordam.
+</p>
+</div>
+
+<div class="card">
+<div class="icon">🌍</div>
+<h3>Xalqaro kompaniyalar</h3>
+<p>
+Xorijiy ish beruvchilar bilan qonuniy hamkorlik
+imkoniyatlarini rivojlantirish.
+</p>
+</div>
+
+<div class="card">
+<div class="icon">🛂</div>
+<h3>Ish hujjatlari</h3>
+<p>
+Ishlash uchun zarur bo‘lishi mumkin bo‘lgan
+hujjatlar bo‘yicha umumiy konsultatsiya.
+</p>
+</div>
+
+<div class="card">
+<div class="icon">🤝</div>
+<h3>Nomzodlarni qo‘llab-quvvatlash</h3>
+<p>
+Ishga topshirish jarayonida hujjatlar va
+tayyorgarlik bo‘yicha yordam.
+</p>
+</div>
+
+</div>
+
+<div class="notice">
+<strong>⚠️ Muhim:</strong>
+Faqat qonuniy ishga joylashish yo‘nalishlari.
+Soxta hujjatlar, yolg‘on ma'lumotlar yoki noqonuniy
+ishga joylashtirish xizmatlari taklif qilinmaydi.
+</div>
+
+<button class="btn gold" onclick="showPage('contact')">
+💼 Ish bo‘yicha murojaat
+</button>
+
+</section>
+
+
+<!-- ================= MEDIA ================= -->
+
+<section id="media" class="page">
+
+<div class="section-title">
+<h2>🎬 Media va AI video</h2>
+<p>MUZAFFAR GLOBAL TRADE UZ haqida zamonaviy video kontent</p>
+</div>
+
+<div class="video-grid">
+
 <div class="video-card">
+
 <div class="video-screen">
-<button class="play" onclick="openMedia('Yoshlar va kelajak')">▶</button>
+<button class="play"
+onclick="openMedia('MUZAFFAR GLOBAL TRADE UZ — kompaniya haqida')">
+▶
+</button>
 </div>
+
 <div class="video-info">
-<h3>Yoshlar</h3>
-<p>Yangi avlod uchun imkoniyatlar.</p>
+<h3>Kompaniya taqdimoti</h3>
+<p>
+MUZAFFAR GLOBAL TRADE UZ kompaniyasining
+global faoliyati haqida video rolik.
+</p>
+<span class="video-tag">AI VIDEO</span>
 </div>
+
 </div>
+
+
+<div class="video-card">
+
+<div class="video-screen">
+<button class="play"
+onclick="openMedia('Muhammadiev Muzaffar — kompaniya asoschisi va rahbari')">
+▶
+</button>
+</div>
+
+<div class="video-info">
+<h3>Rahbar haqida</h3>
+<p>
+Kompaniya asoschisi va rahbari
+Muhammadiev Muzaffar Yo‘ldoshivech.
+</p>
+<span class="video-tag">FOUNDER</span>
+</div>
+
+</div>
+
+
+<div class="video-card">
+
+<div class="video-screen">
+<button class="play"
+onclick="openMedia('Xalqaro turizm va viza xizmatlari')">
+▶
+</button>
+</div>
+
+<div class="video-info">
+<h3>Turizm va viza</h3>
+<p>
+Yevropa va Osiyo yo‘nalishlari bo‘yicha
+xizmatlar taqdimoti.
+</p>
+<span class="video-tag">TRAVEL</span>
+</div>
+
+</div>
+
+
+<div class="video-card">
+
+<div class="video-screen">
+<button class="play"
+onclick="openMedia('Ta’lim va yoshlar')">
+▶
+</button>
+</div>
+
+<div class="video-info">
+<h3>Yoshlar va ta'lim</h3>
+<p>
+Universitet, ta'lim va xalqaro imkoniyatlar.
+</p>
+<span class="video-tag">EDUCATION</span>
+</div>
+
+</div>
+
+
+<div class="video-card">
+
+<div class="video-screen">
+<button class="play"
+onclick="openMedia('Global Career — xalqaro ish')">
+▶
+</button>
+</div>
+
+<div class="video-info">
+<h3>Global Career</h3>
+<p>
+Xorijiy kompaniyalarda qonuniy ish
+imkoniyatlari haqida.
+</p>
+<span class="video-tag">CAREER</span>
+</div>
+
+</div>
+
+
+<div class="video-card">
+
+<div class="video-screen">
+<button class="play"
+onclick="openMedia('AI va kelajak biznesi')">
+▶
+</button>
+</div>
+
+<div class="video-info">
+<h3>AI & Future</h3>
+<p>
+Sun'iy intellekt va kelajakdagi biznes
+texnologiyalari.
+</p>
+<span class="video-tag">FUTURE</span>
+</div>
+
+</div>
+
+</div>
+
+<div class="notice">
+
+<strong>🎥 Video tizimi tayyor:</strong>
+
+Bu bo‘limga keyinchalik kompaniyaning haqiqiy
+MP4 videolari, YouTube videolari yoki AI orqali
+yaratilgan kompaniya roliklarini joylashtirish mumkin.
 
 </div>
 
 </section>
 
 
-<!-- OFFICES -->
+<!-- ================= OFFICES ================= -->
+
 <section id="offices" class="page">
 
 <div class="section-title">
-<h2>🏢 Ofislar</h2>
-<p>Biznes vakolatxonalari va markazlar</p>
+<h2>🏢 Zamonaviy ofislar</h2>
+<p>MUZAFFAR GLOBAL TRADE UZ biznes markazlari</p>
+</div>
+
+<div class="office-special">
+
+<h2>MUZAFFAR GLOBAL TRADE UZ</h2>
+
+<p>
+Zamonaviy biznes, xalqaro hamkorlik,
+turizm, ta'lim va global xizmatlar uchun
+yangi avlod ofis konsepsiyasi.
+</p>
+
 </div>
 
 <div class="office-grid">
 
 <div class="office">
+
 <div class="photo">
-<img src="https://images.unsplash.com/photo-1497366754035-f200968a6e72?auto=format&fit=crop&w=900&q=80">
-</div>
-<h3>Toshkent</h3>
-<p>O‘zbekiston biznes markazi.</p>
+<img
+src="https://images.unsplash.com/photo-1497366754035-f200968a6e72?auto=format&fit=crop&w=900&q=80">
 </div>
 
-<div class="office">
-<div class="photo">
-<img src="https://images.unsplash.com/photo-1497366811353-6870744d04b2?auto=format&fit=crop&w=900&q=80">
+<h3>Toshkent Business Office</h3>
+
+<p>
+Zamonaviy qabulxona, muzokara xonalari,
+mijozlar bilan ishlash markazi.
+</p>
+
 </div>
+
+
+<div class="office">
+
+<div class="photo">
+<img
+src="https://images.unsplash.com/photo-1497366811353-6870744d04b2?auto=format&fit=crop&w=900&q=80">
+</div>
+
 <h3>International Office</h3>
-<p>Xalqaro hamkorlik markazi.</p>
+
+<p>
+Xalqaro hamkorlar bilan uchrashuvlar
+va biznes muzokaralari markazi.
+</p>
+
 </div>
 
+
 <div class="office">
+
 <div class="photo">
-<img src="https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&w=900&q=80">
+<img
+src="https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&w=900&q=80">
 </div>
+
 <h3>Digital Office</h3>
-<p>Raqamli biznes markazi.</p>
+
+<p>
+AI, IT va raqamli biznes loyihalarini
+rivojlantirish markazi.
+</p>
+
+</div>
+
+
+<div class="office">
+
+<div class="photo">
+<img
+src="https://images.unsplash.com/photo-1497366754035-f200968a6e72?auto=format&fit=crop&w=900&q=80">
+</div>
+
+<h3>Education & Visa Center</h3>
+
+<p>
+Ta'lim, universitet va viza hujjatlari
+bo‘yicha mijozlar bilan ishlash markazi.
+</p>
+
 </div>
 
 </div>
@@ -1281,7 +1927,92 @@ Ishonchli va uzoq muddatli biznes hamkorlikni rivojlantirish.
 </section>
 
 
-<!-- STRATEGY -->
+<!-- ================= LEADERSHIP ================= -->
+
+<section id="leadership" class="page">
+
+<div class="section-title">
+<h2>👤 Rahbariyat</h2>
+<p>MUZAFFAR GLOBAL TRADE UZ boshqaruvi</p>
+</div>
+
+<div class="team-grid">
+
+<div class="team">
+
+<div class="avatar">
+👤
+</div>
+
+<div class="position">
+KOMPANIYA ASOSCHISI VA RAHBARI
+</div>
+
+<h3>Muhammadiev Muzaffar Yo‘ldoshivech</h3>
+
+<p>
+MUZAFFAR GLOBAL TRADE UZ kompaniyasi
+asoschisi va rahbari.
+</p>
+
+</div>
+
+</div>
+
+<div class="section">
+
+<div class="office-special">
+
+<h2>🏢 Rahbar xonasi</h2>
+
+<p>
+<strong>Muhammadiev Muzaffar</strong>
+
+rahbar xonasi zamonaviy, professional va
+xalqaro biznes muzokaralari uchun mo‘ljallangan
+ofis konsepsiyasida tasvirlangan.
+</p>
+
+</div>
+
+<div class="cards">
+
+<div class="card">
+<div class="icon">🪑</div>
+<h3>Rahbar ish zonasi</h3>
+<p>
+Minimalistik stol, zamonaviy texnika,
+kompaniya logotipi va professional ish muhiti.
+</p>
+</div>
+
+<div class="card">
+<div class="icon">🤝</div>
+<h3>Muzokara zonasi</h3>
+<p>
+Xalqaro hamkorlar bilan uchrashuvlar uchun
+zamonaviy konferensiya maydoni.
+</p>
+</div>
+
+<div class="card">
+<div class="icon">🌍</div>
+<h3>Global dizayn</h3>
+<p>
+Dizaynda kompaniyaning burgut, oy va yulduzlar
+ramzlari bilan global ruh aks ettiriladi.
+</p>
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- ================= STRATEGY ================= -->
+
 <section id="strategy" class="page">
 
 <div class="section-title">
@@ -1318,7 +2049,7 @@ Ishonchli va uzoq muddatli biznes hamkorlikni rivojlantirish.
 <div class="plan-card">
 <div class="plan-number">05</div>
 <h3>Yoshlar</h3>
-<p>Yosh tadbirkorlar uchun yangi imkoniyatlar.</p>
+<p>Yoshlar uchun yangi ta'lim va biznes imkoniyatlari.</p>
 </div>
 
 <div class="plan-card">
@@ -1327,18 +2058,43 @@ Ishonchli va uzoq muddatli biznes hamkorlikni rivojlantirish.
 <p>Texnologik va innovatsion loyihalarni rivojlantirish.</p>
 </div>
 
+<div class="plan-card">
+<div class="plan-number">07</div>
+<h3>Turizm</h3>
+<p>Xalqaro turizm xizmatlarini rivojlantirish.</p>
+</div>
+
+<div class="plan-card">
+<div class="plan-number">08</div>
+<h3>Viza markazi</h3>
+<p>Qonuniy hujjat tayyorlash xizmatlarini rivojlantirish.</p>
+</div>
+
+<div class="plan-card">
+<div class="plan-number">09</div>
+<h3>Education Hub</h3>
+<p>Universitetlar bilan hamkorlikni kengaytirish.</p>
+</div>
+
+<div class="plan-card">
+<div class="plan-number">10</div>
+<h3>Global Career</h3>
+<p>Xalqaro ish beruvchilar bilan qonuniy hamkorlik.</p>
+</div>
+
 </div>
 
 <div class="notice">
 <strong>Strategik maqsad:</strong>
-MUZAFFAR GLOBAL TRADE UZ platformasini bosqichma-bosqich
+MUZAFFAR GLOBAL TRADE UZ platformasini
 xalqaro biznes ekotizimiga aylantirish.
 </div>
 
 </section>
 
 
-<!-- YOUTH -->
+<!-- ================= YOUTH ================= -->
+
 <section id="youth" class="page">
 
 <div class="section-title">
@@ -1377,7 +2133,8 @@ xalqaro biznes ekotizimiga aylantirish.
 </section>
 
 
-<!-- FUTURE -->
+<!-- ================= FUTURE ================= -->
+
 <section id="future" class="page">
 
 <div class="section-title">
@@ -1412,7 +2169,8 @@ xalqaro biznes ekotizimiga aylantirish.
 </section>
 
 
-<!-- IDEAS -->
+<!-- ================= IDEAS ================= -->
+
 <section id="ideas" class="page">
 
 <div class="section-title">
@@ -1451,7 +2209,8 @@ xalqaro biznes ekotizimiga aylantirish.
 </section>
 
 
-<!-- VALUES -->
+<!-- ================= VALUES ================= -->
+
 <section id="values" class="page">
 
 <div class="section-title">
@@ -1495,7 +2254,8 @@ barqaror biznesning asosidir.”
 </section>
 
 
-<!-- PRODUCTS -->
+<!-- ================= PRODUCTS ================= -->
+
 <section id="products" class="page">
 
 <div class="section-title">
@@ -1516,12 +2276,13 @@ oninput="filterProducts()"
 </section>
 
 
-<!-- CONTACT -->
+<!-- ================= CONTACT ================= -->
+
 <section id="contact" class="page">
 
 <div class="section-title">
 <h2>📩 Aloqa</h2>
-<p>Biz bilan bog‘laning</p>
+<p>MUZAFFAR GLOBAL TRADE UZ bilan bog‘laning</p>
 </div>
 
 <div class="form-box">
@@ -1535,17 +2296,28 @@ oninput="filterProducts()"
 <input id="contactContact" required placeholder="+998... yoki email">
 
 <label>Mavzu</label>
+
 <select id="contactSubject">
+
 <option>Hamkorlik</option>
 <option>Eksport</option>
 <option>Import</option>
 <option>Investitsiya</option>
+<option>Turizm</option>
+<option>Viza</option>
+<option>Ta'lim</option>
+<option>Xalqaro ish</option>
 <option>Mahsulot</option>
 <option>Boshqa</option>
+
 </select>
 
 <label>Xabar</label>
-<textarea id="contactMessage" required placeholder="Xabaringiz..."></textarea>
+
+<textarea
+id="contactMessage"
+required
+placeholder="Xabaringiz..."></textarea>
 
 <button class="btn gold" type="submit">
 📩 Xabar yuborish
@@ -1582,7 +2354,8 @@ oninput="filterProducts()"
 </section>
 
 
-<!-- CART -->
+<!-- ================= CART ================= -->
+
 <section id="cart" class="page">
 
 <div class="section-title">
@@ -1621,7 +2394,10 @@ Buyurtma berish
 <input id="orderPhone" required placeholder="+998">
 
 <label>Manzil</label>
-<textarea id="orderAddress" required placeholder="Yetkazib berish manzili"></textarea>
+<textarea
+id="orderAddress"
+required
+placeholder="Yetkazib berish manzili"></textarea>
 
 <button class="btn green" type="submit">
 ✅ Buyurtmani yuborish
@@ -1638,58 +2414,87 @@ Buyurtma berish
 </main>
 
 
+<!-- ================= FOOTER ================= -->
+
 <footer>
 
-<svg class="footer-logo" viewBox="0 0 200 200">
-<use href="#logo"></use>
+<svg class="footer-logo">
+<use href="#brandLogo"></use>
 </svg>
 
 <h2>MUZAFFAR GLOBAL TRADE UZ</h2>
 
-<p>GLOBAL BUSINESS • EXPORT • IMPORT • INVESTMENT</p>
+<p>FOUNDER & CEO — MUHAMMADIEV MUZAFFAR YO‘LDOSHIVECH</p>
+
+<p>GLOBAL BUSINESS • EXPORT • IMPORT • TOURISM • EDUCATION</p>
 
 <p>© 2026 MUZAFFAR GLOBAL TRADE UZ. Barcha huquqlar himoyalangan.</p>
 
 </footer>
 
 
-<!-- MEDIA MODAL -->
+<!-- ================= MEDIA MODAL ================= -->
+
 <div id="mediaModal" class="modal">
 
 <div class="modal-box">
 
-<button class="close" onclick="closeModal('mediaModal')">×</button>
+<button class="close"
+onclick="closeModal('mediaModal')">
+×
+</button>
 
 <h2 id="mediaTitle">Media</h2>
 
 <div class="media-script">
 
 <p>
-🎬 Ushbu bo‘lim MUZAFFAR GLOBAL TRADE UZ
-platformasining media kontenti uchun tayyorlangan.
+🎬 <strong>MUZAFFAR GLOBAL TRADE UZ</strong>
+kompaniya media roligi.
 </p>
 
 <p style="margin-top:12px">
-Bu yerga keyinchalik kompaniyaning haqiqiy
-video materiallarini joylashtirish mumkin.
+
+Asoschisi va rahbari:
+<strong>Muhammadiev Muzaffar Yo‘ldoshivech</strong>.
+
 </p>
 
-</div>
+<p style="margin-top:12px">
+
+Bu video blok kompaniya haqida
+AI orqali yaratilgan video, MP4 fayl yoki
+YouTube videosini joylashtirish uchun tayyorlangan.
+
+</p>
+
+<div style="margin-top:20px">
+
+<button
+class="btn gold"
+onclick="showToast('Video fayli keyingi bosqichda ulanadi.')">
+🤖 AI Video
+</button>
 
 </div>
 
 </div>
 
+</div>
 
-<!-- TOAST -->
+</div>
+
+
+<!-- ================= TOAST ================= -->
+
 <div id="toast"></div>
 
 
 <script>
 
-/* =========================================
+/* =====================================================
    SUPABASE
-   ========================================= */
+===================================================== */
 
 const SUPABASE_URL = "";
 const SUPABASE_ANON_KEY = "";
@@ -1709,9 +2514,9 @@ if(
 }
 
 
-/* =========================================
-   SAHIFA NAVIGATSIYASI
-   ========================================= */
+/* =====================================================
+   NAVIGATION
+===================================================== */
 
 function showPage(pageId){
 
@@ -1732,11 +2537,13 @@ function showPage(pageId){
  document
  .querySelectorAll("nav button[data-page]")
  .forEach(button=>{
+
   button.classList.remove("active");
 
   if(button.dataset.page === pageId){
    button.classList.add("active");
   }
+
  });
 
  window.scrollTo({
@@ -1751,12 +2558,13 @@ function showPage(pageId){
  if(pageId === "cart"){
   renderCart();
  }
+
 }
 
 
-/* =========================================
-   MAHSULOTLAR
-   ========================================= */
+/* =====================================================
+   PRODUCTS
+===================================================== */
 
 const products = [
 
@@ -1889,9 +2697,9 @@ function filterProducts(){
 }
 
 
-/* =========================================
-   SAVATCHA
-   ========================================= */
+/* =====================================================
+   CART
+===================================================== */
 
 let cart =
  JSON.parse(
@@ -1924,12 +2732,14 @@ function addToCart(productId){
  if(existing){
   existing.quantity++;
  }else{
+
   cart.push({
    id:product.id,
    name:product.name,
    price:product.price,
    quantity:1
   });
+
  }
 
  saveCart();
@@ -1972,7 +2782,9 @@ function removeFromCart(productId){
  saveCart();
  renderCart();
 
- showToast("Mahsulot savatchadan olib tashlandi.");
+ showToast(
+  "Mahsulot savatchadan olib tashlandi."
+ );
 
 }
 
@@ -2014,11 +2826,13 @@ function renderCart(){
    <div class="empty">
     🛒 Savatcha hozircha bo‘sh.
     <br><br>
+
     <button
      class="btn gold"
      onclick="showPage('products')">
      Mahsulotlarni ko‘rish
     </button>
+
    </div>
   `;
 
@@ -2051,6 +2865,7 @@ function renderCart(){
   <div class="cart-item">
 
    <div>
+
     <div class="cart-name">
      ${item.name}
     </div>
@@ -2058,6 +2873,7 @@ function renderCart(){
     <div>
      ${formatMoney(item.price)}
     </div>
+
    </div>
 
    <div class="quantity">
@@ -2116,27 +2932,33 @@ function showCheckout(){
 }
 
 
-/* =========================================
+/* =====================================================
    CONTACT
-   ========================================= */
+===================================================== */
 
 document
 .getElementById("contactForm")
-.addEventListener("submit", async function(event){
+.addEventListener(
+ "submit",
+ async function(event){
 
  event.preventDefault();
 
  const name =
- document.getElementById("contactName").value.trim();
+ document.getElementById("contactName")
+ .value.trim();
 
  const contact =
- document.getElementById("contactContact").value.trim();
+ document.getElementById("contactContact")
+ .value.trim();
 
  const subject =
- document.getElementById("contactSubject").value;
+ document.getElementById("contactSubject")
+ .value;
 
  const message =
- document.getElementById("contactMessage").value.trim();
+ document.getElementById("contactMessage")
+ .value.trim();
 
  const status =
  document.getElementById("contactStatus");
@@ -2149,11 +2971,6 @@ document
   return;
  }
 
-
- /*
-  Supabase ulangan bo‘lsa,
-  shu yerda contacts jadvaliga yuborish mumkin.
- */
 
  if(supabaseClient){
 
@@ -2176,7 +2993,8 @@ document
   }catch(error){
 
    console.log(
-    "Supabase:",error.message
+    "Supabase:",
+    error.message
    );
 
   }
@@ -2194,13 +3012,15 @@ document
 });
 
 
-/* =========================================
+/* =====================================================
    ORDER
-   ========================================= */
+===================================================== */
 
 document
 .getElementById("checkoutForm")
-.addEventListener("submit", async function(event){
+.addEventListener(
+ "submit",
+ async function(event){
 
  event.preventDefault();
 
@@ -2212,13 +3032,16 @@ document
  }
 
  const name =
- document.getElementById("orderName").value.trim();
+ document.getElementById("orderName")
+ .value.trim();
 
  const phone =
- document.getElementById("orderPhone").value.trim();
+ document.getElementById("orderPhone")
+ .value.trim();
 
  const address =
- document.getElementById("orderAddress").value.trim();
+ document.getElementById("orderAddress")
+ .value.trim();
 
  const total =
  cart.reduce(
@@ -2236,11 +3059,13 @@ document
    await supabaseClient
    .from("orders")
    .insert([{
+
     name:name,
     phone:phone,
     address:address,
     total:total,
     items:cart
+
    }]);
 
    if(error) throw error;
@@ -2275,9 +3100,9 @@ document
 });
 
 
-/* =========================================
-   MEDIA MODAL
-   ========================================= */
+/* =====================================================
+   MEDIA
+===================================================== */
 
 function openMedia(title){
 
@@ -2319,12 +3144,11 @@ window.addEventListener(
 );
 
 
-/* =========================================
+/* =====================================================
    TOAST
-   ========================================= */
+===================================================== */
 
 let toastTimer;
-
 
 function showToast(message){
 
@@ -2345,9 +3169,9 @@ function showToast(message){
 }
 
 
-/* =========================================
+/* =====================================================
    START
-   ========================================= */
+===================================================== */
 
 document.addEventListener(
  "DOMContentLoaded",
