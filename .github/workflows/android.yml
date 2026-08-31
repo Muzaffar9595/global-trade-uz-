@@ -1,4 +1,4 @@
-name: Android APK
+name: MUZAFFAR GLOBAL TRADE UZ - Android APK
 
 on:
   workflow_dispatch:
@@ -8,25 +8,27 @@ on:
 
 jobs:
   build:
+    name: Android APK yaratish
     runs-on: ubuntu-latest
 
     steps:
-      - name: Kodni yuklash
+      - name: GitHub kodini yuklash
         uses: actions/checkout@v4
 
-      - name: Java o‘rnatish
+      - name: Java 17 ni o‘rnatish
         uses: actions/setup-java@v4
         with:
           distribution: temurin
           java-version: '17'
 
-      - name: Android loyihasini tayyorlash
-        run: |
-          mkdir -p app/src/main/java/uz/muzaffar/globaltrade
-          mkdir -p app/src/main/res/values
-          echo "Android loyiha tayyorlanmoqda"
+      - name: Gradle o‘rnatish
+        uses: gradle/actions/setup-gradle@v4
 
-      - name: Fayllarni tekshirish
-        run: |
-          echo "MUZAFFAR GLOBAL TRADE UZ"
-          echo "Android APK tayyorlash jarayoni boshlandi"
+      - name: Android APK yaratish
+        run: gradle assembleDebug --no-daemon
+
+      - name: APK faylini saqlash
+        uses: actions/upload-artifact@v4
+        with:
+          name: MUZAFFAR-GLOBAL-TRADE-UZ-APK
+          path: app/build/outputs/apk/debug/app-debug.apk
