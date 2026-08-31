@@ -1,721 +1,1598 @@
 <!DOCTYPE html>
 <html lang="uz">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>MUZAFFAR GLOBAL TRADE UZ</title>
+<title>MUZAFFAR GLOBAL TRADE UZ</title>
 
-  <meta name="description"
-        content="MUZAFFAR GLOBAL TRADE UZ — zamonaviy savdo, biznes va xizmatlar platformasi.">
+<meta name="description"
+content="MUZAFFAR GLOBAL TRADE UZ — zamonaviy savdo, biznes va xizmatlar platformasi.">
 
-  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
 
-  <style>
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    }
+<style>
+*{
+  box-sizing:border-box;
+  margin:0;
+  padding:0;
+}
 
-    html {
-      scroll-behavior: smooth;
-    }
+html{
+  scroll-behavior:smooth;
+}
 
-    body {
-      font-family: Arial, sans-serif;
-      background: #f4f7fb;
-      color: #172033;
-      line-height: 1.6;
-    }
+body{
+  font-family:Arial,sans-serif;
+  background:#f4f7fb;
+  color:#172033;
+  line-height:1.6;
+}
 
-    header {
-      background: linear-gradient(135deg, #071a33, #123b68);
-      color: white;
-      padding: 22px 15px;
-      text-align: center;
-      position: sticky;
-      top: 0;
-      z-index: 1000;
-      box-shadow: 0 3px 15px rgba(0,0,0,.15);
-    }
+header{
+  background:linear-gradient(135deg,#071a33,#123b68);
+  color:white;
+  padding:20px 15px;
+  text-align:center;
+  position:sticky;
+  top:0;
+  z-index:1000;
+  box-shadow:0 3px 15px rgba(0,0,0,.15);
+}
 
-    header h1 {
-      font-size: 26px;
-      margin-bottom: 15px;
-    }
+header h1{
+  font-size:25px;
+  margin-bottom:14px;
+}
 
-    nav {
-      display: flex;
-      justify-content: center;
-      flex-wrap: wrap;
-      gap: 7px;
-    }
+nav{
+  display:flex;
+  justify-content:center;
+  flex-wrap:wrap;
+  gap:6px;
+}
 
-    nav button {
-      border: 0;
-      background: transparent;
-      color: white;
-      padding: 9px 13px;
-      cursor: pointer;
-      font-size: 14px;
-      border-radius: 7px;
-    }
+nav button{
+  border:0;
+  background:transparent;
+  color:white;
+  padding:9px 12px;
+  cursor:pointer;
+  font-size:14px;
+  border-radius:7px;
+}
 
-    nav button:hover,
-    nav button.active {
-      background: rgba(255,255,255,.16);
-    }
+nav button:hover,
+nav button.active{
+  background:rgba(255,255,255,.18);
+}
 
-    main {
-      width: min(1150px, 100%);
-      margin: auto;
-      padding: 35px 18px 60px;
-    }
+.cart-button{
+  background:#fff!important;
+  color:#0b2c52!important;
+  font-weight:bold;
+}
 
-    .page {
-      display: none;
-      animation: fadeIn .25s ease;
-    }
+.cart-count{
+  background:#e53935;
+  color:white;
+  border-radius:20px;
+  padding:2px 7px;
+  margin-left:3px;
+}
 
-    .page.active {
-      display: block;
-    }
+main{
+  width:min(1150px,100%);
+  margin:auto;
+  padding:35px 18px 60px;
+}
 
-    @keyframes fadeIn {
-      from {
-        opacity: 0;
-        transform: translateY(8px);
-      }
-      to {
-        opacity: 1;
-        transform: translateY(0);
-      }
-    }
+.page{
+  display:none;
+  animation:fadeIn .25s ease;
+}
 
-    .hero {
-      background: white;
-      border-radius: 20px;
-      padding: 70px 25px;
-      text-align: center;
-      box-shadow: 0 8px 30px rgba(0,0,0,.08);
-    }
+.page.active{
+  display:block;
+}
 
-    .hero .logo {
-      font-size: 65px;
-      margin-bottom: 10px;
-    }
+@keyframes fadeIn{
+  from{
+    opacity:0;
+    transform:translateY(8px);
+  }
+  to{
+    opacity:1;
+    transform:translateY(0);
+  }
+}
 
-    .hero h2 {
-      color: #0b2c52;
-      font-size: 38px;
-      margin-bottom: 18px;
-    }
+.hero{
+  background:white;
+  border-radius:20px;
+  padding:70px 25px;
+  text-align:center;
+  box-shadow:0 8px 30px rgba(0,0,0,.08);
+}
 
-    .hero p {
-      max-width: 800px;
-      margin: auto;
-      font-size: 18px;
-      color: #526174;
-    }
+.logo{
+  font-size:65px;
+  margin-bottom:10px;
+}
 
-    .btn {
-      display: inline-block;
-      margin-top: 25px;
-      padding: 13px 25px;
-      background: #0b2c52;
-      color: white;
-      border: 0;
-      border-radius: 9px;
-      cursor: pointer;
-      font-size: 15px;
-    }
+.hero h2{
+  color:#0b2c52;
+  font-size:38px;
+  margin-bottom:18px;
+}
 
-    h2 {
-      color: #0b2c52;
-      margin-bottom: 22px;
-      font-size: 30px;
-    }
+.hero p{
+  max-width:800px;
+  margin:auto;
+  font-size:18px;
+  color:#526174;
+}
 
-    .cards,
-    .products {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
-      gap: 20px;
-    }
+.btn{
+  display:inline-block;
+  margin-top:20px;
+  padding:13px 23px;
+  background:#0b2c52;
+  color:white;
+  border:0;
+  border-radius:9px;
+  cursor:pointer;
+  font-size:15px;
+  transition:.2s;
+}
 
-    .card,
-    .product {
-      background: white;
-      padding: 25px;
-      border-radius: 15px;
-      box-shadow: 0 5px 20px rgba(0,0,0,.07);
-    }
+.btn:hover{
+  transform:translateY(-2px);
+  opacity:.92;
+}
 
-    .card h3,
-    .product h3 {
-      color: #0b2c52;
-      margin-bottom: 10px;
-    }
+.btn.secondary{
+  background:#607d9c;
+}
 
-    .product {
-      padding: 20px;
-      transition: .2s;
-    }
+.btn.danger{
+  background:#d32f2f;
+}
 
-    .product:hover {
-      transform: translateY(-4px);
-    }
+h2{
+  color:#0b2c52;
+  margin-bottom:22px;
+  font-size:30px;
+}
 
-    .product-image {
-      height: 170px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      background: #f0f4f8;
-      border-radius: 12px;
-      margin-bottom: 15px;
-      overflow: hidden;
-      font-size: 65px;
-    }
+.cards,
+.products{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(230px,1fr));
+  gap:20px;
+}
 
-    .product-image img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-    }
+.card,
+.product{
+  background:white;
+  padding:25px;
+  border-radius:15px;
+  box-shadow:0 5px 20px rgba(0,0,0,.07);
+}
 
-    .product-description {
-      color: #667386;
-    }
+.card h3,
+.product h3{
+  color:#0b2c52;
+  margin-bottom:10px;
+}
 
-    .price {
-      color: #0b2c52;
-      font-size: 19px;
-      font-weight: bold;
-      margin-top: 13px;
-    }
+.product{
+  padding:20px;
+  transition:.2s;
+}
 
-    form {
-      background: white;
-      max-width: 650px;
-      padding: 28px;
-      border-radius: 15px;
-      box-shadow: 0 5px 20px rgba(0,0,0,.07);
-    }
+.product:hover{
+  transform:translateY(-4px);
+}
 
-    label {
-      display: block;
-      font-weight: bold;
-      margin-top: 8px;
-    }
+.product-image{
+  height:170px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  background:#f0f4f8;
+  border-radius:12px;
+  margin-bottom:15px;
+  overflow:hidden;
+  font-size:65px;
+}
 
-    input,
-    textarea {
-      width: 100%;
-      padding: 13px;
-      margin: 8px 0 15px;
-      border: 1px solid #d2d8e0;
-      border-radius: 8px;
-      font-size: 15px;
-    }
+.product-image img{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+}
 
-    textarea {
-      min-height: 140px;
-      resize: vertical;
-    }
+.product-description{
+  color:#667386;
+  min-height:48px;
+}
 
-    #status {
-      margin-top: 15px;
-      font-weight: bold;
-    }
+.price{
+  color:#0b2c52;
+  font-size:19px;
+  font-weight:bold;
+  margin-top:13px;
+}
 
-    footer {
-      background: #071a33;
-      color: white;
-      text-align: center;
-      padding: 28px 15px;
-    }
+.product-actions{
+  display:flex;
+  gap:8px;
+  margin-top:10px;
+}
 
-    footer p {
-      margin: 4px 0;
-    }
+.product-actions .btn{
+  flex:1;
+  margin-top:0;
+  padding:10px;
+}
 
-    @media (max-width: 600px) {
-      header h1 {
-        font-size: 20px;
-      }
+.search-box{
+  width:100%;
+  padding:14px;
+  margin-bottom:20px;
+  border:1px solid #d2d8e0;
+  border-radius:9px;
+  font-size:16px;
+}
 
-      nav button {
-        font-size: 12px;
-        padding: 7px 8px;
-      }
+form{
+  background:white;
+  max-width:650px;
+  padding:28px;
+  border-radius:15px;
+  box-shadow:0 5px 20px rgba(0,0,0,.07);
+}
 
-      .hero {
-        padding: 45px 20px;
-      }
+label{
+  display:block;
+  font-weight:bold;
+  margin-top:8px;
+}
 
-      .hero h2 {
-        font-size: 27px;
-      }
+input,
+textarea{
+  width:100%;
+  padding:13px;
+  margin:8px 0 15px;
+  border:1px solid #d2d8e0;
+  border-radius:8px;
+  font-size:15px;
+}
 
-      .hero p {
-        font-size: 16px;
-      }
+textarea{
+  min-height:120px;
+  resize:vertical;
+}
 
-      h2 {
-        font-size: 25px;
-      }
-    }
-  </style>
+.status{
+  margin-top:15px;
+  font-weight:bold;
+}
+
+.cart-box{
+  background:white;
+  padding:25px;
+  border-radius:15px;
+  box-shadow:0 5px 20px rgba(0,0,0,.07);
+}
+
+.cart-item{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:15px;
+  padding:15px 0;
+  border-bottom:1px solid #e1e6ec;
+}
+
+.cart-item:last-child{
+  border-bottom:0;
+}
+
+.cart-item-info{
+  flex:1;
+}
+
+.cart-item-name{
+  font-weight:bold;
+  color:#0b2c52;
+}
+
+.cart-item-price{
+  color:#555;
+}
+
+.qty{
+  display:flex;
+  align-items:center;
+  gap:8px;
+}
+
+.qty button{
+  width:30px;
+  height:30px;
+  border:0;
+  border-radius:6px;
+  cursor:pointer;
+  background:#e6edf5;
+}
+
+.total{
+  text-align:right;
+  font-size:22px;
+  font-weight:bold;
+  color:#0b2c52;
+  margin-top:20px;
+}
+
+.checkout{
+  margin-top:25px;
+  display:none;
+}
+
+.checkout.active{
+  display:block;
+}
+
+.empty{
+  text-align:center;
+  padding:30px;
+  color:#667386;
+}
+
+.loading{
+  text-align:center;
+  padding:30px;
+}
+
+footer{
+  background:#071a33;
+  color:white;
+  text-align:center;
+  padding:28px 15px;
+}
+
+footer p{
+  margin:4px 0;
+}
+
+@media(max-width:600px){
+
+  header h1{
+    font-size:19px;
+  }
+
+  nav button{
+    font-size:12px;
+    padding:7px 8px;
+  }
+
+  .hero{
+    padding:45px 20px;
+  }
+
+  .hero h2{
+    font-size:27px;
+  }
+
+  .hero p{
+    font-size:16px;
+  }
+
+  h2{
+    font-size:25px;
+  }
+
+  .cart-item{
+    flex-direction:column;
+    align-items:flex-start;
+  }
+
+  .qty{
+    align-self:flex-end;
+  }
+}
+</style>
 </head>
 
 <body>
 
 <header>
-  <h1>🦅 MUZAFFAR GLOBAL TRADE UZ</h1>
 
-  <nav>
-    <button data-page="home" onclick="showPage('home')">Bosh sahifa</button>
-    <button data-page="about" onclick="showPage('about')">Biz haqimizda</button>
-    <button data-page="services" onclick="showPage('services')">Xizmatlar</button>
-    <button data-page="projects" onclick="showPage('projects')">Loyihalar</button>
-    <button data-page="future" onclick="showPage('future')">Kelajak</button>
-    <button data-page="products" onclick="showPage('products')">Savdo</button>
-    <button data-page="contact" onclick="showPage('contact')">Aloqa</button>
-  </nav>
+<h1>🦅 MUZAFFAR GLOBAL TRADE UZ</h1>
+
+<nav>
+
+<button data-page="home"
+onclick="showPage('home')">
+Bosh sahifa
+</button>
+
+<button data-page="about"
+onclick="showPage('about')">
+Biz haqimizda
+</button>
+
+<button data-page="services"
+onclick="showPage('services')">
+Xizmatlar
+</button>
+
+<button data-page="projects"
+onclick="showPage('projects')">
+Loyihalar
+</button>
+
+<button data-page="future"
+onclick="showPage('future')">
+Kelajak
+</button>
+
+<button data-page="products"
+onclick="showPage('products')">
+Savdo
+</button>
+
+<button data-page="contact"
+onclick="showPage('contact')">
+Aloqa
+</button>
+
+<button class="cart-button"
+onclick="showPage('cart')">
+🛒 Savatcha
+<span id="cartCount" class="cart-count">0</span>
+</button>
+
+</nav>
 </header>
+
 
 <main>
 
-  <section id="home" class="page active">
-    <div class="hero">
-      <div class="logo">🦅</div>
+<!-- BOSH SAHIFA -->
 
-      <h2>MUZAFFAR GLOBAL TRADE UZ</h2>
+<section id="home" class="page active">
 
-      <p>
-        Onlayn savdo, xizmatlar, biznes va xalqaro hamkorlik
-        yo‘nalishlarida zamonaviy imkoniyatlarni birlashtiruvchi
-        raqamli platforma.
-      </p>
+<div class="hero">
 
-      <button class="btn" onclick="showPage('products')">
-        Savdoni boshlash
-      </button>
-    </div>
-  </section>
+<div class="logo">🦅</div>
 
-  <section id="about" class="page">
-    <h2>Biz haqimizda</h2>
+<h2>MUZAFFAR GLOBAL TRADE UZ</h2>
 
-    <div class="card">
-      <h3>MUZAFFAR GLOBAL TRADE UZ</h3>
+<p>
+Onlayn savdo, xizmatlar, biznes va xalqaro hamkorlik
+yo‘nalishlarida zamonaviy imkoniyatlarni birlashtiruvchi
+raqamli platforma.
+</p>
 
-      <p>
-        MUZAFFAR GLOBAL TRADE UZ — savdo, biznes, xizmatlar va
-        xalqaro hamkorlik imkoniyatlarini rivojlantirishga
-        yo‘naltirilgan zamonaviy raqamli platforma.
-      </p>
+<button class="btn"
+onclick="showPage('products')">
+🛍️ Savdoni boshlash
+</button>
 
-      <br>
+</div>
 
-      <p>
-        Bizning maqsadimiz — mijozlar, tadbirkorlar va hamkorlar
-        uchun qulay, ishonchli va zamonaviy raqamli muhit yaratish.
-      </p>
-    </div>
-  </section>
+</section>
 
-  <section id="services" class="page">
-    <h2>Xizmatlar</h2>
 
-    <div class="cards">
+<!-- BIZ HAQIMIZDA -->
 
-      <div class="card">
-        <h3>🛒 Onlayn savdo</h3>
-        <p>Mahsulotlarni internet orqali taqdim etish va sotish.</p>
-      </div>
+<section id="about" class="page">
 
-      <div class="card">
-        <h3>🤝 Biznes hamkorlik</h3>
-        <p>Mahalliy va xalqaro hamkorlik imkoniyatlarini rivojlantirish.</p>
-      </div>
+<h2>Biz haqimizda</h2>
 
-      <div class="card">
-        <h3>📊 Biznes xizmatlari</h3>
-        <p>Zamonaviy biznes va raqamli xizmatlarni rivojlantirish.</p>
-      </div>
+<div class="card">
 
-      <div class="card">
-        <h3>🌍 Global imkoniyatlar</h3>
-        <p>Xalqaro bozorga chiqish uchun yangi imkoniyatlar.</p>
-      </div>
+<h3>MUZAFFAR GLOBAL TRADE UZ</h3>
 
-    </div>
-  </section>
+<p>
+MUZAFFAR GLOBAL TRADE UZ — savdo, biznes, xizmatlar va
+xalqaro hamkorlik imkoniyatlarini rivojlantirishga
+yo‘naltirilgan zamonaviy raqamli platforma.
+</p>
 
-  <section id="projects" class="page">
-    <h2>Loyihalar</h2>
+<br>
 
-    <div class="cards">
+<p>
+Bizning maqsadimiz — mijozlar, tadbirkorlar va hamkorlar
+uchun qulay, ishonchli va zamonaviy raqamli muhit yaratish.
+</p>
 
-      <div class="card">
-        <h3>🌐 Global Trade</h3>
-        <p>Xalqaro savdo platformasini rivojlantirish.</p>
-      </div>
+</div>
 
-      <div class="card">
-        <h3>💻 Digital Business</h3>
-        <p>Biznes jarayonlarini raqamlashtirish.</p>
-      </div>
+</section>
 
-      <div class="card">
-        <h3>🚀 Future Market</h3>
-        <p>Kelajakdagi yangi savdo imkoniyatlari.</p>
-      </div>
 
-    </div>
-  </section>
+<!-- XIZMATLAR -->
 
-  <section id="future" class="page">
-    <h2>Kelajak</h2>
+<section id="services" class="page">
 
-    <div class="card">
-      <p>
-        MUZAFFAR GLOBAL TRADE UZ kelajakda xalqaro savdo,
-        raqamli xizmatlar, yangi biznes loyihalari va
-        texnologik yechimlarni rivojlantirishni maqsad qiladi.
-      </p>
-    </div>
-  </section>
+<h2>Xizmatlar</h2>
 
-  <section id="products" class="page">
-    <h2>Mahsulotlar</h2>
+<div class="cards">
 
-    <div id="productsList" class="products">
-      <div class="card">
-        Mahsulotlar yuklanmoqda...
-      </div>
-    </div>
-  </section>
+<div class="card">
+<h3>🛒 Onlayn savdo</h3>
+<p>
+Mahsulotlarni internet orqali taqdim etish va sotish.
+</p>
+</div>
 
-  <section id="contact" class="page">
-    <h2>Aloqa</h2>
+<div class="card">
+<h3>🤝 Biznes hamkorlik</h3>
+<p>
+Mahalliy va xalqaro hamkorlik imkoniyatlarini rivojlantirish.
+</p>
+</div>
 
-    <form id="contactForm">
+<div class="card">
+<h3>📊 Biznes xizmatlari</h3>
+<p>
+Zamonaviy biznes va raqamli xizmatlarni rivojlantirish.
+</p>
+</div>
 
-      <label for="name">Ismingiz</label>
-      <input
-        type="text"
-        id="name"
-        placeholder="Ismingizni kiriting"
-        required
-      >
+<div class="card">
+<h3>🌍 Global imkoniyatlar</h3>
+<p>
+Xalqaro bozorga chiqish uchun yangi imkoniyatlar.
+</p>
+</div>
 
-      <label for="email">Email</label>
-      <input
-        type="email"
-        id="email"
-        placeholder="Email manzilingiz"
-        required
-      >
+</div>
 
-      <label for="message">Xabaringiz</label>
-      <textarea
-        id="message"
-        placeholder="Xabaringizni yozing..."
-        required
-      ></textarea>
+</section>
 
-      <button class="btn" type="submit">
-        Xabar yuborish
-      </button>
 
-      <div id="status"></div>
+<!-- LOYIHALAR -->
 
-    </form>
-  </section>
+<section id="projects" class="page">
+
+<h2>Loyihalar</h2>
+
+<div class="cards">
+
+<div class="card">
+<h3>🌐 Global Trade</h3>
+<p>
+Xalqaro savdo platformasini rivojlantirish.
+</p>
+</div>
+
+<div class="card">
+<h3>💻 Digital Business</h3>
+<p>
+Biznes jarayonlarini raqamlashtirish.
+</p>
+</div>
+
+<div class="card">
+<h3>🚀 Future Market</h3>
+<p>
+Kelajakdagi yangi savdo imkoniyatlari.
+</p>
+</div>
+
+</div>
+
+</section>
+
+
+<!-- KELAJAK -->
+
+<section id="future" class="page">
+
+<h2>Kelajak</h2>
+
+<div class="card">
+
+<p>
+MUZAFFAR GLOBAL TRADE UZ kelajakda xalqaro savdo,
+raqamli xizmatlar, yangi biznes loyihalari va
+texnologik yechimlarni rivojlantirishni maqsad qiladi.
+</p>
+
+</div>
+
+</section>
+
+
+<!-- MAHSULOTLAR -->
+
+<section id="products" class="page">
+
+<h2>🛍️ Mahsulotlar</h2>
+
+<input
+id="searchInput"
+class="search-box"
+type="text"
+placeholder="🔎 Mahsulot qidirish..."
+oninput="filterProducts()"
+>
+
+<div id="productsList" class="products">
+
+<div class="loading">
+Mahsulotlar yuklanmoqda...
+</div>
+
+</div>
+
+</section>
+
+
+<!-- SAVATCHA -->
+
+<section id="cart" class="page">
+
+<h2>🛒 Savatcha</h2>
+
+<div class="cart-box">
+
+<div id="cartList"></div>
+
+<div id="cartTotal"></div>
+
+<button
+id="checkoutButton"
+class="btn"
+onclick="openCheckout()">
+Buyurtma berish
+</button>
+
+<button
+class="btn secondary"
+onclick="showPage('products')">
+← Xaridni davom ettirish
+</button>
+
+</div>
+
+
+<div id="checkoutBox" class="checkout">
+
+<h2>📦 Buyurtma ma'lumotlari</h2>
+
+<form id="orderForm">
+
+<label>
+Ismingiz
+</label>
+
+<input
+id="orderName"
+type="text"
+placeholder="Ismingiz"
+required
+>
+
+<label>
+Telefon raqamingiz
+</label>
+
+<input
+id="orderPhone"
+type="tel"
+placeholder="+998 XX XXX XX XX"
+required
+>
+
+<label>
+Manzil
+</label>
+
+<input
+id="orderAddress"
+type="text"
+placeholder="Yetkazib berish manzili"
+required
+>
+
+<label>
+Qo‘shimcha izoh
+</label>
+
+<textarea
+id="orderNote"
+placeholder="Qo‘shimcha ma'lumot...">
+</textarea>
+
+<button
+class="btn"
+type="submit">
+✅ Buyurtmani yuborish
+</button>
+
+<div
+id="orderStatus"
+class="status">
+</div>
+
+</form>
+
+</div>
+
+</section>
+
+
+<!-- ALOQA -->
+
+<section id="contact" class="page">
+
+<h2>📩 Aloqa</h2>
+
+<form id="contactForm">
+
+<label for="name">
+Ismingiz
+</label>
+
+<input
+type="text"
+id="name"
+placeholder="Ismingizni kiriting"
+required
+>
+
+<label for="email">
+Email
+</label>
+
+<input
+type="email"
+id="email"
+placeholder="Email manzilingiz"
+required
+>
+
+<label for="message">
+Xabaringiz
+</label>
+
+<textarea
+id="message"
+placeholder="Xabaringizni yozing..."
+required>
+</textarea>
+
+<button
+class="btn"
+type="submit">
+Xabar yuborish
+</button>
+
+<div
+id="status"
+class="status">
+</div>
+
+</form>
+
+</section>
 
 </main>
 
+
 <footer>
-  <p>© 2026 MUZAFFAR GLOBAL TRADE UZ</p>
-  <p>Barcha huquqlar himoyalangan.</p>
+
+<p>
+© 2026 MUZAFFAR GLOBAL TRADE UZ
+</p>
+
+<p>
+Barcha huquqlar himoyalangan.
+</p>
+
 </footer>
+
 
 <script>
 
-  /* =========================================
-     SUPABASE
-     ========================================= */
-
-  const SUPABASE_URL =
-    "https://dvcagjhapqfvelbmdsbb.supabase.co";
-
-  const SUPABASE_KEY =
-    "sb_publishable_IeaZTCblwGK6s0L_TBzHmQ_jkKiv9l9";
-
-  const supabaseClient =
-    window.supabase.createClient(
-      SUPABASE_URL,
-      SUPABASE_KEY
-    );
+/* =====================================================
+   SUPABASE
+===================================================== */
 
+const SUPABASE_URL =
+"https://dvcagjhapqfvelbmdsbb.supabase.co";
 
-  /* =========================================
-     SAHIFALAR
-     ========================================= */
+const SUPABASE_KEY =
+"sb_publishable_IeaZTCblwGK6s0L_TBzHmQ_jkKiv9l9";
 
-  function showPage(pageName) {
+const supabaseClient =
+window.supabase.createClient(
+SUPABASE_URL,
+SUPABASE_KEY
+);
 
-    document
-      .querySelectorAll(".page")
-      .forEach(page => {
-        page.classList.remove("active");
-      });
 
-    document
-      .querySelectorAll("nav button")
-      .forEach(button => {
-        button.classList.remove("active");
-      });
-
-    const page =
-      document.getElementById(pageName);
-
-    const button =
-      document.querySelector(
-        `nav button[data-page="${pageName}"]`
-      );
-
-    if (page) {
-      page.classList.add("active");
-    }
-
-    if (button) {
-      button.classList.add("active");
-    }
-
-    window.scrollTo({
-      top: 0,
-      behavior: "smooth"
-    });
+/* =====================================================
+   O'ZGARUVCHILAR
+===================================================== */
 
-    if (pageName === "products") {
-      loadProducts();
-    }
-  }
+let allProducts = [];
 
+let cart =
+JSON.parse(localStorage.getItem("mgt_cart") || "[]");
 
-  /* =========================================
-     MAHSULOTLAR
-     ========================================= */
 
-  async function loadProducts() {
+/* =====================================================
+   SAHIFA OCHISH
+===================================================== */
 
-    const container =
-      document.getElementById("productsList");
+function showPage(pageName){
 
-    container.innerHTML =
-      `<div class="card">
-        Mahsulotlar yuklanmoqda...
-      </div>`;
+document
+.querySelectorAll(".page")
+.forEach(page=>{
+page.classList.remove("active");
+});
 
-    try {
+document
+.querySelectorAll("nav button[data-page]")
+.forEach(button=>{
+button.classList.remove("active");
+});
 
-      const { data, error } =
-        await supabaseClient
-          .from("products")
-          .select("*")
-          .eq("active", true)
-          .order("created_at", {
-            ascending: false
-          });
+const page =
+document.getElementById(pageName);
 
-      if (error) {
-        console.error("Supabase xatosi:", error);
-        throw error;
-      }
+const button =
+document.querySelector(
+`nav button[data-page="${pageName}"]`
+);
 
-      if (!data || data.length === 0) {
+if(page){
+page.classList.add("active");
+}
 
-        container.innerHTML =
-          `<div class="card">
-            <h3>Hozircha mahsulotlar mavjud emas.</h3>
-            <p>
-              Supabase'dagi products jadvaliga mahsulot
-              qo‘shilgandan keyin ular shu yerda ko‘rinadi.
-            </p>
-          </div>`;
+if(button){
+button.classList.add("active");
+}
 
-        return;
-      }
+window.scrollTo({
+top:0,
+behavior:"smooth"
+});
 
-      container.innerHTML = "";
+if(pageName==="products"){
+loadProducts();
+}
 
-      data.forEach(product => {
+if(pageName==="cart"){
+renderCart();
+}
 
-        const item =
-          document.createElement("div");
+}
 
-        item.className = "product";
 
-        const image =
-          product.image || "📦";
+/* =====================================================
+   MAHSULOTLARNI YUKLASH
+===================================================== */
 
-        const isImage =
-          typeof image === "string" &&
-          (
-            image.startsWith("http://") ||
-            image.startsWith("https://")
-          );
+async function loadProducts(){
 
-        const imageHTML =
-          isImage
-            ? `<img
-                src="${escapeHTML(image)}"
-                alt="${escapeHTML(product.name || "Mahsulot")}"
-              >`
-            : escapeHTML(image);
+const container =
+document.getElementById("productsList");
 
-        item.innerHTML = `
+container.innerHTML =
+`
+<div class="loading">
+Mahsulotlar yuklanmoqda...
+</div>
+`;
 
-          <div class="product-image">
-            ${imageHTML}
-          </div>
+try{
 
-          <h3>
-            ${escapeHTML(product.name || "Nomsiz mahsulot")}
-          </h3>
+const {data,error} =
+await supabaseClient
+.from("products")
+.select("*")
+.eq("active",true)
+.order("created_at",{
+ascending:false
+});
 
-          <p class="product-description">
-            ${escapeHTML(product.description || "")}
-          </p>
+if(error){
+throw error;
+}
 
-          <div class="price">
-            ${formatPrice(product.price)}
-          </div>
+allProducts = data || [];
 
-        `;
+renderProducts(allProducts);
 
-        container.appendChild(item);
-      });
+}
+catch(error){
 
-    } catch (error) {
+console.error(error);
 
-      console.error(error);
+container.innerHTML =
+`
+<div class="card">
 
-      container.innerHTML = `
-        <div class="card">
-          <h3>⚠️ Mahsulotlarni yuklashda xatolik</h3>
+<h3>⚠️ Xatolik</h3>
 
-          <p>
-            Supabase ulanishi yoki products jadvali
-            ruxsatlarini tekshiring.
-          </p>
-        </div>
-      `;
-    }
-  }
+<p>
+Mahsulotlarni yuklashda muammo yuz berdi.
+</p>
 
+<p>
+Supabase'dagi products jadvalini tekshiring.
+</p>
 
-  /* =========================================
-     NARX
-     ========================================= */
+</div>
+`;
 
-  function formatPrice(price) {
+}
 
-    const number =
-      Number(price || 0);
+}
 
-    return number.toLocaleString("uz-UZ") + " so‘m";
-  }
 
+/* =====================================================
+   MAHSULOTLARNI CHIQARISH
+===================================================== */
 
-  /* =========================================
-     XAVFSIZ HTML
-     ========================================= */
+function renderProducts(products){
 
-  function escapeHTML(value) {
+const container =
+document.getElementById("productsList");
 
-    return String(value)
-      .replace(/&/g, "&amp;")
-      .replace(/</g, "&lt;")
-      .replace(/>/g, "&gt;")
-      .replace(/"/g, "&quot;")
-      .replace(/'/g, "&#039;");
-  }
+if(!products.length){
 
+container.innerHTML =
+`
+<div class="card">
 
-  /* =========================================
-     ALOQA FORMASI
-     ========================================= */
+<h3>Mahsulot topilmadi</h3>
 
-  document
-    .getElementById("contactForm")
-    .addEventListener(
-      "submit",
-      async function(event) {
+<p>
+Hozircha mahsulot mavjud emas.
+</p>
 
-        event.preventDefault();
+</div>
+`;
 
-        const name =
-          document.getElementById("name").value.trim();
+return;
 
-        const email =
-          document.getElementById("email").value.trim();
+}
 
-        const message =
-          document.getElementById("message").value.trim();
+container.innerHTML="";
 
-        const status =
-          document.getElementById("status");
+products.forEach(product=>{
 
-        status.textContent =
-          "Xabar yuborilmoqda...";
+const item =
+document.createElement("div");
 
-        try {
+item.className="product";
 
-          const { error } =
-            await supabaseClient
-              .from("contacts")
-              .insert([
-                {
-                  name: name,
-                  email: email,
-                  message: message
-                }
-              ]);
+const image =
+product.image || "📦";
 
-          if (error) {
-            console.error("Contact error:", error);
-            throw error;
-          }
+const isImage =
+typeof image==="string" &&
+(
+image.startsWith("http://") ||
+image.startsWith("https://")
+);
 
-          status.textContent =
-            "✅ Xabaringiz muvaffaqiyatli yuborildi!";
+const imageHTML =
+isImage
+?
+`
+<img
+src="${escapeHTML(image)}"
+alt="${escapeHTML(product.name || "Mahsulot")}"
+>
+`
+:
+escapeHTML(image);
 
-          document
-            .getElementById("contactForm")
-            .reset();
+item.innerHTML =
+`
 
-        } catch (error) {
+<div class="product-image">
+${imageHTML}
+</div>
 
-          console.error(error);
+<h3>
+${escapeHTML(
+product.name || "Nomsiz mahsulot"
+)}
+</h3>
 
-          status.textContent =
-            "❌ Xabar yuborilmadi. Supabase contacts jadvalini tekshiring.";
-        }
-      }
-    );
+<p class="product-description">
+${escapeHTML(
+product.description || ""
+)}
+</p>
 
+<div class="price">
+${formatPrice(product.price)}
+</div>
 
-  /* =========================================
-     BOSHLASH
-     ========================================= */
+<div class="product-actions">
 
-  showPage("home");
+<button
+class="btn"
+onclick='addToCart(${JSON.stringify(product).replace(/'/g,"&#39;")})'>
+🛒 Savatchaga
+</button>
+
+</div>
+
+`;
+
+container.appendChild(item);
+
+});
+
+}
+
+
+/* =====================================================
+   QIDIRUV
+===================================================== */
+
+function filterProducts(){
+
+const text =
+document
+.getElementById("searchInput")
+.value
+.toLowerCase()
+.trim();
+
+const filtered =
+allProducts.filter(product=>{
+
+const name =
+String(product.name || "")
+.toLowerCase();
+
+const description =
+String(product.description || "")
+.toLowerCase();
+
+return(
+name.includes(text) ||
+description.includes(text)
+);
+
+});
+
+renderProducts(filtered);
+
+}
+
+
+/* =====================================================
+   SAVATCHAGA QO'SHISH
+===================================================== */
+
+function addToCart(product){
+
+const existing =
+cart.find(
+item=>String(item.id)===String(product.id)
+);
+
+if(existing){
+
+existing.quantity++;
+
+}else{
+
+cart.push({
+id:product.id,
+name:product.name,
+price:Number(product.price || 0),
+quantity:1
+});
+
+}
+
+saveCart();
+
+alert(
+"✅ Mahsulot savatchaga qo‘shildi!"
+);
+
+}
+
+
+/* =====================================================
+   SAVATCHANI SAQLASH
+===================================================== */
+
+function saveCart(){
+
+localStorage.setItem(
+"mgt_cart",
+JSON.stringify(cart)
+);
+
+updateCartCount();
+
+renderCart();
+
+}
+
+
+/* =====================================================
+   SAVATCHA SONI
+===================================================== */
+
+function updateCartCount(){
+
+const count =
+cart.reduce(
+(sum,item)=>
+sum + Number(item.quantity),
+0
+);
+
+document
+.getElementById("cartCount")
+.textContent=count;
+
+}
+
+
+/* =====================================================
+   SAVATCHANI CHIQARISH
+===================================================== */
+
+function renderCart(){
+
+const list =
+document.getElementById("cartList");
+
+const totalBox =
+document.getElementById("cartTotal");
+
+if(!cart.length){
+
+list.innerHTML =
+`
+<div class="empty">
+
+<h3>🛒 Savatcha bo‘sh</h3>
+
+<p>
+Mahsulotlarni tanlab savatchaga qo‘shing.
+</p>
+
+</div>
+`;
+
+totalBox.innerHTML="";
+
+document
+.getElementById("checkoutButton")
+.style.display="none";
+
+return;
+
+}
+
+document
+.getElementById("checkoutButton")
+.style.display="inline-block";
+
+list.innerHTML="";
+
+let total=0;
+
+cart.forEach(item=>{
+
+const itemTotal =
+Number(item.price) *
+Number(item.quantity);
+
+total += itemTotal;
+
+const row =
+document.createElement("div");
+
+row.className="cart-item";
+
+row.innerHTML =
+`
+
+<div class="cart-item-info">
+
+<div class="cart-item-name">
+${escapeHTML(item.name)}
+</div>
+
+<div class="cart-item-price">
+${formatPrice(item.price)}
+</div>
+
+</div>
+
+<div class="qty">
+
+<button
+onclick="changeQuantity('${item.id}',-1)">
+−
+</button>
+
+<strong>
+${item.quantity}
+</strong>
+
+<button
+onclick="changeQuantity('${item.id}',1)">
++
+</button>
+
+<button
+onclick="removeFromCart('${item.id}')"
+style="background:#ffcdd2">
+🗑️
+</button>
+
+</div>
+
+`;
+
+list.appendChild(row);
+
+});
+
+totalBox.innerHTML =
+`
+<div class="total">
+Jami: ${formatPrice(total)}
+</div>
+`;
+
+}
+
+
+/* =====================================================
+   MIQDORNI O'ZGARTIRISH
+===================================================== */
+
+function changeQuantity(id,change){
+
+const item =
+cart.find(
+item=>String(item.id)===String(id)
+);
+
+if(!item) return;
+
+item.quantity += change;
+
+if(item.quantity<=0){
+
+cart =
+cart.filter(
+item=>String(item.id)!==String(id)
+);
+
+}
+
+saveCart();
+
+}
+
+
+/* =====================================================
+   SAVATCHADAN O'CHIRISH
+===================================================== */
+
+function removeFromCart(id){
+
+cart =
+cart.filter(
+item=>String(item.id)!==String(id)
+);
+
+saveCart();
+
+}
+
+
+/* =====================================================
+   BUYURTMA FORMASINI OCHISH
+===================================================== */
+
+function openCheckout(){
+
+if(!cart.length){
+
+alert(
+"Avval mahsulot tanlang."
+);
+
+return;
+
+}
+
+const box =
+document.getElementById("checkoutBox");
+
+box.classList.add("active");
+
+box.scrollIntoView({
+behavior:"smooth"
+});
+
+}
+
+
+/* =====================================================
+   BUYURTMA YUBORISH
+===================================================== */
+
+document
+.getElementById("orderForm")
+.addEventListener(
+"submit",
+async function(event){
+
+event.preventDefault();
+
+if(!cart.length){
+
+alert(
+"Savatcha bo‘sh."
+);
+
+return;
+
+}
+
+const name =
+document
+.getElementById("orderName")
+.value
+.trim();
+
+const phone =
+document
+.getElementById("orderPhone")
+.value
+.trim();
+
+const address =
+document
+.getElementById("orderAddress")
+.value
+.trim();
+
+const note =
+document
+.getElementById("orderNote")
+.value
+.trim();
+
+const status =
+document.getElementById("orderStatus");
+
+let total=0;
+
+let productsText="";
+
+cart.forEach(item=>{
+
+const itemTotal =
+Number(item.price) *
+Number(item.quantity);
+
+total += itemTotal;
+
+productsText +=
+`${item.name} x ${item.quantity} = ${formatPrice(itemTotal)}\n`;
+
+});
+
+const fullMessage =
+`
+🛒 YANGI BUYURTMA
+
+Mijoz: ${name}
+
+Telefon: ${phone}
+
+Manzil: ${address}
+
+Mahsulotlar:
+${productsText}
+
+JAMI:
+${formatPrice(total)}
+
+Izoh:
+${note || "Yo‘q"}
+`;
+
+status.textContent =
+"Buyurtma yuborilmoqda...";
+
+try{
+
+/*
+  Aloqa jadvalidan foydalanamiz.
+  Shuning uchun hozircha yangi orders jadvali
+  yaratish shart emas.
+*/
+
+const {error} =
+await supabaseClient
+.from("contacts")
+.insert([
+
+{
+name:name,
+email:phone,
+message:fullMessage
+}
+
+]);
+
+if(error){
+throw error;
+}
+
+status.textContent =
+"✅ Buyurtmangiz muvaffaqiyatli yuborildi!";
+
+cart=[];
+
+saveCart();
+
+document
+.getElementById("orderForm")
+.reset();
+
+document
+.getElementById("checkoutBox")
+.classList.remove("active");
+
+}
+catch(error){
+
+console.error(error);
+
+status.textContent =
+"❌ Buyurtma yuborilmadi. Supabase contacts jadvalini tekshiring.";
+
+}
+
+}
+);
+
+
+/* =====================================================
+   ALOQA FORMASI
+===================================================== */
+
+document
+.getElementById("contactForm")
+.addEventListener(
+"submit",
+async function(event){
+
+event.preventDefault();
+
+const name =
+document
+.getElementById("name")
+.value
+.trim();
+
+const email =
+document
+.getElementById("email")
+.value
+.trim();
+
+const message =
+document
+.getElementById("message")
+.value
+.trim();
+
+const status =
+document.getElementById("status");
+
+status.textContent =
+"Xabar yuborilmoqda...";
+
+try{
+
+const {error} =
+await supabaseClient
+.from("contacts")
+.insert([
+
+{
+name:name,
+email:email,
+message:message
+}
+
+]);
+
+if(error){
+throw error;
+}
+
+status.textContent =
+"✅ Xabaringiz muvaffaqiyatli yuborildi!";
+
+document
+.getElementById("contactForm")
+.reset();
+
+}
+catch(error){
+
+console.error(error);
+
+status.textContent =
+"❌ Xabar yuborilmadi. Supabase contacts jadvalini tekshiring.";
+
+}
+
+}
+);
+
+
+/* =====================================================
+   NARX
+===================================================== */
+
+function formatPrice(price){
+
+const number =
+Number(price || 0);
+
+return number.toLocaleString("uz-UZ")
++" so‘m";
+
+}
+
+
+/* =====================================================
+   XAVFSIZ HTML
+===================================================== */
+
+function escapeHTML(value){
+
+return String(value)
+.replace(/&/g,"&amp;")
+.replace(/</g,"&lt;")
+.replace(/>/g,"&gt;")
+.replace(/"/g,"&quot;")
+.replace(/'/g,"&#039;");
+
+}
+
+
+/* =====================================================
+   BOSHLASH
+===================================================== */
+
+updateCartCount();
+
+showPage("home");
 
 </script>
 
