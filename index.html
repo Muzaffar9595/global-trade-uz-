@@ -34,6 +34,10 @@ button,input,textarea,select{
  font-family:inherit
 }
 
+button{
+ cursor:pointer
+}
+
 header{
  position:sticky;
  top:0;
@@ -90,7 +94,6 @@ nav button{
  color:#fff;
  padding:8px 10px;
  border-radius:9px;
- cursor:pointer;
  font-size:12px;
  transition:.25s
 }
@@ -130,11 +133,15 @@ main{
 }
 
 @keyframes pageIn{
- from{opacity:0;transform:translateY(15px)}
- to{opacity:1;transform:translateY(0)}
+ from{
+  opacity:0;
+  transform:translateY(15px)
+ }
+ to{
+  opacity:1;
+  transform:translateY(0)
+ }
 }
-
-/* HERO */
 
 .hero{
  position:relative;
@@ -222,8 +229,6 @@ main{
  margin-top:28px
 }
 
-/* COMMON */
-
 .btn{
  display:inline-block;
  border:0;
@@ -231,7 +236,6 @@ main{
  padding:13px 21px;
  background:#0b315b;
  color:#fff;
- cursor:pointer;
  font-weight:bold;
  font-size:14px;
  transition:.25s
@@ -313,7 +317,8 @@ main{
 .project:hover,
 .idea:hover,
 .country:hover,
-.solution:hover{
+.solution:hover,
+.product:hover{
  transform:translateY(-5px);
  box-shadow:0 16px 38px rgba(12,35,65,.14)
 }
@@ -431,7 +436,17 @@ main{
  border-radius:12px
 }
 
-/* VIDEO */
+.highlight{
+ background:linear-gradient(135deg,#082b50,#124d81);
+ color:#fff;
+ border-radius:20px;
+ padding:30px
+}
+
+.highlight h2,
+.highlight h3{
+ color:#fff
+}
 
 .video-card{
  background:#061b36;
@@ -455,16 +470,6 @@ main{
  overflow:hidden
 }
 
-.video-screen:before{
- content:"";
- position:absolute;
- width:180px;
- height:180px;
- border:1px solid rgba(255,255,255,.25);
- border-radius:50%;
- animation:spin 10s linear infinite
-}
-
 .play{
  position:relative;
  z-index:2;
@@ -478,7 +483,7 @@ main{
  justify-content:center;
  font-size:29px;
  margin:auto;
- cursor:pointer
+ border:0
 }
 
 .video-info{
@@ -489,8 +494,6 @@ main{
  color:#fff;
  margin-bottom:7px
 }
-
-/* DOCUMENT PLAN */
 
 .plan-card{
  border-left:4px solid #c39b3b
@@ -506,8 +509,6 @@ main{
  color:#092d54;
  margin:5px 0
 }
-
-/* TABLE */
 
 .table-wrap{
  overflow-x:auto
@@ -530,12 +531,6 @@ th,td{
 th{
  background:#092d54;
  color:#fff
-}
-
-/* PRODUCT */
-
-.product:hover{
- transform:translateY(-5px)
 }
 
 .product-image{
@@ -565,7 +560,8 @@ th{
  font-size:19px;
  font-weight:bold;
  color:#092d54;
- margin-top:12px
+ margin-top:12px;
+ margin-bottom:12px
 }
 
 .form-box{
@@ -606,8 +602,6 @@ textarea{
  font-weight:bold
 }
 
-/* CART */
-
 .empty{
  background:#fff;
  padding:30px;
@@ -641,8 +635,7 @@ textarea{
  height:35px;
  border:0;
  border-radius:7px;
- background:#e6edf5;
- cursor:pointer
+ background:#e6edf5
 }
 
 .total{
@@ -664,8 +657,6 @@ textarea{
  border-radius:10px;
  margin-bottom:18px
 }
-
-/* MODAL */
 
 #toast{
  position:fixed;
@@ -709,7 +700,6 @@ textarea{
  width:35px;
  height:35px;
  border-radius:50%;
- cursor:pointer;
  font-size:20px
 }
 
@@ -720,8 +710,6 @@ textarea{
  border-radius:15px;
  margin-top:18px
 }
-
-/* FOOTER */
 
 footer{
  background:#04162d;
@@ -753,20 +741,6 @@ footer p{
  border-radius:14px;
  margin:20px 0
 }
-
-.highlight{
- background:linear-gradient(135deg,#082b50,#124d81);
- color:#fff;
- border-radius:20px;
- padding:30px
-}
-
-.highlight h2,
-.highlight h3{
- color:#fff
-}
-
-/* MOBILE */
 
 @media(max-width:650px){
 
@@ -833,54 +807,53 @@ footer p{
 
 <div class="brand">
 
-<!-- YANGI QALQON + BURGUT + OY + YULDUZLAR LOGOTIPI -->
-<svg class="logo" viewBox="0 0 200 200">
+<svg id="logo" class="logo" viewBox="0 0 200 200">
 <defs>
- <linearGradient id="gold" x1="0" x2="1">
-  <stop offset="0" stop-color="#98752c"/>
-  <stop offset=".5" stop-color="#ffe58a"/>
-  <stop offset="1" stop-color="#a47d2e"/>
- </linearGradient>
+<linearGradient id="gold" x1="0" x2="1">
+<stop offset="0" stop-color="#98752c"/>
+<stop offset=".5" stop-color="#ffe58a"/>
+<stop offset="1" stop-color="#a47d2e"/>
+</linearGradient>
 </defs>
 
 <path d="M100 8 L181 42 L169 119 Q158 164 100 190 Q42 164 31 119 L19 42 Z"
- fill="#071e3a" stroke="url(#gold)" stroke-width="8"/>
+fill="#071e3a" stroke="url(#gold)" stroke-width="8"/>
 
-<path d="M47 52 Q100 27 153 52" fill="none" stroke="#d9b85c" stroke-width="3"/>
+<path d="M47 52 Q100 27 153 52"
+fill="none"
+stroke="#d9b85c"
+stroke-width="3"/>
 
-<!-- oy -->
 <path d="M60 67 A28 28 0 1 0 88 102 A22 22 0 1 1 60 67"
- fill="#f2d37b"/>
+fill="#f2d37b"/>
 
-<!-- yulduzlar -->
 <g fill="#f5d878">
- <circle cx="112" cy="54" r="3"/>
- <circle cx="128" cy="61" r="3"/>
- <circle cx="142" cy="72" r="3"/>
- <circle cx="118" cy="77" r="2.5"/>
- <circle cx="137" cy="88" r="2.5"/>
- <circle cx="102" cy="63" r="2.5"/>
+<circle cx="112" cy="54" r="3"/>
+<circle cx="128" cy="61" r="3"/>
+<circle cx="142" cy="72" r="3"/>
+<circle cx="118" cy="77" r="2.5"/>
+<circle cx="137" cy="88" r="2.5"/>
+<circle cx="102" cy="63" r="2.5"/>
 </g>
 
-<!-- burgut -->
 <path d="M100 65
- C87 62 73 55 51 60
- C61 69 70 79 83 84
- C68 83 54 87 45 94
- C66 99 83 96 96 91
- L100 111
- L104 91
- C117 96 134 99 155 94
- C146 87 132 83 117 84
- C130 79 139 69 149 60
- C127 55 113 62 100 65 Z"
- fill="url(#gold)"/>
+C87 62 73 55 51 60
+C61 69 70 79 83 84
+C68 83 54 87 45 94
+C66 99 83 96 96 91
+L100 111
+L104 91
+C117 96 134 99 155 94
+C146 87 132 83 117 84
+C130 79 139 69 149 60
+C127 55 113 62 100 65 Z"
+fill="url(#gold)"/>
 
 <circle cx="100" cy="76" r="8" fill="#071e3a"/>
 <circle cx="103" cy="74" r="2" fill="#fff"/>
 
 <path d="M100 113 L87 138 L100 132 L113 138 Z"
- fill="#d9b85c"/>
+fill="#d9b85c"/>
 </svg>
 
 <div>
@@ -891,6 +864,7 @@ footer p{
 </div>
 
 <nav>
+
 <button data-page="home" onclick="showPage('home')">Bosh sahifa</button>
 <button data-page="about" onclick="showPage('about')">Biz haqimizda</button>
 <button data-page="services" onclick="showPage('services')">Xizmatlar</button>
@@ -905,11 +879,12 @@ footer p{
 <button data-page="values" onclick="showPage('values')">🕊️ Qadriyatlar</button>
 <button data-page="products" onclick="showPage('products')">🛍️ Savdo</button>
 <button data-page="contact" onclick="showPage('contact')">📩 Aloqa</button>
-<button data-page="cart" class="cart-button" onclick="showPage('cart')">
-🛒 <span id="cartCount">0</span>
-</button>
-</nav>
 
+<button data-page="cart" class="cart-button" onclick="showPage('cart')">
+🛒 <span id="cartCount" class="cart-count">0</span>
+</button>
+
+</nav>
 </div>
 </header>
 
@@ -917,7 +892,6 @@ footer p{
 <main>
 
 <!-- HOME -->
-
 <section id="home" class="page active">
 
 <div class="hero">
@@ -928,4 +902,1467 @@ footer p{
 <use href="#logo"></use>
 </svg>
 
-<!-- Must
+<h2>MUZAFFAR GLOBAL TRADE UZ</h2>
+
+<p>
+Xalqaro savdo, eksport, import, investitsiya,
+turizm, ta'lim va zamonaviy biznes imkoniyatlarini
+birlashtiruvchi global platforma.
+</p>
+
+<div class="hero-buttons">
+
+<button class="btn gold" onclick="showPage('products')">
+🛍️ Savdoni boshlash
+</button>
+
+<button class="btn" onclick="showPage('about')">
+Biz haqimizda
+</button>
+
+<button class="btn green" onclick="showPage('contact')">
+📩 Bog‘lanish
+</button>
+
+</div>
+
+</div>
+</div>
+
+
+<div class="section">
+
+<div class="section-title">
+<h2>Bizning yo‘nalishlarimiz</h2>
+<p>Global biznes uchun asosiy xizmatlar</p>
+</div>
+
+<div class="cards">
+
+<div class="card">
+<div class="icon">🌍</div>
+<h3>Xalqaro savdo</h3>
+<p>Eksport va import yo‘nalishlarida biznes hamkorlik.</p>
+</div>
+
+<div class="card">
+<div class="icon">📦</div>
+<h3>Mahsulotlar</h3>
+<p>Zamonaviy mahsulotlarni onlayn ko‘rish va buyurtma qilish.</p>
+</div>
+
+<div class="card">
+<div class="icon">💼</div>
+<h3>Biznes xizmatlari</h3>
+<p>Biznes loyihalari va hamkorlik imkoniyatlari.</p>
+</div>
+
+<div class="card">
+<div class="icon">🎓</div>
+<h3>Ta'lim</h3>
+<p>Yoshlar va tadbirkorlar uchun rivojlanish imkoniyatlari.</p>
+</div>
+
+</div>
+
+</div>
+
+
+<div class="stats">
+
+<div class="stat">
+<strong>15+</strong>
+<span>Yo‘nalish</span>
+</div>
+
+<div class="stat">
+<strong>20+</strong>
+<span>Global imkoniyat</span>
+</div>
+
+<div class="stat">
+<strong>125</strong>
+<span>Strategik reja</span>
+</div>
+
+<div class="stat">
+<strong>24/7</strong>
+<span>Onlayn platforma</span>
+</div>
+
+</div>
+
+</section>
+
+
+<!-- ABOUT -->
+<section id="about" class="page">
+
+<div class="section-title">
+<h2>Biz haqimizda</h2>
+<p>MUZAFFAR GLOBAL TRADE UZ</p>
+</div>
+
+<div class="highlight">
+<h2>Global biznes uchun yangi imkoniyatlar</h2>
+<p>
+MUZAFFAR GLOBAL TRADE UZ — xalqaro savdo,
+biznes, eksport, import, investitsiya, turizm va
+ta'lim yo‘nalishlarini birlashtirishga qaratilgan
+zamonaviy platforma.
+</p>
+</div>
+
+<div class="section">
+
+<div class="cards">
+
+<div class="card">
+<div class="icon">🎯</div>
+<h3>Missiyamiz</h3>
+<p>
+Tadbirkorlar, yoshlar va xalqaro hamkorlarni
+bir platformada birlashtirish.
+</p>
+</div>
+
+<div class="card">
+<div class="icon">👁️</div>
+<h3>Vizyonimiz</h3>
+<p>
+O‘zbekiston va xalqaro bozorlar o‘rtasida
+zamonaviy biznes ko‘prigini yaratish.
+</p>
+</div>
+
+<div class="card">
+<div class="icon">🤝</div>
+<h3>Hamkorlik</h3>
+<p>
+Ishonchli va uzoq muddatli biznes hamkorlikni rivojlantirish.
+</p>
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- SERVICES -->
+<section id="services" class="page">
+
+<div class="section-title">
+<h2>Xizmatlar</h2>
+<p>Biznes uchun asosiy xizmatlar</p>
+</div>
+
+<div class="cards">
+
+<div class="card">
+<div class="icon">📦</div>
+<h3>Eksport</h3>
+<p>Mahsulotlarni xalqaro bozorlarga olib chiqish imkoniyatlari.</p>
+<button class="btn" onclick="showPage('contact')">Murojaat</button>
+</div>
+
+<div class="card">
+<div class="icon">🚢</div>
+<h3>Import</h3>
+<p>Xorijiy mahsulot va hamkorlar bilan ishlash.</p>
+<button class="btn" onclick="showPage('contact')">Murojaat</button>
+</div>
+
+<div class="card">
+<div class="icon">💰</div>
+<h3>Investitsiya</h3>
+<p>Biznes loyihalar va investitsion g‘oyalarni rivojlantirish.</p>
+<button class="btn" onclick="showPage('projects')">Loyihalar</button>
+</div>
+
+<div class="card">
+<div class="icon">✈️</div>
+<h3>Turizm</h3>
+<p>Turizm va xalqaro sayohat yo‘nalishlari.</p>
+<button class="btn" onclick="showPage('international')">Ko‘rish</button>
+</div>
+
+<div class="card">
+<div class="icon">🎓</div>
+<h3>Ta'lim</h3>
+<p>Ta'lim, malaka va yoshlar rivoji yo‘nalishlari.</p>
+<button class="btn" onclick="showPage('youth')">Yoshlar</button>
+</div>
+
+<div class="card">
+<div class="icon">💻</div>
+<h3>Digital biznes</h3>
+<p>Zamonaviy raqamli biznes va onlayn platformalar.</p>
+<button class="btn" onclick="showPage('future')">Kelajak</button>
+</div>
+
+</div>
+
+</section>
+
+
+<!-- PROJECTS -->
+<section id="projects" class="page">
+
+<div class="section-title">
+<h2>Loyihalar</h2>
+<p>Rivojlantirilayotgan biznes yo‘nalishlari</p>
+</div>
+
+<div class="project-grid">
+
+<div class="project">
+<div class="icon">🌾</div>
+<h3>Agro eksport</h3>
+<p>Mahalliy qishloq xo‘jaligi mahsulotlarini xalqaro bozorga chiqarish.</p>
+</div>
+
+<div class="project">
+<div class="icon">🏭</div>
+<h3>Ishlab chiqarish</h3>
+<p>Mahsulot ishlab chiqarish va xalqaro hamkorlik.</p>
+</div>
+
+<div class="project">
+<div class="icon">🛒</div>
+<h3>E-commerce</h3>
+<p>Onlayn savdo tizimini rivojlantirish.</p>
+</div>
+
+<div class="project">
+<div class="icon">🌐</div>
+<h3>Global platforma</h3>
+<p>Xalqaro biznes hamkorlarini bog‘lovchi raqamli platforma.</p>
+</div>
+
+</div>
+
+</section>
+
+
+<!-- INTERNATIONAL -->
+<section id="international" class="page">
+
+<div class="section-title">
+<h2>🌍 Xalqaro hamkorlik</h2>
+<p>Global bozorlarga chiqish</p>
+</div>
+
+<div class="country-grid">
+
+<div class="country">
+<div class="flag">🇺🇿</div>
+<h3>O‘zbekiston</h3>
+<p>Mahalliy biznes va eksport imkoniyatlari.</p>
+</div>
+
+<div class="country">
+<div class="flag">🇹🇷</div>
+<h3>Turkiya</h3>
+<p>Savdo va biznes hamkorlik imkoniyatlari.</p>
+</div>
+
+<div class="country">
+<div class="flag">🇦🇪</div>
+<h3>BAA</h3>
+<p>Xalqaro savdo va biznes markazlari.</p>
+</div>
+
+<div class="country">
+<div class="flag">🇺🇸</div>
+<h3>AQSH</h3>
+<p>Global biznes va texnologik imkoniyatlar.</p>
+</div>
+
+<div class="country">
+<div class="flag">🇨🇳</div>
+<h3>Xitoy</h3>
+<p>Import, ishlab chiqarish va logistika.</p>
+</div>
+
+<div class="country">
+<div class="flag">🇰🇷</div>
+<h3>Janubiy Koreya</h3>
+<p>Texnologiya, ta'lim va biznes aloqalari.</p>
+</div>
+
+</div>
+
+</section>
+
+
+<!-- MEDIA -->
+<section id="media" class="page">
+
+<div class="section-title">
+<h2>🎬 Media</h2>
+<p>Yangiliklar va biznes kontent</p>
+</div>
+
+<div class="cards">
+
+<div class="video-card">
+<div class="video-screen">
+<button class="play" onclick="openMedia('MUZAFFAR GLOBAL TRADE UZ — Global biznes platformasi')">▶</button>
+</div>
+<div class="video-info">
+<h3>Global biznes</h3>
+<p>Platforma haqida taqdimot.</p>
+</div>
+</div>
+
+<div class="video-card">
+<div class="video-screen">
+<button class="play" onclick="openMedia('Eksport va import imkoniyatlari')">▶</button>
+</div>
+<div class="video-info">
+<h3>Eksport va import</h3>
+<p>Xalqaro savdo imkoniyatlari.</p>
+</div>
+</div>
+
+<div class="video-card">
+<div class="video-screen">
+<button class="play" onclick="openMedia('Yoshlar va kelajak')">▶</button>
+</div>
+<div class="video-info">
+<h3>Yoshlar</h3>
+<p>Yangi avlod uchun imkoniyatlar.</p>
+</div>
+</div>
+
+</div>
+
+</section>
+
+
+<!-- OFFICES -->
+<section id="offices" class="page">
+
+<div class="section-title">
+<h2>🏢 Ofislar</h2>
+<p>Biznes vakolatxonalari va markazlar</p>
+</div>
+
+<div class="office-grid">
+
+<div class="office">
+<div class="photo">
+<img src="https://images.unsplash.com/photo-1497366754035-f200968a6e72?auto=format&fit=crop&w=900&q=80">
+</div>
+<h3>Toshkent</h3>
+<p>O‘zbekiston biznes markazi.</p>
+</div>
+
+<div class="office">
+<div class="photo">
+<img src="https://images.unsplash.com/photo-1497366811353-6870744d04b2?auto=format&fit=crop&w=900&q=80">
+</div>
+<h3>International Office</h3>
+<p>Xalqaro hamkorlik markazi.</p>
+</div>
+
+<div class="office">
+<div class="photo">
+<img src="https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&w=900&q=80">
+</div>
+<h3>Digital Office</h3>
+<p>Raqamli biznes markazi.</p>
+</div>
+
+</div>
+
+</section>
+
+
+<!-- STRATEGY -->
+<section id="strategy" class="page">
+
+<div class="section-title">
+<h2>📚 125 reja</h2>
+<p>Strategik rivojlanish yo‘nalishlari</p>
+</div>
+
+<div class="plan-grid">
+
+<div class="plan-card">
+<div class="plan-number">01</div>
+<h3>Brend rivoji</h3>
+<p>Kompaniya brendini xalqaro darajaga olib chiqish.</p>
+</div>
+
+<div class="plan-card">
+<div class="plan-number">02</div>
+<h3>Eksport</h3>
+<p>Mahsulotlar eksport geografiyasini kengaytirish.</p>
+</div>
+
+<div class="plan-card">
+<div class="plan-number">03</div>
+<h3>Digital platforma</h3>
+<p>Raqamli xizmatlar va onlayn savdoni rivojlantirish.</p>
+</div>
+
+<div class="plan-card">
+<div class="plan-number">04</div>
+<h3>Xalqaro hamkorlik</h3>
+<p>Yangi davlatlar va kompaniyalar bilan hamkorlik.</p>
+</div>
+
+<div class="plan-card">
+<div class="plan-number">05</div>
+<h3>Yoshlar</h3>
+<p>Yosh tadbirkorlar uchun yangi imkoniyatlar.</p>
+</div>
+
+<div class="plan-card">
+<div class="plan-number">06</div>
+<h3>Innovatsiya</h3>
+<p>Texnologik va innovatsion loyihalarni rivojlantirish.</p>
+</div>
+
+</div>
+
+<div class="notice">
+<strong>Strategik maqsad:</strong>
+MUZAFFAR GLOBAL TRADE UZ platformasini bosqichma-bosqich
+xalqaro biznes ekotizimiga aylantirish.
+</div>
+
+</section>
+
+
+<!-- YOUTH -->
+<section id="youth" class="page">
+
+<div class="section-title">
+<h2>🎓 Yoshlar</h2>
+<p>Yoshlar uchun biznes va ta'lim imkoniyatlari</p>
+</div>
+
+<div class="cards">
+
+<div class="card">
+<div class="icon">💡</div>
+<h3>Startaplar</h3>
+<p>Yangi biznes g‘oyalarni rivojlantirish.</p>
+</div>
+
+<div class="card">
+<div class="icon">📖</div>
+<h3>Ta'lim</h3>
+<p>Biznes va zamonaviy ko‘nikmalarni rivojlantirish.</p>
+</div>
+
+<div class="card">
+<div class="icon">🤝</div>
+<h3>Mentorlik</h3>
+<p>Tajribali mutaxassislar bilan hamkorlik qilish.</p>
+</div>
+
+<div class="card">
+<div class="icon">🌍</div>
+<h3>Xalqaro imkoniyat</h3>
+<p>Global loyihalar va xalqaro hamkorlik.</p>
+</div>
+
+</div>
+
+</section>
+
+
+<!-- FUTURE -->
+<section id="future" class="page">
+
+<div class="section-title">
+<h2>🚀 Kelajak</h2>
+<p>Kompaniyaning kelajakdagi rivojlanish konsepsiyasi</p>
+</div>
+
+<div class="timeline">
+
+<div class="timeline-item">
+<h3>1-bosqich</h3>
+<p>Raqamli platformani ishga tushirish.</p>
+</div>
+
+<div class="timeline-item">
+<h3>2-bosqich</h3>
+<p>Mahsulot va xizmatlar katalogini kengaytirish.</p>
+</div>
+
+<div class="timeline-item">
+<h3>3-bosqich</h3>
+<p>Xalqaro hamkorlar tarmog‘ini yaratish.</p>
+</div>
+
+<div class="timeline-item">
+<h3>4-bosqich</h3>
+<p>Global biznes ekotizimini rivojlantirish.</p>
+</div>
+
+</div>
+
+</section>
+
+
+<!-- IDEAS -->
+<section id="ideas" class="page">
+
+<div class="section-title">
+<h2>💡 G‘oyalar</h2>
+<p>Yangi biznes g‘oyalar uchun maydon</p>
+</div>
+
+<div class="idea-grid">
+
+<div class="idea">
+<div class="icon">📱</div>
+<h3>Digital Market</h3>
+<p>Mahsulotlarni raqamli bozorda sotish.</p>
+</div>
+
+<div class="idea">
+<div class="icon">🌱</div>
+<h3>Green Business</h3>
+<p>Ekologik va barqaror biznes loyihalari.</p>
+</div>
+
+<div class="idea">
+<div class="icon">🚚</div>
+<h3>Smart Logistics</h3>
+<p>Zamonaviy logistika tizimlari.</p>
+</div>
+
+<div class="idea">
+<div class="icon">🏆</div>
+<h3>Global Brand</h3>
+<p>Mahalliy brendlarni xalqaro darajaga olib chiqish.</p>
+</div>
+
+</div>
+
+</section>
+
+
+<!-- VALUES -->
+<section id="values" class="page">
+
+<div class="section-title">
+<h2>🕊️ Qadriyatlar</h2>
+<p>Bizning asosiy tamoyillarimiz</p>
+</div>
+
+<div class="quote">
+“Halollik, sifat, innovatsiya va hamkorlik —
+barqaror biznesning asosidir.”
+</div>
+
+<div class="cards" style="margin-top:25px">
+
+<div class="card">
+<div class="icon">🤝</div>
+<h3>Ishonch</h3>
+<p>Hamkorlar bilan ochiq va ishonchli munosabat.</p>
+</div>
+
+<div class="card">
+<div class="icon">⭐</div>
+<h3>Sifat</h3>
+<p>Xizmat va mahsulotlarda yuqori sifatga intilish.</p>
+</div>
+
+<div class="card">
+<div class="icon">💡</div>
+<h3>Innovatsiya</h3>
+<p>Zamonaviy texnologiyalarni qo‘llash.</p>
+</div>
+
+<div class="card">
+<div class="icon">🌍</div>
+<h3>Global fikrlash</h3>
+<p>Mahalliy imkoniyatlardan global bozorgacha.</p>
+</div>
+
+</div>
+
+</section>
+
+
+<!-- PRODUCTS -->
+<section id="products" class="page">
+
+<div class="section-title">
+<h2>🛍️ Savdo</h2>
+<p>Mahsulotlar katalogi</p>
+</div>
+
+<input
+id="productSearch"
+class="search"
+type="search"
+placeholder="🔎 Mahsulot qidirish..."
+oninput="filterProducts()"
+>
+
+<div id="productsList" class="products"></div>
+
+</section>
+
+
+<!-- CONTACT -->
+<section id="contact" class="page">
+
+<div class="section-title">
+<h2>📩 Aloqa</h2>
+<p>Biz bilan bog‘laning</p>
+</div>
+
+<div class="form-box">
+
+<form id="contactForm">
+
+<label>Ismingiz</label>
+<input id="contactName" required placeholder="Ismingiz">
+
+<label>Telefon yoki Email</label>
+<input id="contactContact" required placeholder="+998... yoki email">
+
+<label>Mavzu</label>
+<select id="contactSubject">
+<option>Hamkorlik</option>
+<option>Eksport</option>
+<option>Import</option>
+<option>Investitsiya</option>
+<option>Mahsulot</option>
+<option>Boshqa</option>
+</select>
+
+<label>Xabar</label>
+<textarea id="contactMessage" required placeholder="Xabaringiz..."></textarea>
+
+<button class="btn gold" type="submit">
+📩 Xabar yuborish
+</button>
+
+<div id="contactStatus" class="status"></div>
+
+</form>
+
+</div>
+
+<div class="cards">
+
+<div class="card">
+<div class="icon">📞</div>
+<h3>Telefon</h3>
+<p>+998 XX XXX XX XX</p>
+</div>
+
+<div class="card">
+<div class="icon">📧</div>
+<h3>Email</h3>
+<p>info@muzaffarglobaltrade.uz</p>
+</div>
+
+<div class="card">
+<div class="icon">🌍</div>
+<h3>Manzil</h3>
+<p>O‘zbekiston</p>
+</div>
+
+</div>
+
+</section>
+
+
+<!-- CART -->
+<section id="cart" class="page">
+
+<div class="section-title">
+<h2>🛒 Savatcha</h2>
+<p>Tanlangan mahsulotlar</p>
+</div>
+
+<div class="cart-box">
+
+<div id="cartItems"></div>
+
+<div id="cartTotal" class="total">
+Jami: 0 so‘m
+</div>
+
+<button
+id="checkoutButton"
+class="btn gold"
+style="margin-top:20px"
+onclick="showCheckout()">
+Buyurtma berish
+</button>
+
+<div id="checkoutBox" class="checkout">
+
+<div class="divider"></div>
+
+<h3>Buyurtma ma'lumotlari</h3>
+
+<form id="checkoutForm">
+
+<label>Ism</label>
+<input id="orderName" required placeholder="Ismingiz">
+
+<label>Telefon</label>
+<input id="orderPhone" required placeholder="+998">
+
+<label>Manzil</label>
+<textarea id="orderAddress" required placeholder="Yetkazib berish manzili"></textarea>
+
+<button class="btn green" type="submit">
+✅ Buyurtmani yuborish
+</button>
+
+</form>
+
+</div>
+
+</div>
+
+</section>
+
+</main>
+
+
+<footer>
+
+<svg class="footer-logo" viewBox="0 0 200 200">
+<use href="#logo"></use>
+</svg>
+
+<h2>MUZAFFAR GLOBAL TRADE UZ</h2>
+
+<p>GLOBAL BUSINESS • EXPORT • IMPORT • INVESTMENT</p>
+
+<p>© 2026 MUZAFFAR GLOBAL TRADE UZ. Barcha huquqlar himoyalangan.</p>
+
+</footer>
+
+
+<!-- MEDIA MODAL -->
+<div id="mediaModal" class="modal">
+
+<div class="modal-box">
+
+<button class="close" onclick="closeModal('mediaModal')">×</button>
+
+<h2 id="mediaTitle">Media</h2>
+
+<div class="media-script">
+
+<p>
+🎬 Ushbu bo‘lim MUZAFFAR GLOBAL TRADE UZ
+platformasining media kontenti uchun tayyorlangan.
+</p>
+
+<p style="margin-top:12px">
+Bu yerga keyinchalik kompaniyaning haqiqiy
+video materiallarini joylashtirish mumkin.
+</p>
+
+</div>
+
+</div>
+
+</div>
+
+
+<!-- TOAST -->
+<div id="toast"></div>
+
+
+<script>
+
+/* =========================================
+   SUPABASE
+   ========================================= */
+
+const SUPABASE_URL = "";
+const SUPABASE_ANON_KEY = "";
+
+let supabaseClient = null;
+
+if(
+ typeof supabase !== "undefined" &&
+ SUPABASE_URL &&
+ SUPABASE_ANON_KEY
+){
+ supabaseClient =
+ supabase.createClient(
+  SUPABASE_URL,
+  SUPABASE_ANON_KEY
+ );
+}
+
+
+/* =========================================
+   SAHIFA NAVIGATSIYASI
+   ========================================= */
+
+function showPage(pageId){
+
+ const pages =
+ document.querySelectorAll(".page");
+
+ pages.forEach(page=>{
+  page.classList.remove("active");
+ });
+
+ const target =
+ document.getElementById(pageId);
+
+ if(target){
+  target.classList.add("active");
+ }
+
+ document
+ .querySelectorAll("nav button[data-page]")
+ .forEach(button=>{
+  button.classList.remove("active");
+
+  if(button.dataset.page === pageId){
+   button.classList.add("active");
+  }
+ });
+
+ window.scrollTo({
+  top:0,
+  behavior:"smooth"
+ });
+
+ if(pageId === "products"){
+  renderProducts();
+ }
+
+ if(pageId === "cart"){
+  renderCart();
+ }
+}
+
+
+/* =========================================
+   MAHSULOTLAR
+   ========================================= */
+
+const products = [
+
+{
+ id:1,
+ name:"Premium mahsulot",
+ description:"MUZAFFAR GLOBAL TRADE UZ mahsuloti.",
+ price:100000,
+ icon:"📦"
+},
+
+{
+ id:2,
+ name:"Global Business Package",
+ description:"Biznes uchun maxsus xizmat paketi.",
+ price:250000,
+ icon:"💼"
+},
+
+{
+ id:3,
+ name:"Export Package",
+ description:"Eksport yo‘nalishidagi biznes xizmati.",
+ price:500000,
+ icon:"🌍"
+},
+
+{
+ id:4,
+ name:"Business Consultation",
+ description:"Biznes maslahat xizmati.",
+ price:150000,
+ icon:"🤝"
+},
+
+{
+ id:5,
+ name:"Digital Service",
+ description:"Raqamli biznes xizmati.",
+ price:200000,
+ icon:"💻"
+},
+
+{
+ id:6,
+ name:"Tourism Package",
+ description:"Turizm yo‘nalishidagi xizmat.",
+ price:750000,
+ icon:"✈️"
+}
+
+];
+
+
+function formatMoney(number){
+
+ return new Intl.NumberFormat(
+  "uz-UZ"
+ ).format(number) + " so‘m";
+
+}
+
+
+function renderProducts(list = products){
+
+ const container =
+ document.getElementById("productsList");
+
+ if(!container) return;
+
+ if(list.length === 0){
+
+  container.innerHTML = `
+   <div class="empty">
+   Mahsulot topilmadi.
+   </div>
+  `;
+
+  return;
+ }
+
+ container.innerHTML = list.map(product=>`
+
+ <div class="product">
+
+  <div class="product-image">
+   ${product.icon}
+  </div>
+
+  <h3>${product.name}</h3>
+
+  <p class="product-description">
+   ${product.description}
+  </p>
+
+  <div class="price">
+   ${formatMoney(product.price)}
+  </div>
+
+  <button
+   class="btn gold"
+   onclick="addToCart(${product.id})">
+   🛒 Savatchaga qo‘shish
+  </button>
+
+ </div>
+
+ `).join("");
+
+}
+
+
+function filterProducts(){
+
+ const search =
+ document
+ .getElementById("productSearch")
+ .value
+ .toLowerCase()
+ .trim();
+
+ const filtered =
+ products.filter(product=>
+  product.name.toLowerCase().includes(search) ||
+  product.description.toLowerCase().includes(search)
+ );
+
+ renderProducts(filtered);
+
+}
+
+
+/* =========================================
+   SAVATCHA
+   ========================================= */
+
+let cart =
+ JSON.parse(
+  localStorage.getItem("mgt_cart") || "[]"
+ );
+
+
+function saveCart(){
+
+ localStorage.setItem(
+  "mgt_cart",
+  JSON.stringify(cart)
+ );
+
+ updateCartCount();
+
+}
+
+
+function addToCart(productId){
+
+ const product =
+ products.find(p=>p.id === productId);
+
+ if(!product) return;
+
+ const existing =
+ cart.find(item=>item.id === productId);
+
+ if(existing){
+  existing.quantity++;
+ }else{
+  cart.push({
+   id:product.id,
+   name:product.name,
+   price:product.price,
+   quantity:1
+  });
+ }
+
+ saveCart();
+ renderCart();
+
+ showToast(
+  product.name + " savatchaga qo‘shildi."
+ );
+
+}
+
+
+function changeQuantity(productId, amount){
+
+ const item =
+ cart.find(p=>p.id === productId);
+
+ if(!item) return;
+
+ item.quantity += amount;
+
+ if(item.quantity <= 0){
+
+  cart =
+  cart.filter(p=>p.id !== productId);
+
+ }
+
+ saveCart();
+ renderCart();
+
+}
+
+
+function removeFromCart(productId){
+
+ cart =
+ cart.filter(p=>p.id !== productId);
+
+ saveCart();
+ renderCart();
+
+ showToast("Mahsulot savatchadan olib tashlandi.");
+
+}
+
+
+function updateCartCount(){
+
+ const count =
+ cart.reduce(
+  (sum,item)=>sum + item.quantity,
+  0
+ );
+
+ const element =
+ document.getElementById("cartCount");
+
+ if(element){
+  element.textContent = count;
+ }
+
+}
+
+
+function renderCart(){
+
+ const container =
+ document.getElementById("cartItems");
+
+ const totalElement =
+ document.getElementById("cartTotal");
+
+ const checkoutButton =
+ document.getElementById("checkoutButton");
+
+ if(!container) return;
+
+ if(cart.length === 0){
+
+  container.innerHTML = `
+   <div class="empty">
+    🛒 Savatcha hozircha bo‘sh.
+    <br><br>
+    <button
+     class="btn gold"
+     onclick="showPage('products')">
+     Mahsulotlarni ko‘rish
+    </button>
+   </div>
+  `;
+
+  totalElement.textContent =
+  "Jami: 0 so‘m";
+
+  if(checkoutButton){
+   checkoutButton.style.display="none";
+  }
+
+  return;
+ }
+
+ if(checkoutButton){
+  checkoutButton.style.display="inline-block";
+ }
+
+ let total = 0;
+
+ container.innerHTML =
+ cart.map(item=>{
+
+  const itemTotal =
+  item.price * item.quantity;
+
+  total += itemTotal;
+
+  return `
+
+  <div class="cart-item">
+
+   <div>
+    <div class="cart-name">
+     ${item.name}
+    </div>
+
+    <div>
+     ${formatMoney(item.price)}
+    </div>
+   </div>
+
+   <div class="quantity">
+
+    <button
+     onclick="changeQuantity(${item.id},-1)">
+     −
+    </button>
+
+    <strong>
+     ${item.quantity}
+    </strong>
+
+    <button
+     onclick="changeQuantity(${item.id},1)">
+     +
+    </button>
+
+    <button
+     class="btn red"
+     style="padding:7px 10px"
+     onclick="removeFromCart(${item.id})">
+     ×
+    </button>
+
+   </div>
+
+  </div>
+
+  `;
+
+ }).join("");
+
+ totalElement.textContent =
+ "Jami: " + formatMoney(total);
+
+}
+
+
+function showCheckout(){
+
+ if(cart.length === 0){
+
+  showToast("Avval mahsulot tanlang.");
+
+  return;
+ }
+
+ const box =
+ document.getElementById("checkoutBox");
+
+ if(box){
+  box.style.display="block";
+ }
+
+}
+
+
+/* =========================================
+   CONTACT
+   ========================================= */
+
+document
+.getElementById("contactForm")
+.addEventListener("submit", async function(event){
+
+ event.preventDefault();
+
+ const name =
+ document.getElementById("contactName").value.trim();
+
+ const contact =
+ document.getElementById("contactContact").value.trim();
+
+ const subject =
+ document.getElementById("contactSubject").value;
+
+ const message =
+ document.getElementById("contactMessage").value.trim();
+
+ const status =
+ document.getElementById("contactStatus");
+
+ if(!name || !contact || !message){
+
+  status.textContent =
+  "Iltimos, barcha maydonlarni to‘ldiring.";
+
+  return;
+ }
+
+
+ /*
+  Supabase ulangan bo‘lsa,
+  shu yerda contacts jadvaliga yuborish mumkin.
+ */
+
+ if(supabaseClient){
+
+  try{
+
+   const {error} =
+   await supabaseClient
+   .from("contacts")
+   .insert([
+    {
+     name:name,
+     contact:contact,
+     subject:subject,
+     message:message
+    }
+   ]);
+
+   if(error) throw error;
+
+  }catch(error){
+
+   console.log(
+    "Supabase:",error.message
+   );
+
+  }
+
+ }
+
+
+ status.textContent =
+ "✅ Xabaringiz qabul qilindi. Tez orada bog‘lanamiz.";
+
+ this.reset();
+
+ showToast("Xabar yuborildi.");
+
+});
+
+
+/* =========================================
+   ORDER
+   ========================================= */
+
+document
+.getElementById("checkoutForm")
+.addEventListener("submit", async function(event){
+
+ event.preventDefault();
+
+ if(cart.length === 0){
+
+  showToast("Savatcha bo‘sh.");
+
+  return;
+ }
+
+ const name =
+ document.getElementById("orderName").value.trim();
+
+ const phone =
+ document.getElementById("orderPhone").value.trim();
+
+ const address =
+ document.getElementById("orderAddress").value.trim();
+
+ const total =
+ cart.reduce(
+  (sum,item)=>
+   sum + item.price * item.quantity,
+  0
+ );
+
+
+ if(supabaseClient){
+
+  try{
+
+   const {error} =
+   await supabaseClient
+   .from("orders")
+   .insert([{
+    name:name,
+    phone:phone,
+    address:address,
+    total:total,
+    items:cart
+   }]);
+
+   if(error) throw error;
+
+  }catch(error){
+
+   console.log(
+    "Order error:",
+    error.message
+   );
+
+  }
+
+ }
+
+
+ showToast(
+  "✅ Buyurtmangiz qabul qilindi."
+ );
+
+ cart = [];
+
+ saveCart();
+ renderCart();
+
+ this.reset();
+
+ document
+ .getElementById("checkoutBox")
+ .style.display="none";
+
+});
+
+
+/* =========================================
+   MEDIA MODAL
+   ========================================= */
+
+function openMedia(title){
+
+ document
+ .getElementById("mediaTitle")
+ .textContent = title;
+
+ document
+ .getElementById("mediaModal")
+ .style.display="flex";
+
+}
+
+
+function closeModal(id){
+
+ const modal =
+ document.getElementById(id);
+
+ if(modal){
+  modal.style.display="none";
+ }
+
+}
+
+
+window.addEventListener(
+ "click",
+ function(event){
+
+  const modal =
+  document.getElementById("mediaModal");
+
+  if(event.target === modal){
+   modal.style.display="none";
+  }
+
+ }
+);
+
+
+/* =========================================
+   TOAST
+   ========================================= */
+
+let toastTimer;
+
+
+function showToast(message){
+
+ const toast =
+ document.getElementById("toast");
+
+ toast.textContent = message;
+
+ toast.style.display="block";
+
+ clearTimeout(toastTimer);
+
+ toastTimer =
+ setTimeout(()=>{
+  toast.style.display="none";
+ },3000);
+
+}
+
+
+/* =========================================
+   START
+   ========================================= */
+
+document.addEventListener(
+ "DOMContentLoaded",
+ function(){
+
+  updateCartCount();
+
+  renderProducts();
+
+  showPage("home");
+
+ }
+);
+
+</script>
+
+</body>
+</html>
