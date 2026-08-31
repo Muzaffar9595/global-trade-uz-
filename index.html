@@ -6,6 +6,9 @@
 
   <title>MUZAFFAR GLOBAL TRADE UZ</title>
 
+  <meta name="description"
+        content="MUZAFFAR GLOBAL TRADE UZ — onlayn savdo, xizmatlar, biznes va investitsiya platformasi.">
+
   <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
 
   <style>
@@ -13,121 +16,121 @@
       box-sizing: border-box;
       margin: 0;
       padding: 0;
-      font-family: Arial, sans-serif;
     }
 
     body {
+      font-family: Arial, sans-serif;
       background: #f5f7fa;
-      color: #172033;
+      color: #222;
       line-height: 1.6;
     }
 
     header {
       background: #0b1f3a;
       color: white;
-      padding: 18px 6%;
+      padding: 20px;
+      text-align: center;
       position: sticky;
       top: 0;
       z-index: 100;
-      box-shadow: 0 3px 15px rgba(0,0,0,.15);
+    }
+
+    header h1 {
+      font-size: 25px;
+      margin-bottom: 12px;
     }
 
     nav {
       display: flex;
-      justify-content: space-between;
-      align-items: center;
-      gap: 20px;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 8px;
     }
 
-    .logo {
-      font-size: 22px;
-      font-weight: bold;
-    }
-
-    nav a {
+    nav button {
+      border: none;
+      background: transparent;
       color: white;
-      text-decoration: none;
-      margin-left: 18px;
+      padding: 9px 13px;
+      cursor: pointer;
       font-size: 15px;
+      border-radius: 6px;
     }
 
-    nav a:hover {
-      color: #58d68d;
+    nav button:hover {
+      background: rgba(255,255,255,0.15);
+    }
+
+    main {
+      max-width: 1100px;
+      margin: auto;
+      padding: 30px 18px;
+    }
+
+    .page {
+      display: none;
+    }
+
+    .page.active {
+      display: block;
     }
 
     .hero {
-      min-height: 75vh;
-      display: flex;
-      align-items: center;
-      justify-content: center;
+      background: white;
+      border-radius: 16px;
+      padding: 55px 25px;
       text-align: center;
-      padding: 60px 20px;
-      background: linear-gradient(135deg, #0b1f3a, #164b78);
-      color: white;
+      box-shadow: 0 5px 20px rgba(0,0,0,0.08);
     }
 
-    .hero h1 {
-      font-size: clamp(32px, 6vw, 65px);
-      margin-bottom: 20px;
+    .hero h2 {
+      color: #0b1f3a;
+      font-size: 34px;
+      margin-bottom: 15px;
     }
 
     .hero p {
-      max-width: 800px;
+      max-width: 750px;
       margin: auto;
-      font-size: 19px;
-      opacity: .95;
+      font-size: 18px;
     }
 
     .btn {
       display: inline-block;
-      margin-top: 28px;
-      padding: 14px 25px;
-      background: #22c55e;
+      margin-top: 25px;
+      padding: 13px 24px;
+      background: #0b1f3a;
       color: white;
-      border-radius: 10px;
-      text-decoration: none;
-      font-weight: bold;
       border: none;
+      border-radius: 8px;
       cursor: pointer;
+      text-decoration: none;
     }
 
-    section {
-      padding: 70px 6%;
+    .btn:hover {
+      opacity: 0.9;
     }
 
-    section h2 {
-      text-align: center;
-      font-size: 34px;
-      margin-bottom: 40px;
-    }
-
-    .about {
-      max-width: 900px;
-      margin: auto;
-      text-align: center;
-      font-size: 18px;
+    h2 {
+      margin-bottom: 20px;
+      color: #0b1f3a;
     }
 
     .cards {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
-      gap: 22px;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 20px;
     }
 
     .card {
       background: white;
-      padding: 30px;
-      border-radius: 18px;
-      box-shadow: 0 5px 25px rgba(0,0,0,.08);
-      transition: .3s;
-    }
-
-    .card:hover {
-      transform: translateY(-6px);
+      padding: 25px;
+      border-radius: 14px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.07);
     }
 
     .card h3 {
-      margin-bottom: 12px;
+      margin-bottom: 10px;
       color: #0b1f3a;
     }
 
@@ -139,45 +142,43 @@
 
     .product {
       background: white;
-      border-radius: 15px;
-      padding: 25px;
-      box-shadow: 0 5px 20px rgba(0,0,0,.08);
+      padding: 20px;
+      border-radius: 14px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.07);
     }
 
-    .product-image {
-      height: 150px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 70px;
-      background: #eef3f8;
-      border-radius: 12px;
-      margin-bottom: 18px;
+    .product .image {
+      font-size: 55px;
+      text-align: center;
+      margin-bottom: 10px;
+    }
+
+    .product h3 {
+      color: #0b1f3a;
+      margin-bottom: 8px;
     }
 
     .price {
-      color: #16a34a;
       font-weight: bold;
-      font-size: 20px;
       margin-top: 10px;
     }
 
     form {
-      max-width: 600px;
-      margin: auto;
       background: white;
-      padding: 30px;
-      border-radius: 18px;
-      box-shadow: 0 5px 25px rgba(0,0,0,.08);
+      max-width: 600px;
+      padding: 25px;
+      border-radius: 14px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.07);
     }
 
-    input, textarea {
+    input,
+    textarea {
       width: 100%;
-      padding: 14px;
-      margin-bottom: 15px;
-      border: 1px solid #d5dbe3;
-      border-radius: 9px;
-      font-size: 16px;
+      padding: 12px;
+      margin: 8px 0 15px;
+      border: 1px solid #ccc;
+      border-radius: 7px;
+      font-size: 15px;
     }
 
     textarea {
@@ -186,30 +187,30 @@
     }
 
     footer {
+      margin-top: 50px;
       background: #0b1f3a;
       color: white;
       text-align: center;
-      padding: 35px 20px;
+      padding: 25px;
     }
 
     #status {
-      text-align: center;
       margin-top: 15px;
       font-weight: bold;
     }
 
-    @media(max-width: 700px) {
-      nav {
-        flex-direction: column;
+    @media (max-width: 600px) {
+      header h1 {
+        font-size: 20px;
       }
 
-      nav a {
-        margin: 5px;
+      nav button {
         font-size: 13px;
+        padding: 7px 9px;
       }
 
-      section {
-        padding: 50px 20px;
+      .hero h2 {
+        font-size: 26px;
       }
     }
   </style>
@@ -218,306 +219,389 @@
 <body>
 
 <header>
-  <nav>
-    <div class="logo">🦅 MUZAFFAR GLOBAL TRADE UZ</div>
+  <h1>🦅 MUZAFFAR GLOBAL TRADE UZ</h1>
 
-    <div>
-      <a href="#home">Bosh sahifa</a>
-      <a href="#about">Biz haqimizda</a>
-      <a href="#services">Xizmatlar</a>
-      <a href="#products">Savdo</a>
-      <a href="#contact">Aloqa</a>
-    </div>
+  <nav>
+    <button onclick="showPage('home')">Bosh sahifa</button>
+    <button onclick="showPage('about')">Biz haqimizda</button>
+    <button onclick="showPage('services')">Xizmatlar</button>
+    <button onclick="showPage('projects')">Loyihalar</button>
+    <button onclick="showPage('future')">Kelajak</button>
+    <button onclick="showPage('products')">Savdo</button>
+    <button onclick="showPage('contact')">Aloqa</button>
   </nav>
 </header>
 
-<section class="hero" id="home">
-  <div>
-    <h1>MUZAFFAR GLOBAL TRADE UZ</h1>
+<main>
 
-    <p>
-      Onlayn savdo, xizmatlar, biznes va investitsiya yo‘nalishlarida
-      zamonaviy imkoniyatlarni birlashtiruvchi platforma.
-    </p>
+  <!-- BOSH SAHIFA -->
+  <section id="home" class="page active">
+    <div class="hero">
+      <h2>MUZAFFAR GLOBAL TRADE UZ</h2>
 
-    <a href="#products" class="btn">Savdoni boshlash</a>
-  </div>
-</section>
+      <p>
+        Onlayn savdo, xizmatlar, biznes va investitsiya yo‘nalishlarida
+        zamonaviy imkoniyatlarni birlashtiruvchi platforma.
+      </p>
 
-<section id="about">
-  <h2>Biz haqimizda</h2>
-
-  <div class="about">
-    <p>
-      MUZAFFAR GLOBAL TRADE UZ — zamonaviy savdo, xizmatlar,
-      biznes hamkorliklari va yangi imkoniyatlarni rivojlantirishga
-      yo‘naltirilgan kompaniya.
-    </p>
-  </div>
-</section>
-
-<section id="services">
-  <h2>Xizmatlarimiz</h2>
-
-  <div class="cards">
-    <div class="card">
-      <h3>🛒 Onlayn savdo</h3>
-      <p>Mahsulotlarni zamonaviy onlayn platforma orqali taqdim etish.</p>
+      <button class="btn" onclick="showPage('products')">
+        Savdoni boshlash
+      </button>
     </div>
+  </section>
+
+
+  <!-- BIZ HAQIMIZDA -->
+  <section id="about" class="page">
+    <h2>Biz haqimizda</h2>
 
     <div class="card">
-      <h3>🤝 Biznes hamkorlik</h3>
-      <p>Mahalliy va xalqaro biznes hamkorliklarini rivojlantirish.</p>
+      <p>
+        MUZAFFAR GLOBAL TRADE UZ — zamonaviy savdo va biznes
+        imkoniyatlarini rivojlantirishga qaratilgan platforma.
+      </p>
+
+      <br>
+
+      <p>
+        Bizning maqsadimiz — mijozlar, tadbirkorlar va hamkorlar
+        uchun qulay raqamli muhit yaratish.
+      </p>
     </div>
+  </section>
+
+
+  <!-- XIZMATLAR -->
+  <section id="services" class="page">
+    <h2>Xizmatlar</h2>
+
+    <div class="cards">
+
+      <div class="card">
+        <h3>🛒 Onlayn savdo</h3>
+        <p>Mahsulotlarni internet orqali taqdim etish va sotish.</p>
+      </div>
+
+      <div class="card">
+        <h3>🤝 Biznes hamkorlik</h3>
+        <p>Mahalliy va xalqaro hamkorlik imkoniyatlarini rivojlantirish.</p>
+      </div>
+
+      <div class="card">
+        <h3>📊 Biznes xizmatlari</h3>
+        <p>Zamonaviy biznes va raqamli xizmatlarni rivojlantirish.</p>
+      </div>
+
+      <div class="card">
+        <h3>🌍 Global imkoniyatlar</h3>
+        <p>Xalqaro bozorga chiqish uchun yangi imkoniyatlar.</p>
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- LOYIHALAR -->
+  <section id="projects" class="page">
+    <h2>Loyihalar</h2>
+
+    <div class="cards">
+
+      <div class="card">
+        <h3>Global Trade</h3>
+        <p>Xalqaro savdo platformasini rivojlantirish.</p>
+      </div>
+
+      <div class="card">
+        <h3>Digital Business</h3>
+        <p>Biznes jarayonlarini raqamlashtirish.</p>
+      </div>
+
+      <div class="card">
+        <h3>Future Market</h3>
+        <p>Kelajakdagi yangi savdo imkoniyatlari.</p>
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- KELAJAK -->
+  <section id="future" class="page">
+    <h2>Kelajak</h2>
 
     <div class="card">
-      <h3>🌍 Global imkoniyatlar</h3>
-      <p>Xalqaro bozorga chiqish va yangi biznes imkoniyatlarini izlash.</p>
+      <p>
+        MUZAFFAR GLOBAL TRADE UZ kelajakda xalqaro savdo,
+        raqamli xizmatlar, yangi biznes loyihalari va
+        texnologik yechimlarni rivojlantirishni maqsad qiladi.
+      </p>
     </div>
+  </section>
 
-    <div class="card">
-      <h3>💼 Konsalting</h3>
-      <p>Biznes va savdo yo‘nalishlarida zamonaviy yechimlar.</p>
+
+  <!-- SAVDO / MAHSULOTLAR -->
+  <section id="products" class="page">
+    <h2>Mahsulotlar</h2>
+
+    <div id="productsList" class="products">
+      <p>Mahsulotlar yuklanmoqda...</p>
     </div>
-  </div>
-</section>
+  </section>
 
-<section id="products">
-  <h2>Mahsulotlar</h2>
 
-  <div id="productsList" class="products">
-    <div class="card">
-      <h3>Mahsulotlar yuklanmoqda...</h3>
-      <p>Supabase ma'lumotlar bazasiga ulanmoqda.</p>
-    </div>
-  </div>
-</section>
+  <!-- ALOQA -->
+  <section id="contact" class="page">
+    <h2>Aloqa</h2>
 
-<section id="contact">
-  <h2>Aloqa</h2>
+    <form id="contactForm">
 
-  <form id="contactForm">
+      <label>Ismingiz</label>
+      <input
+        type="text"
+        id="name"
+        placeholder="Ismingizni kiriting"
+        required
+      >
 
-    <input
-      type="text"
-      id="name"
-      placeholder="Ismingiz"
-      required
-    >
+      <label>Email</label>
+      <input
+        type="email"
+        id="email"
+        placeholder="Email manzilingiz"
+        required
+      >
 
-    <input
-      type="tel"
-      id="phone"
-      placeholder="Telefon raqamingiz"
-      required
-    >
+      <label>Xabaringiz</label>
+      <textarea
+        id="message"
+        placeholder="Xabaringizni yozing..."
+        required
+      ></textarea>
 
-    <textarea
-      id="message"
-      placeholder="Xabaringiz"
-      required
-    ></textarea>
+      <button class="btn" type="submit">
+        Xabar yuborish
+      </button>
 
-    <button class="btn" type="submit">
-      Xabar yuborish
-    </button>
+      <div id="status"></div>
 
-    <div id="status"></div>
+    </form>
+  </section>
 
-  </form>
-</section>
+</main>
+
 
 <footer>
-  <h3>MUZAFFAR GLOBAL TRADE UZ</h3>
-  <p>© 2026 Barcha huquqlar himoyalangan.</p>
+  <p>© 2026 MUZAFFAR GLOBAL TRADE UZ</p>
+  <p>Barcha huquqlar himoyalangan.</p>
 </footer>
 
 
 <script>
 
-/* =====================================================
-   SUPABASE ULASH
-   ===================================================== */
+  // ==========================================
+  // SUPABASE ULanishi
+  // ==========================================
 
-/*
-  1. SUPABASE PROJECT URL:
-     Supabase → Project Settings → API
+  const SUPABASE_URL =
+    "https://dvcagjhapqfvelbmdsbb.supabase.co";
 
-  2. PUBLISHABLE KEY:
-     Supabase → Project Settings → API
-*/
+  const SUPABASE_KEY =
+    "YOUR_SUPABASE_PUBLISHABLE_KEY";
 
-
-const SUPABASE_URL = "BU_YERGA_PROJECT_URLNI_QOYING";
-
-const SUPABASE_KEY = "BU_YERGA_PUBLISHABLE_KEYNI_QOYING";
-
-
-const supabaseClient = window.supabase.createClient(
-  SUPABASE_URL,
-  SUPABASE_KEY
-);
+  const supabaseClient =
+    window.supabase.createClient(
+      SUPABASE_URL,
+      SUPABASE_KEY
+    );
 
 
-/* =====================================================
-   MAHSULOTLARNI SUPABASEDAN OLISH
-   ===================================================== */
+  // ==========================================
+  // SAHIFALAR
+  // ==========================================
 
-async function loadProducts() {
+  function showPage(pageName) {
 
-  const productsList = document.getElementById("productsList");
+    document.querySelectorAll(".page")
+      .forEach(page => {
+        page.classList.remove("active");
+      });
 
-  try {
+    const selectedPage =
+      document.getElementById(pageName);
 
-    const { data, error } = await supabaseClient
-      .from("products")
-      .select("*")
-      .eq("active", true)
-      .order("created_at", { ascending: false });
-
-    if (error) {
-      throw error;
+    if (selectedPage) {
+      selectedPage.classList.add("active");
+      window.scrollTo(0, 0);
     }
 
-    if (!data || data.length === 0) {
-
-      productsList.innerHTML = `
-        <div class="card">
-          <h3>Hozircha mahsulot yo‘q</h3>
-          <p>Yangi mahsulotlar tez orada qo‘shiladi.</p>
-        </div>
-      `;
-
-      return;
+    if (pageName === "products") {
+      loadProducts();
     }
-
-    productsList.innerHTML = "";
-
-    data.forEach(product => {
-
-      const div = document.createElement("div");
-
-      div.className = "product";
-
-      div.innerHTML = `
-        <div class="product-image">
-          ${product.image || "📦"}
-        </div>
-
-        <h3>${escapeHTML(product.name)}</h3>
-
-        <p>
-          ${escapeHTML(product.description || "")}
-        </p>
-
-        <div class="price">
-          ${Number(product.price || 0).toLocaleString("uz-UZ")} so‘m
-        </div>
-      `;
-
-      productsList.appendChild(div);
-
-    });
-
-  } catch (error) {
-
-    console.error("Supabase xatosi:", error);
-
-    productsList.innerHTML = `
-      <div class="card">
-        <h3>Ma'lumotlarni yuklashda xatolik</h3>
-        <p>Supabase ulanishini tekshiring.</p>
-      </div>
-    `;
   }
-}
 
 
-/* =====================================================
-   ALOQA FORMASI
-   ===================================================== */
+  // ==========================================
+  // MAHSULOTLARNI SUPABASE'DAN OLISH
+  // ==========================================
 
-document
-  .getElementById("contactForm")
-  .addEventListener("submit", async function(event) {
+  async function loadProducts() {
 
-    event.preventDefault();
+    const container =
+      document.getElementById("productsList");
 
-    const status = document.getElementById("status");
-
-    const name =
-      document.getElementById("name").value.trim();
-
-    const phone =
-      document.getElementById("phone").value.trim();
-
-    const message =
-      document.getElementById("message").value.trim();
-
-
-    status.textContent = "Yuborilmoqda...";
-
+    container.innerHTML =
+      "<p>Mahsulotlar yuklanmoqda...</p>";
 
     try {
 
-      const { error } = await supabaseClient
-        .from("contacts")
-        .insert([
-          {
-            name: name,
-            phone: phone,
-            message: message
-          }
-        ]);
-
+      const { data, error } =
+        await supabaseClient
+          .from("products")
+          .select("*")
+          .eq("active", true)
+          .order("created_at", {
+            ascending: false
+          });
 
       if (error) {
         throw error;
       }
 
+      if (!data || data.length === 0) {
 
-      status.textContent =
-        "Xabaringiz muvaffaqiyatli yuborildi!";
+        container.innerHTML =
+          "<p>Hozircha mahsulotlar mavjud emas.</p>";
 
+        return;
+      }
 
-      document
-        .getElementById("contactForm")
-        .reset();
+      container.innerHTML = "";
 
+      data.forEach(product => {
+
+        const item =
+          document.createElement("div");
+
+        item.className = "product";
+
+        item.innerHTML = `
+          <div class="image">
+            ${product.image || "📦"}
+          </div>
+
+          <h3>
+            ${escapeHTML(product.name)}
+          </h3>
+
+          <p>
+            ${escapeHTML(product.description || "")}
+          </p>
+
+          <div class="price">
+            ${Number(product.price || 0).toLocaleString()}
+          </div>
+        `;
+
+        container.appendChild(item);
+      });
 
     } catch (error) {
 
       console.error(error);
 
-      status.textContent =
-        "Xatolik yuz berdi. Keyinroq urinib ko‘ring.";
-
+      container.innerHTML = `
+        <div class="card">
+          <h3>Mahsulotlarni yuklashda xatolik</h3>
+          <p>
+            Supabase ulanishini tekshiring.
+          </p>
+        </div>
+      `;
     }
-
-  });
-
-
-/* =====================================================
-   XAVFSIZ MATN
-   ===================================================== */
-
-function escapeHTML(value) {
-
-  return String(value)
-    .replace(/&/g, "&amp;")
-    .replace(/</g, "&lt;")
-    .replace(/>/g, "&gt;")
-    .replace(/"/g, "&quot;")
-    .replace(/'/g, "&#039;");
-
-}
+  }
 
 
-/* =====================================================
-   SAYT ISHGA TUSHGANDA MAHSULOTLARNI YUKLASH
-   ===================================================== */
+  // ==========================================
+  // ALOQA FORMASI
+  // ==========================================
 
-loadProducts();
+  document
+    .getElementById("contactForm")
+    .addEventListener("submit", async function(event) {
+
+      event.preventDefault();
+
+      const name =
+        document.getElementById("name").value.trim();
+
+      const email =
+        document.getElementById("email").value.trim();
+
+      const message =
+        document.getElementById("message").value.trim();
+
+      const status =
+        document.getElementById("status");
+
+      status.textContent =
+        "Xabar yuborilmoqda...";
+
+      try {
+
+        const { error } =
+          await supabaseClient
+            .from("contacts")
+            .insert([
+              {
+                name: name,
+                email: email,
+                message: message
+              }
+            ]);
+
+        if (error) {
+          throw error;
+        }
+
+        status.textContent =
+          "✅ Xabaringiz muvaffaqiyatli yuborildi!";
+
+        document
+          .getElementById("contactForm")
+          .reset();
+
+      } catch (error) {
+
+        console.error(error);
+
+        status.textContent =
+          "❌ Xabar yuborilmadi. Supabase jadvalini tekshiring.";
+      }
+
+    });
+
+
+  // ==========================================
+  // XAVFSIZ MATN
+  // ==========================================
+
+  function escapeHTML(text) {
+
+    return String(text)
+      .replace(/&/g, "&amp;")
+      .replace(/</g, "&lt;")
+      .replace(/>/g, "&gt;")
+      .replace(/"/g, "&quot;")
+      .replace(/'/g, "&#039;");
+  }
+
+
+  // ==========================================
+  // BOSHLANG‘ICH YUKLASH
+  // ==========================================
+
+  showPage("home");
 
 </script>
 
