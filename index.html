@@ -12,7 +12,6 @@ content="MUZAFFAR GLOBAL TRADE UZ — zamonaviy savdo, biznes va xizmatlar platf
 <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
 
 <style>
-
 *{
   box-sizing:border-box;
   margin:0;
@@ -290,6 +289,10 @@ textarea{
   color:#667386;
 }
 
+.cart-box{
+  padding:25px;
+}
+
 .cart-item{
   display:flex;
   align-items:center;
@@ -321,10 +324,6 @@ textarea{
   border-radius:6px;
   cursor:pointer;
   background:#e6edf5;
-}
-
-.quantity button:hover{
-  background:#d4dfeb;
 }
 
 .total{
@@ -401,9 +400,7 @@ footer p{
   .quantity{
     align-self:flex-end;
   }
-
 }
-
 </style>
 </head>
 
@@ -415,55 +412,45 @@ footer p{
 
 <nav>
 
-<button data-page="home"
-onclick="showPage('home')">
+<button data-page="home" onclick="showPage('home')">
 Bosh sahifa
 </button>
 
-<button data-page="about"
-onclick="showPage('about')">
+<button data-page="about" onclick="showPage('about')">
 Biz haqimizda
 </button>
 
-<button data-page="services"
-onclick="showPage('services')">
+<button data-page="services" onclick="showPage('services')">
 Xizmatlar
 </button>
 
-<button data-page="projects"
-onclick="showPage('projects')">
+<button data-page="projects" onclick="showPage('projects')">
 Loyihalar
 </button>
 
-<button data-page="future"
-onclick="showPage('future')">
+<button data-page="future" onclick="showPage('future')">
 Kelajak
 </button>
 
-<button data-page="products"
-onclick="showPage('products')">
+<button data-page="products" onclick="showPage('products')">
 🛍️ Savdo
 </button>
 
-<button data-page="contact"
-onclick="showPage('contact')">
+<button data-page="contact" onclick="showPage('contact')">
 📩 Aloqa
 </button>
 
-<button class="cart-button"
-onclick="showPage('cart')">
+<button class="cart-button" onclick="showPage('cart')">
 🛒 Savatcha
 <span id="cartCount" class="cart-count">0</span>
 </button>
 
 </nav>
-
 </header>
 
 <main>
 
 <!-- BOSH SAHIFA -->
-
 <section id="home" class="page active">
 
 <div class="hero">
@@ -478,18 +465,15 @@ yo‘nalishlarida zamonaviy imkoniyatlarni birlashtiruvchi
 raqamli platforma.
 </p>
 
-<button class="btn"
-onclick="showPage('products')">
+<button class="btn" onclick="showPage('products')">
 🛍️ Savdoni boshlash
 </button>
 
 </div>
-
 </section>
 
 
 <!-- BIZ HAQIMIZDA -->
-
 <section id="about" class="page">
 
 <h2>Biz haqimizda</h2>
@@ -512,12 +496,10 @@ uchun qulay, ishonchli va zamonaviy raqamli muhit yaratish.
 </p>
 
 </div>
-
 </section>
 
 
 <!-- XIZMATLAR -->
-
 <section id="services" class="page">
 
 <h2>Xizmatlar</h2>
@@ -526,39 +508,29 @@ uchun qulay, ishonchli va zamonaviy raqamli muhit yaratish.
 
 <div class="card">
 <h3>🛒 Onlayn savdo</h3>
-<p>
-Mahsulotlarni internet orqali taqdim etish va sotish.
-</p>
+<p>Mahsulotlarni internet orqali taqdim etish va sotish.</p>
 </div>
 
 <div class="card">
 <h3>🤝 Biznes hamkorlik</h3>
-<p>
-Mahalliy va xalqaro hamkorlik imkoniyatlarini rivojlantirish.
-</p>
+<p>Mahalliy va xalqaro hamkorlik imkoniyatlarini rivojlantirish.</p>
 </div>
 
 <div class="card">
 <h3>📊 Biznes xizmatlari</h3>
-<p>
-Zamonaviy biznes va raqamli xizmatlarni rivojlantirish.
-</p>
+<p>Zamonaviy biznes va raqamli xizmatlarni rivojlantirish.</p>
 </div>
 
 <div class="card">
 <h3>🌍 Global imkoniyatlar</h3>
-<p>
-Xalqaro bozorga chiqish uchun yangi imkoniyatlar.
-</p>
+<p>Xalqaro bozorga chiqish uchun yangi imkoniyatlar.</p>
 </div>
 
 </div>
-
 </section>
 
 
 <!-- LOYIHALAR -->
-
 <section id="projects" class="page">
 
 <h2>Loyihalar</h2>
@@ -567,32 +539,24 @@ Xalqaro bozorga chiqish uchun yangi imkoniyatlar.
 
 <div class="card">
 <h3>🌐 Global Trade</h3>
-<p>
-Xalqaro savdo platformasini rivojlantirish.
-</p>
+<p>Xalqaro savdo platformasini rivojlantirish.</p>
 </div>
 
 <div class="card">
 <h3>💻 Digital Business</h3>
-<p>
-Biznes jarayonlarini raqamlashtirish.
-</p>
+<p>Biznes jarayonlarini raqamlashtirish.</p>
 </div>
 
 <div class="card">
 <h3>🚀 Future Market</h3>
-<p>
-Kelajakdagi yangi savdo imkoniyatlari.
-</p>
+<p>Kelajakdagi yangi savdo imkoniyatlari.</p>
 </div>
 
 </div>
-
 </section>
 
 
 <!-- KELAJAK -->
-
 <section id="future" class="page">
 
 <h2>Kelajak</h2>
@@ -606,18 +570,13 @@ texnologik yechimlarni rivojlantirishni maqsad qiladi.
 </p>
 
 </div>
-
 </section>
 
 
 <!-- SAVDO -->
-
 <section id="products" class="page">
 
 <h2>🛍️ Mahsulotlar</h2>
-
-
-<!-- MAHSULOT QO'SHISH -->
 
 <div class="admin-box">
 
@@ -628,21 +587,16 @@ texnologik yechimlarni rivojlantirishni maqsad qiladi.
 <div class="form-grid">
 
 <div>
-
 <label>Mahsulot nomi</label>
 
 <input
 id="productName"
 type="text"
 placeholder="Masalan: Telefon"
-required
->
-
+required>
 </div>
 
-
 <div>
-
 <label>Narxi</label>
 
 <input
@@ -651,11 +605,8 @@ type="number"
 min="0"
 step="0.01"
 placeholder="2500000"
-required
->
-
+required>
 </div>
-
 
 <div class="full">
 
@@ -663,11 +614,9 @@ required
 
 <textarea
 id="productDescription"
-placeholder="Mahsulot haqida ma'lumot..."
-></textarea>
+placeholder="Mahsulot haqida ma'lumot..."></textarea>
 
 </div>
-
 
 <div class="full">
 
@@ -676,11 +625,9 @@ placeholder="Mahsulot haqida ma'lumot..."
 <input
 id="productImage"
 type="url"
-placeholder="https://..."
->
+placeholder="https://...">
 
 </div>
-
 
 <div>
 
@@ -688,13 +635,8 @@ placeholder="https://..."
 
 <select id="productActive">
 
-<option value="true">
-Faol
-</option>
-
-<option value="false">
-Yashirin
-</option>
+<option value="true">Faol</option>
+<option value="false">Yashirin</option>
 
 </select>
 
@@ -702,42 +644,25 @@ Yashirin
 
 </div>
 
-
-<button
-class="btn green"
-type="submit">
-
+<button class="btn green" type="submit">
 ➕ Mahsulotni saqlash
-
 </button>
 
-
-<div
-id="productStatus"
-class="status">
-</div>
+<div id="productStatus" class="status"></div>
 
 </form>
-
 </div>
 
-
-<!-- QIDIRUV -->
 
 <input
 id="searchInput"
 class="search-box"
 type="text"
 placeholder="🔎 Mahsulot qidirish..."
-oninput="filterProducts()"
->
+oninput="filterProducts()">
 
 
-<!-- MAHSULOTLAR -->
-
-<div
-id="productsList"
-class="products">
+<div id="productsList" class="products">
 
 <div class="empty">
 📦 Mahsulotlar yuklanmoqda...
@@ -749,7 +674,6 @@ class="products">
 
 
 <!-- SAVATCHA -->
-
 <section id="cart" class="page">
 
 <h2>🛒 Savatcha</h2>
@@ -764,33 +688,25 @@ class="products">
 id="checkoutButton"
 class="btn green"
 onclick="openCheckout()">
-
 📦 Buyurtma berish
-
 </button>
 
 <button
 class="btn gray"
 onclick="showPage('products')">
-
 ← Xaridni davom ettirish
-
 </button>
 
 </div>
 
 
-<!-- BUYURTMA -->
+<!-- BUYURTMA FORMASI -->
 
-<div
-id="checkoutBox"
-class="checkout-box">
+<div id="checkoutBox" class="checkout-box">
 
 <h2>📦 Buyurtma ma’lumotlari</h2>
 
-
 <form id="orderForm">
-
 
 <div class="order-summary">
 
@@ -800,67 +716,45 @@ class="checkout-box">
 
 </div>
 
-
-<label>
-Ismingiz
-</label>
+<label>Ismingiz</label>
 
 <input
 id="orderName"
 type="text"
 placeholder="Ismingiz"
-required
->
+required>
 
 
-<label>
-Telefon raqamingiz
-</label>
+<label>Telefon raqamingiz</label>
 
 <input
 id="orderPhone"
 type="tel"
 placeholder="+998 XX XXX XX XX"
-required
->
+required>
 
 
-<label>
-Manzil
-</label>
+<label>Manzil</label>
 
 <input
 id="orderAddress"
 type="text"
 placeholder="Yetkazib berish manzili"
-required
->
+required>
 
 
-<label>
-Qo‘shimcha izoh
-</label>
+<label>Qo‘shimcha izoh</label>
 
 <textarea
 id="orderNote"
-placeholder="Qo‘shimcha ma'lumot..."
-></textarea>
+placeholder="Qo‘shimcha ma'lumot..."></textarea>
 
 
-<button
-class="btn"
-type="submit">
-
+<button class="btn" type="submit">
 ✅ Buyurtmani yuborish
-
 </button>
 
-
-<div
-id="orderStatus"
-class="status">
-</div>
-
+<div id="orderStatus" class="status"></div>
 
 </form>
 
@@ -870,61 +764,43 @@ class="status">
 
 
 <!-- ALOQA -->
-
 <section id="contact" class="page">
 
 <h2>📩 Aloqa</h2>
 
 <form id="contactForm">
 
-<label>
-Ismingiz
-</label>
+<label>Ismingiz</label>
 
 <input
 id="name"
 type="text"
 placeholder="Ismingizni kiriting"
-required
->
+required>
 
 
-<label>
-Email
-</label>
+<label>Email</label>
 
 <input
 id="email"
 type="email"
 placeholder="Email manzilingiz"
-required
->
+required>
 
 
-<label>
-Xabaringiz
-</label>
+<label>Xabaringiz</label>
 
 <textarea
 id="message"
 placeholder="Xabaringizni yozing..."
-required
-></textarea>
+required></textarea>
 
 
-<button
-class="btn"
-type="submit">
-
+<button class="btn" type="submit">
 📩 Xabar yuborish
-
 </button>
 
-
-<div
-id="status"
-class="status">
-</div>
+<div id="status" class="status"></div>
 
 </form>
 
@@ -935,22 +811,18 @@ class="status">
 
 <footer>
 
-<p>
-© 2026 MUZAFFAR GLOBAL TRADE UZ
-</p>
+<p>© 2026 MUZAFFAR GLOBAL TRADE UZ</p>
 
-<p>
-Barcha huquqlar himoyalangan.
-</p>
+<p>Barcha huquqlar himoyalangan.</p>
 
 </footer>
 
 
 <script>
 
-/* =========================================
+/* ==========================================
    SUPABASE
-========================================= */
+========================================== */
 
 const SUPABASE_URL =
 "https://dvcagjhapqfvelbmdsbb.supabase.co";
@@ -965,21 +837,35 @@ SUPABASE_KEY
 );
 
 
-/* =========================================
+/* ==========================================
    O'ZGARUVCHILAR
-========================================= */
+========================================== */
 
 let allProducts = [];
 
-let cart =
+let cart = [];
+
+try {
+
+cart =
 JSON.parse(
 localStorage.getItem("mgt_cart") || "[]"
 );
 
+if(!Array.isArray(cart)){
+cart=[];
+}
 
-/* =========================================
+} catch(e){
+
+cart=[];
+
+}
+
+
+/* ==========================================
    SAHIFA
-========================================= */
+========================================== */
 
 function showPage(pageName){
 
@@ -1031,9 +917,9 @@ renderCart();
 }
 
 
-/* =========================================
+/* ==========================================
    MAHSULOTLARNI YUKLASH
-========================================= */
+========================================== */
 
 async function loadProducts(){
 
@@ -1051,10 +937,7 @@ container.innerHTML =
 
 try{
 
-const {
-data,
-error
-} =
+const result =
 await supabaseClient
 .from("products")
 .select("*")
@@ -1064,13 +947,13 @@ ascending:false
 });
 
 
-if(error){
-throw error;
+if(result.error){
+throw result.error;
 }
 
 
 allProducts =
-data || [];
+result.data || [];
 
 
 renderProducts(allProducts);
@@ -1080,14 +963,11 @@ renderProducts(allProducts);
 
 console.error(error);
 
-
 container.innerHTML =
 `
 <div class="card">
 
-<h3>
-⚠️ Mahsulotlarni yuklashda xatolik
-</h3>
+<h3>⚠️ Mahsulotlarni yuklashda xatolik</h3>
 
 <p>
 Supabase bilan bog‘lanishda muammo yuz berdi.
@@ -1101,9 +981,9 @@ Supabase bilan bog‘lanishda muammo yuz berdi.
 }
 
 
-/* =========================================
-   MAHSULOTLARNI CHIQARISH
-========================================= */
+/* ==========================================
+   MAHSULOTLARNI KO'RSATISH
+========================================== */
 
 function renderProducts(products){
 
@@ -1117,9 +997,7 @@ container.innerHTML =
 `
 <div class="empty">
 
-<h3>
-📦 Mahsulot mavjud emas
-</h3>
+<h3>📦 Mahsulot mavjud emas</h3>
 
 <p>
 Hozircha mahsulot qo‘shilmagan.
@@ -1140,7 +1018,6 @@ products.forEach(product=>{
 
 const item =
 document.createElement("div");
-
 
 item.className="product";
 
@@ -1163,8 +1040,7 @@ isImage
 `
 <img
 src="${escapeHTML(image)}"
-alt="${escapeHTML(product.name || "Mahsulot")}"
->
+alt="${escapeHTML(product.name || "Mahsulot")}">
 `
 :
 escapeHTML(image);
@@ -1174,11 +1050,8 @@ item.innerHTML =
 `
 
 <div class="product-image">
-
 ${imageHTML}
-
 </div>
-
 
 <h3>
 ${escapeHTML(
@@ -1186,22 +1059,15 @@ product.name || "Nomsiz mahsulot"
 )}
 </h3>
 
-
 <p class="product-description">
-
 ${escapeHTML(
 product.description || ""
 )}
-
 </p>
 
-
 <div class="price">
-
 ${formatPrice(product.price)}
-
 </div>
-
 
 <div class="product-actions">
 
@@ -1225,9 +1091,9 @@ container.appendChild(item);
 }
 
 
-/* =========================================
-   QIDIRUV
-========================================= */
+/* ==========================================
+   QIDIRISH
+========================================== */
 
 function filterProducts(){
 
@@ -1246,7 +1112,6 @@ const name =
 String(
 product.name || ""
 ).toLowerCase();
-
 
 const description =
 String(
@@ -1267,9 +1132,9 @@ renderProducts(filtered);
 }
 
 
-/* =========================================
+/* ==========================================
    MAHSULOT QO'SHISH
-========================================= */
+========================================== */
 
 document
 .getElementById("productForm")
@@ -1322,14 +1187,12 @@ document
 
 
 status.textContent =
-"Mahsulot saqlanmoqda...";
+"⏳ Mahsulot saqlanmoqda...";
 
 
 try{
 
-const {
-error
-} =
+const result =
 await supabaseClient
 .from("products")
 .insert([
@@ -1343,8 +1206,8 @@ active:active
 ]);
 
 
-if(error){
-throw error;
+if(result.error){
+throw result.error;
 }
 
 
@@ -1364,18 +1227,17 @@ await loadProducts();
 
 console.error(error);
 
-
 status.textContent =
-"❌ Mahsulot saqlanmadi. Supabase ruxsatlarini tekshiring.";
+"❌ Mahsulot saqlanmadi.";
 
 }
 
 });
 
 
-/* =========================================
+/* ==========================================
    SAVATCHAGA QO'SHISH
-========================================= */
+========================================== */
 
 function addToCart(productId){
 
@@ -1388,7 +1250,11 @@ Number(productId)
 
 
 if(!product){
+
+alert("Mahsulot topilmadi.");
+
 return;
+
 }
 
 
@@ -1413,9 +1279,7 @@ id:product.id,
 
 name:product.name,
 
-price:Number(
-product.price || 0
-),
+price:Number(product.price || 0),
 
 quantity:1
 
@@ -1437,9 +1301,9 @@ showPage("cart");
 }
 
 
-/* =========================================
+/* ==========================================
    SAVATCHANI SAQLASH
-========================================= */
+========================================== */
 
 function saveCart(){
 
@@ -1450,14 +1314,12 @@ JSON.stringify(cart)
 
 updateCartCount();
 
-renderCart();
-
 }
 
 
-/* =========================================
+/* ==========================================
    SAVATCHA SONI
-========================================= */
+========================================== */
 
 function updateCartCount(){
 
@@ -1476,28 +1338,20 @@ document
 }
 
 
-/* =========================================
-   SAVATCHANI CHIQARISH
-========================================= */
+/* ==========================================
+   SAVATCHANI KO'RSATISH
+========================================== */
 
 function renderCart(){
 
 const list =
-document.getElementById(
-"cartList"
-);
-
+document.getElementById("cartList");
 
 const totalBox =
-document.getElementById(
-"cartTotal"
-);
-
+document.getElementById("cartTotal");
 
 const checkoutButton =
-document.getElementById(
-"checkoutButton"
-);
+document.getElementById("checkoutButton");
 
 
 if(!cart.length){
@@ -1506,9 +1360,7 @@ list.innerHTML =
 `
 <div class="empty">
 
-<h3>
-🛒 Savatcha bo‘sh
-</h3>
+<h3>🛒 Savatcha bo‘sh</h3>
 
 <p>
 Mahsulotlarni Savdo bo‘limidan tanlang.
@@ -1517,12 +1369,13 @@ Mahsulotlarni Savdo bo‘limidan tanlang.
 </div>
 `;
 
-
 totalBox.innerHTML="";
-
 
 checkoutButton.style.display="none";
 
+document
+.getElementById("checkoutBox")
+.style.display="none";
 
 return;
 
@@ -1552,9 +1405,7 @@ total += itemTotal;
 const row =
 document.createElement("div");
 
-
-row.className =
-"cart-item";
+row.className="cart-item";
 
 
 row.innerHTML =
@@ -1563,15 +1414,11 @@ row.innerHTML =
 <div class="cart-info">
 
 <div class="cart-name">
-
 ${escapeHTML(item.name)}
-
 </div>
 
 <div>
-
 ${formatPrice(item.price)}
-
 </div>
 
 </div>
@@ -1580,33 +1427,22 @@ ${formatPrice(item.price)}
 <div class="quantity">
 
 <button
-onclick="changeQuantity(${item.id},-1)">
-
+onclick="changeQuantity(${Number(item.id)},-1)">
 −
-
 </button>
-
 
 <strong>
-
-${item.quantity}
-
+${Number(item.quantity)}
 </strong>
 
-
 <button
-onclick="changeQuantity(${item.id},1)">
-
+onclick="changeQuantity(${Number(item.id)},1)">
 +
-
 </button>
 
-
 <button
-onclick="removeFromCart(${item.id})">
-
+onclick="removeFromCart(${Number(item.id)})">
 🗑️
-
 </button>
 
 </div>
@@ -1622,19 +1458,16 @@ list.appendChild(row);
 totalBox.innerHTML =
 `
 <div class="total">
-
-Jami:
-${formatPrice(total)}
-
+Jami: ${formatPrice(total)}
 </div>
 `;
 
 }
 
 
-/* =========================================
-   MIQDORNI O'ZGARTIRISH
-========================================= */
+/* ==========================================
+   MIQDOR
+========================================== */
 
 function changeQuantity(id,change){
 
@@ -1669,12 +1502,14 @@ Number(id)
 
 saveCart();
 
+renderCart();
+
 }
 
 
-/* =========================================
-   SAVATCHADAN O'CHIRISH
-========================================= */
+/* ==========================================
+   O'CHIRISH
+========================================== */
 
 function removeFromCart(id){
 
@@ -1688,21 +1523,16 @@ Number(id)
 
 saveCart();
 
+renderCart();
+
 }
 
 
-/* =========================================
+/* ==========================================
    BUYURTMA FORMASINI OCHISH
-========================================= */
+========================================== */
 
 function openCheckout(){
-
-/*
-  MUHIM:
-  Bu yerda cart=[] qilinmaydi.
-  Buyurtma muvaffaqiyatli yuborilmaguncha
-  mahsulot savatchada qoladi.
-*/
 
 if(!cart || cart.length === 0){
 
@@ -1746,7 +1576,7 @@ html +=
 `
 <p>
 ${escapeHTML(item.name)}
-× ${item.quantity}
+× ${Number(item.quantity)}
 =
 <strong>
 ${formatPrice(itemTotal)}
@@ -1781,9 +1611,9 @@ block:"start"
 }
 
 
-/* =========================================
+/* ==========================================
    BUYURTMA YUBORISH
-========================================= */
+========================================== */
 
 document
 .getElementById("orderForm")
@@ -1796,9 +1626,7 @@ event.preventDefault();
 
 if(!cart || cart.length === 0){
 
-alert(
-"🛒 Savatcha bo‘sh."
-);
+alert("🛒 Savatcha bo‘sh.");
 
 return;
 
@@ -1841,45 +1669,30 @@ document.getElementById(
 
 let total=0;
 
-let productsText="";
-
-
-cart.forEach(item=>{
+const orderProducts =
+cart.map(item=>{
 
 const itemTotal =
 Number(item.price) *
 Number(item.quantity);
 
-
 total += itemTotal;
 
+return {
 
-productsText +=
-`${item.name} x ${item.quantity} = ${formatPrice(itemTotal)}\n`;
+id:item.id,
+
+name:item.name,
+
+price:Number(item.price),
+
+quantity:Number(item.quantity),
+
+subtotal:itemTotal
+
+};
 
 });
-
-
-const orderMessage =
-`
-🛒 YANGI BUYURTMA
-
-Mijoz: ${name}
-
-Telefon: ${phone}
-
-Manzil: ${address}
-
-Mahsulotlar:
-
-${productsText}
-
-JAMI:
-${formatPrice(total)}
-
-Izoh:
-${note || "Yo‘q"}
-`;
 
 
 status.textContent =
@@ -1888,28 +1701,30 @@ status.textContent =
 
 try{
 
-const {
-error
-} =
+const result =
 await supabaseClient
-.from("contacts")
+.from("orders")
 .insert([
 {
-name:name,
-email:phone,
-message:orderMessage
+customer_name:name,
+phone:phone,
+address:address,
+note:note,
+products:orderProducts,
+total:total,
+status:"new"
 }
 ]);
 
 
-if(error){
-throw error;
+if(result.error){
+throw result.error;
 }
 
 
 /*
-  FAQAT BUYURTMA MUVAFFAQIYATLI
-  SAQLANGANDAN KEYIN SAVATCHA TOZALANADI.
+  FAQAT SUPABASE BUYURTMANI QABUL QILGANDAN
+  KEYIN SAVATCHA TOZALANADI.
 */
 
 status.textContent =
@@ -1918,44 +1733,36 @@ status.textContent =
 
 cart=[];
 
-
-localStorage.removeItem(
-"mgt_cart"
-);
-
+localStorage.removeItem("mgt_cart");
 
 updateCartCount();
-
 
 document
 .getElementById("orderForm")
 .reset();
 
-
 document
 .getElementById("checkoutBox")
 .style.display="none";
-
 
 renderCart();
 
 
 }catch(error){
 
-console.error(error);
-
+console.error("ORDER ERROR:",error);
 
 status.textContent =
-"❌ Buyurtma yuborilmadi. Ma'lumotlar saqlanmadi. Qaytadan urinib ko‘ring.";
+"❌ Buyurtma yuborilmadi. Iltimos, qaytadan urinib ko‘ring.";
 
 }
 
 });
 
 
-/* =========================================
-   ALOQA FORMASI
-========================================= */
+/* ==========================================
+   ALOQA
+========================================== */
 
 document
 .getElementById("contactForm")
@@ -1988,9 +1795,7 @@ document
 
 
 const status =
-document.getElementById(
-"status"
-);
+document.getElementById("status");
 
 
 status.textContent =
@@ -1999,9 +1804,7 @@ status.textContent =
 
 try{
 
-const {
-error
-} =
+const result =
 await supabaseClient
 .from("contacts")
 .insert([
@@ -2013,8 +1816,8 @@ message:message
 ]);
 
 
-if(error){
-throw error;
+if(result.error){
+throw result.error;
 }
 
 
@@ -2031,18 +1834,17 @@ document
 
 console.error(error);
 
-
 status.textContent =
-"❌ Xabar yuborilmadi. Supabase ruxsatlarini tekshiring.";
+"❌ Xabar yuborilmadi.";
 
 }
 
 });
 
 
-/* =========================================
+/* ==========================================
    NARX
-========================================= */
+========================================== */
 
 function formatPrice(price){
 
@@ -2054,9 +1856,9 @@ return Number(price || 0)
 }
 
 
-/* =========================================
+/* ==========================================
    XAVFSIZ HTML
-========================================= */
+========================================== */
 
 function escapeHTML(value){
 
@@ -2075,9 +1877,9 @@ return String(value)
 }
 
 
-/* =========================================
+/* ==========================================
    BOSHLASH
-========================================= */
+========================================== */
 
 updateCartCount();
 
